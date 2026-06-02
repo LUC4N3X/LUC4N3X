@@ -1,188 +1,177 @@
 <div align="center">
 
-<img src="https://i.ibb.co/6RJQgpTw/luca4n3x-logo.png" alt="LUC4N3X Logo" width="600" />
-
-
-# LUC4N3X
-
-### Software Developer · Builder · Problem Solver
-
-I like turning messy ideas into clean, practical and good-looking software.
+<img src="https://i.ibb.co/6RJQgpTw/luca4n3x-logo.png" alt="LUC4N3X" width="780" />
 
 <br />
 
-<a href="https://github.com/LUC4N3X"><img src="https://img.shields.io/badge/STATUS-ONLINE-00E7FF?style=for-the-badge&labelColor=020617" /></a>
-<img src="https://img.shields.io/badge/MODE-DEEP%20BUILD-A78BFA?style=for-the-badge&labelColor=020617" />
-<img src="https://img.shields.io/badge/BASED-ITALY-22D3EE?style=for-the-badge&labelColor=020617" />
-<img src="https://img.shields.io/badge/STACK-BACKEND%20%2F%20FULL%E2%80%91STACK-8B5CF6?style=for-the-badge&labelColor=020617" />
-<img src="https://komarev.com/ghpvc/?username=LUC4N3X&style=for-the-badge&color=00E7FF&label=VISITORS&labelColor=020617" />
+<h1>LUC4N3X</h1>
+
+<p>
+  <strong>I build practical software with clean logic, solid architecture and a polished user experience.</strong>
+</p>
+
+<p>
+  Tools should be fast, clear and reliable. My goal is to create software that feels simple on the surface,
+  but is carefully engineered underneath.
+</p>
+
+<br />
+
+<a href="https://github.com/LUC4N3X">
+  <img src="https://img.shields.io/badge/GitHub-LUC4N3X-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="GitHub" />
+</a>
+<img src="https://img.shields.io/badge/Focus-Backend%20%26%20Automation-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Backend and Automation" />
+<img src="https://img.shields.io/badge/Style-Modern%20UI-020617?style=for-the-badge&labelColor=020617&color=f97316" alt="Modern UI" />
+
+<br />
+<br />
+
+<img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=gradient&customColorList=12,20,24,30" width="100%" alt="divider" />
 
 </div>
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+## About
 
-## ⟦ ABOUT ⟧
+I'm Luca, a developer who likes turning rough ideas into useful, stable and good-looking software.
 
-I build small, sharp tools where the backend meets the interface — services, integrations, proxies, schedulers, and the occasional dashboard that doesn't lie. I take rough ideas, ship working prototypes, then keep refining until they feel quiet under load and pleasant to use.
+When I build something, I care about the full experience: the logic has to be reliable, the interface has to be clear, and the final result has to feel smooth for the people who use it.
 
-Most of my work lives in the layer users never see: routing logic, validation, retries, caches, queues. Some of it lives right in front of them: dark surfaces, considered density, layouts that breathe. I like the seam between the two.
+I work mostly on backend systems, automation flows, dashboards, integrations and developer-focused tools. I like projects that solve real problems, reduce friction and make everyday workflows easier to manage.
 
-> Aesthetic bias: deep navy, cyan glow, sharp edges, the modern developer-tool feel — practical, elegant, never overloaded.
+My approach is direct: understand the problem, build a working solution, refine the structure, then polish the details until the product feels complete.
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+---
 
-## ⟦ WHAT I BUILD ⟧
+## What I Build
 
-<table width="100%">
+<table>
   <tr>
     <td width="50%" valign="top">
-      <h3>◆ Backend Systems</h3>
-      <p>APIs, services, routing layers, validation, background workers and queues. Built to stay calm under real traffic and fail loudly when something actually goes wrong.</p>
+      <h3>Backend Systems</h3>
+      <p>
+        APIs, services, routing logic, validation layers, background jobs and structured flows designed to remain stable under real usage.
+      </p>
     </td>
     <td width="50%" valign="top">
-      <h3>◆ Automation</h3>
-      <p>Quiet workflows that remove the manual parts. Connectors between services, schedulers, retry logic, the kind of pipelines you set up once and forget.</p>
+      <h3>Automation Tools</h3>
+      <p>
+        Practical workflows that remove repetitive work, connect services together and give users more control with less effort.
+      </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>◆ Modern Interfaces</h3>
-      <p>Dark dashboards, glassy cards, responsive grids, soft glow. Practical UI with personality — never the same generic SaaS layout twice.</p>
+      <h3>Modern Interfaces</h3>
+      <p>
+        Clean dashboards, responsive layouts, readable sections, polished cards and interfaces that feel professional without becoming heavy.
+      </p>
     </td>
     <td width="50%" valign="top">
-      <h3>◆ Developer Utilities</h3>
-      <p>Diagnostics, log readers, config helpers, monitoring shims, small CLIs. The unglamorous 5% that makes the other 95% easier to ship.</p>
+      <h3>Developer Utilities</h3>
+      <p>
+        Diagnostics, configuration helpers, logs, monitoring views and small tools that make development easier to understand and maintain.
+      </p>
     </td>
   </tr>
 </table>
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+---
 
-## ⟦ CURRENT FOCUS ⟧
+## What You Can Expect From My Projects
 
 ```txt
-┌─ deep-channel · luc4n3x@abyss ──────────────────────────────────────
-│
-│  backend       →  cleaner flows, stronger structure, real reliability
-│  automation    →  less repetition, more control, faster iteration
-│  interfaces    →  polished layouts, considered density, dark by default
-│  tooling       →  diagnostics, logs, config, the quiet 5%
-│  open source   →  ship in public, refine in the open
-│
-│  status        →  shipping  ·  building  ·  listening on CH·07
-│
-└─────────────────────────────────────────────────────────────────────
+Clear purpose        → every feature should solve a real problem
+Clean structure      → readable logic, maintainable flows and fewer hidden surprises
+Fast iteration       → build, test, improve, repeat
+User-first design    → simple usage, clear feedback and polished presentation
+Reliable behavior    → stable defaults, useful logs and practical fallbacks
 ```
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+I don't like software that feels confusing, unfinished or overloaded. I prefer tools that do their job well, explain what is happening, and stay pleasant to use even when the logic behind them is complex.
 
-## ⟦ TECH STACK ⟧
+---
+
+## Tech Stack
 
 <div align="center">
 
-**Languages**
-
-<img src="https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
-<img src="https://img.shields.io/badge/TypeScript-020617?style=for-the-badge&logo=typescript&logoColor=3178C6" />
-<img src="https://img.shields.io/badge/Python-020617?style=for-the-badge&logo=python&logoColor=3776AB" />
-<img src="https://img.shields.io/badge/Bash-020617?style=for-the-badge&logo=gnubash&logoColor=4EAA25" />
-
-**Runtimes & Frameworks**
-
-<img src="https://img.shields.io/badge/Node.js-020617?style=for-the-badge&logo=node.js&logoColor=5FA04E" />
-<img src="https://img.shields.io/badge/FastAPI-020617?style=for-the-badge&logo=fastapi&logoColor=009688" />
-<img src="https://img.shields.io/badge/Express-020617?style=for-the-badge&logo=express&logoColor=FFFFFF" />
-
-**Data & Cache**
-
-<img src="https://img.shields.io/badge/PostgreSQL-020617?style=for-the-badge&logo=postgresql&logoColor=4169E1" />
-<img src="https://img.shields.io/badge/Redis-020617?style=for-the-badge&logo=redis&logoColor=FF4438" />
-<img src="https://img.shields.io/badge/SQLite-020617?style=for-the-badge&logo=sqlite&logoColor=003B57" />
-
-**Infrastructure**
-
-<img src="https://img.shields.io/badge/Docker-020617?style=for-the-badge&logo=docker&logoColor=2496ED" />
-<img src="https://img.shields.io/badge/Linux-020617?style=for-the-badge&logo=linux&logoColor=FCC624" />
-<img src="https://img.shields.io/badge/Nginx-020617?style=for-the-badge&logo=nginx&logoColor=009639" />
-<img src="https://img.shields.io/badge/Cloudflare-020617?style=for-the-badge&logo=cloudflare&logoColor=F38020" />
-<img src="https://img.shields.io/badge/GitHub%20Actions-020617?style=for-the-badge&logo=githubactions&logoColor=2088FF" />
-
-**Tools**
-
-<img src="https://img.shields.io/badge/Git-020617?style=for-the-badge&logo=git&logoColor=F05032" />
-<img src="https://img.shields.io/badge/VS%20Code-020617?style=for-the-badge&logo=visualstudiocode&logoColor=007ACC" />
-<img src="https://img.shields.io/badge/Postman-020617?style=for-the-badge&logo=postman&logoColor=FF6C37" />
+<img src="https://img.shields.io/badge/Node.js-020617?style=for-the-badge&logo=node.js&logoColor=5FA04E" alt="Node.js" />
+<img src="https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+<img src="https://img.shields.io/badge/Python-020617?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python" />
+<img src="https://img.shields.io/badge/FastAPI-020617?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" />
+<img src="https://img.shields.io/badge/Docker-020617?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" />
+<img src="https://img.shields.io/badge/Redis-020617?style=for-the-badge&logo=redis&logoColor=FF4438" alt="Redis" />
+<img src="https://img.shields.io/badge/PostgreSQL-020617?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/GitHub%20Actions-020617?style=for-the-badge&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/Linux-020617?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux" />
+<img src="https://img.shields.io/badge/Cloudflare-020617?style=for-the-badge&logo=cloudflare&logoColor=F38020" alt="Cloudflare" />
 
 </div>
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+---
 
-## ⟦ HOW I WORK ⟧
+## How I Work
 
-<table width="100%">
+<table>
   <tr>
-    <td width="33%" valign="top" align="left">
-      <h3>01 · BUILD</h3>
-      <p>Start from the real problem, move fast toward something that works end-to-end. Prototype first, perfect later.</p>
+    <td width="33%" valign="top">
+      <h3>01 · Build</h3>
+      <p>I start from the real problem and move quickly toward a working version.</p>
     </td>
-    <td width="33%" valign="top" align="left">
-      <h3>02 · REFINE</h3>
-      <p>Clean the structure, simplify the flow, drop what isn't earning its weight. The boring pass that decides whether the thing survives contact with reality.</p>
+    <td width="33%" valign="top">
+      <h3>02 · Refine</h3>
+      <p>I simplify the structure, improve the flow and remove anything that does not help the project.</p>
     </td>
-    <td width="33%" valign="top" align="left">
-      <h3>03 · POLISH</h3>
-      <p>Readable code, clear UI, useful logs, sensible defaults. The pass that decides whether you actually enjoy using it.</p>
+    <td width="33%" valign="top">
+      <h3>03 · Polish</h3>
+      <p>I care about the final feeling: clear UI, useful logs, stable behavior and a clean presentation.</p>
     </td>
   </tr>
 </table>
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+---
 
-## ⟦ TELEMETRY ⟧
+## Current Direction
+
+I am focused on building tools that combine strong backend logic with a modern, polished interface.
+
+The kind of software I want to create is simple to use, technically solid and visually recognizable. I like a dark, ocean-inspired style with sharp layouts, soft glow, clean cards and a premium developer-tool feeling.
+
+---
+
+## GitHub Stats
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=LUC4N3X&show_icons=true&hide_border=true&count_private=true&bg_color=020617&title_color=00E7FF&icon_color=A78BFA&text_color=CBD5E1&ring_color=A78BFA" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LUC4N3X&layout=compact&hide_border=true&bg_color=020617&title_color=00E7FF&text_color=CBD5E1&langs_count=8" />
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=LUC4N3X&show_icons=true&theme=github_dark&hide_border=true&count_private=true&bg_color=020617&title_color=38bdf8&icon_color=f97316&text_color=cbd5e1" alt="GitHub stats" />
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=LUC4N3X&layout=compact&theme=github_dark&hide_border=true&bg_color=020617&title_color=38bdf8&text_color=cbd5e1" alt="Top languages" />
 
-<br /><br />
+<br />
+<br />
 
-<img src="https://streak-stats.demolab.com?user=LUC4N3X&hide_border=true&background=020617&stroke=26DFFB&ring=00E7FF&fire=A78BFA&currStreakLabel=00E7FF&sideLabels=CBD5E1&currStreakNum=5EE9FF&sideNums=5EE9FF&dates=94A3B8" />
-
-<br /><br />
-
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=LUC4N3X&hide_border=true&bg_color=020617&color=00E7FF&line=A78BFA&point=5EE9FF&area=true&area_color=26DFFB&title_color=00E7FF" />
-
-<br /><br />
-
-<img src="https://github-profile-trophy.vercel.app/?username=LUC4N3X&theme=algolia&no-frame=true&no-bg=true&margin-w=8&column=7" />
+<img src="https://streak-stats.demolab.com?user=LUC4N3X&theme=dark&hide_border=true&background=020617&ring=7C3AED&fire=F97316&currStreakLabel=38BDF8&sideLabels=CBD5E1&dates=94A3B8" alt="GitHub streak" />
 
 </div>
 
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
+---
 
-## ⟦ FIND ME ⟧
+## Contact
 
 <div align="center">
 
-<a href="https://github.com/LUC4N3X" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/badge/GitHub-020617?style=for-the-badge&logo=github&logoColor=FFFFFF" />
+<p>
+  I build, test, improve and keep pushing projects until they feel solid.
+  <br />
+  If something can be cleaner, faster or more useful, I want to make it better.
+</p>
+
+<a href="https://github.com/LUC4N3X">
+  <img src="https://img.shields.io/badge/Follow%20on%20GitHub-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="Follow on GitHub" />
 </a>
 
-</div>
-
-<img src="./assets/sonar-divider.svg" alt="" width="100%" />
-
-<div align="center">
-
+<br />
 <br />
 
-```txt
-$ luc4n3x@abyss:~$ echo "built with curiosity, patience, and a deep-ocean kind of style."
-```
-
-<br />
-
-<sub><i>Listening on CH·07 · still descending · 0xLUC4N3X</i></sub>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=gradient&customColorList=12,20,24,30" width="100%" alt="footer wave" />
 
 </div>
