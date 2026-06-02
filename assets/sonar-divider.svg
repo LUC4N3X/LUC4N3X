@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 60" preserveAspectRatio="none" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="waveStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#26DFFB" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#26DFFB" stop-opacity="0.7"/>
+      <stop offset="0.5" stop-color="#A78BFA" stop-opacity="0.95"/>
+      <stop offset="0.82" stop-color="#26DFFB" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#26DFFB" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="ping">
+      <stop offset="0" stop-color="#9CF0FF" stop-opacity="1"/>
+      <stop offset="0.45" stop-color="#26DFFB" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#26DFFB" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#26DFFB" stop-opacity="0"/>
+      <stop offset="1" stop-color="#5EE9FF" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Frame guidelines -->
+  <line x1="0" y1="10" x2="1280" y2="10" stroke="#26DFFB" stroke-width="0.5" opacity="0.15"/>
+  <line x1="0" y1="50" x2="1280" y2="50" stroke="#26DFFB" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Dashed centerline -->
+  <line x1="0" y1="30" x2="1280" y2="30" stroke="#26DFFB" stroke-width="0.5" opacity="0.18" stroke-dasharray="2 7"/>
+
+  <!-- Signal trace -->
+  <path d="M 0 30 L 120 30 L 130 22 L 138 38 L 150 30 L 320 30 L 330 16 L 340 30 L 500 30 L 510 12 L 520 48 L 530 22 L 540 30 L 720 30 L 740 30 L 750 26 L 758 34 L 770 30 L 920 30 L 935 10 L 950 30 L 1100 30 L 1120 30 L 1280 30"
+        fill="none" stroke="url(#waveStroke)" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+
+  <!-- Tick marks -->
+  <g stroke="#26DFFB" stroke-width="0.5" opacity="0.25">
+    <line x1="0" y1="26" x2="0" y2="34"/>
+    <line x1="320" y1="27" x2="320" y2="33"/>
+    <line x1="640" y1="25" x2="640" y2="35"/>
+    <line x1="960" y1="27" x2="960" y2="33"/>
+    <line x1="1280" y1="26" x2="1280" y2="34"/>
+  </g>
+
+  <!-- Traveling ping with trail -->
+  <g>
+    <rect x="-80" y="29" width="80" height="2" fill="url(#trail)" opacity="0.6">
+      <animate attributeName="x" from="-80" to="1280" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="0" cy="30" r="7" fill="url(#ping)">
+      <animate attributeName="cx" from="-50" to="1330" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="30" r="2" fill="#9CF0FF">
+      <animate attributeName="cx" from="-50" to="1330" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Corner labels -->
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="8" fill="#26DFFB" opacity="0.5" letter-spacing="1.5">
+    <text x="8" y="56">··  ·—  —— ·</text>
+    <text x="1272" y="56" text-anchor="end">CH·07 · LISTENING</text>
+  </g>
+</svg>
