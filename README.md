@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/luc4n3x-logo1.png" alt="LUC4N3X Logo" width="680" />
+<img src="./assets/luc4n3x-logo.png" alt="LUC4N3X Logo" width="680" />
 
 
 # LUC4N3X
