@@ -1,0 +1,22 @@
+<svg width="1200" height="180" viewBox="0 0 1200 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ocean divider">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.45" stop-color="#06283D"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 40) rotate(159) scale(410 160)">
+      <stop stop-color="#22D3EE" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-20%" y="-50%" width="140%" height="200%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="180" rx="28" fill="url(#g)"/>
+  <rect width="1200" height="180" rx="28" fill="url(#glow)"/>
+  <path d="M0 116C82 84 166 87 257 116C349 145 427 144 515 111C616 73 707 74 800 111C898 150 1002 151 1200 88V180H0V116Z" fill="#075985" fill-opacity="0.62"/>
+  <path d="M0 132C105 96 207 99 303 130C403 162 491 161 583 126C688 87 787 90 887 126C987 162 1080 159 1200 117" stroke="#38BDF8" stroke-width="3" stroke-opacity="0.72"/>
+  <path d="M35 82C138 49 225 50 330 82C428 111 522 111 628 77C742 40 856 44 963 78C1050 106 1121 105 1180 83" stroke="#67E8F9" stroke-width="2" stroke-opacity="0.34"/>
+  <circle cx="944" cy="48" r="58" fill="#22D3EE" fill-opacity="0.18" filter="url(#blur)"/>
+</svg>
