@@ -1,22 +1,148 @@
-<svg width="1200" height="180" viewBox="0 0 1200 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ocean divider">
+<svg width="1200" height="190" viewBox="0 0 1200 190" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated ocean divider">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
+    <clipPath id="clip">
+      <rect width="1200" height="190" rx="30"/>
+    </clipPath>
+
+    <linearGradient id="deep" x1="0" y1="0" x2="1200" y2="190" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#020617"/>
-      <stop offset="0.45" stop-color="#06283D"/>
+      <stop offset="0.34" stop-color="#041C2D"/>
+      <stop offset="0.68" stop-color="#075985"/>
       <stop offset="1" stop-color="#0EA5E9"/>
     </linearGradient>
-    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(940 40) rotate(159) scale(410 160)">
-      <stop stop-color="#22D3EE" stop-opacity="0.55"/>
+
+    <linearGradient id="water" x1="0" y1="100" x2="1200" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#082F49" stop-opacity="0.92"/>
+      <stop offset="0.52" stop-color="#0369A1" stop-opacity="0.78"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0.72"/>
+    </linearGradient>
+
+    <linearGradient id="line" x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#38BDF8" stop-opacity="0.62"/>
+      <stop offset="0.52" stop-color="#67E8F9" stop-opacity="0.95"/>
+      <stop offset="0.86" stop-color="#38BDF8" stop-opacity="0.62"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(970 40) rotate(155) scale(430 170)">
+      <stop stop-color="#22D3EE" stop-opacity="0.58"/>
       <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur" x="-20%" y="-50%" width="140%" height="200%">
-      <feGaussianBlur stdDeviation="10"/>
+
+    <filter id="softBlur" x="-25%" y="-70%" width="150%" height="240%">
+      <feGaussianBlur stdDeviation="12"/>
     </filter>
+
+    <filter id="shineBlur" x="-25%" y="-80%" width="150%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+
+    <style>
+      .pulse { animation: pulse 4.8s ease-in-out infinite; transform-origin: 78% 24%; }
+      .driftA { animation: driftA 9s ease-in-out infinite alternate; }
+      .driftB { animation: driftB 12s ease-in-out infinite alternate; }
+      .driftC { animation: driftC 15s ease-in-out infinite alternate; }
+      .sweep { animation: sweep 6.5s ease-in-out infinite; }
+      .bubble1 { animation: bubble 6s ease-in-out infinite; }
+      .bubble2 { animation: bubble 7.2s ease-in-out infinite 0.8s; }
+      .bubble3 { animation: bubble 8s ease-in-out infinite 1.5s; }
+      .bubble4 { animation: bubble 6.8s ease-in-out infinite 2.1s; }
+
+      @keyframes pulse {
+        0%, 100% { opacity: .42; transform: scale(1); }
+        50% { opacity: .82; transform: scale(1.08); }
+      }
+      @keyframes driftA {
+        from { transform: translateX(-22px); }
+        to { transform: translateX(32px); }
+      }
+      @keyframes driftB {
+        from { transform: translateX(38px); }
+        to { transform: translateX(-42px); }
+      }
+      @keyframes driftC {
+        from { transform: translateX(-14px); }
+        to { transform: translateX(24px); }
+      }
+      @keyframes sweep {
+        0% { transform: translateX(-420px); opacity: 0; }
+        22% { opacity: .55; }
+        55% { opacity: .24; }
+        100% { transform: translateX(760px); opacity: 0; }
+      }
+      @keyframes bubble {
+        0% { transform: translateY(24px) scale(.7); opacity: 0; }
+        20% { opacity: .55; }
+        72% { opacity: .48; }
+        100% { transform: translateY(-78px) scale(1.18); opacity: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .pulse, .driftA, .driftB, .driftC, .sweep, .bubble1, .bubble2, .bubble3, .bubble4 { animation: none; }
+      }
+    </style>
   </defs>
-  <rect width="1200" height="180" rx="28" fill="url(#g)"/>
-  <rect width="1200" height="180" rx="28" fill="url(#glow)"/>
-  <path d="M0 116C82 84 166 87 257 116C349 145 427 144 515 111C616 73 707 74 800 111C898 150 1002 151 1200 88V180H0V116Z" fill="#075985" fill-opacity="0.62"/>
-  <path d="M0 132C105 96 207 99 303 130C403 162 491 161 583 126C688 87 787 90 887 126C987 162 1080 159 1200 117" stroke="#38BDF8" stroke-width="3" stroke-opacity="0.72"/>
-  <path d="M35 82C138 49 225 50 330 82C428 111 522 111 628 77C742 40 856 44 963 78C1050 106 1121 105 1180 83" stroke="#67E8F9" stroke-width="2" stroke-opacity="0.34"/>
-  <circle cx="944" cy="48" r="58" fill="#22D3EE" fill-opacity="0.18" filter="url(#blur)"/>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="190" fill="url(#deep)"/>
+    <rect width="1200" height="190" fill="url(#glow)" class="pulse"/>
+
+    <g opacity="0.24" class="driftC">
+      <path d="M-90 63C30 31 143 40 260 71C381 103 485 101 611 65C734 30 858 37 975 71C1080 102 1187 94 1284 61" stroke="#67E8F9" stroke-width="2"/>
+      <path d="M-70 92C41 64 151 67 259 95C378 126 486 121 596 88C720 50 856 54 988 91C1089 119 1194 115 1270 90" stroke="#38BDF8" stroke-width="1.4" opacity="0.62"/>
+    </g>
+
+    <g class="driftB">
+      <path fill="url(#water)" opacity="0.78">
+        <animate attributeName="d" dur="7s" repeatCount="indefinite" values="
+          M-80 122C30 88 143 89 262 121C386 154 484 151 602 111C726 69 843 78 958 116C1068 153 1168 142 1280 101V190H-80V122Z;
+          M-80 112C42 78 160 92 274 124C388 157 502 145 614 104C736 60 850 75 968 122C1072 163 1182 147 1280 113V190H-80V112Z;
+          M-80 122C30 88 143 89 262 121C386 154 484 151 602 111C726 69 843 78 958 116C1068 153 1168 142 1280 101V190H-80V122Z"/>
+      </path>
+    </g>
+
+    <g class="driftA">
+      <path fill="#075985" fill-opacity="0.58">
+        <animate attributeName="d" dur="8.5s" repeatCount="indefinite" values="
+          M-70 140C58 104 174 106 293 137C408 167 512 167 631 126C749 86 859 93 981 130C1080 160 1170 160 1270 132V190H-70V140Z;
+          M-70 132C58 101 183 108 301 143C418 178 520 159 637 119C755 79 872 102 986 138C1096 172 1184 155 1270 124V190H-70V132Z;
+          M-70 140C58 104 174 106 293 137C408 167 512 167 631 126C749 86 859 93 981 130C1080 160 1170 160 1270 132V190H-70V140Z"/>
+      </path>
+    </g>
+
+    <g class="driftA" opacity="0.92">
+      <path fill="none" stroke="url(#line)" stroke-width="3.2" stroke-linecap="round">
+        <animate attributeName="d" dur="6.2s" repeatCount="indefinite" values="
+          M-40 132C78 96 196 101 310 132C430 165 526 162 640 124C764 82 878 92 990 129C1096 164 1195 153 1250 128;
+          M-40 124C78 94 190 106 315 140C430 171 537 153 648 115C762 77 883 101 998 138C1100 171 1198 146 1250 119;
+          M-40 132C78 96 196 101 310 132C430 165 526 162 640 124C764 82 878 92 990 129C1096 164 1195 153 1250 128"/>
+      </path>
+    </g>
+
+    <g class="driftC" opacity="0.5">
+      <path fill="none" stroke="#67E8F9" stroke-width="1.8" stroke-linecap="round">
+        <animate attributeName="d" dur="9.5s" repeatCount="indefinite" values="
+          M24 85C145 52 246 57 358 88C470 119 566 108 675 75C790 40 907 49 1019 84C1094 108 1146 104 1188 85;
+          M24 78C150 47 254 62 365 95C478 128 579 101 686 68C801 33 910 56 1025 91C1100 114 1150 97 1188 78;
+          M24 85C145 52 246 57 358 88C470 119 566 108 675 75C790 40 907 49 1019 84C1094 108 1146 104 1188 85"/>
+      </path>
+    </g>
+
+    <g class="sweep" filter="url(#shineBlur)">
+      <path d="M0 28C106 4 221 16 346 45C489 78 620 76 770 34" stroke="#E0F2FE" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+      <path d="M32 49C177 21 311 42 463 74" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    </g>
+
+    <g fill="#67E8F9">
+      <circle cx="152" cy="150" r="3" class="bubble1" opacity="0"/>
+      <circle cx="213" cy="158" r="2.2" class="bubble2" opacity="0"/>
+      <circle cx="1014" cy="154" r="2.8" class="bubble3" opacity="0"/>
+      <circle cx="1096" cy="148" r="2" class="bubble4" opacity="0"/>
+      <circle cx="918" cy="160" r="1.8" class="bubble2" opacity="0"/>
+      <circle cx="326" cy="154" r="2.4" class="bubble3" opacity="0"/>
+    </g>
+
+    <circle cx="944" cy="48" r="60" fill="#22D3EE" fill-opacity="0.16" filter="url(#softBlur)" class="pulse"/>
+    <rect x="0.5" y="0.5" width="1199" height="189" rx="29.5" stroke="#38BDF8" stroke-opacity="0.18"/>
+  </g>
 </svg>
