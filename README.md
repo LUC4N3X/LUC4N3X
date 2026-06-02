@@ -1,7 +1,8 @@
 <div align="center">
 
-<img src="./assets/luc4n3x-logo.png" alt="LUC4N3X Logo" width="760" />
+<img src="./assets/luc4n3x-logo.png" alt="LUC4N3X Logo" width="680" />
 
+<br />
 <br />
 
 <img src="./assets/ocean-divider.svg" alt="Ocean divider" width="100%" />
@@ -10,16 +11,16 @@
 
 # LUC4N3X
 
-### Stremio Addon Developer · Media Proxy Builder · Streaming Infrastructure Enthusiast
+### Software Developer · Builder · Problem Solver
 
-Building a darker, cleaner and smarter media-tooling ecosystem around **Leviathan**, **Kraken Proxy** and modern Stremio workflows.
+I like turning messy ideas into clean, practical and good-looking software.
 
 <br />
 
-![Leviathan](https://img.shields.io/badge/LEVIATHAN-STREMIO%20ADDON-0ea5e9?style=for-the-badge&labelColor=020617)
-![Kraken](https://img.shields.io/badge/KRAKEN-MEDIA%20PROXY-06b6d4?style=for-the-badge&labelColor=020617)
-![Status](https://img.shields.io/badge/FOCUS-STREAM%20ROUTING-22d3ee?style=for-the-badge&labelColor=020617)
-![Code](https://img.shields.io/badge/STYLE-DEVELOPER%20TOOLS-38bdf8?style=for-the-badge&labelColor=020617)
+![Developer](https://img.shields.io/badge/ROLE-SOFTWARE%20DEVELOPER-0ea5e9?style=for-the-badge&labelColor=020617)
+![Backend](https://img.shields.io/badge/FOCUS-BACKEND%20TOOLS-06b6d4?style=for-the-badge&labelColor=020617)
+![Automation](https://img.shields.io/badge/BUILD-AUTOMATION-22d3ee?style=for-the-badge&labelColor=020617)
+![UI](https://img.shields.io/badge/STYLE-MODERN%20UI-38bdf8?style=for-the-badge&labelColor=020617)
 
 </div>
 
@@ -27,44 +28,37 @@ Building a darker, cleaner and smarter media-tooling ecosystem around **Leviatha
 
 ## 🌊 About Me
 
-I build tools for **Stremio**, provider orchestration, media routing and stream delivery pipelines.
+I'm a developer who enjoys building software with a clear purpose: tools that are useful, fast, clean and pleasant to use.
 
-My work focuses on making complex streaming flows feel simple: cleaner configuration, smarter fallback logic, better provider handling, stronger diagnostics and a UI that does not look like it was assembled during a server outage at 3 AM.
+I like working on backend logic, automation, dashboards, routing systems, integrations, user interfaces and small utilities that remove friction from everyday workflows.
 
-The visual identity is inspired by deep ocean interfaces, Leviathan/Kraken energy, modern SaaS dashboards, glassmorphism and developer-tool precision.
+My favorite kind of project is the one that starts as a rough idea, becomes a working prototype, and then slowly turns into something stable, polished and actually enjoyable to use.
+
+Visually, I prefer dark interfaces, ocean-inspired details, sharp layouts, soft glow, clean cards and that modern developer-tool feeling: practical, elegant and never overloaded.
 
 ---
 
-## 🧩 Main Ecosystem
+## 🧠 What I Like Building
 
 <table>
   <tr>
-    <td width="33%" valign="top">
-      <h3>🐉 Leviathan</h3>
-      <p><strong>Stremio addon</strong> focused on provider aggregation, stream generation, metadata handling and Italian-first media discovery.</p>
-      <p>
-        <a href="https://github.com/LUC4N3X/Leviathan">
-          <img src="https://img.shields.io/badge/Open%20Project-020617?style=for-the-badge&logo=github&logoColor=white" />
-        </a>
-      </p>
+    <td width="50%" valign="top">
+      <h3>⚙️ Backend Tools</h3>
+      <p>APIs, services, routing logic, validation layers, background jobs and systems designed to stay reliable under real usage.</p>
     </td>
-    <td width="33%" valign="top">
-      <h3>🐙 Kraken Proxy</h3>
-      <p><strong>Media proxy core</strong> for HLS/MP4 routing, extractor support, header handling, fallback chains and diagnostics.</p>
-      <p>
-        <a href="https://github.com/LUC4N3X/Kraken-Proxy">
-          <img src="https://img.shields.io/badge/Open%20Project-020617?style=for-the-badge&logo=github&logoColor=white" />
-        </a>
-      </p>
+    <td width="50%" valign="top">
+      <h3>🧩 Automation</h3>
+      <p>Small but powerful workflows that reduce manual work, connect services together and make repeated tasks simpler.</p>
     </td>
-    <td width="33%" valign="top">
-      <h3>⚡ StreamThrone</h3>
-      <p><strong>Modern dashboard/UI layer</strong> for polished media presentation, posters, rankings and developer-tool style interfaces.</p>
-      <p>
-        <a href="https://github.com/LUC4N3X/StreamThrone">
-          <img src="https://img.shields.io/badge/Open%20Project-020617?style=for-the-badge&logo=github&logoColor=white" />
-        </a>
-      </p>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🌌 Modern Interfaces</h3>
+      <p>Dark dashboards, clean cards, responsive layouts, soft glass effects and interfaces that feel professional without becoming heavy.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🛠️ Developer Utilities</h3>
+      <p>Scripts, diagnostics, configuration helpers, logs, monitoring flows and tools that make development easier to manage.</p>
     </td>
   </tr>
 </table>
@@ -74,10 +68,11 @@ The visual identity is inspired by deep ocean interfaces, Leviathan/Kraken energ
 ## 🔥 Current Focus
 
 ```txt
-Leviathan      → Stremio addon architecture, providers, Debrid/P2P flows, stream generation
-Kraken Proxy   → HLS/MP4 proxying, extractor pipeline, forward routing, anti-bot diagnostics
-StreamThrone   → modern UI, poster presentation, rankings, dashboard-style layouts
-TorrentHan     → snapshot/cache experiments, Italian-first indexing and fallback logic
+Backend logic        → cleaner flows, stronger structure, better reliability
+Automation           → less repetition, more control, faster iteration
+Modern UI            → polished layouts, readable sections, responsive design
+Developer tooling    → diagnostics, logs, configuration and practical utilities
+Open-source work     → building in public, improving steadily, learning by doing
 ```
 
 ---
@@ -101,27 +96,21 @@ TorrentHan     → snapshot/cache experiments, Italian-first indexing and fallba
 
 ---
 
-## ⚙️ What I Like Building
+## 🧭 How I Work
 
 <table>
   <tr>
-    <td width="50%" valign="top">
-      <h3>🧠 Smart Routing</h3>
-      <p>Fallback chains, proxy selection, stream validation, provider-specific behavior and clean diagnostics.</p>
+    <td width="33%" valign="top">
+      <h3>01 · Build</h3>
+      <p>I start from the practical problem and move fast toward something that works.</p>
     </td>
-    <td width="50%" valign="top">
-      <h3>🧪 Extractor Pipelines</h3>
-      <p>Hoster resolution, HLS/MP4 handling, preflight checks, redirect normalization and stable stream delivery.</p>
+    <td width="33%" valign="top">
+      <h3>02 · Refine</h3>
+      <p>I clean the structure, improve the flow, remove noise and make the system easier to understand.</p>
     </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>🎬 Stremio Experiences</h3>
-      <p>Addon manifests, provider cards, result filtering, Debrid/P2P logic and Italian-first metadata flows.</p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>🌌 Modern Interfaces</h3>
-      <p>Dark ocean themes, soft glassmorphism, SaaS-style layouts, clean cards and dashboard-level polish.</p>
+    <td width="33%" valign="top">
+      <h3>03 · Polish</h3>
+      <p>I care about the final feeling: readable code, clear UI, useful logs and a smooth user experience.</p>
     </td>
   </tr>
 </table>
@@ -144,63 +133,12 @@ TorrentHan     → snapshot/cache experiments, Italian-first indexing and fallba
 
 ---
 
-## 🧭 Project Philosophy
-
-> Clean streams. Smart routing. Better tooling.
-
-I care about projects that are practical, fast and understandable.  
-No useless complexity, no messy UI, no mystery behavior hidden behind silent failures.
-
-The goal is simple: build tools that feel stable, sharp and enjoyable to use.
-
----
-
-## 🧱 Repository Highlights
-
-<table>
-  <tr>
-    <td>
-      <a href="https://github.com/LUC4N3X/Leviathan">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=LUC4N3X&repo=Leviathan&theme=github_dark&hide_border=true&bg_color=020617&title_color=38bdf8&text_color=cbd5e1&icon_color=22d3ee" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/LUC4N3X/Kraken-Proxy">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=LUC4N3X&repo=Kraken-Proxy&theme=github_dark&hide_border=true&bg_color=020617&title_color=38bdf8&text_color=cbd5e1&icon_color=22d3ee" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <a href="https://github.com/LUC4N3X/StreamThrone">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=LUC4N3X&repo=StreamThrone&theme=github_dark&hide_border=true&bg_color=020617&title_color=38bdf8&text_color=cbd5e1&icon_color=22d3ee" />
-      </a>
-    </td>
-    <td>
-      <a href="https://github.com/LUC4N3X/TorrentHan">
-        <img src="https://github-readme-stats.vercel.app/api/pin/?username=LUC4N3X&repo=TorrentHan&theme=github_dark&hide_border=true&bg_color=020617&title_color=38bdf8&text_color=cbd5e1&icon_color=22d3ee" />
-      </a>
-    </td>
-  </tr>
-</table>
-
----
-
-## 🌐 Links
+## 🌐 Find Me
 
 <div align="center">
 
 <a href="https://github.com/LUC4N3X" target="_blank" rel="noreferrer">
   <img src="https://img.shields.io/badge/GitHub-020617?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-<a href="https://github.com/LUC4N3X/Leviathan" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/badge/Leviathan-020617?style=for-the-badge&logo=stremio&logoColor=7C3AED" />
-</a>
-<a href="https://github.com/LUC4N3X/Kraken-Proxy" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/badge/Kraken%20Proxy-020617?style=for-the-badge&logo=python&logoColor=38BDF8" />
-</a>
-<a href="https://github.com/LUC4N3X/StreamThrone" target="_blank" rel="noreferrer">
-  <img src="https://img.shields.io/badge/StreamThrone-020617?style=for-the-badge&logo=react&logoColor=61DAFB" />
 </a>
 
 </div>
@@ -213,6 +151,6 @@ The goal is simple: build tools that feel stable, sharp and enjoyable to use.
 
 <br />
 
-### Built from the abyss, tuned for clean developer experiences.
+### Built with curiosity, patience and a deep-ocean kind of style.
 
 </div>
