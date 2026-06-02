@@ -5,15 +5,16 @@
 <br />
 <br />
 
-<h1>LUC4N3X</h1>
+# LUC4N3X
+
+### Software Developer · Builder · Problem Solver
 
 <p>
-  <strong>I build practical software with clean logic, strong structure and a polished user experience.</strong>
+  I build practical software with clean logic, strong structure and a polished user experience.
 </p>
 
 <p>
-  I like tools that feel simple to use, but solid under the surface.
-  My goal is to create software that is useful, reliable, visually recognizable and pleasant to work with.
+  I like tools that feel simple on the surface, solid underneath and memorable in the way they look and behave.
 </p>
 
 <br />
@@ -28,15 +29,15 @@
 
 ---
 
-## About
+## About Me
 
-I'm Luca, a developer focused on building tools that solve real problems without becoming complicated to use.
+I'm Luca.
 
-When I create something, I care about the full experience: the backend has to be reliable, the interface has to be clear, and the final result has to feel smooth for the people using it.
+I enjoy turning rough ideas into tools that are clean, reliable and genuinely useful. When I build something, I care about the whole experience: the logic has to be strong, the structure has to stay readable and the final interface has to feel polished for the people using it.
 
-I work on backend systems, automation flows, integrations, dashboards and developer-focused utilities. I like projects that start from a rough idea and become something stable, clean and genuinely useful.
+Most of the work I enjoy sits around backend systems, automation, integrations, dashboards and developer-focused utilities. I like projects that solve practical problems and still keep a clear identity.
 
-My style is direct: understand the problem, build the first working version, refine the structure, then polish the details until the project feels complete.
+The kind of software I want my name attached to is simple to use, technically solid and visually recognizable.
 
 ---
 
@@ -47,13 +48,13 @@ My style is direct: understand the problem, build the first working version, ref
     <td width="50%" valign="top">
       <h3>Backend Systems</h3>
       <p>
-        APIs, services, routing logic, validation layers, background jobs and structured flows designed to stay reliable under real usage.
+        APIs, services, routing logic, validation layers, background jobs and structured flows designed to stay stable under real usage.
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>Automation Tools</h3>
       <p>
-        Workflows that remove repetitive steps, connect services together and give users more control with less effort.
+        Workflows that remove repetition, connect services together and make daily tasks cleaner and easier to manage.
       </p>
     </td>
   </tr>
@@ -61,13 +62,13 @@ My style is direct: understand the problem, build the first working version, ref
     <td width="50%" valign="top">
       <h3>Modern Interfaces</h3>
       <p>
-        Clean dashboards, responsive layouts, readable sections and polished cards with a professional developer-tool feeling.
+        Clean layouts, readable sections, dark themes, ocean-inspired details and a professional developer-tool feel.
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>Developer Utilities</h3>
       <p>
-        Diagnostics, configuration helpers, logs, monitoring views and small tools that make development easier to understand and maintain.
+        Diagnostics, configuration helpers, logs, monitoring views and small tools that make development easier to understand.
       </p>
     </td>
   </tr>
@@ -85,7 +86,7 @@ User-first design    → simple usage, clear feedback and polished presentation
 Reliable behavior    → stable defaults, useful logs and practical fallbacks
 ```
 
-I don't like software that feels confusing, unfinished or overloaded. I prefer tools that do their job well, explain what is happening, and stay pleasant to use even when the logic behind them is complex.
+I prefer software that does its job well, stays clear under pressure and still feels good to use.
 
 ---
 
@@ -118,7 +119,7 @@ I don't like software that feels confusing, unfinished or overloaded. I prefer t
     </td>
     <td width="33%" valign="top">
       <h3>02 · Refine</h3>
-      <p>I simplify the structure, improve the flow and remove anything that does not help the project.</p>
+      <p>I simplify the structure, improve the flow and remove what does not help the project.</p>
     </td>
     <td width="33%" valign="top">
       <h3>03 · Polish</h3>
@@ -129,44 +130,40 @@ I don't like software that feels confusing, unfinished or overloaded. I prefer t
 
 ---
 
-## Current Direction
+## Rhythm & Consistency
 
-I am focused on building tools that combine strong backend logic with a modern, polished interface.
+<div align="center">
+  <img src="./assets/luc4n3x-activity-ridge.svg" alt="LUC4N3X activity ridge" width="920" />
+</div>
 
-The kind of software I want to create is simple to use, technically solid and visually recognizable. I like a dark, ocean-inspired style with sharp layouts, soft glow, clean cards and a premium developer-tool identity.
-
----
-
-## Development Snapshot
+<p align="center">
+  I like building steadily: improving version after version, keeping momentum, and turning progress into something visible.
+</p>
 
 <table>
   <tr>
-    <td width="25%" align="center">
-      <strong>Backend</strong><br />
-      structured logic, APIs and stable flows
+    <td width="33%" align="center">
+      <strong>Steady Output</strong><br />
+      ship, test, refine
     </td>
-    <td width="25%" align="center">
-      <strong>Automation</strong><br />
-      less repetition, more control
+    <td width="33%" align="center">
+      <strong>Clean Direction</strong><br />
+      clear goals, practical decisions
     </td>
-    <td width="25%" align="center">
-      <strong>Interface</strong><br />
-      clean, modern and readable UI
-    </td>
-    <td width="25%" align="center">
-      <strong>Quality</strong><br />
-      logs, fallbacks and practical reliability
+    <td width="33%" align="center">
+      <strong>Constant Improvement</strong><br />
+      every version should be better than the last
     </td>
   </tr>
 </table>
 
-<div align="center">
+---
 
-<img src="https://img.shields.io/badge/Building-Clean%20Tools-020617?style=for-the-badge&labelColor=020617&color=7c3aed" alt="Building Clean Tools" />
-<img src="https://img.shields.io/badge/Design-Ocean%20Inspired-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Ocean Inspired Design" />
-<img src="https://img.shields.io/badge/Mindset-Improve%20Every%20Version-020617?style=for-the-badge&labelColor=020617&color=f97316" alt="Improve Every Version" />
+## Current Direction
 
-</div>
+I am focused on building tools that combine strong backend logic with a modern, polished interface.
+
+I like a dark, ocean-inspired visual style with sharp layouts, soft glow, clean cards and a premium developer-tool identity.
 
 ---
 
@@ -187,6 +184,11 @@ The kind of software I want to create is simple to use, technically solid and vi
 <br />
 <br />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=gradient&customColorList=12,20,24,30" width="100%" alt="footer wave" />
+<img src="./assets/ocean-divider.svg" alt="Ocean divider" width="100%" />
+
+<br />
+<br />
+
+<strong>Built with focus, patience and a deep-ocean kind of style.</strong>
 
 </div>
