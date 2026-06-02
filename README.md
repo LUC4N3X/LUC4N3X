@@ -2,12 +2,6 @@
 
 <img src="./assets/luc4n3x-logo.png" alt="LUC4N3X Logo" width="680" />
 
-<br />
-<br />
-
-<img src="./assets/ocean-divider.svg" alt="Ocean divider" width="100%" />
-
-<br />
 
 # LUC4N3X
 
