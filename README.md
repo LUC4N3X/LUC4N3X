@@ -187,6 +187,6 @@ The kind of software I want to create is simple to use, technically solid and vi
 <br />
 <br />
 
-<strong>Built with focus, patience and a deep-ocean kind of style.</strong>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=gradient&customColorList=12,20,24,30" width="100%" alt="footer wave" />
 
 </div>
