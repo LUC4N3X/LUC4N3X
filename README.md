@@ -1,42 +1,42 @@
 <div align="center">
 
-<img src="https://i.ibb.co/6RJQgpTw/luca4n3x-logo.png" alt="LUC4N3X" width="600" />
+<img src="https://i.ibb.co/6RJQgpTw/luca4n3x-logo.png" alt="LUC4N3X" width="660" />
 
 <br />
 <br />
-
-<h1>LUC4N3X</h1>
 
 <p>
-  <strong>I build practical software with clean logic, strong structure and a polished user experience.</strong>
+  <strong>Practical software. Clean backend logic. Polished user experience.</strong>
 </p>
 
 <p>
-  I like tools that feel simple to use, but solid under the surface.
-  My goal is to create software that is useful, reliable, visually recognizable and pleasant to work with.
+  I build tools that turn rough ideas into reliable products: simple to use, solid under the surface,
+  and refined enough to feel complete from the first interaction.
 </p>
 
 <br />
 
 <a href="https://github.com/LUC4N3X">
-  <img src="https://img.shields.io/badge/GitHub-LUC4N3X-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="GitHub" />
+  <img src="https://img.shields.io/badge/GitHub-Profile-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="GitHub Profile" />
 </a>
-<img src="https://img.shields.io/badge/Focus-Backend%20%26%20Automation-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Backend and Automation" />
+<img src="https://img.shields.io/badge/Focus-Backend%20Systems-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Backend Systems" />
+<img src="https://img.shields.io/badge/Focus-Automation%20Flows-020617?style=for-the-badge&labelColor=020617&color=8b5cf6" alt="Automation Flows" />
 <img src="https://img.shields.io/badge/Style-Modern%20Developer%20Tools-020617?style=for-the-badge&labelColor=020617&color=f97316" alt="Modern Developer Tools" />
+
+<br />
+<br />
+
+<img src="https://capsule-render.vercel.app/api?type=rect&height=3&section=header&color=gradient&customColorList=12,20,24,30" width="100%" alt="gradient divider" />
 
 </div>
 
----
-
 ## About
 
-I'm Luca, a developer focused on building tools that solve real problems without becoming complicated to use.
+I'm Luca, a developer focused on building practical software with a clear purpose, a clean structure and a polished final experience.
 
-When I create something, I care about the full experience: the backend has to be reliable, the interface has to be clear, and the final result has to feel smooth for the people using it.
+I like projects that start from a rough idea and become something stable, readable and genuinely useful. For me, good software is not only about making things work: it has to be understandable, reliable, pleasant to use and easy to improve over time.
 
-I work on backend systems, automation flows, integrations, dashboards and developer-focused utilities. I like projects that start from a rough idea and become something stable, clean and genuinely useful.
-
-My style is direct: understand the problem, build the first working version, refine the structure, then polish the details until the project feels complete.
+My work usually sits between backend logic, automation, integrations, dashboards and developer-focused utilities. I enjoy shaping the entire flow: from the first working version to the details that make a project feel professional.
 
 ---
 
@@ -47,13 +47,13 @@ My style is direct: understand the problem, build the first working version, ref
     <td width="50%" valign="top">
       <h3>Backend Systems</h3>
       <p>
-        APIs, services, routing logic, validation layers, background jobs and structured flows designed to stay reliable under real usage.
+        APIs, routing logic, validation layers, background jobs and structured services designed to stay reliable under real usage.
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>Automation Tools</h3>
+      <h3>Automation Flows</h3>
       <p>
-        Workflows that remove repetitive steps, connect services together and give users more control with less effort.
+        Workflows that remove repetitive steps, connect services together and give users more control with less friction.
       </p>
     </td>
   </tr>
@@ -61,13 +61,13 @@ My style is direct: understand the problem, build the first working version, ref
     <td width="50%" valign="top">
       <h3>Modern Interfaces</h3>
       <p>
-        Clean dashboards, responsive layouts, readable sections and polished cards with a professional developer-tool feeling.
+        Clean dashboards, responsive layouts, readable sections and polished cards with a premium developer-tool feeling.
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>Developer Utilities</h3>
       <p>
-        Diagnostics, configuration helpers, logs, monitoring views and small tools that make development easier to understand and maintain.
+        Diagnostics, configuration helpers, monitoring views and small tools that make systems easier to understand and maintain.
       </p>
     </td>
   </tr>
@@ -75,17 +75,17 @@ My style is direct: understand the problem, build the first working version, ref
 
 ---
 
-## What You Can Expect From My Projects
+## Engineering Principles
 
 ```txt
-Clear purpose        → every feature should solve a real problem
-Clean structure      → readable logic, maintainable flows and fewer hidden surprises
-Fast iteration       → build, test, improve, repeat
-User-first design    → simple usage, clear feedback and polished presentation
-Reliable behavior    → stable defaults, useful logs and practical fallbacks
+Clear purpose        -> every feature should solve a real problem
+Clean structure      -> readable logic, maintainable flows and fewer hidden surprises
+Fast iteration       -> build, test, improve, repeat
+User-first design    -> simple usage, clear feedback and polished presentation
+Reliable behavior    -> stable defaults, useful logs and practical fallbacks
 ```
 
-I don't like software that feels confusing, unfinished or overloaded. I prefer tools that do their job well, explain what is happening, and stay pleasant to use even when the logic behind them is complex.
+I prefer software that feels focused instead of overloaded. A project should explain itself, behave consistently and stay pleasant to use even when the logic behind it is complex.
 
 ---
 
@@ -118,11 +118,11 @@ I don't like software that feels confusing, unfinished or overloaded. I prefer t
     </td>
     <td width="33%" valign="top">
       <h3>02 · Refine</h3>
-      <p>I simplify the structure, improve the flow and remove anything that does not help the project.</p>
+      <p>I simplify the structure, improve the flow and remove everything that does not help the project.</p>
     </td>
     <td width="33%" valign="top">
       <h3>03 · Polish</h3>
-      <p>I care about the final feeling: clear UI, useful logs, stable behavior and a clean presentation.</p>
+      <p>I care about the final feeling: clean UI, useful logs, stable behavior and a strong presentation.</p>
     </td>
   </tr>
 </table>
@@ -131,9 +131,9 @@ I don't like software that feels confusing, unfinished or overloaded. I prefer t
 
 ## Current Direction
 
-I am focused on building tools that combine strong backend logic with a modern, polished interface.
+I'm focused on building tools that combine strong backend logic with a modern, polished interface.
 
-The kind of software I want to create is simple to use, technically solid and visually recognizable. I like a dark, ocean-inspired style with sharp layouts, soft glow, clean cards and a premium developer-tool identity.
+The kind of software I want to create is simple to use, technically solid and visually recognizable: sharp layouts, clear flows, soft glow, ocean-inspired details and a premium developer-tool identity.
 
 ---
 
@@ -181,7 +181,7 @@ The kind of software I want to create is simple to use, technically solid and vi
 </p>
 
 <a href="https://github.com/LUC4N3X">
-  <img src="https://img.shields.io/badge/Follow%20on%20GitHub-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="Follow on GitHub" />
+  <img src="https://img.shields.io/badge/Open%20GitHub%20Profile-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="Open GitHub Profile" />
 </a>
 
 <br />
