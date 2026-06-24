@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.ibb.co/HfL6Z2Hc/logo.png" alt="LUC4N3X" width="630" />
+<img src="https://i.ibb.co/HfL6Z2Hc/logo1.png" alt="LUC4N3X" width="630" />
 
 <br />
 <br />
