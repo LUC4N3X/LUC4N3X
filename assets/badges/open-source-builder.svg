@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="108" viewBox="0 0 570 108" role="img" aria-label="Open Source Builder">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111F"/>
+      <stop offset="1" stop-color="#0A1D21"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2DD4BF" stop-opacity=".9"/>
+      <stop offset=".55" stop-color="#14B8A6" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity=".75"/>
+    </linearGradient>
+    <linearGradient id="icon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="570" height="108" rx="24" fill="url(#background)"/>
+  <rect x="1.5" y="1.5" width="567" height="105" rx="22.5" fill="none" stroke="url(#border)" stroke-width="3"/>
+  <circle cx="58" cy="54" r="31" fill="#14B8A6" opacity=".08"/>
+  <circle cx="58" cy="54" r="22" fill="#14B8A6" opacity=".08"/>
+  <g fill="none" stroke="url(#icon)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <circle cx="43" cy="39" r="6"/>
+    <circle cx="73" cy="39" r="6"/>
+    <circle cx="58" cy="70" r="6"/>
+    <path d="M49 39h18M46 44l9 20M70 44l-9 20"/>
+  </g>
+  <text x="108" y="43" fill="#5EEAD4" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="3">DEVELOPMENT MINDSET</text>
+  <text x="108" y="74" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="27" font-weight="700">Open Source Builder</text>
+  <circle cx="526" cy="54" r="6" fill="#2DD4BF"/>
+  <circle cx="526" cy="54" r="13" fill="none" stroke="#2DD4BF" stroke-opacity=".25" stroke-width="3"/>
+</svg>

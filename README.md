@@ -1,42 +1,77 @@
 <div align="center">
 
-<img src="https://i.ibb.co/8DkDMMgY/file-0000000009c881f4baceb76d339239d9.png" alt="LUC4N3X" width="680" />
+<img
+  src="https://i.ibb.co/8DkDMMgY/file-0000000009c881f4baceb76d339239d9.png"
+  alt="LUC4N3X"
+  width="720"
+/>
 
 <br />
-<br />
+
+<h3>Software built with purpose, engineered for real use.</h3>
 
 <p>
-  <strong>Practical software. Clean backend logic. Polished user experience.</strong>
+  I design and build practical products that combine reliable backend architecture,
+  thoughtful automation and polished user experiences.
 </p>
 
 <p>
-  I build tools that turn rough ideas into reliable products: simple to use, solid under the surface,
-  and refined enough to feel complete from the first interaction.
+  Clean enough to understand. Solid enough to depend on. Refined enough to feel complete.
 </p>
 
 <br />
 
 <a href="https://github.com/LUC4N3X">
-  <img src="https://img.shields.io/badge/GitHub-Profile-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="GitHub Profile" />
+  <img src="./assets/badges/backend-architecture.svg" width="285" alt="Backend Architecture" />
 </a>
-<img src="https://img.shields.io/badge/Focus-Backend%20Systems-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Backend Systems" />
-<img src="https://img.shields.io/badge/Focus-Automation%20Flows-020617?style=for-the-badge&labelColor=020617&color=8b5cf6" alt="Automation Flows" />
-<img src="https://img.shields.io/badge/Style-Modern%20Developer%20Tools-020617?style=for-the-badge&labelColor=020617&color=f97316" alt="Modern Developer Tools" />
+<a href="https://github.com/LUC4N3X">
+  <img src="./assets/badges/automation-systems.svg" width="285" alt="Automation Systems" />
+</a>
+
+<br />
+
+<a href="https://github.com/LUC4N3X">
+  <img src="./assets/badges/product-engineering.svg" width="285" alt="Product Engineering" />
+</a>
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <img src="./assets/badges/open-source-builder.svg" width="285" alt="Open Source Builder" />
+</a>
 
 <br />
 <br />
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=3&section=header&color=gradient&customColorList=12,20,24,30" width="100%" alt="gradient divider" />
+<a href="https://github.com/LUC4N3X">
+  <img
+    src="https://img.shields.io/badge/Explore_My_Repositories-07111F?style=for-the-badge&logo=github&logoColor=FFFFFF"
+    alt="Explore my repositories"
+  />
+</a>
+
+<br />
+<br />
+
+<img
+  src="https://capsule-render.vercel.app/api?type=rect&height=2&section=header&color=gradient&customColorList=24,12,20,24"
+  width="100%"
+  alt=""
+/>
 
 </div>
 
-## About
+## About Me
 
-I'm Luca, a developer focused on building practical software with a clear purpose, a clean structure and a polished final experience.
+I'm **Luca**, a developer focused on turning ambitious ideas into software that feels clear, reliable and genuinely useful.
 
-I like projects that start from a rough idea and become something stable, readable and genuinely useful. For me, good software is not only about making things work: it has to be understandable, reliable, pleasant to use and easy to improve over time.
+I work across the complete product flow: understanding the real problem, designing the architecture, building the core logic, integrating external services, improving performance and refining the final experience.
 
-My work usually sits between backend logic, automation, integrations, dashboards and developer-focused utilities. I enjoy shaping the entire flow: from the first working version to the details that make a project feel professional.
+My projects often begin as experiments, prototypes or rough technical ideas. I enjoy taking them further: reorganizing the structure, removing fragile shortcuts and shaping them into products that are easier to use, debug and maintain.
+
+I care about what happens beneath the interface, but I care just as much about what the user sees and feels.
+
+A feature is not finished just because it works. It should behave predictably, communicate clearly and fit naturally into the rest of the product.
+
+> I do not add complexity to make software look advanced.  
+> I remove unnecessary complexity so the product can become genuinely strong.
 
 ---
 
@@ -45,29 +80,49 @@ My work usually sits between backend logic, automation, integrations, dashboards
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>Backend Systems</h3>
+      <h3>Backend Architecture</h3>
       <p>
-        APIs, routing logic, validation layers, background jobs and structured services designed to stay reliable under real usage.
+        Structured services, APIs, routing systems, validation layers, caching strategies
+        and resilient data flows designed for real-world conditions.
+      </p>
+      <p>
+        I focus on predictable behavior, explicit failure handling and architectures that
+        remain understandable as the project grows.
       </p>
     </td>
     <td width="50%" valign="top">
-      <h3>Automation Flows</h3>
+      <h3>Automation Systems</h3>
       <p>
-        Workflows that remove repetitive steps, connect services together and give users more control with less friction.
+        Workflows that connect services, reduce repetitive operations and turn complicated
+        processes into clear, repeatable actions.
+      </p>
+      <p>
+        From background jobs to deployment pipelines, every automation should save time
+        without hiding important behavior.
       </p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3>Modern Interfaces</h3>
+      <h3>Product Engineering</h3>
       <p>
-        Clean dashboards, responsive layouts, readable sections and polished cards with a premium developer-tool feeling.
+        End-to-end implementation that brings architecture, application logic and user
+        experience together as one coherent product.
+      </p>
+      <p>
+        I build beyond the first working version, refining performance, usability and
+        technical quality until the result feels deliberate.
       </p>
     </td>
     <td width="50%" valign="top">
       <h3>Developer Utilities</h3>
       <p>
-        Diagnostics, configuration helpers, monitoring views and small tools that make systems easier to understand and maintain.
+        Diagnostics, monitoring views, configuration tools and internal utilities that make
+        complex systems easier to inspect and maintain.
+      </p>
+      <p>
+        Good tooling should shorten debugging sessions, expose useful information and help
+        developers make better decisions faster.
       </p>
     </td>
   </tr>
@@ -75,118 +130,234 @@ My work usually sits between backend logic, automation, integrations, dashboards
 
 ---
 
-## Engineering Principles
+## Selected Projects
 
-```txt
-Clear purpose        -> every feature should solve a real problem
-Clean structure      -> readable logic, maintainable flows and fewer hidden surprises
-Fast iteration       -> build, test, improve, repeat
-User-first design    -> simple usage, clear feedback and polished presentation
-Reliable behavior    -> stable defaults, useful logs and practical fallbacks
-```
-
-I prefer software that feels focused instead of overloaded. A project should explain itself, behave consistently and stay pleasant to use even when the logic behind it is complex.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a>
+      </h3>
+      <p>
+        A native Android music experience built around fast playback, intelligent discovery,
+        reliable downloads and a carefully refined interface.
+      </p>
+      <p>
+        The project combines Kotlin, Jetpack Compose, Media3, local persistence, metadata
+        enrichment, synchronized lyrics and performance-focused background processing.
+      </p>
+      <p>
+        <strong>Focus:</strong> Android architecture, media playback, caching, performance
+        and product-level interface refinement.
+      </p>
+      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
+        <img
+          src="https://img.shields.io/badge/View_Levyra-0B1727?style=flat-square&logo=android&logoColor=3DDC84"
+          alt="View Levyra"
+        />
+      </a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>
+        <a href="https://github.com/LUC4N3X/Leviathan-Addon">Leviathan Addon</a>
+      </h3>
+      <p>
+        A modular streaming addon focused on provider orchestration, resilient extraction
+        flows and practical diagnostics.
+      </p>
+      <p>
+        Its architecture is designed to manage unreliable external sources through isolated
+        providers, structured fallbacks, caching and clear runtime visibility.
+      </p>
+      <p>
+        <strong>Focus:</strong> Node.js services, provider integrations, extraction logic,
+        observability and defensive error handling.
+      </p>
+      <a href="https://github.com/LUC4N3X/Leviathan-Addon">
+        <img
+          src="https://img.shields.io/badge/View_Leviathan-0B1727?style=flat-square&logo=nodedotjs&logoColor=5FA04E"
+          alt="View Leviathan Addon"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## Tech Stack
+## Engineering Approach
+
+```text
+Understand the real problem
+        ↓
+Design the smallest solid architecture
+        ↓
+Build an observable working version
+        ↓
+Test failure paths and real usage
+        ↓
+Remove friction and unnecessary complexity
+        ↓
+Improve performance and resource usage
+        ↓
+Polish the product until it feels complete
+```
+
+### Principles I Work By
+
+| Principle | What it means in practice |
+|---|---|
+| **Purpose before features** | Every addition should solve a clear problem or improve a measurable part of the experience. |
+| **Readable architecture** | Important flows should be understandable without having to reverse-engineer the entire project. |
+| **Explicit failure handling** | Errors should be contained, logged and handled through practical fallbacks whenever possible. |
+| **Performance as a feature** | Startup time, memory usage, network calls and background work are part of the product experience. |
+| **Stable iteration** | Improvements should strengthen the existing system instead of creating unnecessary rewrites. |
+| **Product-level polish** | Naming, feedback, transitions, empty states and visual hierarchy matter as much as core logic. |
+
+---
+
+## Technical Focus
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Node.js-020617?style=for-the-badge&logo=node.js&logoColor=5FA04E" alt="Node.js" />
-<img src="https://img.shields.io/badge/JavaScript-020617?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
-<img src="https://img.shields.io/badge/Python-020617?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python" />
-<img src="https://img.shields.io/badge/FastAPI-020617?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" />
-<img src="https://img.shields.io/badge/Docker-020617?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" />
-<img src="https://img.shields.io/badge/Redis-020617?style=for-the-badge&logo=redis&logoColor=FF4438" alt="Redis" />
-<img src="https://img.shields.io/badge/PostgreSQL-020617?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/GitHub%20Actions-020617?style=for-the-badge&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
-<img src="https://img.shields.io/badge/Linux-020617?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux" />
-<img src="https://img.shields.io/badge/Cloudflare-020617?style=for-the-badge&logo=cloudflare&logoColor=F38020" alt="Cloudflare" />
+<img src="https://img.shields.io/badge/Kotlin-07111F?style=for-the-badge&logo=kotlin&logoColor=7F52FF" alt="Kotlin" />
+<img src="https://img.shields.io/badge/Jetpack_Compose-07111F?style=for-the-badge&logo=jetpackcompose&logoColor=4285F4" alt="Jetpack Compose" />
+<img src="https://img.shields.io/badge/Android-07111F?style=for-the-badge&logo=android&logoColor=3DDC84" alt="Android" />
+<img src="https://img.shields.io/badge/Node.js-07111F?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" />
+<img src="https://img.shields.io/badge/JavaScript-07111F?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="JavaScript" />
+
+<br />
+
+<img src="https://img.shields.io/badge/Python-07111F?style=for-the-badge&logo=python&logoColor=3776AB" alt="Python" />
+<img src="https://img.shields.io/badge/FastAPI-07111F?style=for-the-badge&logo=fastapi&logoColor=009688" alt="FastAPI" />
+<img src="https://img.shields.io/badge/PostgreSQL-07111F?style=for-the-badge&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Redis-07111F?style=for-the-badge&logo=redis&logoColor=FF4438" alt="Redis" />
+<img src="https://img.shields.io/badge/Docker-07111F?style=for-the-badge&logo=docker&logoColor=2496ED" alt="Docker" />
+
+<br />
+
+<img src="https://img.shields.io/badge/GitHub_Actions-07111F?style=for-the-badge&logo=githubactions&logoColor=2088FF" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/Linux-07111F?style=for-the-badge&logo=linux&logoColor=FCC624" alt="Linux" />
+<img src="https://img.shields.io/badge/Cloudflare-07111F?style=for-the-badge&logo=cloudflare&logoColor=F38020" alt="Cloudflare" />
+<img src="https://img.shields.io/badge/REST_APIs-07111F?style=for-the-badge&logo=fastapi&logoColor=00D4AA" alt="REST APIs" />
+<img src="https://img.shields.io/badge/Automation-07111F?style=for-the-badge&logo=task&logoColor=38BDF8" alt="Automation" />
 
 </div>
 
 ---
 
-## How I Work
+## How I Think About Quality
 
-<table>
-  <tr>
-    <td width="33%" valign="top">
-      <h3>01 · Build</h3>
-      <p>I start from the real problem and move quickly toward a working version.</p>
-    </td>
-    <td width="33%" valign="top">
-      <h3>02 · Refine</h3>
-      <p>I simplify the structure, improve the flow and remove everything that does not help the project.</p>
-    </td>
-    <td width="33%" valign="top">
-      <h3>03 · Polish</h3>
-      <p>I care about the final feeling: clean UI, useful logs, stable behavior and a strong presentation.</p>
-    </td>
-  </tr>
-</table>
+Reliable software is not created by assuming that every dependency, request or user action will behave perfectly.
+
+I design around the opposite assumption.
+
+External providers can fail. Networks can become slow. Data can be incomplete. Background jobs can overlap. Interfaces can receive unexpected input. A strong system acknowledges these conditions and responds deliberately.
+
+That means building with:
+
+- controlled retries and sensible timeouts;
+- clear validation boundaries;
+- cache strategies that improve speed without hiding stale data;
+- graceful fallback paths;
+- structured diagnostics and useful logs;
+- resource-aware background processing;
+- interfaces that communicate loading, success and failure clearly.
+
+The goal is not theoretical perfection. The goal is software that remains useful when reality becomes messy.
 
 ---
 
 ## Current Direction
 
-I'm focused on building tools that combine strong backend logic with a modern, polished interface.
-
-The kind of software I want to create is simple to use, technically solid and visually recognizable: sharp layouts, clear flows, soft glow, ocean-inspired details and a premium developer-tool identity.
-
----
-
-## Development Snapshot
+I am currently focused on projects that combine:
 
 <table>
   <tr>
-    <td width="25%" align="center">
-      <strong>Backend</strong><br />
-      structured logic, APIs and stable flows
+    <td width="25%" align="center" valign="top">
+      <h3>Strong Core</h3>
+      <p>Reliable architecture and maintainable application logic.</p>
     </td>
-    <td width="25%" align="center">
-      <strong>Automation</strong><br />
-      less repetition, more control
+    <td width="25%" align="center" valign="top">
+      <h3>Smart Automation</h3>
+      <p>Less repetitive work and more visible, controlled processes.</p>
     </td>
-    <td width="25%" align="center">
-      <strong>Interface</strong><br />
-      clean, modern and readable UI
+    <td width="25%" align="center" valign="top">
+      <h3>Fast Experience</h3>
+      <p>Responsive interfaces and efficient background operations.</p>
     </td>
-    <td width="25%" align="center">
-      <strong>Quality</strong><br />
-      logs, fallbacks and practical reliability
+    <td width="25%" align="center" valign="top">
+      <h3>Clear Identity</h3>
+      <p>Products that feel recognizable, coherent and intentional.</p>
     </td>
   </tr>
 </table>
 
+My visual direction takes inspiration from modern developer platforms: deep surfaces, precise spacing, subtle light, strong typography and ocean-inspired accents.
+
+The result should feel technical without becoming cold, and polished without becoming decorative.
+
+---
+
+## Open Source
+
+I use open source as a place to build in public, test ideas against real constraints and continuously improve the quality of my work.
+
+My repositories are not static showcases. They evolve through implementation, testing, review, refactoring and repeated refinement.
+
 <div align="center">
 
-<img src="https://img.shields.io/badge/Building-Clean%20Tools-020617?style=for-the-badge&labelColor=020617&color=7c3aed" alt="Building Clean Tools" />
-<img src="https://img.shields.io/badge/Design-Ocean%20Inspired-020617?style=for-the-badge&labelColor=020617&color=0ea5e9" alt="Ocean Inspired Design" />
-<img src="https://img.shields.io/badge/Mindset-Improve%20Every%20Version-020617?style=for-the-badge&labelColor=020617&color=f97316" alt="Improve Every Version" />
+<table>
+  <tr>
+    <td align="center">
+      <strong>Build deliberately</strong><br />
+      Start from a real problem
+    </td>
+    <td align="center">
+      <strong>Test honestly</strong><br />
+      Include difficult conditions
+    </td>
+    <td align="center">
+      <strong>Improve continuously</strong><br />
+      Treat every version as a foundation
+    </td>
+  </tr>
+</table>
 
 </div>
 
 ---
 
-## Contact
-
 <div align="center">
 
+<h2>Build useful things. Make them solid. Keep improving them.</h2>
+
 <p>
-  I build, test, improve and keep pushing projects until they feel solid.
-  <br />
-  If something can be cleaner, faster or more useful, I want to make it better.
+  I am always working toward software that is easier to understand,
+  faster to use and stronger under real conditions.
 </p>
 
-<a href="https://github.com/LUC4N3X">
-  <img src="https://img.shields.io/badge/Open%20GitHub%20Profile-020617?style=for-the-badge&logo=github&logoColor=white&labelColor=020617&color=7c3aed" alt="Open GitHub Profile" />
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <img
+    src="https://img.shields.io/badge/Explore_My_Work-07111F?style=for-the-badge&logo=github&logoColor=FFFFFF"
+    alt="Explore my work"
+  />
 </a>
 
 <br />
 <br />
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=110&section=footer&color=gradient&customColorList=12,20,24,30" width="100%" alt="footer wave" />
+<sub>
+  Designed and built by
+  <a href="https://github.com/LUC4N3X"><strong>LUC4N3X</strong></a>
+</sub>
+
+<br />
+
+<img
+  src="https://capsule-render.vercel.app/api?type=waving&height=115&section=footer&color=gradient&customColorList=24,12,20,24"
+  width="100%"
+  alt=""
+/>
 
 </div>
