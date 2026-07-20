@@ -135,80 +135,24 @@ A feature is not finished just because it works. It should behave predictably, c
 <div align="center">
 
 <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="./assets/levyra/levyra-showcase.svg" width="100%" alt="Levyra — Native Android Music Experience" />
+  <img src="./assets/levyra/levyra-icon.png" width="48" alt="Levyra icon" />
 </a>
 
 <br />
+
+<strong><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></strong>
 <br />
+<sub>Native Android music app focused on fast playback, reliable downloads and a polished experience.</sub>
 
-<h3>Levyra — music without friction.</h3>
-
-<p>
-  My flagship open-source project: a native Android music application built to deliver
-  fast playback, intelligent discovery, dependable offline listening and a refined interface.
-</p>
-
-<p>
-  Levyra is where backend architecture, media engineering and product design meet.
-  Every part of the app is shaped around one goal: making a technically complex system
-  feel immediate, stable and effortless to use.
-</p>
-
+<br />
 <br />
 
 <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://img.shields.io/badge/Explore_Source-07111F?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="Explore Levyra source" />
+  <img src="https://img.shields.io/badge/Open_Project-07111F?style=flat-square&logo=github&logoColor=FFFFFF" alt="Open Levyra project" />
 </a>
 <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
-  <img src="https://img.shields.io/badge/Latest_Release-07111F?style=for-the-badge&logo=android&logoColor=3DDC84" alt="Latest Levyra release" />
+  <img src="https://img.shields.io/badge/Latest_Release-07111F?style=flat-square&logo=android&logoColor=3DDC84" alt="Latest Levyra release" />
 </a>
-
-</div>
-
-<br />
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Playback Engine</h3>
-      <p>
-        Native Media3 playback, persistent queues, intelligent prefetching, resilient stream
-        resolution and background behavior designed for uninterrupted listening.
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Download Engine</h3>
-      <p>
-        Fast and resumable offline downloads with quality controls, duplicate detection,
-        metadata handling, verification and practical recovery from interrupted operations.
-      </p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Lyrics & Discovery</h3>
-      <p>
-        Synchronized lyrics, provider scoring, metadata enrichment, artwork resolution and
-        personalized discovery flows built to remain relevant and visually consistent.
-      </p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Product Experience</h3>
-      <p>
-        A Kotlin and Jetpack Compose interface focused on fluid navigation, responsive loading,
-        polished motion and a recognizable visual identity across the entire application.
-      </p>
-    </td>
-  </tr>
-</table>
-
-<div align="center">
-
-<img src="https://img.shields.io/badge/Kotlin-07111F?style=flat-square&logo=kotlin&logoColor=7F52FF" alt="Kotlin" />
-<img src="https://img.shields.io/badge/Jetpack_Compose-07111F?style=flat-square&logo=jetpackcompose&logoColor=4285F4" alt="Jetpack Compose" />
-<img src="https://img.shields.io/badge/Media3-07111F?style=flat-square&logo=android&logoColor=3DDC84" alt="Media3" />
-<img src="https://img.shields.io/badge/Offline_First-07111F?style=flat-square&logo=icloud&logoColor=38BDF8" alt="Offline First" />
-<img src="https://img.shields.io/badge/Open_Source-07111F?style=flat-square&logo=opensourceinitiative&logoColor=FFFFFF" alt="Open Source" />
 
 </div>
 
