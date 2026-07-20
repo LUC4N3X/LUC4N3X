@@ -130,58 +130,87 @@ A feature is not finished just because it works. It should behave predictably, c
 
 ---
 
-## Selected Projects
+## Flagship Project
+
+<div align="center">
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="./assets/levyra/levyra-showcase.svg" width="100%" alt="Levyra — Native Android Music Experience" />
+</a>
+
+<br />
+<br />
+
+<h3>Levyra — music without friction.</h3>
+
+<p>
+  My flagship open-source project: a native Android music application built to deliver
+  fast playback, intelligent discovery, dependable offline listening and a refined interface.
+</p>
+
+<p>
+  Levyra is where backend architecture, media engineering and product design meet.
+  Every part of the app is shaped around one goal: making a technically complex system
+  feel immediate, stable and effortless to use.
+</p>
+
+<br />
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="https://img.shields.io/badge/Explore_Source-07111F?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="Explore Levyra source" />
+</a>
+<a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
+  <img src="https://img.shields.io/badge/Latest_Release-07111F?style=for-the-badge&logo=android&logoColor=3DDC84" alt="Latest Levyra release" />
+</a>
+
+</div>
+
+<br />
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3>
-        <a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a>
-      </h3>
+      <h3>Playback Engine</h3>
       <p>
-        A native Android music experience built around fast playback, intelligent discovery,
-        reliable downloads and a carefully refined interface.
+        Native Media3 playback, persistent queues, intelligent prefetching, resilient stream
+        resolution and background behavior designed for uninterrupted listening.
       </p>
-      <p>
-        The project combines Kotlin, Jetpack Compose, Media3, local persistence, metadata
-        enrichment, synchronized lyrics and performance-focused background processing.
-      </p>
-      <p>
-        <strong>Focus:</strong> Android architecture, media playback, caching, performance
-        and product-level interface refinement.
-      </p>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img
-          src="https://img.shields.io/badge/View_Levyra-0B1727?style=flat-square&logo=android&logoColor=3DDC84"
-          alt="View Levyra"
-        />
-      </a>
     </td>
     <td width="50%" valign="top">
-      <h3>
-        <a href="https://github.com/LUC4N3X/Leviathan-Addon">Leviathan Addon</a>
-      </h3>
+      <h3>Download Engine</h3>
       <p>
-        A modular streaming addon focused on provider orchestration, resilient extraction
-        flows and practical diagnostics.
+        Fast and resumable offline downloads with quality controls, duplicate detection,
+        metadata handling, verification and practical recovery from interrupted operations.
       </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>Lyrics & Discovery</h3>
       <p>
-        Its architecture is designed to manage unreliable external sources through isolated
-        providers, structured fallbacks, caching and clear runtime visibility.
+        Synchronized lyrics, provider scoring, metadata enrichment, artwork resolution and
+        personalized discovery flows built to remain relevant and visually consistent.
       </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Product Experience</h3>
       <p>
-        <strong>Focus:</strong> Node.js services, provider integrations, extraction logic,
-        observability and defensive error handling.
+        A Kotlin and Jetpack Compose interface focused on fluid navigation, responsive loading,
+        polished motion and a recognizable visual identity across the entire application.
       </p>
-      <a href="https://github.com/LUC4N3X/Leviathan-Addon">
-        <img
-          src="https://img.shields.io/badge/View_Leviathan-0B1727?style=flat-square&logo=nodedotjs&logoColor=5FA04E"
-          alt="View Leviathan Addon"
-        />
-      </a>
     </td>
   </tr>
 </table>
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Kotlin-07111F?style=flat-square&logo=kotlin&logoColor=7F52FF" alt="Kotlin" />
+<img src="https://img.shields.io/badge/Jetpack_Compose-07111F?style=flat-square&logo=jetpackcompose&logoColor=4285F4" alt="Jetpack Compose" />
+<img src="https://img.shields.io/badge/Media3-07111F?style=flat-square&logo=android&logoColor=3DDC84" alt="Media3" />
+<img src="https://img.shields.io/badge/Offline_First-07111F?style=flat-square&logo=icloud&logoColor=38BDF8" alt="Offline First" />
+<img src="https://img.shields.io/badge/Open_Source-07111F?style=flat-square&logo=opensourceinitiative&logoColor=FFFFFF" alt="Open Source" />
+
+</div>
 
 ---
 
