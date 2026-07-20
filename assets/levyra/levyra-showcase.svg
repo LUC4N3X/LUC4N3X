@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="Levyra Native Android Music Experience">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050711"/>
+      <stop offset="0.52" stop-color="#090D1B"/>
+      <stop offset="1" stop-color="#11102A"/>
+    </linearGradient>
+    <linearGradient id="border" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#3B82F6" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#A855F7" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67E8F9"/>
+      <stop offset="0.52" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#C084FC"/>
+    </linearGradient>
+    <radialGradient id="oceanGlow" cx="0" cy="0" r="1" gradientTransform="translate(1030 80) rotate(135) scale(390 300)">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.24"/>
+      <stop offset="0.45" stop-color="#2563EB" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iconGlow" cx="0" cy="0" r="1" gradientTransform="translate(154 181) scale(140)">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.24"/>
+      <stop offset="0.48" stop-color="#7C3AED" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#020617" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#94A3B8" stroke-opacity="0.035"/>
+    </pattern>
+    <filter id="softGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="cardClip">
+      <rect width="1200" height="420" rx="34"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <rect width="1200" height="420" fill="url(#background)"/>
+    <rect width="1200" height="420" fill="url(#oceanGlow)"/>
+    <rect width="1200" height="420" fill="url(#grid)"/>
+    <circle cx="154" cy="181" r="140" fill="url(#iconGlow)"/>
+    <path d="M0 357C164 305 302 395 467 344C650 288 775 308 936 351C1050 382 1132 357 1200 322V420H0Z" fill="#38BDF8" opacity="0.025"/>
+  </g>
+
+  <rect x="1.5" y="1.5" width="1197" height="417" rx="32.5" fill="none" stroke="url(#border)" stroke-width="3"/>
+
+  <g transform="translate(74 58)">
+    <rect width="170" height="170" rx="42" fill="#050711" stroke="#7DD3FC" stroke-opacity="0.18"/>
+    <image xlink:href="data:image/png;base64,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" x="10" y="10" width="150" height="150" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g transform="translate(286 60)">
+    <rect width="218" height="34" rx="17" fill="#0B1728" stroke="#38BDF8" stroke-opacity="0.32"/>
+    <circle cx="20" cy="17" r="5" fill="#67E8F9" filter="url(#softGlow)"/>
+    <text x="36" y="22" fill="#BAE6FD" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="750" letter-spacing="2.2">FLAGSHIP PROJECT</text>
+
+    <text x="0" y="111" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="72" font-weight="850" letter-spacing="-2.5">LEVYRA</text>
+    <rect x="1" y="126" width="328" height="4" rx="2" fill="url(#accent)"/>
+
+    <text x="0" y="174" fill="#D9E5F2" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="25" font-weight="650">Native Android music, built without shortcuts.</text>
+    <text x="0" y="211" fill="#8FA3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="500">Fast playback · resilient downloads · synchronized lyrics</text>
+    <text x="0" y="239" fill="#8FA3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="500">smart discovery · offline-first control · polished Compose UI</text>
+  </g>
+
+  <g transform="translate(74 276)" font-family="Inter,Segoe UI,Arial,sans-serif">
+    <g>
+      <rect width="164" height="52" rx="18" fill="#0A1422" stroke="#22D3EE" stroke-opacity="0.28"/>
+      <text x="18" y="22" fill="#67E8F9" font-size="12" font-weight="750" letter-spacing="1.6">PLAYBACK</text>
+      <text x="18" y="40" fill="#E2E8F0" font-size="15" font-weight="650">Media3 engine</text>
+    </g>
+    <g transform="translate(176)">
+      <rect width="164" height="52" rx="18" fill="#0A1422" stroke="#60A5FA" stroke-opacity="0.28"/>
+      <text x="18" y="22" fill="#93C5FD" font-size="12" font-weight="750" letter-spacing="1.6">DOWNLOADS</text>
+      <text x="18" y="40" fill="#E2E8F0" font-size="15" font-weight="650">Offline-ready</text>
+    </g>
+    <g transform="translate(352)">
+      <rect width="164" height="52" rx="18" fill="#0A1422" stroke="#A78BFA" stroke-opacity="0.3"/>
+      <text x="18" y="22" fill="#C4B5FD" font-size="12" font-weight="750" letter-spacing="1.6">LYRICS</text>
+      <text x="18" y="40" fill="#E2E8F0" font-size="15" font-weight="650">Time-synced</text>
+    </g>
+    <g transform="translate(528)">
+      <rect width="164" height="52" rx="18" fill="#0A1422" stroke="#C084FC" stroke-opacity="0.3"/>
+      <text x="18" y="22" fill="#D8B4FE" font-size="12" font-weight="750" letter-spacing="1.6">INTERFACE</text>
+      <text x="18" y="40" fill="#E2E8F0" font-size="15" font-weight="650">Compose-native</text>
+    </g>
+  </g>
+
+  <g transform="translate(846 71)">
+    <rect width="286" height="278" rx="28" fill="#070C17" fill-opacity="0.82" stroke="#94A3B8" stroke-opacity="0.16"/>
+    <text x="28" y="42" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="12" font-weight="750" letter-spacing="2.4">ENGINEERED NATIVE</text>
+
+    <g transform="translate(28 66)" font-family="Inter,Segoe UI,Arial,sans-serif">
+      <circle cx="8" cy="8" r="8" fill="#7C3AED" opacity="0.24"/>
+      <circle cx="8" cy="8" r="3.5" fill="#C4B5FD"/>
+      <text x="28" y="14" fill="#F1F5F9" font-size="18" font-weight="700">Kotlin</text>
+      <text x="28" y="37" fill="#7F93A8" font-size="14">Structured application logic</text>
+
+      <circle cx="8" cy="78" r="8" fill="#2563EB" opacity="0.24"/>
+      <circle cx="8" cy="78" r="3.5" fill="#93C5FD"/>
+      <text x="28" y="84" fill="#F1F5F9" font-size="18" font-weight="700">Jetpack Compose</text>
+      <text x="28" y="107" fill="#7F93A8" font-size="14">Responsive native interface</text>
+
+      <circle cx="8" cy="148" r="8" fill="#0891B2" opacity="0.24"/>
+      <circle cx="8" cy="148" r="3.5" fill="#67E8F9"/>
+      <text x="28" y="154" fill="#F1F5F9" font-size="18" font-weight="700">AndroidX Media3</text>
+      <text x="28" y="177" fill="#7F93A8" font-size="14">Playback and media sessions</text>
+    </g>
+
+    <rect x="28" y="244" width="230" height="1" fill="url(#accent)" opacity="0.42"/>
+    <text x="28" y="267" fill="#A8B8C8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="13" font-weight="650">BUILT · TESTED · REFINED</text>
+  </g>
+
+  <circle cx="1153" cy="31" r="4" fill="#67E8F9"/>
+  <circle cx="1135" cy="31" r="4" fill="#60A5FA" opacity="0.75"/>
+  <circle cx="1117" cy="31" r="4" fill="#C084FC" opacity="0.75"/>
+</svg>
