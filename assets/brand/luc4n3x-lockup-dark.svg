@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280" role="img" aria-labelledby="title desc">
+  <title id="title">LUC4N3X</title>
+  <desc id="desc">LUC4N3X developer brand mark for dark interfaces.</desc>
+
+  <!-- Dark-mode lockup: same geometry, tuned only for contrast. -->
+  <g transform="translate(24 10)" fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- L -->
+    <path d="M52 42V218H137" stroke="#F0F6FC" stroke-width="28"/>
+
+    <!-- X backbone -->
+    <path d="M112 42L225 218" stroke="#F0F6FC" stroke-width="25"/>
+
+    <!-- 4 + crossing stroke, fused into the same monogram -->
+    <path d="M226 42L132 164H231M209 113V218" stroke="#58A6FF" stroke-width="23"/>
+  </g>
+
+  <text x="330" y="175"
+        font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="112" font-weight="800" letter-spacing="4" fill="#F0F6FC">
+    LUC<tspan fill="#58A6FF">4</tspan>N3<tspan fill="#58A6FF">X</tspan>
+  </text>
+</svg>
