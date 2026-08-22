@@ -69,7 +69,7 @@ Right now, most of my attention goes into **Levyra** and the tools around the wa
     <td>
       <p>
         <a href="https://github.com/LUC4N3X/antigravity-thalarch">
-          <img src="./assets/thalarch/thalarch-mark.svg" width="72" align="left" alt="Antigravity Thalarch" />
+          <img src="./assets/thalarch/thalarch-icon.png" width="72" align="left" alt="Antigravity Thalarch" />
         </a>
         <strong><a href="https://github.com/LUC4N3X/antigravity-thalarch">Antigravity Thalarch</a></strong><br />
         <sub>AI engineering · Grounding · Review · Verification</sub>
