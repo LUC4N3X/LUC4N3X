@@ -30,22 +30,27 @@ Right now, most of my attention goes into **Levyra** and the tools around the wa
 
 ## Selected work
 
-<table>
+<sub>A couple of projects I keep coming back to.</sub>
+
+<br />
+<br />
+
+<table width="100%">
   <tr>
-    <td width="64" valign="top">
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="./assets/levyra/levyra-icon.png" width="52" alt="Levyra" />
-      </a>
-    </td>
-    <td valign="top">
-      <h3><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h3>
-      <sub>Android · music · media systems</sub>
+    <td>
       <p>
-        The project I spend the most time on: a modern Android music app built with Kotlin, Jetpack Compose and Media3.
-        Playback, downloads, discovery, lyrics, video mode and the player itself all live in the same product, so there is always another edge case worth chasing.
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound">
+          <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="72" align="left" alt="Levyra" />
+        </a>
+        <strong><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></strong><br />
+        <sub>Android · Music · Media systems</sub>
+      </p>
+      <br clear="left" />
+      <p>
+        A modern Android music app I keep pushing on playback, downloads, lyrics, video mode and the small details that make the whole thing feel right.
       </p>
       <p>
-        <code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3 / ExoPlayer</code> · <code>Android</code>
+        <code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Android</code>
       </p>
       <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
         <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&label=stars" alt="Levyra stars" />
@@ -59,23 +64,29 @@ Right now, most of my attention goes into **Levyra** and the tools around the wa
 
 <br />
 
-<table>
+<table width="100%">
   <tr>
-    <td width="64" valign="top">
-      <a href="https://github.com/LUC4N3X/antigravity-thalarch">
-        <img src="./assets/brand/luc4n3x-mark.svg" width="52" alt="Thalarch" />
+    <td>
+      <p>
+        <a href="https://github.com/LUC4N3X/antigravity-thalarch">
+          <img src="./assets/thalarch/thalarch-mark.svg" width="72" align="left" alt="Antigravity Thalarch" />
+        </a>
+        <strong><a href="https://github.com/LUC4N3X/antigravity-thalarch">Antigravity Thalarch</a></strong><br />
+        <sub>AI engineering · Grounding · Review · Verification</sub>
+      </p>
+      <br clear="left" />
+      <p>
+        An engineering layer for AI coding agents that pushes them to inspect first, ground facts, review independently and prove what matters before calling the work done.
+      </p>
+      <p>
+        <code>Python</code> · <code>AI agents</code> · <code>code review</code> · <code>validation</code> · <code>developer tools</code>
+      </p>
+      <a href="https://github.com/LUC4N3X/antigravity-thalarch/stargazers">
+        <img src="https://img.shields.io/github/stars/LUC4N3X/antigravity-thalarch?style=flat-square&label=stars" alt="Thalarch stars" />
       </a>
-    </td>
-    <td valign="top">
-      <h3><a href="https://github.com/LUC4N3X/antigravity-thalarch">Antigravity Thalarch</a></h3>
-      <sub>Developer tooling · AI workflows · reliability</sub>
-      <p>
-        A multi-agent engineering and reliability toolkit for AI coding workflows. I built it around a simple problem:
-        generating more code is not very useful if planning, review, debugging and verification are weak.
-      </p>
-      <p>
-        <code>Python</code> · <code>AI agents</code> · <code>code review</code> · <code>debugging</code> · <code>developer tools</code>
-      </p>
+      <a href="https://github.com/LUC4N3X/antigravity-thalarch/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-4F6B5F?style=flat-square" alt="MIT license" />
+      </a>
     </td>
   </tr>
 </table>
