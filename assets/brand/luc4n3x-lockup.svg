@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
+  <title id="title">LUC4N3X</title>
+  <desc id="desc">LUC4N3X developer wordmark with geometric monogram.</desc>
+  <defs>
+    <linearGradient id="accent" x1="46" y1="46" x2="254" y2="254" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#79C0FF"/>
+      <stop offset="1" stop-color="#2F81F7"/>
+    </linearGradient>
+    <style>
+      .word { fill: #0D1117; }
+      .muted { fill: #57606A; }
+      @media (prefers-color-scheme: dark) {
+        .word { fill: #F0F6FC; }
+        .muted { fill: #8B949E; }
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(16 16)">
+    <rect width="268" height="268" rx="68" fill="#0D1117"/>
+    <rect x="1" y="1" width="266" height="266" rx="67" fill="none" stroke="#30363D" stroke-width="2"/>
+    <path d="M72 70v126h55" fill="none" stroke="#F0F6FC" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m177 70-57 88h87m-23-51v89" fill="none" stroke="url(#accent)" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m201 190 23 26m0-26-23 26" fill="none" stroke="#8B949E" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <text x="338" y="145" class="word" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="112" font-weight="800" letter-spacing="5">LUC4N3X</text>
+  <text x="344" y="205" class="muted" font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="26" font-weight="600" letter-spacing="3">SOFTWARE ENGINEERING · ANDROID · DEVELOPER TOOLS</text>
+</svg>
