@@ -1,21 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
   <title id="title">LUC4N3X mark</title>
-  <desc id="desc">Geometric L4X monogram for the LUC4N3X developer profile.</desc>
-  <defs>
-    <linearGradient id="accent" x1="96" y1="96" x2="416" y2="416" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#79C0FF"/>
-      <stop offset="1" stop-color="#2F81F7"/>
-    </linearGradient>
-  </defs>
-  <rect x="28" y="28" width="456" height="456" rx="112" fill="#0D1117"/>
-  <rect x="29" y="29" width="454" height="454" rx="111" fill="none" stroke="#30363D" stroke-width="2"/>
+  <desc id="desc">Minimal geometric L4X monogram for the LUC4N3X developer brand.</desc>
 
-  <!-- L -->
-  <path d="M136 136v208h92" fill="none" stroke="#F0F6FC" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="28" y="28" width="456" height="456" rx="104" fill="#0D1117"/>
+  <rect x="29" y="29" width="454" height="454" rx="103" fill="none" stroke="#30363D" stroke-width="2"/>
 
-  <!-- 4 -->
-  <path d="M315 136 220 282h145M326 195v149" fill="none" stroke="url(#accent)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(48 40) scale(1.72)" fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <!-- L -->
+    <path d="M52 42V218H137" stroke="#F0F6FC" stroke-width="22"/>
 
-  <!-- X cut: small signature detail, not a separate decorative icon -->
-  <path d="m346 335 36 41m0-41-36 41" fill="none" stroke="#8B949E" stroke-width="12" stroke-linecap="round"/>
+    <!-- X backbone -->
+    <path d="M112 42L225 218" stroke="#F0F6FC" stroke-width="20"/>
+
+    <!-- 4 + crossing stroke -->
+    <path d="M226 42L132 164H231M209 113V218" stroke="#58A6FF" stroke-width="19"/>
+  </g>
 </svg>
