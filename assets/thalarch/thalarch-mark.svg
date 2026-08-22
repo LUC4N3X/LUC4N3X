@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Antigravity Thalarch</title>
+  <desc id="desc">Minimal TA monogram with a verification mark, inspired by Thalarch's grounding and proof workflow.</desc>
+
+  <rect x="32" y="32" width="448" height="448" rx="104" fill="#0E1311"/>
+  <rect x="33" y="33" width="446" height="446" rx="103" fill="none" stroke="#2F6B66" stroke-width="2"/>
+
+  <!-- T: routing / control layer -->
+  <path d="M146 150H366" fill="none" stroke="#4F6B5F" stroke-width="30" stroke-linecap="round"/>
+  <path d="M256 150V247" fill="none" stroke="#DDE5E0" stroke-width="28" stroke-linecap="round"/>
+
+  <!-- A: structured engineering path -->
+  <path d="M143 368 256 222 369 368" fill="none" stroke="#DDE5E0" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M201 319H311" fill="none" stroke="#4F6B5F" stroke-width="22" stroke-linecap="round"/>
+
+  <!-- proof / verification signature -->
+  <path d="m218 351 27 27 55-68" fill="none" stroke="#8B6F47" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
