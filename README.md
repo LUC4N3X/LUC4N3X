@@ -3,10 +3,9 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup.svg" width="700" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup.svg" width="660" alt="LUC4N3X" />
 </picture>
 
-<br />
 <br />
 
 **I build software I want to use, then keep fixing the annoying parts.**
