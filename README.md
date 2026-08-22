@@ -1,17 +1,19 @@
 <div align="center">
 
-<img src="./assets/brand/luc4n3x-lockup.svg" width="760" alt="LUC4N3X — Software engineering, Android and developer tools" />
+<img src="./assets/brand/luc4n3x-lockup.svg" width="740" alt="LUC4N3X — Software engineering, Android and developer tools" />
 
 <br />
 <br />
 
-**I build software I actually want to use — then keep fixing it until it feels solid.**
+**I build software I want to use, then keep fixing the annoying parts.**
 
 `Android` · `Kotlin` · `Jetpack Compose` · `Media3` · `Python` · `Node.js` · `Docker`
 
-</div>
+<br />
 
----
+<img src="./assets/brand/signal-divider.svg" width="100%" alt="" />
+
+</div>
 
 ## Hey, I'm Luca.
 
@@ -34,6 +36,7 @@ Right now, most of my attention goes into **Levyra** and the tools around the wa
     </td>
     <td valign="top">
       <h3><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h3>
+      <sub>Android · music · media systems</sub>
       <p>
         The project I spend the most time on: a modern Android music app built with Kotlin, Jetpack Compose and Media3.
         Playback, downloads, discovery, lyrics, video mode and the player itself all live in the same product, so there is always another edge case worth chasing.
@@ -62,6 +65,7 @@ Right now, most of my attention goes into **Levyra** and the tools around the wa
     </td>
     <td valign="top">
       <h3><a href="https://github.com/LUC4N3X/antigravity-thalarch">Antigravity Thalarch</a></h3>
+      <sub>Developer tooling · AI workflows · reliability</sub>
       <p>
         A multi-agent engineering and reliability toolkit for AI coding workflows. I built it around a simple problem:
         generating more code is not very useful if planning, review, debugging and verification are weak.
