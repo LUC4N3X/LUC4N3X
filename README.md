@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="./assets/brand/luc4n3x-lockup.svg" width="740" alt="LUC4N3X — Software engineering, Android and developer tools" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
+  <img src="./assets/brand/luc4n3x-lockup.svg" width="700" alt="LUC4N3X" />
+</picture>
 
 <br />
 <br />
