@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 72" role="img" aria-label="">
+  <defs>
+    <linearGradient id="signal" x1="370" y1="36" x2="830" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2F81F7" stop-opacity="0"/>
+      <stop offset="0.28" stop-color="#58A6FF" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#79C0FF" stop-opacity="0.95"/>
+      <stop offset="0.72" stop-color="#58A6FF" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#2F81F7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M20 36H365" stroke="#8C959F" stroke-opacity="0.18"/>
+  <path d="M835 36H1180" stroke="#8C959F" stroke-opacity="0.18"/>
+
+  <path
+    d="M350 36
+       C382 36 395 35 410 31
+       C427 26 438 18 449 18
+       C463 18 468 54 482 54
+       C498 54 504 10 520 10
+       C536 10 542 61 558 61
+       C575 61 582 25 596 25
+       C611 25 616 47 630 47
+       C646 47 652 17 667 17
+       C683 17 690 55 706 55
+       C721 55 729 28 743 28
+       C758 28 768 36 785 36
+       H850"
+    fill="none"
+    stroke="url(#signal)"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <circle cx="600" cy="36" r="3.5" fill="#79C0FF"/>
+  <circle cx="600" cy="36" r="9" fill="none" stroke="#58A6FF" stroke-opacity="0.22"/>
+</svg>
