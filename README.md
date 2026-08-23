@@ -24,6 +24,8 @@
 
 ---
 
+<a id="featured-projects"></a>
+
 ## Featured projects
 
 ### Levyra
@@ -81,6 +83,8 @@ An engineering layer for coding agents focused on **repository inspection, groun
 **[Open LevyraExtractor →](https://github.com/LUC4N3X/LevyraExtractor)**
 
 ---
+
+<a id="how-i-work"></a>
 
 ## How I work
 
