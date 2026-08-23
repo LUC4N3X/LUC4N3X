@@ -14,6 +14,8 @@
 
 <br />
 
+<a href="#about-me"><b>About</b></a>
+&nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="#featured-projects"><b>Projects</b></a>
 &nbsp;&nbsp;·&nbsp;&nbsp;
 <a href="#how-i-work"><b>How I work</b></a>
@@ -21,6 +23,20 @@
 <a href="https://github.com/LUC4N3X?tab=repositories"><b>Repositories</b></a>
 
 </div>
+
+---
+
+<a id="about-me"></a>
+
+## About me
+
+I'm **Luca**. I build software because I like turning an idea into something I can actually use, test and keep improving over time.
+
+Most of what I work on sits around **Android, media playback, open-source tools and developer tooling**. I'm especially drawn to the less glamorous problems that show up after the first version works: memory usage, unreliable networks, playback edge cases, upstream changes, performance and UI details that still don't feel quite right.
+
+I don't care much for rewriting things just to make them look clever. I prefer understanding what is actually failing, changing the smallest useful part and checking the result on the real thing.
+
+Right now, most of that work goes into **Levyra** and **Thalarch**.
 
 ---
 
@@ -65,22 +81,6 @@ An engineering layer for coding agents focused on **repository inspection, groun
 `Python` · `AI agents` · `Code review` · `Evaluation` · `Verification`
 
 **[Open Thalarch →](https://github.com/LUC4N3X/antigravity-thalarch)** · [Benchmarks](https://github.com/LUC4N3X/antigravity-thalarch#benchmark--proof-not-promises)
-
-<br />
-
-### LevyraExtractor
-
-**The extraction engine built for Levyra.** It handles media extraction, multi-client stream resolution, diagnostics, caching and fallbacks when upstream services change.
-
-<p>
-  <a href="https://github.com/LUC4N3X/LevyraExtractor/stargazers"><img src="https://img.shields.io/github/stars/LUC4N3X/LevyraExtractor?style=flat-square&label=stars" alt="LevyraExtractor stars" /></a>
-  <a href="https://github.com/LUC4N3X/LevyraExtractor/releases"><img src="https://img.shields.io/github/v/release/LUC4N3X/LevyraExtractor?style=flat-square&label=release" alt="LevyraExtractor release" /></a>
-  <a href="https://jitpack.io/#LUC4N3X/LevyraExtractor"><img src="https://jitpack.io/v/LUC4N3X/LevyraExtractor.svg" alt="JitPack" /></a>
-</p>
-
-`Java 17` · `NewPipe / PipePipe lineage` · `YouTube stream resolution` · `SponsorBlock`
-
-**[Open LevyraExtractor →](https://github.com/LUC4N3X/LevyraExtractor)**
 
 ---
 
