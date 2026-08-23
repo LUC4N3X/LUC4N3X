@@ -3,109 +3,21 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup.svg" width="560" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup.svg" width="650" alt="LUC4N3X" />
 </picture>
-
-<br />
-
-**Software I build, use, break and keep improving.**
-
-`Android` · `Media systems` · `Developer tooling` · `Open source`
-
-<br />
-
-<a href="#about-me"><b>About</b></a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="#featured-projects"><b>Projects</b></a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="#how-i-work"><b>How I work</b></a>
-&nbsp;&nbsp;·&nbsp;&nbsp;
-<a href="https://github.com/LUC4N3X?tab=repositories"><b>Repositories</b></a>
 
 </div>
 
----
-
-<a id="about-me"></a>
+<br />
 
 ## About me
 
-I'm **Luca**. I build software because I like turning an idea into something I can actually use, test and keep improving over time.
+I'm **Luca**.
 
-Most of what I work on sits around **Android, media playback, open-source tools and developer tooling**. I'm especially drawn to the less glamorous problems that show up after the first version works: memory usage, unreliable networks, playback edge cases, upstream changes, performance and UI details that still don't feel quite right.
+I build software because I like taking an idea, turning it into something real, and then using it long enough to discover what the first version got wrong.
 
-I don't care much for rewriting things just to make them look clever. I prefer understanding what is actually failing, changing the smallest useful part and checking the result on the real thing.
+A lot of my work ends up around **Android, media systems, open-source software and developer tooling**. The part I enjoy most usually starts after something already works: tracking down a memory problem that only appears on one device, making playback survive an upstream change, fixing the awkward edge case in a download flow, or spending another pass on a UI because technically correct still doesn't mean it feels right.
 
-Right now, most of that work goes into **Levyra** and **Thalarch**.
+I care more about software that holds up in real use than software that only looks good in a demo. When something breaks, I would rather understand why, change the smallest useful part and verify the result than hide the problem behind a rewrite.
 
----
-
-<a id="featured-projects"></a>
-
-## Featured projects
-
-### Levyra
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/docs/assets/levyra-github-banner.webp" width="100%" alt="Levyra" />
-</a>
-
-A native music application for **Android and Windows**, built around playback, offline ownership, synced lyrics, downloads, video and the details that make a media app pleasant to use every day.
-
-<p>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers"><img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&label=stars" alt="Levyra stars" /></a>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=release" alt="Latest Levyra release" /></a>
-  <a href="https://f-droid.org/packages/com.luc4n3x.levyra/"><img src="https://img.shields.io/badge/F--Droid-available-1976D2?style=flat-square&logo=fdroid&logoColor=white" alt="Available on F-Droid" /></a>
-</p>
-
-`Kotlin` · `Jetpack Compose` · `Media3 / ExoPlayer` · `Compose Multiplatform` · `libVLC`
-
-**[Open Levyra →](https://github.com/LUC4N3X/Levyra-deepsound)**
-
-<br />
-
-### Thalarch
-
-<a href="https://github.com/LUC4N3X/antigravity-thalarch">
-  <img src="https://raw.githubusercontent.com/LUC4N3X/antigravity-thalarch/main/assets/branding/thalarch-banner.webp" width="100%" alt="Thalarch" />
-</a>
-
-An engineering layer for coding agents focused on **repository inspection, grounding, independent review and real evidence before completion claims**.
-
-<p>
-  <a href="https://github.com/LUC4N3X/antigravity-thalarch/stargazers"><img src="https://img.shields.io/github/stars/LUC4N3X/antigravity-thalarch?style=flat-square&label=stars" alt="Thalarch stars" /></a>
-  <a href="https://github.com/LUC4N3X/antigravity-thalarch/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-2f6b66?style=flat-square" alt="MIT license" /></a>
-  <a href="https://github.com/LUC4N3X/antigravity-thalarch/actions"><img src="https://github.com/LUC4N3X/antigravity-thalarch/actions/workflows/validate.yml/badge.svg" alt="Validation" /></a>
-</p>
-
-`Python` · `AI agents` · `Code review` · `Evaluation` · `Verification`
-
-**[Open Thalarch →](https://github.com/LUC4N3X/antigravity-thalarch)** · [Benchmarks](https://github.com/LUC4N3X/antigravity-thalarch#benchmark--proof-not-promises)
-
----
-
-<a id="how-i-work"></a>
-
-## How I work
-
-I usually get interested when something works **almost** perfectly.
-
-A player that behaves differently on one device. A download that fails only sometimes. An upstream service that changes without warning. A UI that is technically correct but still feels wrong.
-
-My preference is simple: **understand the failure, change the smallest useful part, and verify the thing that actually matters.** I would rather keep a diff boring and trustworthy than turn every fix into a rewrite.
-
-### Main tools
-
-`Kotlin` · `Jetpack Compose` · `Media3` · `Java` · `Python` · `Node.js` · `Docker` · `Linux` · `GitHub Actions`
-
----
-
-<div align="center">
-
-**Build it. Use it. Find what breaks. Make it better.**
-
-<br />
-
-<a href="https://github.com/LUC4N3X?tab=repositories"><b>View all repositories →</b></a>
-
-</div>
+Most of my time right now goes into building and maintaining **Levyra** and **Thalarch**, and into whatever problem is interesting enough that I keep digging until I understand it.
