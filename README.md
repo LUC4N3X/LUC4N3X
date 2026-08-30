@@ -8,9 +8,9 @@
 
 <br />
 
-**I build software I want to use, then keep fixing the annoying parts.**
+**I build software I want to use — then keep refining it until it feels right.**
 
-`Android` · `Kotlin` · `Jetpack Compose` · `Media3` · `Python` · `Node.js` · `Docker`
+`Android` · `Kotlin` · `Jetpack Compose` · `Media3` · `Python` · `Docker`
 
 <br />
 
@@ -20,87 +20,79 @@
 
 ## Hey, I'm Luca.
 
-I like taking rough ideas and turning them into software that feels finished.
+I turn rough ideas into software that feels polished, fast and dependable.
 
-Most of my work sits somewhere between **Android apps, media systems, backend services, automation and developer tooling**. I care about the obvious things — speed and a good UI — but also the less glamorous parts that usually decide whether a product is actually pleasant to live with: memory use, flaky networks, retries, caching, fallbacks, logs and weird device-specific bugs.
+Most of my time goes into **Android, media systems and product-focused engineering** — not just making features work, but making them hold up when networks are flaky, devices behave differently, memory gets tight or the UI needs that last pass to actually feel good.
 
-Right now, most of my attention goes into **Levyra** and the tools around the way I build and debug software.
+I care about **performance, playback, reliability and clean interfaces**, and I usually prefer a small well-understood fix over a giant rewrite.
 
 ---
 
-## Selected work
+<div align="center">
 
-<sub>A couple of projects I keep coming back to.</sub>
+## ✦ Featured Project
 
-<br />
-<br />
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="104" alt="Levyra" />
+</a>
 
-<table width="100%">
-  <tr>
-    <td>
-      <p>
-        <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-          <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="72" align="left" alt="Levyra" />
-        </a>
-        <strong><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></strong><br />
-        <sub>Android · Music · Media systems</sub>
-      </p>
-      <br clear="left" />
-      <p>
-        A modern Android music app I keep pushing on playback, downloads, lyrics, video mode and the small details that make the whole thing feel right.
-      </p>
-      <p>
-        <code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Android</code>
-      </p>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
-        <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&label=stars" alt="Levyra stars" />
-      </a>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
-        <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=release" alt="Latest Levyra release" />
-      </a>
-    </td>
-  </tr>
-</table>
+### [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
+
+**A modern Android music experience built around playback, discovery and the details that make a player feel alive.**
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
+  <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=github&label=Stars" alt="Levyra stars" />
+</a>
+<a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
+  <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=android&label=Release" alt="Latest Levyra release" />
+</a>
+<a href="https://github.com/LUC4N3X/Levyra-deepsound/issues">
+  <img src="https://img.shields.io/github/issues/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=github&label=Issues" alt="Levyra issues" />
+</a>
+
+</div>
 
 <br />
 
 <table width="100%">
   <tr>
-    <td>
-      <p>
-        <a href="https://github.com/LUC4N3X/antigravity-thalarch">
-          <img src="./assets/thalarch/thalarch-icon.png" width="72" align="left" alt="Antigravity Thalarch" />
-        </a>
-        <strong><a href="https://github.com/LUC4N3X/antigravity-thalarch">Antigravity Thalarch</a></strong><br />
-        <sub>AI engineering · Grounding · Review · Verification</sub>
-      </p>
-      <br clear="left" />
-      <p>
-        An engineering layer for AI coding agents that pushes them to inspect first, ground facts, review independently and prove what matters before calling the work done.
-      </p>
-      <p>
-        <code>Python</code> · <code>AI agents</code> · <code>code review</code> · <code>validation</code> · <code>developer tools</code>
-      </p>
-      <a href="https://github.com/LUC4N3X/antigravity-thalarch/stargazers">
-        <img src="https://img.shields.io/github/stars/LUC4N3X/antigravity-thalarch?style=flat-square&label=stars" alt="Thalarch stars" />
-      </a>
-      <a href="https://github.com/LUC4N3X/antigravity-thalarch/blob/main/LICENSE">
-        <img src="https://img.shields.io/badge/license-MIT-4F6B5F?style=flat-square" alt="MIT license" />
-      </a>
+    <td width="50%" valign="top">
+      <h3>♫ Built for music</h3>
+      <p>Playback, lyrics, downloads, video mode, queue handling and a UI designed around the listening experience.</p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>⚙ Engineered for real devices</h3>
+      <p>Memory use, caching, recovery, network fallbacks and device-specific behavior are treated as product features, not afterthoughts.</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>◈ Native Android</h3>
+      <p><code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Coroutines</code> · <code>Room</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>↗ Always evolving</h3>
+      <p>Levyra is actively refined across playback quality, discovery, visuals, performance and the small interactions users notice every day.</p>
     </td>
   </tr>
 </table>
+
+<div align="center">
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="https://img.shields.io/badge/EXPLORE_LEVYRA-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explore Levyra" />
+</a>
+
+</div>
 
 ---
 
 ## What I work with
 
-I do not try to collect technologies for the sake of having a longer list. These are the ones that show up regularly in my projects:
-
-**Android**  
+**Android & media**  
 `Kotlin` · `Jetpack Compose` · `Media3 / ExoPlayer` · `Coroutines` · `Room`
 
-**Services & automation**  
+**Services & tooling**  
 `Python` · `Node.js` · `FastAPI` · `REST APIs` · `Docker`
 
 **Infrastructure & data**  
@@ -108,23 +100,13 @@ I do not try to collect technologies for the sake of having a longer list. These
 
 ---
 
-## The part of engineering I enjoy most
+## How I like to build
 
-I tend to get interested when something works **almost** perfectly.
+The interesting problems usually start when something works **almost** perfectly.
 
-A player that is smooth on one phone but slowly grows memory on another. A download that succeeds nine times out of ten. A resolver that is fast until one upstream service starts behaving badly. A UI that technically works but still feels one pass away from being right.
+A player that is smooth on one phone but slowly grows memory on another. A download that succeeds nine times out of ten. A resolver that is fast until an upstream service starts behaving badly. A UI that works, but still feels one pass away from being right.
 
-Those are usually the problems I keep digging into.
-
-My preferred fix is rarely a giant rewrite. I would rather understand the failure, change the smallest useful part, test the ugly paths and leave the codebase easier to reason about than I found it.
-
----
-
-## Currently
-
-- Building and refining **Levyra** across Android playback, media handling, downloads and UI.
-- Working on better tooling for **debugging, code review and AI-assisted engineering**.
-- Keeping my public projects useful instead of treating them as portfolio screenshots.
+That is the part I enjoy: understanding the failure, fixing the smallest useful piece, testing the ugly paths and leaving the codebase cleaner than before.
 
 ---
 
@@ -132,12 +114,12 @@ My preferred fix is rarely a giant rewrite. I would rather understand the failur
 
 ### Build it. Use it. Find what breaks. Make it better.
 
-If something in one of my public repositories breaks, open an issue. I actually read them.
+**Right now, that project is Levyra.**
 
 <br />
 
-<a href="https://github.com/LUC4N3X?tab=repositories">
-  <img src="https://img.shields.io/badge/view_repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="View repositories" />
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="https://img.shields.io/badge/LEVYRA-Open_Project-181717?style=for-the-badge&logo=android&logoColor=white" alt="Open Levyra" />
 </a>
 
 </div>
