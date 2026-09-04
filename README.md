@@ -20,128 +20,72 @@
 
 ## About me
 
-<img align="right" alt="LUC4N3X workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
+<img align="right" alt="LUC4N3X workspace" width="340" src="./assets/brand/luc4n3x-workspace.svg" />
 
 Hey, I'm Luca. I like taking rough ideas and turning them into software I can actually use.
 
-Most days I bounce between **Android apps, backend services, tooling and infrastructure**. The part I enjoy most usually starts after something already works: finding the weird behavior, making it faster, cleaning up the rough edges and getting the details to feel right.
+Most days I bounce between **Android apps, backend services, tooling and infrastructure**. I enjoy the part after something starts working: finding what still feels off, fixing the weird edge cases and making the whole thing cleaner.
 
-- I work a lot with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
+- I work mostly with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
 - 🔧 I like bugs that only show up on one device, one network or one very specific path
 - I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
-- 🎧 **Levyra** is one project where a lot of my Android and product ideas end up
+- **Levyra** is where a lot of my Android and product ideas end up
 - If it involves **Android, self-hosting, APIs, performance or useful tools**, I'm probably interested
 
 <br clear="right"/>
 
 ---
 
-<div align="center">
-
-## ✦ Featured Project
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="96" alt="Levyra" />
-</a>
+## ✦ Featured project
 
 ### [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
 
-**A modern Android music app built around playback, discovery and the details that make the whole thing feel finished.**
+A modern open-source music player for Android and Windows, built around playback, discovery, synced lyrics, rich artwork and a polished everyday experience.
 
 <p>
   <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
   <img src="https://img.shields.io/badge/Media3-34A853?style=flat-square&logo=android&logoColor=white" alt="Media3" />
-  <img src="https://img.shields.io/badge/ExoPlayer-34A853?style=flat-square&logo=android&logoColor=white" alt="ExoPlayer" />
+  <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
+  <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
 </p>
 
-</div>
+- Playback resilience, queue recovery and multiple media paths
+- Discovery, artist experiences and local-first personalization
+- Android UI work, performance tuning and device-specific fixes
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3>Playback that holds up</h3>
-      <ul>
-        <li>Media3 / ExoPlayer playback with queue handling and recovery</li>
-        <li>Lyrics, downloads and video mode built into the listening flow</li>
-        <li>Fallbacks for the moments when networks and upstream sources get messy</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3>Built like a product</h3>
-      <ul>
-        <li>Memory, caching and device-specific behavior are treated as real features</li>
-        <li>Discovery and UI polish get the same attention as the playback engine</li>
-        <li>Small, tested improvements over rewrites that only make the diff bigger</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-<p align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
-    <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
-  </a>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
-    <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
-  </a>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/issues">
-    <img src="https://img.shields.io/github/issues/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Issues" alt="Levyra issues" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-    <img src="https://img.shields.io/badge/Open_Levyra-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open Levyra" />
-  </a>
-</p>
+[Open repository](https://github.com/LUC4N3X/Levyra-deepsound) · [Latest release](https://github.com/LUC4N3X/Levyra-deepsound/releases/latest) · [Website](https://levyra.dpdns.org)
 
 ---
 
-<div align="center">
+### 👷 What I'm currently working on
 
-## The rest of the picture
+- [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound) — music player for Android and Windows, with most of my current Android/product work
+- [**Instara-Crew**](https://github.com/LUC4N3X/Instara-Crew) — multi-account Instagram operations console with queues, persistent sessions and Gemini-assisted workflows
+- [**antigravity-thalarch**](https://github.com/LUC4N3X/antigravity-thalarch) — engineering skill and reliability layer for AI coding agents
 
-<sub>A snapshot of the public work behind the username.</sub>
+### 🌱 Other public work
 
-<br /><br />
+- [**LevyraExtractor**](https://github.com/LUC4N3X/LevyraExtractor) — extractor work used around Levyra's media stack
+- [**apps.obtainium.imranr.dev**](https://github.com/LUC4N3X/apps.obtainium.imranr.dev) — contributions around the Obtainium app catalog
+- [**LUC4N3X**](https://github.com/LUC4N3X/LUC4N3X) — this profile and its branding
 
-<img src="./assets/metrics/github-snapshot.svg" width="100%" alt="LUC4N3X GitHub snapshot" />
+### 🔨 Recent pull requests
 
-<br /><br />
-
-<a href="https://github.com/LUC4N3X?tab=repositories">
-  <img src="./assets/metrics/public-projects.svg" width="100%" alt="LUC4N3X public projects" />
-</a>
-
-<br /><br />
-
-<img src="./assets/metrics/engineering-spectrum.svg" width="100%" alt="LUC4N3X engineering spectrum" />
-
-</div>
+- [Add Levyra Ambient, Rediscover, artist exclusions, playlist tags and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520)
+- [Improve project-local RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519)
+- [Update the extractor stack and add per-capability client policy](https://github.com/LUC4N3X/Levyra-deepsound/pull/517)
+- [Add authentic YouTube comment cards to the Resonance shelf](https://github.com/LUC4N3X/Levyra-deepsound/pull/516)
+- [Polish Home collections, videos, resonance and ambience](https://github.com/LUC4N3X/Levyra-deepsound/pull/514)
 
 ---
 
 ## How I like to build
 
-The interesting problems usually start when something works **almost** perfectly.
-
-An app that behaves on one device and not another. An API that is fast until an upstream service slows down. A workflow that is fine once but annoying the hundredth time. A UI that technically works but still feels a little off.
-
-That's the part I enjoy: understand what is actually happening, fix the smallest useful piece, test the ugly paths and leave the codebase cleaner than before.
-
----
+Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish.
 
 <div align="center">
 
-### Build it. Use it. Break it. Understand it. Ship the better version.
-
-**There is usually another build in progress.**
-
-<br />
-
-<a href="https://github.com/LUC4N3X?tab=repositories">
-  <img src="https://img.shields.io/badge/Browse_my_repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Browse my repositories" />
-</a>
+**Build it. Use it. Break it. Understand it. Ship the better version.**
 
 </div>
