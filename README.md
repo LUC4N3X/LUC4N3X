@@ -18,13 +18,21 @@
 
 </div>
 
-## Hey, I'm Luca.
+## 🚀 About Me
 
-I turn rough ideas into software that feels polished, fast and dependable.
+<img align="right" alt="LUC4N3X workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-Most of my time goes into **Android, media systems and product-focused engineering** — not just making features work, but making them hold up when networks are flaky, devices behave differently, memory gets tight or the UI needs that last pass to actually feel good.
+**Hey, I'm Luca.** I build software I actually want to use, and I tend to keep working on it long after the first version already works.
 
-I care about **performance, playback, reliability and clean interfaces**, and I usually prefer a small well-understood fix over a giant rewrite.
+Most of my time goes into **Android and media**. I care about playback, performance, reliability and UI details — especially the things users notice without necessarily knowing why.
+
+- 🎧 Building **[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)**, my Android music project and the place where most of my ideas end up
+- 📱 Working mainly with **Kotlin, Jetpack Compose, Media3 and ExoPlayer**
+- 🔧 I like the messy stuff: playback edge cases, flaky networks, caching, memory pressure and weird device behavior
+- ⚡ I'd rather make one good fix than rewrite half the app just because I can
+- 💬 Always happy to talk about **Android, media playback, performance, UI polish and product decisions**
+
+<br clear="right"/>
 
 ---
 
