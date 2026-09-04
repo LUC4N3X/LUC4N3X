@@ -29,8 +29,8 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 - I work a lot with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
 - 🔧 I like bugs that only show up on one device, one network or one very specific path
 - I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
-- 🎧 **Levyra** is one of the projects where a lot of my Android and product ideas end up
-- If it involves **Android, self-hosting, APIs, performance or building useful tools**, I'm probably interested
+- 🎧 **Levyra** is one project where a lot of my Android and product ideas end up
+- If it involves **Android, self-hosting, APIs, performance or useful tools**, I'm probably interested
 
 <br clear="right"/>
 
