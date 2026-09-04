@@ -102,7 +102,7 @@ Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepso
 
 ## Behind the builds
 
-<sub>Less stats, more of what I'm actually building.</sub>
+<sub>Three snapshots of what I spend most of my time on.</sub>
 
 <br /><br />
 
