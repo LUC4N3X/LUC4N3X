@@ -38,42 +38,22 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ## ✦ Featured project
 
-<div align="center">
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="92" alt="Levyra icon" />
-</a>
-
-### [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
-
-**Modern open-source music player for Android and Windows.**
-
-<br />
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="./assets/projects/levyra-showcase.svg" width="100%" alt="Levyra featured project" />
-</a>
-
-<br />
-
-<p>
-  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
-  <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
-  <img src="https://img.shields.io/badge/Media3-34A853?style=flat-square&logo=android&logoColor=white" alt="Media3" />
-  <img src="https://img.shields.io/badge/ExoPlayer-34A853?style=flat-square&logo=android&logoColor=white" alt="ExoPlayer" />
-  <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
-  <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
-</p>
-
-**Playback that holds up · Discovery that feels personal · UI polish that matters**
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a>
-&nbsp;·&nbsp;
-<a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a>
-&nbsp;·&nbsp;
-<a href="https://levyra.dpdns.org"><strong>Website</strong></a>
-
-</div>
+<table>
+  <tr>
+    <td width="104" align="center" valign="middle">
+      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
+        <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80" alt="Levyra icon" />
+      </a>
+    </td>
+    <td valign="middle">
+      <h3><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h3>
+      <p><strong>Open-source music player for Android and Windows.</strong></p>
+      <p>Playback, discovery, synced lyrics, downloads and the small details that make the app feel finished.</p>
+      <p><code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code></p>
+      <p><a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · <a href="https://levyra.dpdns.org"><strong>Website</strong></a></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
