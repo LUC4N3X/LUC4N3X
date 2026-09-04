@@ -38,63 +38,42 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ## ✦ Featured project
 
-<table>
-  <tr>
-    <td width="150" align="center" valign="middle">
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="112" alt="Levyra icon" />
-      </a>
-    </td>
-    <td valign="middle">
-      <h2><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h2>
-      <p><strong>Modern open-source music player for Android and Windows.</strong></p>
-      <p>Built around resilient playback, discovery, synced lyrics, rich artwork and the kind of polish that makes an app feel good every day.</p>
-      <p>
-        <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
-        <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
-        <img src="https://img.shields.io/badge/Media3-34A853?style=flat-square&logo=android&logoColor=white" alt="Media3" />
-        <img src="https://img.shields.io/badge/ExoPlayer-34A853?style=flat-square&logo=android&logoColor=white" alt="ExoPlayer" />
-      </p>
-    </td>
-  </tr>
-</table>
+<div align="center">
 
-<table width="100%">
-  <tr>
-    <td width="33%" valign="top">
-      <strong>Playback first</strong><br />
-      Queue handling, recovery, lyrics, downloads and multiple media paths.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Built for real devices</strong><br />
-      Caching, memory pressure, flaky networks and device-specific edge cases matter.
-    </td>
-    <td width="33%" valign="top">
-      <strong>Product-minded</strong><br />
-      Discovery and UI polish get the same attention as the engine underneath.
-    </td>
-  </tr>
-</table>
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="92" alt="Levyra icon" />
+</a>
 
-<p align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
-    <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
-  </a>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
-    <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
-  </a>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/issues">
-    <img src="https://img.shields.io/github/issues/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Issues" alt="Levyra issues" />
-  </a>
+### [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
+
+**Modern open-source music player for Android and Windows.**
+
+<br />
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="./assets/projects/levyra-showcase.svg" width="100%" alt="Levyra featured project" />
+</a>
+
+<br />
+
+<p>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Jetpack%20Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
+  <img src="https://img.shields.io/badge/Media3-34A853?style=flat-square&logo=android&logoColor=white" alt="Media3" />
+  <img src="https://img.shields.io/badge/ExoPlayer-34A853?style=flat-square&logo=android&logoColor=white" alt="ExoPlayer" />
+  <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
+  <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a>
-  &nbsp;·&nbsp;
-  <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
-</p>
+**Playback that holds up · Discovery that feels personal · UI polish that matters**
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a>
+&nbsp;·&nbsp;
+<a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a>
+&nbsp;·&nbsp;
+<a href="https://levyra.dpdns.org"><strong>Website</strong></a>
+
+</div>
 
 ---
 
