@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="370" viewBox="0 0 580 370" role="img" aria-labelledby="title desc">
+  <title id="title">Debug lab</title>
+  <desc id="desc">A dark developer debugging dashboard focused on memory, network and state.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#09111C"/><stop offset="1" stop-color="#0B1322"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/><stop offset="1" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="578" height="368" rx="24" fill="url(#bg)" stroke="#253244" stroke-width="2"/>
+  <text x="34" y="50" fill="#67E8F9" font-family="SFMono-Regular,Consolas,monospace" font-size="13" font-weight="700" letter-spacing="2">DEBUG LAB</text>
+  <text x="34" y="84" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="26" font-weight="800">The weird bugs are usually the useful ones.</text>
+  <text x="34" y="109" fill="#94A3B8" font-family="Inter,Segoe UI,sans-serif" font-size="14">trace · isolate · fix the smallest real cause</text>
+
+  <g transform="translate(34 142)">
+    <rect width="246" height="188" rx="16" fill="#0A0F18" stroke="#263244"/>
+    <text x="18" y="28" fill="#CBD5E1" font-family="SFMono-Regular,Consolas,monospace" font-size="12">runtime.log</text>
+    <text x="18" y="56" fill="#64748B" font-family="SFMono-Regular,Consolas,monospace" font-size="11">12:41:08</text><text x="78" y="56" fill="#F8FAFC" font-family="SFMono-Regular,Consolas,monospace" font-size="11">state restored</text>
+    <text x="18" y="80" fill="#64748B" font-family="SFMono-Regular,Consolas,monospace" font-size="11">12:41:09</text><text x="78" y="80" fill="#F59E0B" font-family="SFMono-Regular,Consolas,monospace" font-size="11">network retry 1/2</text>
+    <text x="18" y="104" fill="#64748B" font-family="SFMono-Regular,Consolas,monospace" font-size="11">12:41:10</text><text x="78" y="104" fill="#22C55E" font-family="SFMono-Regular,Consolas,monospace" font-size="11">recovered</text>
+    <text x="18" y="128" fill="#64748B" font-family="SFMono-Regular,Consolas,monospace" font-size="11">12:41:14</text><text x="78" y="128" fill="#F8FAFC" font-family="SFMono-Regular,Consolas,monospace" font-size="11">cache hit 94%</text>
+    <path d="M18 156H226" stroke="#1E293B"/>
+    <path d="M22 170C50 166 60 152 82 162C104 172 118 148 142 156C168 165 184 145 222 151" fill="none" stroke="url(#blue)" stroke-width="3"/>
+  </g>
+
+  <g transform="translate(298 142)">
+    <rect width="248" height="88" rx="16" fill="#0A0F18" stroke="#263244"/>
+    <text x="18" y="26" fill="#CBD5E1" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Memory</text>
+    <text x="188" y="26" fill="#22C55E" font-family="SFMono-Regular,Consolas,monospace" font-size="11">stable</text>
+    <path d="M18 62C42 57 58 69 76 58C98 44 116 72 138 57C160 41 183 68 226 51" fill="none" stroke="#60A5FA" stroke-width="3"/>
+    <path d="M18 72H226" stroke="#1E293B"/>
+  </g>
+
+  <g transform="translate(298 242)">
+    <rect width="248" height="88" rx="16" fill="#0A0F18" stroke="#263244"/>
+    <text x="18" y="26" fill="#CBD5E1" font-family="Inter,Segoe UI,sans-serif" font-size="13" font-weight="700">Failure path</text>
+    <circle cx="34" cy="58" r="8" fill="#EF4444" opacity="0.9"/>
+    <path d="M44 58H90" stroke="#475569" stroke-width="2"/>
+    <circle cx="102" cy="58" r="8" fill="#F59E0B"/>
+    <path d="M112 58H158" stroke="#475569" stroke-width="2"/>
+    <circle cx="170" cy="58" r="8" fill="#22C55E"/>
+    <text x="185" y="62" fill="#94A3B8" font-family="SFMono-Regular,Consolas,monospace" font-size="10">recovered</text>
+  </g>
+
+  <g font-family="SFMono-Regular,Consolas,monospace" font-size="11" font-weight="700">
+    <rect x="34" y="340" width="78" height="22" rx="11" fill="#101827" stroke="#263244"/><text x="52" y="355" fill="#93C5FD">memory</text>
+    <rect x="120" y="340" width="82" height="22" rx="11" fill="#101827" stroke="#263244"/><text x="138" y="355" fill="#67E8F9">network</text>
+    <rect x="210" y="340" width="68" height="22" rx="11" fill="#101827" stroke="#263244"/><text x="231" y="355" fill="#C4B5FD">state</text>
+  </g>
+</svg>
