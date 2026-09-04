@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img" aria-labelledby="title desc">
+  <title id="title">LUC4N3X engineering spectrum</title>
+  <desc id="desc">A self-contained visual summary of the engineering areas and tools used across public work.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#080C13"/>
+      <stop offset="1" stop-color="#0C1320"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.42" stop-color="#3B82F6"/>
+      <stop offset="0.72" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F472B6"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="378" rx="30" fill="url(#bg)" stroke="#2A3443" stroke-width="2"/>
+  <text x="54" y="52" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="28" font-weight="800">Engineering spectrum</text>
+  <text x="54" y="78" fill="#7E8EA3" font-family="Inter,Segoe UI,sans-serif" font-size="14">The profile is broader than one app: product, services, automation and infrastructure.</text>
+
+  <path d="M72 145H1128" stroke="#1E293B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M72 145H1128" stroke="url(#line)" stroke-width="4" stroke-linecap="round" filter="url(#glow)"/>
+
+  <g transform="translate(72 126)">
+    <circle cx="0" cy="19" r="12" fill="#22D3EE" stroke="#BFF7FF" stroke-width="2"/>
+    <text x="0" y="64" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="16" font-weight="800">Android &amp; media</text>
+    <text x="0" y="87" text-anchor="middle" fill="#7E8EA3" font-family="SFMono-Regular,Consolas,monospace" font-size="11">Kotlin · Compose · Media3</text>
+    <text x="0" y="106" text-anchor="middle" fill="#526174" font-family="Inter,Segoe UI,sans-serif" font-size="11">Levyra</text>
+  </g>
+
+  <g transform="translate(412 126)">
+    <circle cx="0" cy="19" r="12" fill="#3B82F6" stroke="#BFDBFE" stroke-width="2"/>
+    <text x="0" y="64" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="16" font-weight="800">Backend &amp; APIs</text>
+    <text x="0" y="87" text-anchor="middle" fill="#7E8EA3" font-family="SFMono-Regular,Consolas,monospace" font-size="11">Python · Node.js · REST</text>
+    <text x="0" y="106" text-anchor="middle" fill="#526174" font-family="Inter,Segoe UI,sans-serif" font-size="11">services · extractors</text>
+  </g>
+
+  <g transform="translate(770 126)">
+    <circle cx="0" cy="19" r="12" fill="#8B5CF6" stroke="#DDD6FE" stroke-width="2"/>
+    <text x="0" y="64" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="16" font-weight="800">Automation &amp; agents</text>
+    <text x="0" y="87" text-anchor="middle" fill="#7E8EA3" font-family="SFMono-Regular,Consolas,monospace" font-size="11">Gemini · Codex · workflows</text>
+    <text x="0" y="106" text-anchor="middle" fill="#526174" font-family="Inter,Segoe UI,sans-serif" font-size="11">Instara · thalarch</text>
+  </g>
+
+  <g transform="translate(1128 126)">
+    <circle cx="0" cy="19" r="12" fill="#F472B6" stroke="#FBCFE8" stroke-width="2"/>
+    <text x="0" y="64" text-anchor="middle" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="16" font-weight="800">Infra &amp; delivery</text>
+    <text x="0" y="87" text-anchor="middle" fill="#7E8EA3" font-family="SFMono-Regular,Consolas,monospace" font-size="11">Docker · Linux · GitHub Actions</text>
+    <text x="0" y="106" text-anchor="middle" fill="#526174" font-family="Inter,Segoe UI,sans-serif" font-size="11">self-hosting · CI</text>
+  </g>
+
+  <g transform="translate(54 278)" font-family="SFMono-Regular,Consolas,monospace" font-size="12" font-weight="700">
+    <rect width="126" height="32" rx="16" fill="#0D1E2A" stroke="#244D75"/><text x="22" y="21" fill="#7DD3FC">product-first</text>
+    <rect x="138" width="126" height="32" rx="16" fill="#111827" stroke="#334155"/><text x="158" y="21" fill="#CBD5E1">debug-heavy</text>
+    <rect x="276" width="150" height="32" rx="16" fill="#17112A" stroke="#4B3F7A"/><text x="297" y="21" fill="#C4B5FD">automation-minded</text>
+    <rect x="438" width="136" height="32" rx="16" fill="#10251B" stroke="#28563A"/><text x="460" y="21" fill="#86EFAC">self-hosted</text>
+  </g>
+
+  <text x="54" y="344" fill="#526174" font-family="SFMono-Regular,Consolas,monospace" font-size="11">ONE PROFILE · MULTIPLE SYSTEMS · SAME BUILD / TEST / REFINE MINDSET</text>
+</svg>
