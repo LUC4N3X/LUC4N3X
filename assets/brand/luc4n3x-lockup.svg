@@ -1,22 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 280" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
   <title id="title">LUC4N3X</title>
-  <desc id="desc">LUC4N3X developer brand mark.</desc>
+  <desc id="desc">LUC4N3X developer lockup.</desc>
+  <defs>
+    <linearGradient id="terminal" x1="44" y1="44" x2="298" y2="252" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F8FA"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="70" y1="100" x2="1040" y2="214" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0969DA"/>
+      <stop offset="1" stop-color="#0550AE"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Light-mode lockup: intentionally flat, high-contrast and minimal. -->
-  <g transform="translate(24 10)" fill="none" stroke-linecap="square" stroke-linejoin="miter">
-    <!-- L -->
-    <path d="M52 42V218H137" stroke="#0D1117" stroke-width="28"/>
+  <rect x="36" y="38" width="262" height="214" rx="24" fill="url(#terminal)" stroke="#D0D7DE" stroke-width="2"/>
+  <circle cx="66" cy="66" r="5" fill="#AFB8C1"/>
+  <circle cx="84" cy="66" r="5" fill="#AFB8C1"/>
+  <circle cx="102" cy="66" r="5" fill="#AFB8C1"/>
+  <path d="M36 86H298" stroke="#D8DEE4" stroke-width="2"/>
+  <text x="62" y="120" fill="#57606A" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">~/dev/luc4n3x</text>
+  <path d="M70 158L100 180L70 202" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M122 204H184" stroke="#24292F" stroke-width="10" stroke-linecap="square"/>
+  <rect x="210" y="156" width="46" height="46" rx="8" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="2"/>
+  <path d="M222 170L232 180L222 190M239 190H247" fill="none" stroke="#0969DA" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
 
-    <!-- X backbone -->
-    <path d="M112 42L225 218" stroke="#0D1117" stroke-width="25"/>
-
-    <!-- 4 + crossing stroke, fused into the same monogram -->
-    <path d="M226 42L132 164H231M209 113V218" stroke="#0969DA" stroke-width="23"/>
-  </g>
-
-  <text x="330" y="175"
-        font-family="Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
-        font-size="112" font-weight="800" letter-spacing="4" fill="#0D1117">
-    LUC<tspan fill="#0969DA">4</tspan>N3<tspan fill="#0969DA">X</tspan>
-  </text>
+  <text x="352" y="158" fill="#24292F" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="92" font-weight="700" letter-spacing="2">LUC4N3<tspan fill="#0969DA">X</tspan></text>
+  <path d="M352 188H1120" stroke="#D8DEE4" stroke-width="2"/>
+  <path d="M352 188H690" stroke="url(#accent)" stroke-width="2" opacity="0.85"/>
+  <text x="352" y="226" fill="#57606A" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" letter-spacing="1.6">android / media / product engineering</text>
+  <text x="1002" y="226" fill="#0969DA" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">git:main</text>
+  <circle cx="1109" cy="220" r="4" fill="#0969DA"/>
 </svg>
