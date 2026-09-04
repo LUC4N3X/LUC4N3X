@@ -10,7 +10,7 @@
 
 **I build software I want to use — and keep working on it until it feels right.**
 
-`Android` · `Kotlin` · `Jetpack Compose` · `Media3` · `Python` · `Docker`
+`Android` · `Kotlin` · `Jetpack Compose` · `Python` · `APIs` · `Docker`
 
 <br />
 
@@ -22,15 +22,15 @@
 
 <img align="right" alt="LUC4N3X workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-Hey, I'm Luca. I spend a lot of my time building Android stuff, breaking it, fixing it and then finding one more thing I want to improve.
+Hey, I'm Luca. I like taking rough ideas and turning them into software I can actually use.
 
-Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)**, my music app. I enjoy the part after "it works": making playback smoother, cleaning up rough edges, tracking down weird device problems and getting the little details right.
+Most days I bounce between **Android apps, backend services, tooling and infrastructure**. The part I enjoy most usually starts after something already works: finding the weird behavior, making it faster, cleaning up the rough edges and getting the details to feel right.
 
-- 🎧 Right now I'm building **Levyra** and pushing it forward one release at a time
-- Most of my day-to-day work is **Kotlin, Jetpack Compose, Media3 and ExoPlayer**
-- 🔧 I like chasing the annoying bugs: flaky networks, caching issues, memory pressure and playback edge cases
-- I usually prefer a focused fix I understand well over a rewrite for the sake of rewriting
-- If you're into **Android, media playback, performance or product polish**, we'll probably have something to talk about
+- I work a lot with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
+- 🔧 I like bugs that only show up on one device, one network or one very specific path
+- I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
+- 🎧 **Levyra** is one of the projects where a lot of my Android and product ideas end up
+- If it involves **Android, self-hosting, APIs, performance or building useful tools**, I'm probably interested
 
 <br clear="right"/>
 
@@ -100,25 +100,23 @@ Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepso
 
 <div align="center">
 
-## Behind the builds
+## Developer mode
 
-<sub>Three snapshots of what I spend most of my time on.</sub>
+<sub>Three parts of the work I actually enjoy.</sub>
 
 <br /><br />
 
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="./assets/showcase/levyra-now-playing.svg" width="100%" alt="Levyra now playing showcase" />
-</a>
+<img src="./assets/showcase/developer-mode.svg" width="100%" alt="LUC4N3X developer workbench" />
 
 <br />
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <img src="./assets/showcase/android-workbench.svg" width="100%" alt="Android workbench showcase" />
+      <img src="./assets/showcase/debug-lab.svg" width="100%" alt="Debug lab" />
     </td>
     <td width="50%" valign="top">
-      <img src="./assets/showcase/ship-refine.svg" width="100%" alt="Ship and refine showcase" />
+      <img src="./assets/showcase/ship-loop.svg" width="100%" alt="Ship loop" />
     </td>
   </tr>
 </table>
@@ -131,22 +129,22 @@ Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepso
 
 The interesting problems usually start when something works **almost** perfectly.
 
-A player that is smooth on one phone but slowly grows memory on another. A download that succeeds nine times out of ten. A resolver that is fast until an upstream service starts behaving badly. A UI that works, but still feels one pass away from being right.
+An app that behaves on one device and not another. An API that is fast until an upstream service slows down. A workflow that is fine once but annoying the hundredth time. A UI that technically works but still feels a little off.
 
-That is the part I enjoy: understanding the failure, fixing the smallest useful piece, testing the ugly paths and leaving the codebase cleaner than before.
+That's the part I enjoy: understand what is actually happening, fix the smallest useful piece, test the ugly paths and leave the codebase cleaner than before.
 
 ---
 
 <div align="center">
 
-### Build it. Use it. Find what breaks. Make it better.
+### Build it. Use it. Break it. Understand it. Ship the better version.
 
-**Right now, that project is Levyra.**
+**There is usually another build in progress.**
 
 <br />
 
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://img.shields.io/badge/LEVYRA-Open_Project-181717?style=for-the-badge&logo=android&logoColor=white" alt="Open Levyra" />
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <img src="https://img.shields.io/badge/Browse_my_repositories-181717?style=for-the-badge&logo=github&logoColor=white" alt="Browse my repositories" />
 </a>
 
 </div>
