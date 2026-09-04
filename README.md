@@ -3,12 +3,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup.svg" width="660" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup.svg" width="760" alt="LUC4N3X" />
 </picture>
 
 <br />
 
-**I build software I want to use — then keep refining it until it feels right.**
+**I build software I want to use — and keep working on it until it feels right.**
 
 `Android` · `Kotlin` · `Jetpack Compose` · `Media3` · `Python` · `Docker`
 
@@ -18,19 +18,19 @@
 
 </div>
 
-## 🚀 About Me
+## About me
 
 <img align="right" alt="LUC4N3X workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-**Hey, I'm Luca.** I build software I actually want to use, and I tend to keep working on it long after the first version already works.
+Hey, I'm Luca. I spend a lot of my time building Android stuff, breaking it, fixing it and then finding one more thing I want to improve.
 
-Most of my time goes into **Android and media**. I care about playback, performance, reliability and UI details — especially the things users notice without necessarily knowing why.
+Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)**, my music app. I enjoy the part after "it works": making playback smoother, cleaning up rough edges, tracking down weird device problems and getting the little details right.
 
-- 🎧 Building **[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)**, my Android music project and the place where most of my ideas end up
-- 📱 Working mainly with **Kotlin, Jetpack Compose, Media3 and ExoPlayer**
-- 🔧 I like the messy stuff: playback edge cases, flaky networks, caching, memory pressure and weird device behavior
-- ⚡ I'd rather make one good fix than rewrite half the app just because I can
-- 💬 Always happy to talk about **Android, media playback, performance, UI polish and product decisions**
+- 🎧 Right now I'm building **Levyra** and pushing it forward one release at a time
+- Most of my day-to-day work is **Kotlin, Jetpack Compose, Media3 and ExoPlayer**
+- 🔧 I like chasing the annoying bugs: flaky networks, caching issues, memory pressure and playback edge cases
+- I usually prefer a focused fix I understand well over a rewrite for the sake of rewriting
+- If you're into **Android, media playback, performance or product polish**, we'll probably have something to talk about
 
 <br clear="right"/>
 
