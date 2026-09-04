@@ -1,38 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 72" role="img" aria-label="">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" role="img" aria-label="">
   <defs>
-    <linearGradient id="signal" x1="370" y1="36" x2="830" y2="36" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2F81F7" stop-opacity="0"/>
-      <stop offset="0.28" stop-color="#58A6FF" stop-opacity="0.6"/>
-      <stop offset="0.5" stop-color="#79C0FF" stop-opacity="0.95"/>
-      <stop offset="0.72" stop-color="#58A6FF" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#2F81F7" stop-opacity="0"/>
+    <linearGradient id="leftLine" x1="80" y1="28" x2="522" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30363D" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#30363D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0.55"/>
     </linearGradient>
+    <linearGradient id="rightLine" x1="678" y1="28" x2="1120" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF" stop-opacity="0.55"/>
+      <stop offset="0.7" stop-color="#30363D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#30363D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="559" y1="16" x2="641" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79C0FF"/>
+      <stop offset="1" stop-color="#2F81F7"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <path d="M20 36H365" stroke="#8C959F" stroke-opacity="0.18"/>
-  <path d="M835 36H1180" stroke="#8C959F" stroke-opacity="0.18"/>
+  <path d="M80 28H522" stroke="url(#leftLine)" stroke-width="1.5"/>
+  <path d="M678 28H1120" stroke="url(#rightLine)" stroke-width="1.5"/>
 
-  <path
-    d="M350 36
-       C382 36 395 35 410 31
-       C427 26 438 18 449 18
-       C463 18 468 54 482 54
-       C498 54 504 10 520 10
-       C536 10 542 61 558 61
-       C575 61 582 25 596 25
-       C611 25 616 47 630 47
-       C646 47 652 17 667 17
-       C683 17 690 55 706 55
-       C721 55 729 28 743 28
-       C758 28 768 36 785 36
-       H850"
-    fill="none"
-    stroke="url(#signal)"
-    stroke-width="2.2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
+  <rect x="542" y="10" width="116" height="36" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <rect x="550" y="17" width="3" height="22" rx="1.5" fill="#21262D"/>
+  <rect x="647" y="17" width="3" height="22" rx="1.5" fill="#21262D"/>
 
-  <circle cx="600" cy="36" r="3.5" fill="#79C0FF"/>
-  <circle cx="600" cy="36" r="9" fill="none" stroke="#58A6FF" stroke-opacity="0.22"/>
+  <path d="M573 21L563 28L573 35" fill="none" stroke="#8C959F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M588 37L601 19" fill="none" stroke="url(#accent)" stroke-width="2.8" stroke-linecap="round" filter="url(#softGlow)"/>
+  <path d="M615 21L625 28L615 35" fill="none" stroke="#F0F6FC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="522" cy="28" r="3" fill="#58A6FF"/>
+  <circle cx="678" cy="28" r="3" fill="#58A6FF"/>
 </svg>
