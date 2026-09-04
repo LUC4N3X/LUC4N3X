@@ -100,30 +100,23 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 <div align="center">
 
-## GitHub pulse
+## The rest of the picture
 
-<sub>Live data from the profile, not a fake dashboard.</sub>
-
-<br /><br />
-
-<img src="https://metrics.lecoq.io/LUC4N3X?template=classic&isocalendar=1&languages=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&config.timezone=Europe%2FRome" width="72%" alt="LUC4N3X GitHub metrics" />
+<sub>A snapshot of the public work behind the username.</sub>
 
 <br /><br />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=LUC4N3X&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20activity" width="100%" alt="LUC4N3X contribution activity" />
+<img src="./assets/metrics/github-snapshot.svg" width="100%" alt="LUC4N3X GitHub snapshot" />
 
-<br />
+<br /><br />
 
-<table width="100%">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api?username=LUC4N3X&show_icons=true&hide_border=true&theme=github_dark&rank_icon=github&include_all_commits=true" width="100%" alt="LUC4N3X GitHub stats" />
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=LUC4N3X&layout=compact&hide_border=true&theme=github_dark&langs_count=8" width="100%" alt="LUC4N3X top languages" />
-    </td>
-  </tr>
-</table>
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <img src="./assets/metrics/public-projects.svg" width="100%" alt="LUC4N3X public projects" />
+</a>
+
+<br /><br />
+
+<img src="./assets/metrics/engineering-spectrum.svg" width="100%" alt="LUC4N3X engineering spectrum" />
 
 </div>
 
