@@ -41,70 +41,106 @@ Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepso
 ## ✦ Featured Project
 
 <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="104" alt="Levyra" />
+  <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="96" alt="Levyra" />
 </a>
 
 ### [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
 
-**A modern Android music experience built around playback, discovery and the details that make a player feel alive.**
+**A modern Android music app built around playback, discovery and the details that make the whole thing feel finished.**
 
-<a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
-  <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=github&label=Stars" alt="Levyra stars" />
-</a>
-<a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
-  <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=android&label=Release" alt="Latest Levyra release" />
-</a>
-<a href="https://github.com/LUC4N3X/Levyra-deepsound/issues">
-  <img src="https://img.shields.io/github/issues/LUC4N3X/Levyra-deepsound?style=for-the-badge&logo=github&label=Issues" alt="Levyra issues" />
-</a>
+<p>
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
+  <img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=flat-square&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
+  <img src="https://img.shields.io/badge/Media3-34A853?style=flat-square&logo=android&logoColor=white" alt="Media3" />
+  <img src="https://img.shields.io/badge/ExoPlayer-34A853?style=flat-square&logo=android&logoColor=white" alt="ExoPlayer" />
+</p>
 
 </div>
-
-<br />
 
 <table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h3>♫ Built for music</h3>
-      <p>Playback, lyrics, downloads, video mode, queue handling and a UI designed around the listening experience.</p>
+      <h3>Playback that holds up</h3>
+      <ul>
+        <li>Media3 / ExoPlayer playback with queue handling and recovery</li>
+        <li>Lyrics, downloads and video mode built into the listening flow</li>
+        <li>Fallbacks for the moments when networks and upstream sources get messy</li>
+      </ul>
     </td>
     <td width="50%" valign="top">
-      <h3>⚙ Engineered for real devices</h3>
-      <p>Memory use, caching, recovery, network fallbacks and device-specific behavior are treated as product features, not afterthoughts.</p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h3>◈ Native Android</h3>
-      <p><code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Coroutines</code> · <code>Room</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3>↗ Always evolving</h3>
-      <p>Levyra is actively refined across playback quality, discovery, visuals, performance and the small interactions users notice every day.</p>
+      <h3>Built like a product</h3>
+      <ul>
+        <li>Memory, caching and device-specific behavior are treated as real features</li>
+        <li>Discovery and UI polish get the same attention as the playback engine</li>
+        <li>Small, tested improvements over rewrites that only make the diff bigger</li>
+      </ul>
     </td>
   </tr>
 </table>
 
-<div align="center">
+<p align="center">
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers">
+    <img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Stars" alt="Levyra stars" />
+  </a>
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">
+    <img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&logo=android&label=Release" alt="Latest Levyra release" />
+  </a>
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/issues">
+    <img src="https://img.shields.io/github/issues/LUC4N3X/Levyra-deepsound?style=flat-square&logo=github&label=Issues" alt="Levyra issues" />
+  </a>
+</p>
 
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="https://img.shields.io/badge/EXPLORE_LEVYRA-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explore Levyra" />
-</a>
-
-</div>
+<p align="center">
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound">
+    <img src="https://img.shields.io/badge/Open_Levyra-181717?style=for-the-badge&logo=github&logoColor=white" alt="Open Levyra" />
+  </a>
+</p>
 
 ---
 
+<div align="center">
+
 ## What I work with
 
-**Android & media**  
-`Kotlin` · `Jetpack Compose` · `Media3 / ExoPlayer` · `Coroutines` · `Room`
+<sub>The stack changes when the problem calls for it. These are the tools I reach for most.</sub>
 
-**Services & tooling**  
-`Python` · `Node.js` · `FastAPI` · `REST APIs` · `Docker`
+<br /><br />
 
-**Infrastructure & data**  
-`Linux` · `GitHub Actions` · `Cloudflare` · `PostgreSQL` · `Redis`
+**Android & media**
+
+<br />
+
+<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
+<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
+<img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
+<img src="https://img.shields.io/badge/Media3-34A853?style=for-the-badge&logo=android&logoColor=white" alt="Media3" />
+<img src="https://img.shields.io/badge/Room-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Room" />
+
+<br /><br />
+
+**Services & tooling**
+
+<br />
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+<img src="https://img.shields.io/badge/REST_APIs-1F6FEB?style=for-the-badge&logo=swagger&logoColor=white" alt="REST APIs" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+
+<br /><br />
+
+**Infrastructure & data**
+
+<br />
+
+<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+
+</div>
 
 ---
 
