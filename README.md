@@ -100,45 +100,28 @@ Most of that work ends up in **[Levyra](https://github.com/LUC4N3X/Levyra-deepso
 
 <div align="center">
 
-## What I work with
+## Behind the builds
 
-<sub>The stack changes when the problem calls for it. These are the tools I reach for most.</sub>
-
-<br /><br />
-
-**Android & media**
-
-<br />
-
-<img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
-<img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin" />
-<img src="https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white" alt="Jetpack Compose" />
-<img src="https://img.shields.io/badge/Media3-34A853?style=for-the-badge&logo=android&logoColor=white" alt="Media3" />
-<img src="https://img.shields.io/badge/Room-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Room" />
+<sub>Less stats, more of what I'm actually building.</sub>
 
 <br /><br />
 
-**Services & tooling**
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="./assets/showcase/levyra-now-playing.svg" width="100%" alt="Levyra now playing showcase" />
+</a>
 
 <br />
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-<img src="https://img.shields.io/badge/REST_APIs-1F6FEB?style=for-the-badge&logo=swagger&logoColor=white" alt="REST APIs" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-
-<br /><br />
-
-**Infrastructure & data**
-
-<br />
-
-<img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
-<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-<img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare" />
-<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+<table width="100%">
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./assets/showcase/android-workbench.svg" width="100%" alt="Android workbench showcase" />
+    </td>
+    <td width="50%" valign="top">
+      <img src="./assets/showcase/ship-refine.svg" width="100%" alt="Ship and refine showcase" />
+    </td>
+  </tr>
+</table>
 
 </div>
 
