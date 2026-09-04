@@ -6,18 +6,19 @@
       <stop stop-color="#161B22"/>
       <stop offset="1" stop-color="#0D1117"/>
     </linearGradient>
-    <linearGradient id="accent" x1="80" y1="70" x2="1120" y2="230" gradientUnits="userSpaceOnUse">
+    <linearGradient id="accent" x1="70" y1="100" x2="1040" y2="214" gradientUnits="userSpaceOnUse">
       <stop stop-color="#58A6FF"/>
       <stop offset="1" stop-color="#2F81F7"/>
     </linearGradient>
     <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="4" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
+
   <rect x="36" y="38" width="262" height="214" rx="24" fill="url(#terminal)" stroke="#30363D" stroke-width="2"/>
   <circle cx="66" cy="66" r="5" fill="#484F58"/>
   <circle cx="84" cy="66" r="5" fill="#484F58"/>
@@ -26,13 +27,13 @@
   <text x="62" y="120" fill="#8B949E" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">~/dev/luc4n3x</text>
   <path d="M70 158L100 180L70 202" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter" filter="url(#glow)"/>
   <path d="M122 204H184" stroke="#F0F6FC" stroke-width="10" stroke-linecap="square"/>
-  <path d="M214 144L260 214" stroke="#F0F6FC" stroke-width="11" stroke-linecap="square"/>
-  <path d="M260 144L214 214" stroke="url(#accent)" stroke-width="11" stroke-linecap="square" filter="url(#glow)"/>
-  <text x="352" y="154" fill="#F0F6FC" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="92" font-weight="700" letter-spacing="4">LUC4N3</text>
-  <path d="M1007 84L1083 168" stroke="#F0F6FC" stroke-width="17" stroke-linecap="square"/>
-  <path d="M1083 84L1007 168" stroke="url(#accent)" stroke-width="17" stroke-linecap="square" filter="url(#glow)"/>
-  <rect x="1105" y="142" width="15" height="15" fill="#58A6FF" opacity="0.95"/>
+  <rect x="210" y="156" width="46" height="46" rx="8" fill="#161B22" stroke="#30363D" stroke-width="2"/>
+  <path d="M222 170L232 180L222 190M239 190H247" fill="none" stroke="#58A6FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+
+  <text x="352" y="158" fill="#F0F6FC" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="92" font-weight="700" letter-spacing="2">LUC4N3<tspan fill="#58A6FF">X</tspan></text>
   <path d="M352 188H1120" stroke="#21262D" stroke-width="2"/>
+  <path d="M352 188H690" stroke="url(#accent)" stroke-width="2" opacity="0.85"/>
   <text x="352" y="226" fill="#8B949E" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" letter-spacing="1.6">android / media / product engineering</text>
-  <text x="1006" y="226" fill="#58A6FF" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">git:main</text>
+  <text x="1002" y="226" fill="#58A6FF" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">git:main</text>
+  <circle cx="1109" cy="220" r="4" fill="#58A6FF" filter="url(#glow)"/>
 </svg>
