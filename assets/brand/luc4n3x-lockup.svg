@@ -1,32 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
-  <title id="title">LUC4N3X</title>
-  <desc id="desc">LUC4N3X developer lockup.</desc>
+<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X">
   <defs>
-    <linearGradient id="terminal" x1="44" y1="44" x2="298" y2="252" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F6F8FA"/>
-      <stop offset="1" stop-color="#FFFFFF"/>
+    <!-- Master Brand Gradients -->
+    <linearGradient id="cyberX" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0969DA"/>
+      <stop offset="55%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#0550AE"/>
     </linearGradient>
-    <linearGradient id="accent" x1="70" y1="100" x2="1040" y2="214" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0969DA"/>
-      <stop offset="1" stop-color="#0550AE"/>
+
+    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EAEEF2"/>
     </linearGradient>
+
+    <linearGradient id="shieldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0969DA" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#D0D7DE"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="beamHoriz" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0969DA"/>
+      <stop offset="40%" stop-color="#6366F1"/>
+      <stop offset="80%" stop-color="#D0D7DE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D0D7DE" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="neonReflect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <rect x="36" y="38" width="262" height="214" rx="24" fill="url(#terminal)" stroke="#D0D7DE" stroke-width="2"/>
-  <circle cx="66" cy="66" r="5" fill="#AFB8C1"/>
-  <circle cx="84" cy="66" r="5" fill="#AFB8C1"/>
-  <circle cx="102" cy="66" r="5" fill="#AFB8C1"/>
-  <path d="M36 86H298" stroke="#D8DEE4" stroke-width="2"/>
-  <text x="62" y="120" fill="#57606A" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">~/dev/luc4n3x</text>
-  <path d="M70 158L100 180L70 202" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter"/>
-  <path d="M122 204H184" stroke="#24292F" stroke-width="10" stroke-linecap="square"/>
-  <rect x="210" y="156" width="46" height="46" rx="8" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="2"/>
-  <path d="M222 170L232 180L222 190M239 190H247" fill="none" stroke="#0969DA" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Centered Lockup Group -->
+  <g transform="translate(60, 20)">
+    <!-- 1. The Master Cyber Emblem (140 x 140) -->
+    <g transform="translate(10, 0)">
+      <!-- Hexagonal Tech Tile with Precision Chamfers -->
+      <path d="M 70 8 L 126 40 L 126 100 L 70 132 L 14 100 L 14 40 Z" fill="url(#shieldFill)" stroke="url(#shieldRim)" stroke-width="2"/>
 
-  <text x="352" y="158" fill="#24292F" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="92" font-weight="700" letter-spacing="2">LUC4N3<tspan fill="#0969DA">X</tspan></text>
-  <path d="M352 188H1120" stroke="#D8DEE4" stroke-width="2"/>
-  <path d="M352 188H690" stroke="url(#accent)" stroke-width="2" opacity="0.85"/>
-  <text x="352" y="226" fill="#57606A" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" letter-spacing="1.6">android / media / product engineering</text>
-  <text x="1002" y="226" fill="#0969DA" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">git:main</text>
-  <circle cx="1109" cy="220" r="4" fill="#0969DA"/>
+      <!-- Corner Tech Notches -->
+      <line x1="70" y1="12" x2="70" y2="20" stroke="#0969DA" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      <line x1="70" y1="120" x2="70" y2="128" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+
+      <!-- 'L' Monogram Blade (Architectural Solid Base) -->
+      <path d="M 38 42 L 38 98 L 74 98" stroke="#1F2328" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- 'X' Monogram Energy Cross (Precision Angled Blades) -->
+      <!-- Primary Laser Blade (Down-Right) -->
+      <path d="M 64 52 L 102 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round" filter="url(#neonReflect)"/>
+      
+      <!-- Counter Blade (Up-Right with Negative Space Interlock) -->
+      <path d="M 102 52 L 83 75" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 69 92 L 64 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
+
+      <!-- Central Quantum Dot / Core Focus -->
+      <circle cx="70" cy="70" r="3" fill="#0969DA"/>
+    </g>
+
+    <!-- 2. The Master Wordmark (Pure, Bold, Authoritative, Zero Fluff) -->
+    <g transform="translate(195, 20)">
+      <!-- LUC4N3X Display Typography -->
+      <text x="0" y="72" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Montserrat', sans-serif" font-size="64" font-weight="900" letter-spacing="4">
+        LUC4N3<tspan fill="url(#cyberX)">X</tspan>
+      </text>
+
+      <!-- Signature Horizon Beam (Dynamic, razor thin, laser refined) -->
+      <rect x="0" y="90" width="540" height="2" rx="1" fill="url(#beamHoriz)"/>
+    </g>
+  </g>
 </svg>

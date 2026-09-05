@@ -8,7 +8,7 @@
 
 <br />
 
-**I build software I want to use — and keep working on it until it feels right.**
+**I build software I want to use, and keep working on it until it feels right.**
 
 `Android` · `Kotlin` · `Jetpack Compose` · `Python` · `APIs` · `Docker`
 
@@ -27,7 +27,7 @@ Hey, I'm Luca. I like taking rough ideas and turning them into software I can ac
 Most days I bounce between **Android apps, backend services, tooling and infrastructure**. I enjoy the part after something starts working: finding what still feels off, fixing the weird edge cases and making the whole thing cleaner.
 
 - I work mostly with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
-- 🔧 I like bugs that only show up on one device, one network or one very specific path
+- I like bugs that only show up on one device, one network or one very specific path
 - I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
 - **Levyra** is where a lot of my Android and product ideas end up
 - If it involves **Android, self-hosting, APIs, performance or useful tools**, I'm probably interested
@@ -36,55 +36,70 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ---
 
-## ✦ Featured project
+## Featured project
 
-<table>
-  <tr>
-    <td width="104" align="center" valign="middle">
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="https://raw.githubusercontent.com/LUC4N3X/Levyra-deepsound/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80" alt="Levyra icon" />
-      </a>
-    </td>
-    <td valign="middle">
-      <h3><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h3>
-      <p><strong>Open-source music player for Android and Windows.</strong></p>
-      <p>Playback, discovery, synced lyrics, downloads and the small details that make the app feel finished.</p>
-      <p><code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code></p>
-      <p><a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · <a href="https://levyra.dpdns.org"><strong>Website</strong></a></p>
-    </td>
-  </tr>
-</table>
+<div align="center">
 
----
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/levyra/levyra-lockup-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/levyra/levyra-lockup.svg">
+    <img src="./assets/levyra/levyra-lockup-dark.svg" width="760" alt="Levyra" />
+  </picture>
+</a>
 
-### 👷 What I'm currently working on
+<br />
 
-- [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound) — music player for Android and Windows, with most of my current Android/product work
-- [**Instara-Crew**](https://github.com/LUC4N3X/Instara-Crew) — multi-account Instagram operations console with queues, persistent sessions and Gemini-assisted workflows
-- [**antigravity-thalarch**](https://github.com/LUC4N3X/antigravity-thalarch) — engineering skill and reliability layer for AI coding agents
+<p>
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · 
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · 
+  <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
+</p>
 
-### 🌱 Other public work
+</div>
 
-- [**LevyraExtractor**](https://github.com/LUC4N3X/LevyraExtractor) — extractor work used around Levyra's media stack
-- [**apps.obtainium.imranr.dev**](https://github.com/LUC4N3X/apps.obtainium.imranr.dev) — contributions around the Obtainium app catalog
-- [**LUC4N3X**](https://github.com/LUC4N3X/LUC4N3X) — this profile and its branding
+Levyra is an open-source music player for Android and Windows. It focuses on low-latency playback with AndroidX Media3, offline downloads, synced lyrics via LRCLIB, and a fluid Jetpack Compose interface with zero tracking.
 
-### 🔨 Recent pull requests
-
-- [Add Levyra Ambient, Rediscover, artist exclusions, playlist tags and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520)
-- [Improve project-local RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519)
-- [Update the extractor stack and add per-capability client policy](https://github.com/LUC4N3X/Levyra-deepsound/pull/517)
-- [Add authentic YouTube comment cards to the Resonance shelf](https://github.com/LUC4N3X/Levyra-deepsound/pull/516)
-- [Polish Home collections, videos, resonance and ambience](https://github.com/LUC4N3X/Levyra-deepsound/pull/514)
+- **Audio engine:** AndroidX Media3 and ExoPlayer pipeline, custom session handling, gapless playback
+- **Offline vault:** Resumable background downloads, local cache hierarchy, audio tag embedding
+- **Synced lyrics:** Real-time synchronized lyrics scoring and custom extraction pipeline
+- **Interface:** Pure Jetpack Compose with Material You dynamic theming and desktop support
 
 ---
 
-## How I like to build
+## Technologies I work with
+
+<img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
+
+My environment is built entirely on Linux. I prefer a focused, predictable set of tools I can rely on when things get complicated:
+
+- **Android core:** **Kotlin** and **Jetpack Compose** for building fluid UI without legacy XML overhead. **AndroidX Media3** and **ExoPlayer** for audio sessions and foreground services that never drop playback.
+- **Async & APIs:** **Python** with **FastAPI** and **AsyncIO** for high-throughput concurrency, task queues, and automated workers. **Node.js** for lightweight scrapers and edge utilities.
+- **Offline vault:** **Room** and **SQLite** for dependable offline-first data that never vanishes on restart. **Redis** when caching speed is critical.
+- **Infrastructure:** **Docker** on lean **Linux** instances, reverse-proxied through **Cloudflare**, and shipped with reproducible **GitHub Actions** workflows.
+
+<br clear="right"/>
+
+---
+
+## How I build
 
 Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish.
 
 <div align="center">
 
-**Build it. Use it. Break it. Understand it. Ship the better version.**
+<br />
+
+**💻 Code. Build. Improve. Repeat.**
+
+<br /><br />
+
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
+    <img src="./assets/brand/github-cta-dark.svg" width="320" alt="Explore open source repositories" />
+  </picture>
+</a>
 
 </div>

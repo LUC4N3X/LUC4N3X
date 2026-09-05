@@ -1,89 +1,263 @@
-<svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="520" height="380" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Luca's Linux &amp; Android Developer Battlestation">
   <defs>
-    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#161B22"/>
-      <stop offset="1" stop-color="#0D1117"/>
+    <!-- Gradients -->
+    <linearGradient id="deskGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D333B"/>
+      <stop offset="100%" stop-color="#1C2128"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7C5CFF"/>
-      <stop offset="1" stop-color="#4CC9F0"/>
+
+    <linearGradient id="screenCode" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
     </linearGradient>
-    <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#3A335F"/>
-      <stop offset="1" stop-color="#21263A"/>
+
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
     </linearGradient>
+
+    <linearGradient id="hoodieGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#282E39"/>
+      <stop offset="100%" stop-color="#1A1E24"/>
+    </linearGradient>
+
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3139"/>
+      <stop offset="100%" stop-color="#16181D"/>
+    </linearGradient>
+
+    <linearGradient id="monitorLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
   </defs>
 
-  <ellipse cx="281" cy="331" rx="205" ry="12" fill="#8B949E" opacity="0.12"/>
+  <!-- Ground Soft Ambient Shadow -->
+  <ellipse cx="260" cy="360" rx="210" ry="14" fill="#010409" opacity="0.35"/>
 
-  <rect x="58" y="95" width="161" height="103" rx="10" fill="#30363D"/>
-  <rect x="65" y="102" width="147" height="89" rx="6" fill="url(#screen)"/>
-  <rect x="84" y="119" width="58" height="8" rx="4" fill="#F0F6FC" opacity="0.9"/>
-  <rect x="84" y="137" width="91" height="5" rx="2.5" fill="#8B949E" opacity="0.55"/>
-  <rect x="84" y="149" width="77" height="5" rx="2.5" fill="#8B949E" opacity="0.4"/>
-  <rect x="84" y="166" width="9" height="10" rx="2" fill="#7C5CFF"/>
-  <rect x="98" y="158" width="9" height="18" rx="2" fill="#6D68F7"/>
-  <rect x="112" y="151" width="9" height="25" rx="2" fill="#5D76F2"/>
-  <rect x="126" y="162" width="9" height="14" rx="2" fill="#4B8DEB"/>
-  <rect x="140" y="145" width="9" height="31" rx="2" fill="#43A5E3"/>
-  <rect x="154" y="155" width="9" height="21" rx="2" fill="#4CC9F0"/>
-  <path d="M80 198H197" stroke="#484F58" stroke-width="8" stroke-linecap="round"/>
-  <path d="M138 198V218" stroke="#484F58" stroke-width="7"/>
-  <path d="M112 218H164" stroke="#484F58" stroke-width="7" stroke-linecap="round"/>
+  <!-- ==================== DESK &amp; LEGS ==================== -->
+  <!-- Left &amp; Right Desk Legs -->
+  <path d="M 72 265 L 56 352" stroke="#21262D" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 448 265 L 464 352" stroke="#21262D" stroke-width="8" stroke-linecap="round"/>
+  <line x1="52" y1="352" x2="80" y2="352" stroke="#30363D" stroke-width="6" stroke-linecap="round"/>
+  <line x1="440" y1="352" x2="468" y2="352" stroke="#30363D" stroke-width="6" stroke-linecap="round"/>
 
-  <rect x="235" y="78" width="178" height="118" rx="11" fill="#30363D"/>
-  <rect x="242" y="85" width="164" height="104" rx="7" fill="url(#screen)"/>
-  <circle cx="265" cy="108" r="11" fill="url(#accent)"/>
-  <path d="M260 111L264 103L268 111L272 105" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="284" y="112" fill="#F0F6FC" font-size="13" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="1.2">LEVYRA</text>
-  <rect x="260" y="132" width="126" height="36" rx="7" fill="#161B22" stroke="#30363D"/>
-  <circle cx="278" cy="150" r="10" fill="#252A34"/>
-  <path d="M275 145L283 150L275 155V145Z" fill="#F0F6FC"/>
-  <rect x="297" y="142" width="63" height="5" rx="2.5" fill="#F0F6FC" opacity="0.8"/>
-  <rect x="297" y="153" width="44" height="4" rx="2" fill="#8B949E" opacity="0.55"/>
-  <path d="M260 177C270 166 278 187 287 174C297 160 306 190 316 174C326 158 336 188 346 173C356 158 365 186 386 169" stroke="url(#accent)" stroke-width="3" stroke-linecap="round"/>
-  <path d="M269 196H383" stroke="#484F58" stroke-width="8" stroke-linecap="round"/>
-  <path d="M326 196V217" stroke="#484F58" stroke-width="7"/>
-  <path d="M300 217H352" stroke="#484F58" stroke-width="7" stroke-linecap="round"/>
+  <!-- Main Desk Surface (Solid, beveled, rich slate) -->
+  <rect x="42" y="248" width="436" height="18" rx="5" fill="url(#deskGrad)" stroke="#373E47" stroke-width="1.2"/>
+  <rect x="44" y="248" width="432" height="3" rx="1.5" fill="#444C56" opacity="0.6"/>
 
-  <rect x="73" y="227" width="349" height="17" rx="8.5" fill="#484F58"/>
-  <path d="M97 242L80 326" stroke="#30363D" stroke-width="12" stroke-linecap="round"/>
-  <path d="M397 242L416 326" stroke="#30363D" stroke-width="12" stroke-linecap="round"/>
+  <!-- Desk Light Cone onto surface -->
+  <polygon points="120,180 380,180 430,250 70,250" fill="url(#monitorLight)"/>
 
-  <rect x="183" y="211" width="76" height="11" rx="5.5" fill="#21262D"/>
-  <rect x="192" y="202" width="58" height="10" rx="5" fill="#6E7681" opacity="0.35"/>
+  <!-- ==================== DUAL MONITORS SETUP ==================== -->
 
-  <rect x="432" y="187" width="31" height="56" rx="7" fill="#30363D"/>
-  <rect x="436" y="192" width="23" height="45" rx="4" fill="#0D1117"/>
-  <circle cx="447.5" cy="201.5" r="3.5" fill="#7C5CFF"/>
-  <path d="M440 218C444 211 448 225 452 216C455 211 457 216 459 213" stroke="#4CC9F0" stroke-width="2" stroke-linecap="round"/>
-  <rect x="441" y="227" width="13" height="3" rx="1.5" fill="#8B949E" opacity="0.5"/>
+  <!-- MONITOR 1: Primary Center/Left — Code Editor (Kotlin / Compose) -->
+  <g transform="translate(68, 80)">
+    <!-- Monitor Stand -->
+    <path d="M 85 140 L 85 168" stroke="#373E47" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="85" cy="168" rx="34" ry="5" fill="#21262D" stroke="#373E47" stroke-width="1"/>
 
-  <circle cx="342" cy="193" r="31" fill="#D8A37C"/>
-  <path d="M315 187C316 162 334 150 353 157C371 164 376 180 370 197C363 186 356 180 345 177C333 174 324 178 315 187Z" fill="#20252D"/>
-  <path d="M315 185C306 187 302 199 307 208" stroke="#7C5CFF" stroke-width="7" stroke-linecap="round"/>
-  <path d="M369 185C379 187 381 198 375 208" stroke="#7C5CFF" stroke-width="7" stroke-linecap="round"/>
-  <path d="M316 174C324 155 346 148 365 162" stroke="#7C5CFF" stroke-width="6" stroke-linecap="round"/>
+    <!-- Screen Bezel -->
+    <rect x="0" y="0" width="170" height="140" rx="8" fill="#1C2128" stroke="#373E47" stroke-width="1.5"/>
+    <!-- Screen Display -->
+    <rect x="4" y="4" width="162" height="132" rx="5" fill="url(#screenCode)"/>
 
-  <path d="M327 219C342 208 366 210 382 225L396 283H302L312 237C315 230 320 224 327 219Z" fill="url(#hoodie)"/>
-  <path d="M326 224C335 236 351 241 365 226" stroke="#6D68F7" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
-  <path d="M310 241C286 240 270 233 252 222" stroke="#D8A37C" stroke-width="12" stroke-linecap="round"/>
-  <path d="M380 236C398 226 407 216 415 205" stroke="#D8A37C" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="250" cy="221" r="7" fill="#D8A37C"/>
-  <circle cx="417" cy="203" r="7" fill="#D8A37C"/>
+    <!-- Window Traffic Lights -->
+    <circle cx="14" cy="14" r="3" fill="#FF5F56"/>
+    <circle cx="23" cy="14" r="3" fill="#FFBD2E"/>
+    <circle cx="32" cy="14" r="3" fill="#27C93F"/>
+    <line x1="4" y1="22" x2="166" y2="22" stroke="#21262D" stroke-width="1"/>
 
-  <path d="M322 281L299 326" stroke="#252A34" stroke-width="18" stroke-linecap="round"/>
-  <path d="M371 281L395 325" stroke="#252A34" stroke-width="18" stroke-linecap="round"/>
-  <path d="M287 327H314" stroke="#161B22" stroke-width="12" stroke-linecap="round"/>
-  <path d="M388 327H417" stroke="#161B22" stroke-width="12" stroke-linecap="round"/>
+    <!-- Tab: MainActivity.kt -->
+    <rect x="44" y="8" width="68" height="14" rx="3" fill="#21262D"/>
+    <text x="50" y="18" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="8">MainActivity.kt</text>
 
-  <path d="M292 255H403" stroke="#21262D" stroke-width="10" stroke-linecap="round"/>
-  <path d="M296 259L280 316" stroke="#21262D" stroke-width="10" stroke-linecap="round"/>
-  <path d="M399 259L418 316" stroke="#21262D" stroke-width="10" stroke-linecap="round"/>
+    <!-- Code Lines Syntax Highlights -->
+    <!-- Line numbers -->
+    <text x="10" y="38" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">1</text>
+    <text x="10" y="52" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">2</text>
+    <text x="10" y="66" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">3</text>
+    <text x="10" y="80" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">4</text>
+    <text x="10" y="94" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">5</text>
+    <text x="10" y="108" fill="#484F58" font-family="'JetBrains Mono', monospace" font-size="8">6</text>
 
-  <circle cx="470" cy="299" r="23" fill="#161B22" stroke="#30363D" stroke-width="3"/>
-  <path d="M459 300C461 290 466 286 470 286C477 286 481 292 481 300" stroke="#7C5CFF" stroke-width="4" stroke-linecap="round"/>
-  <rect x="456" y="298" width="6" height="14" rx="3" fill="#4CC9F0"/>
-  <rect x="478" y="298" width="6" height="14" rx="3" fill="#4CC9F0"/>
-  <path d="M463 315H477" stroke="#484F58" stroke-width="3" stroke-linecap="round"/>
+    <!-- Code content blocks -->
+    <rect x="22" y="32" width="28" height="6" rx="2" fill="#F47067"/> <!-- package -->
+    <rect x="54" y="32" width="46" height="6" rx="2" fill="#8B949E"/>
+
+    <rect x="22" y="46" width="36" height="6" rx="2" fill="#D2A8FF"/> <!-- @Composable -->
+    
+    <rect x="22" y="60" width="20" height="6" rx="2" fill="#F47067"/> <!-- fun -->
+    <rect x="46" y="60" width="48" height="6" rx="2" fill="#38BDF8"/> <!-- LevyraPlayer -->
+    <rect x="98" y="60" width="30" height="6" rx="2" fill="#8B949E"/>
+
+    <rect x="30" y="74" width="42" height="6" rx="2" fill="#7EE787"/> <!-- AudioSession -->
+    <rect x="76" y="74" width="54" height="6" rx="2" fill="#A5D6FF"/>
+
+    <rect x="30" y="88" width="60" height="6" rx="2" fill="#38BDF8"/>
+    <rect x="94" y="88" width="38" height="6" rx="2" fill="#7EE787"/>
+
+    <rect x="22" y="102" width="10" height="6" rx="2" fill="#8B949E"/>
+
+    <!-- Cyan Line Highlight Cursor -->
+    <line x1="136" y1="88" x2="136" y2="95" stroke="#38BDF8" stroke-width="2"/>
+  </g>
+
+  <!-- MONITOR 2: Vertical / Secondary Right — Levyra Music &amp; Linux Terminal -->
+  <g transform="translate(252, 60)">
+    <!-- Stand -->
+    <path d="M 90 160 L 90 188" stroke="#373E47" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="90" cy="188" rx="36" ry="5" fill="#21262D" stroke="#373E47" stroke-width="1"/>
+
+    <!-- Screen Bezel -->
+    <rect x="0" y="0" width="180" height="160" rx="8" fill="#1C2128" stroke="#373E47" stroke-width="1.5"/>
+    <rect x="4" y="4" width="172" height="152" rx="5" fill="url(#screenCode)"/>
+
+    <!-- Top: Levyra Logo &amp; Mini Visualizer -->
+    <circle cx="20" cy="20" r="7" fill="url(#neonGlow)"/>
+    <text x="32" y="23" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="700" letter-spacing="1">LEVYRA</text>
+    <rect x="134" y="14" width="34" height="12" rx="3" fill="#21262D"/>
+    <text x="140" y="23" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8">PLAY</text>
+
+    <!-- Music Equalizer / Audio Waveform Bars -->
+    <rect x="16" y="38" width="5" height="18" rx="2" fill="#818CF8"/>
+    <rect x="24" y="32" width="5" height="24" rx="2" fill="#38BDF8"/>
+    <rect x="32" y="40" width="5" height="16" rx="2" fill="#7EE787"/>
+    <rect x="40" y="28" width="5" height="28" rx="2" fill="#38BDF8"/>
+    <rect x="48" y="35" width="5" height="21" rx="2" fill="#818CF8"/>
+    <rect x="56" y="42" width="5" height="14" rx="2" fill="#38BDF8"/>
+    <rect x="64" y="34" width="5" height="22" rx="2" fill="#7EE787"/>
+    <rect x="72" y="30" width="5" height="26" rx="2" fill="#38BDF8"/>
+    <rect x="80" y="39" width="5" height="17" rx="2" fill="#818CF8"/>
+
+    <!-- Track title / artist -->
+    <rect x="96" y="36" width="66" height="6" rx="2" fill="#F0F6FC" opacity="0.9"/>
+    <rect x="96" y="46" width="44" height="5" rx="2" fill="#8B949E" opacity="0.6"/>
+
+    <!-- Divider inside monitor -->
+    <line x1="10" y1="68" x2="170" y2="68" stroke="#21262D" stroke-width="1"/>
+
+    <!-- Bottom: Linux Terminal Window -->
+    <text x="14" y="84" fill="#7EE787" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600">lucan3x@arch</text>
+    <text x="82" y="84" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="9">~ $ docker ps</text>
+
+    <rect x="14" y="94" width="70" height="5" rx="2" fill="#38BDF8" opacity="0.8"/>
+    <rect x="90" y="94" width="40" height="5" rx="2" fill="#8B949E" opacity="0.5"/>
+    <rect x="14" y="104" width="94" height="5" rx="2" fill="#8B949E" opacity="0.5"/>
+    <rect x="14" y="114" width="60" height="5" rx="2" fill="#7EE787" opacity="0.7"/>
+
+    <text x="14" y="136" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600">❯</text>
+    <rect x="24" y="128" width="6" height="10" rx="1" fill="#F0F6FC" opacity="0.9"/>
+  </g>
+
+  <!-- ==================== DESKTOP ACCESSORIES ==================== -->
+
+  <!-- 1. Ceramic Coffee Mug ☕ -->
+  <g transform="translate(68, 230)">
+    <rect x="0" y="0" width="18" height="20" rx="4" fill="#21262D" stroke="#373E47" stroke-width="1"/>
+    <!-- Handle -->
+    <path d="M 0 5 C -6 5 -6 15 0 15" stroke="#373E47" stroke-width="2.5" fill="none"/>
+    <!-- Steam -->
+    <path d="M 5 -2 C 3 -6 8 -10 6 -14" stroke="#8B949E" stroke-width="1.2" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 12 -4 C 10 -8 15 -12 13 -16" stroke="#8B949E" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+  </g>
+
+  <!-- 2. Android Test Device on Stand 📱 -->
+  <g transform="translate(422, 206)">
+    <!-- Stand Base -->
+    <path d="M 5 44 L 17 44 L 14 36 L 8 36 Z" fill="#21262D"/>
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="22" height="42" rx="4" fill="#161B22" stroke="#373E47" stroke-width="1.2"/>
+    <!-- Screen -->
+    <rect x="2" y="3" width="18" height="36" rx="2.5" fill="#0D1117"/>
+    <!-- Mini Android UI: Status bar &amp; Play card -->
+    <circle cx="11" cy="6" r="1" fill="#30363D"/>
+    <rect x="4" y="12" width="14" height="16" rx="2" fill="url(#neonGlow)" opacity="0.8"/>
+    <!-- Home bar -->
+    <line x1="8" y1="36" x2="14" y2="36" stroke="#8B949E" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- 3. Desktop Plant in Geometric Pot 🪴 -->
+  <g transform="translate(450, 222)">
+    <!-- Pot -->
+    <polygon points="4,14 18,14 15,28 7,28" fill="#21262D" stroke="#373E47" stroke-width="1"/>
+    <!-- Leaves -->
+    <path d="M 11 14 C 6 8 4 2 11 0 C 14 4 15 10 11 14 Z" fill="#238636"/>
+    <path d="M 11 14 C 16 9 20 5 18 1 C 13 4 12 10 11 14 Z" fill="#2EA043"/>
+    <path d="M 11 14 C 4 12 0 10 3 6 C 7 7 10 10 11 14 Z" fill="#3FB950"/>
+  </g>
+
+  <!-- 4. Cute Mini Linux Tux Mascot 🐧 (Right on desk!) -->
+  <g transform="translate(104, 226)">
+    <!-- Tux Body -->
+    <ellipse cx="10" cy="14" rx="7" ry="9" fill="#161B22"/>
+    <!-- Tux Belly -->
+    <ellipse cx="10" cy="15" rx="4.5" ry="6" fill="#F0F6FC"/>
+    <!-- Yellow Beak -->
+    <polygon points="8,10 12,10 10,13" fill="#E3B341"/>
+    <!-- Feet -->
+    <ellipse cx="7" cy="22" rx="3" ry="1.5" fill="#E3B341"/>
+    <ellipse cx="13" cy="22" rx="3" ry="1.5" fill="#E3B341"/>
+  </g>
+
+  <!-- 5. Keyboard &amp; Mouse on Extended Desk Mat -->
+  <!-- Desk Mat -->
+  <rect x="140" y="244" width="220" height="14" rx="3" fill="#1C2128" stroke="#30363D" stroke-width="1"/>
+  
+  <!-- Mechanical Keyboard with Backlit Glow -->
+  <rect x="160" y="240" width="120" height="10" rx="2" fill="#21262D" stroke="#38BDF8" stroke-width="0.8"/>
+  <line x1="164" y1="243" x2="276" y2="243" stroke="#8B949E" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+  <line x1="164" y1="247" x2="276" y2="247" stroke="#8B949E" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
+
+  <!-- Ergonomic Mouse -->
+  <rect x="300" y="241" width="14" height="8" rx="4" fill="#2D333B" stroke="#444C56" stroke-width="0.8"/>
+
+  <!-- ==================== THE DEVELOPER (LUCA) ==================== -->
+  <!-- Clean, relaxed, focused posture from behind, working on the code -->
+  <g transform="translate(200, 205)">
+    <!-- Office Ergonomic Chair Backrest -->
+    <rect x="16" y="55" width="88" height="70" rx="16" fill="#161B22" stroke="#2D333B" stroke-width="1.5"/>
+    <line x1="30" y1="90" x2="90" y2="90" stroke="#21262D" stroke-width="2"/>
+
+    <!-- Developer Torso &amp; Hoodie -->
+    <path d="M 28 62 C 34 38 48 32 60 32 C 72 32 86 38 92 62 L 102 118 L 18 118 Z" fill="url(#hoodieGrad)"/>
+
+    <!-- Hoodie Details &amp; Creases -->
+    <path d="M 44 48 C 52 56 68 56 76 48" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="56" y1="53" x2="56" y2="65" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <line x1="64" y1="53" x2="64" y2="65" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Arms resting naturally toward desk/keyboard -->
+    <path d="M 28 62 C 16 75 8 92 2 108" stroke="#282E39" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 92 62 C 104 75 112 92 118 108" stroke="#282E39" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- Hands on desk -->
+    <circle cx="2" cy="110" r="5" fill="#D8A37C"/>
+    <circle cx="118" cy="110" r="5" fill="#D8A37C"/>
+
+    <!-- Head &amp; Modern Haircut -->
+    <circle cx="60" cy="22" r="17" fill="#D8A37C"/>
+    <!-- Hair Texture -->
+    <path d="M 44 20 C 44 8 52 5 60 5 C 68 5 76 8 76 20 C 76 14 70 8 60 8 C 50 8 44 14 44 20 Z" fill="url(#hairGrad)"/>
+    <path d="M 44 18 C 43 28 47 30 50 32" fill="url(#hairGrad)"/>
+    <path d="M 76 18 C 77 28 73 30 70 32" fill="url(#hairGrad)"/>
+
+    <!-- Over-ear Studio Headphones 🎧 -->
+    <!-- Headband -->
+    <path d="M 42 18 C 42 5 78 5 78 18" stroke="#30363D" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M 44 18 C 44 7 76 7 76 18" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <!-- Ear Cups with Cyan Neon Ring -->
+    <rect x="38" y="14" width="7" height="15" rx="3.5" fill="#1C2128" stroke="#38BDF8" stroke-width="1.2"/>
+    <rect x="75" y="14" width="7" height="15" rx="3.5" fill="#1C2128" stroke="#38BDF8" stroke-width="1.2"/>
+  </g>
+
+  <!-- Chair Base &amp; Wheels underneath -->
+  <path d="M 260 325 L 260 350" stroke="#161B22" stroke-width="10"/>
+  <path d="M 230 354 L 260 348 L 290 354" stroke="#21262D" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="230" cy="355" r="3" fill="#30363D"/>
+  <circle cx="290" cy="355" r="3" fill="#30363D"/>
 </svg>
