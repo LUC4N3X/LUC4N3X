@@ -69,9 +69,16 @@ Levyra is an open-source music player for Android and Windows. It focuses on low
 
 ## Technologies I work with
 
-- **Android:** Kotlin, Jetpack Compose, AndroidX Media3, ExoPlayer, Coroutines, Room
-- **Backend and APIs:** Python, FastAPI, Node.js, REST APIs, WebSockets, AsyncIO
-- **Infrastructure:** Docker, Linux, GitHub Actions, Cloudflare, PostgreSQL, Redis
+<img align="right" alt="LUC4N3X mark" width="220" src="./assets/brand/luc4n3x-mark.svg" />
+
+I prefer a small set of tools I know inside out over a long list of buzzwords. If something is in my daily rotation, it is because I have had to debug it at 2 AM when a background service stopped responding:
+
+- **Android core:** **Kotlin** and **Jetpack Compose** for building fluid UI without legacy XML overhead. **AndroidX Media3** and **ExoPlayer** for rock-solid media sessions, gapless audio, and foreground service lifecycles.
+- **Async & APIs:** **Python**, **FastAPI**, and **AsyncIO** for high-throughput concurrency, task queues, and automated workflows. **Node.js** when lightweight event-driven tooling is the right fit.
+- **Data & resilience:** **Room** and **SQLite** for clean offline-first state that never loses user data. **PostgreSQL** and **Redis** when caching and relational structure matter.
+- **Infrastructure:** **Docker** containers deployed on lean **Linux** instances, proxied through **Cloudflare**, and shipped with minimal, reproducible **GitHub Actions** pipelines.
+
+<br clear="right"/>
 
 ---
 
