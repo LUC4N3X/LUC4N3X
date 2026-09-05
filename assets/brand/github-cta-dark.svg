@@ -1,30 +1,40 @@
-<svg width="460" height="54" viewBox="0 0 460 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Explore open source repositories">
+<svg width="300" height="46" viewBox="0 0 300 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Explore Repositories">
   <defs>
-    <linearGradient id="btnBgDark" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#161B22"/>
-      <stop offset="100%" stop-color="#0D1117"/>
+    <linearGradient id="pillBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#30363D"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#30363D"/>
     </linearGradient>
-    <linearGradient id="borderGradDark" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#7C5CFF" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#30363D"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.8"/>
-    </linearGradient>
+
+    <style>
+      @keyframes nudge {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+      .arrow-nudge {
+        animation: nudge 1.8s ease-in-out infinite;
+      }
+    </style>
   </defs>
 
-  <!-- Button Pill -->
-  <rect x="1" y="1" width="458" height="52" rx="26" fill="url(#btnBgDark)" stroke="url(#borderGradDark)" stroke-width="1.2"/>
+  <!-- Clean Pill Background -->
+  <rect x="1" y="1" width="298" height="44" rx="22" fill="#161B22" stroke="url(#pillBorder)" stroke-width="1.2"/>
 
-  <!-- GitHub Icon in Circle -->
-  <circle cx="34" cy="27" r="16" fill="#21262D"/>
-  <g transform="translate(24, 17)">
+  <!-- Centered Content Group -->
+  <g transform="translate(48, 13)">
+    <!-- GitHub Octocat Mark (20x20) -->
     <path fill-rule="evenodd" clip-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-1.98 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.73 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V19c0 .27.16.59.67.5C17.14 18.16 20 14.42 20 10A10 10 0 0010 0z" fill="#F0F6FC"/>
+
+    <!-- Label -->
+    <text x="30" y="15" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="600" letter-spacing="0.2">
+      Explore Repositories
+    </text>
+
+    <!-- Arrow (nested in positioning group to prevent CSS transform conflict) -->
+    <g transform="translate(182, 10)">
+      <g class="arrow-nudge">
+        <path d="M 0 0 L 10 0 M 6 -4 L 10 0 L 6 4" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
   </g>
-
-  <!-- Typography -->
-  <text x="64" y="27" fill="#F0F6FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="13" font-weight="600">Explore open source repositories</text>
-  <text x="64" y="41" fill="#8B949E" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="10.5">github.com/LUC4N3X · Kotlin, Android, Python, Tools</text>
-
-  <!-- Circular Arrow Button on Right -->
-  <circle cx="426" cy="27" r="14" fill="#21262D" stroke="#30363D" stroke-width="1"/>
-  <path d="M 421 27 L 429 27 M 426 23 L 430 27 L 426 31" stroke="#38BDF8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

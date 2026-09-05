@@ -102,7 +102,7 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
-    <img src="./assets/brand/github-cta-dark.svg" width="440" alt="Explore open source repositories" />
+    <img src="./assets/brand/github-cta-dark.svg" width="300" alt="Explore Repositories" />
   </picture>
 </a>
 
