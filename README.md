@@ -90,7 +90,11 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
 
 <br />
 
-**💻 Code. Build. Improve. Repeat**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/motto-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/motto.svg">
+  <img src="./assets/brand/motto-dark.svg" width="460" alt="Code. Build. Improve. Repeat" />
+</picture>
 
 <br />
 
