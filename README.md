@@ -84,23 +84,13 @@ My environment is built entirely on Linux. I prefer a focused, predictable set o
 
 ## How I build
 
-Software gets good when you test under real constraints and feel every rough edge yourself:
-
-```diff
-- Rewrite entire subsystems because an edge case is hard to reproduce
-+ Trace the callstack on real hardware and apply the smallest durable fix
-
-- Rely on emulators and assume ideal desktop network conditions
-+ Test against thermal throttling, spotty cellular handoffs, and aggressive OEM background killers
-
-- Treat offline as an unexpected error state
-+ Offline-first by default: local cache is primary, network is just for synchronization
-
-- Rely solely on synthetic test suites to assess quality
-+ Daily-drive what I ship and eliminate every friction firsthand
-```
+Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish.
 
 <div align="center">
+
+<br />
+
+**💻 Code. Build. Improve. Repeat**
 
 <br />
 
