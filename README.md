@@ -41,7 +41,11 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 <div align="center">
 
 <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <img src="./assets/levyra/levyra-showcase.svg" width="100%" alt="Levyra Native Android Music Experience" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/levyra/levyra-lockup-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/levyra/levyra-lockup.svg">
+    <img src="./assets/levyra/levyra-lockup-dark.svg" width="760" alt="Levyra" />
+  </picture>
 </a>
 
 <br />
@@ -54,32 +58,12 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 </div>
 
-<table width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h4>Audio and playback</h4>
-      <p>AndroidX Media3 and ExoPlayer pipeline, custom audio session management, gapless playback, and queue persistence across app restarts.</p>
-      <p><code>Kotlin</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Coroutines</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>Offline and storage</h4>
-      <p>Resumable background downloads, local cache hierarchy, duplicate prevention, audio tag embedding, and storage integrity checks.</p>
-      <p><code>Room DB</code> · <code>WorkManager</code> · <code>Cache architecture</code></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <h4>Lyrics and discovery</h4>
-      <p>Real-time synchronized scrolling lyrics, multi-provider resolution scoring, metadata enrichment, and ambient discovery feeds.</p>
-      <p><code>REST APIs</code> · <code>LevyraExtractor</code> · <code>Lyrics engine</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h4>Interface and experience</h4>
-      <p>Pure Jetpack Compose UI with Material You dynamic color adaptation, smooth gesture controls, desktop layout support, and refined micro-interactions.</p>
-      <p><code>Jetpack Compose</code> · <code>Material 3</code> · <code>Desktop Compose</code></p>
-    </td>
-  </tr>
-</table>
+Levyra is an open-source music player for Android and Windows. It focuses on low-latency playback with AndroidX Media3, offline downloads, synced lyrics via LRCLIB, and a fluid Jetpack Compose interface with zero tracking.
+
+- **Audio engine:** AndroidX Media3 and ExoPlayer pipeline, custom session handling, gapless playback
+- **Offline vault:** Resumable background downloads, local cache hierarchy, audio tag embedding
+- **Synced lyrics:** Real-time synchronized lyrics scoring and custom extraction pipeline
+- **Interface:** Pure Jetpack Compose with Material You dynamic theming and desktop support
 
 ---
 
