@@ -90,11 +90,15 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
 
 <br />
 
+**💻 Code. Build. Improve. Repeat.**
+
+<br /><br />
+
 <a href="https://github.com/LUC4N3X?tab=repositories">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
-    <img src="./assets/brand/how-i-build-dark.svg" width="510" alt="Code. Build. Improve. Repeat · Explore Repositories" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
+    <img src="./assets/brand/github-cta-dark.svg" width="320" alt="Explore open source repositories" />
   </picture>
 </a>
 

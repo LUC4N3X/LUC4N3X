@@ -1,39 +1,83 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 300" role="img" aria-labelledby="title desc">
-  <title id="title">LUC4N3X</title>
-  <desc id="desc">LUC4N3X developer lockup for dark interfaces.</desc>
+<svg width="920" height="200" viewBox="0 0 920 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X Logo">
   <defs>
-    <linearGradient id="terminal" x1="44" y1="44" x2="298" y2="252" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#161B22"/>
-      <stop offset="1" stop-color="#0D1117"/>
+    <!-- Brand Gradient -->
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
     </linearGradient>
-    <linearGradient id="accent" x1="70" y1="100" x2="1040" y2="214" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#58A6FF"/>
-      <stop offset="1" stop-color="#2F81F7"/>
+
+    <!-- Emblem Container Gradient -->
+    <linearGradient id="emblemBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F242D"/>
+      <stop offset="100%" stop-color="#111418"/>
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+
+    <!-- Subtle Beam Underline -->
+    <linearGradient id="beamUnderline" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9"/>
+      <stop offset="35%" stop-color="#818CF8" stop-opacity="0.8"/>
+      <stop offset="80%" stop-color="#30363D" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#30363D" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
   </defs>
 
-  <rect x="36" y="38" width="262" height="214" rx="24" fill="url(#terminal)" stroke="#30363D" stroke-width="2"/>
-  <circle cx="66" cy="66" r="5" fill="#484F58"/>
-  <circle cx="84" cy="66" r="5" fill="#484F58"/>
-  <circle cx="102" cy="66" r="5" fill="#484F58"/>
-  <path d="M36 86H298" stroke="#21262D" stroke-width="2"/>
-  <text x="62" y="120" fill="#8B949E" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">~/dev/luc4n3x</text>
-  <path d="M70 158L100 180L70 202" fill="none" stroke="url(#accent)" stroke-width="10" stroke-linecap="square" stroke-linejoin="miter" filter="url(#glow)"/>
-  <path d="M122 204H184" stroke="#F0F6FC" stroke-width="10" stroke-linecap="square"/>
-  <rect x="210" y="156" width="46" height="46" rx="8" fill="#161B22" stroke="#30363D" stroke-width="2"/>
-  <path d="M222 170L232 180L222 190M239 190H247" fill="none" stroke="#58A6FF" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- LEFT: The Iconic Geometric Monogram Logo Emblem (144x144) -->
+  <g transform="translate(42, 28)">
+    <!-- Outer Shield / Hexagonal Tech Tile -->
+    <path d="M 72 6 L 134 40 L 134 104 L 72 138 L 10 104 L 10 40 Z" fill="url(#emblemBg)" stroke="#30363D" stroke-width="1.8"/>
+    <!-- Subtle Inner Rim Highlight -->
+    <path d="M 72 6 L 134 40 L 134 104 L 72 138 L 10 104 L 10 40 Z" stroke="url(#brandGrad)" stroke-width="1.8" opacity="0.5"/>
 
-  <text x="352" y="158" fill="#F0F6FC" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="92" font-weight="700" letter-spacing="2">LUC4N3<tspan fill="#58A6FF">X</tspan></text>
-  <path d="M352 188H1120" stroke="#21262D" stroke-width="2"/>
-  <path d="M352 188H690" stroke="url(#accent)" stroke-width="2" opacity="0.85"/>
-  <text x="352" y="226" fill="#8B949E" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="20" letter-spacing="1.6">android / media / product engineering</text>
-  <text x="1002" y="226" fill="#58A6FF" font-family="SFMono-Regular,Consolas,'Liberation Mono',monospace" font-size="18" letter-spacing="1">git:main</text>
-  <circle cx="1109" cy="220" r="4" fill="#58A6FF" filter="url(#glow)"/>
+    <!-- Geometric 'L' Component (Clean, Solid, Architecture) -->
+    <path d="M 38 42 L 38 102 L 76 102" stroke="#F0F6FC" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Geometric 'X' Component (Dynamic, Luminous, Cyber Crossing) -->
+    <!-- Downward Diagonal -->
+    <path d="M 64 56 L 106 102" stroke="url(#brandGrad)" stroke-width="7.5" stroke-linecap="round" filter="url(#coreGlow)"/>
+    <!-- Upward Diagonal with clean break for depth -->
+    <path d="M 106 56 L 86 78 M 70 96 L 64 102" stroke="url(#brandGrad)" stroke-width="7.5" stroke-linecap="round"/>
+
+    <!-- Luminous Central Nexus Dot -->
+    <circle cx="72" cy="72" r="3.5" fill="#38BDF8"/>
+  </g>
+
+  <!-- RIGHT: Typographic Brand Lockup -->
+  <g transform="translate(225, 42)">
+    <!-- Top Status / Role Pill -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="138" height="24" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="12" cy="12" r="3.5" fill="#3FB950"/>
+      <text x="22" y="16" fill="#7EE787" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8">SYSTEMS DEV</text>
+      <text x="104" y="16" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="11">~</text>
+    </g>
+
+    <!-- Brand Name: LUC4N3X (Bold, Precision Display Typography) -->
+    <text x="0" y="70" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif" font-size="54" font-weight="900" letter-spacing="3.5">
+      LUC4N3<tspan fill="url(#brandGrad)">X</tspan>
+    </text>
+
+    <!-- Underline Horizon Beam -->
+    <rect x="0" y="86" width="560" height="1.8" rx="0.9" fill="url(#beamUnderline)"/>
+
+    <!-- Subtitle Meta Information -->
+    <g transform="translate(0, 114)">
+      <text x="0" y="0" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="500" letter-spacing="0.3">
+        Android Engineering <tspan fill="#38BDF8">·</tspan> Media Pipelines <tspan fill="#38BDF8">·</tspan> Linux Tools
+      </text>
+
+      <!-- Git Branch Pill on Right -->
+      <g transform="translate(480, -14)">
+        <rect x="0" y="0" width="76" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="8" cy="10" r="2.5" fill="#38BDF8"/>
+        <text x="16" y="14" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">git:main</text>
+      </g>
+    </g>
+  </g>
 </svg>
