@@ -93,7 +93,7 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/motto-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/motto.svg">
-  <img src="./assets/brand/motto-dark.svg" width="460" alt="Code. Build. Improve. Repeat" />
+  <img src="./assets/brand/motto-dark.svg" width="380" alt="Code. Build. Improve. Repeat" />
 </picture>
 
 <br />
@@ -102,7 +102,7 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
-    <img src="./assets/brand/github-cta-dark.svg" width="460" alt="Explore open source repositories" />
+    <img src="./assets/brand/github-cta-dark.svg" width="440" alt="Explore open source repositories" />
   </picture>
 </a>
 
