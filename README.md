@@ -27,7 +27,7 @@ Hey, I'm Luca. I like taking rough ideas and turning them into software I can ac
 Most days I bounce between **Android apps, backend services, tooling and infrastructure**. I enjoy the part after something starts working: finding what still feels off, fixing the weird edge cases and making the whole thing cleaner.
 
 - I work mostly with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
-- 🔧 I like bugs that only show up on one device, one network or one very specific path
+- I like bugs that only show up on one device, one network or one very specific path
 - I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
 - **Levyra** is where a lot of my Android and product ideas end up
 - If it involves **Android, self-hosting, APIs, performance or useful tools**, I'm probably interested
@@ -36,7 +36,7 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ---
 
-## ✦ Featured project
+## Featured project
 
 <table>
   <tr>
@@ -57,19 +57,19 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ---
 
-### 👷 Current projects
+### 01 / Current projects
 
 - [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound) — Android & Windows music player
 - [**Instara-Crew**](https://github.com/LUC4N3X/Instara-Crew) — multi-account Instagram operations console
 - [**antigravity-thalarch**](https://github.com/LUC4N3X/antigravity-thalarch) — reliability tooling for coding agents
 
-### 🌱 Other repos
+### 02 / Other repositories
 
 - [**LevyraExtractor**](https://github.com/LUC4N3X/LevyraExtractor) — media extractor stack used by Levyra
 - [**apps.obtainium.imranr.dev**](https://github.com/LUC4N3X/apps.obtainium.imranr.dev) — Obtainium catalog contributions
 - [**LUC4N3X**](https://github.com/LUC4N3X/LUC4N3X) — profile README and branding
 
-### 🔨 Recent pull requests
+### 03 / Recent pull requests
 
 - [#520 Add Levyra Ambient, Rediscover, artist exclusions, playlist tags and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520)
 - [#519 Improve project-local RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519)
