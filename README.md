@@ -84,16 +84,35 @@ My environment is built entirely on Linux. I prefer a focused, predictable set o
 
 ## How I build
 
-Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish.
-
 <div align="center">
 
-**Build it. Use it. Break it. Understand it. Ship the better version.**
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/build-pipeline-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/build-pipeline.svg">
+  <img src="./assets/brand/build-pipeline-dark.svg" width="760" alt="How I build: Hardware, Root Cause, Surgical Diff, Daily Drive" />
+</picture>
+
+</div>
 
 <br />
 
+Software gets good when you test it under real constraints and feel every rough edge yourself:
+
+- **Physical silicon over simulation:** Emulators don't hit thermal limits, drop packets during cell tower handoffs, or face aggressive background task killers. I test on real devices early.
+- **Surgical fixes over broad rewrites:** Understand why an edge case happens before opening a PR. The cleanest solution is usually the smallest real diff.
+- **Offline-first durability:** If the network drops in a tunnel, playback shouldn't stop and state shouldn't vanish. Local cache and Room persistence come first.
+- **Daily-drive what I ship:** Using my own tools daily is the fastest way to spot friction. If an interaction stutters or feels clumsy, it gets fixed immediately.
+
+<br />
+
+<div align="center">
+
 <a href="https://github.com/LUC4N3X?tab=repositories">
-  <img src="https://img.shields.io/badge/view_repositories-07111F?style=for-the-badge&logo=github&logoColor=white" alt="View repositories" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
+    <img src="./assets/brand/github-cta-dark.svg" width="460" alt="Explore open source repositories" />
+  </picture>
 </a>
 
 </div>

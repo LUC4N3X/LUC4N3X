@@ -1,0 +1,64 @@
+<svg width="760" height="88" viewBox="0 0 760 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How I build: Hardware, Root Cause, Surgical Diff, Daily Drive">
+  <defs>
+    <linearGradient id="cardBgDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="stepBgDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#21262D"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container -->
+  <rect x="1" y="1" width="758" height="86" rx="12" fill="url(#cardBgDark)" stroke="#30363D" stroke-width="1.2"/>
+
+  <!-- Connecting Track -->
+  <line x1="80" y1="44" x2="680" y2="44" stroke="#21262D" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Step 1: Hardware -->
+  <g transform="translate(30, 16)">
+    <rect width="144" height="56" rx="8" fill="url(#stepBgDark)" stroke="#30363D" stroke-width="1"/>
+    <rect x="14" y="15" width="26" height="26" rx="5" fill="#0D1117" stroke="#38BDF8" stroke-width="1.2"/>
+    <circle cx="27" cy="28" r="4" fill="#38BDF8"/>
+    <text x="50" y="27" fill="#F0F6FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="700">01. Hardware</text>
+    <text x="50" y="41" fill="#8B949E" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9">Real device silicon</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 188 44 L 208 44 M 204 40 L 209 44 L 204 48" stroke="#484F58" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Step 2: Root Cause -->
+  <g transform="translate(218, 16)">
+    <rect width="144" height="56" rx="8" fill="url(#stepBgDark)" stroke="#30363D" stroke-width="1"/>
+    <rect x="14" y="15" width="26" height="26" rx="5" fill="#0D1117" stroke="#7C5CFF" stroke-width="1.2"/>
+    <circle cx="27" cy="28" r="6" stroke="#7C5CFF" stroke-width="1.5" fill="none"/>
+    <circle cx="27" cy="28" r="2" fill="#7C5CFF"/>
+    <text x="50" y="27" fill="#F0F6FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="700">02. Root Cause</text>
+    <text x="50" y="41" fill="#8B949E" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9">Trace the edge case</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 376 44 L 396 44 M 392 40 L 397 44 L 392 48" stroke="#484F58" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Step 3: Surgical Diff -->
+  <g transform="translate(406, 16)">
+    <rect width="144" height="56" rx="8" fill="url(#stepBgDark)" stroke="#30363D" stroke-width="1"/>
+    <rect x="14" y="15" width="26" height="26" rx="5" fill="#0D1117" stroke="#34D399" stroke-width="1.2"/>
+    <text x="27" y="32" fill="#34D399" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" font-weight="700" text-anchor="middle">&gt;_</text>
+    <text x="50" y="27" fill="#F0F6FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="700">03. Surgical Diff</text>
+    <text x="50" y="41" fill="#8B949E" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9">Minimal exact fix</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 564 44 L 584 44 M 580 40 L 585 44 L 580 48" stroke="#484F58" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Step 4: Daily Drive -->
+  <g transform="translate(594, 16)">
+    <rect width="136" height="56" rx="8" fill="url(#stepBgDark)" stroke="#30363D" stroke-width="1"/>
+    <rect x="14" y="15" width="26" height="26" rx="5" fill="#0D1117" stroke="#F59E0B" stroke-width="1.2"/>
+    <path d="M 21 28 L 25 32 L 33 24" stroke="#F59E0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="50" y="27" fill="#F0F6FC" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="11" font-weight="700">04. Daily Drive</text>
+    <text x="50" y="41" fill="#8B949E" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif" font-size="9">Polish through use</text>
+  </g>
+</svg>
