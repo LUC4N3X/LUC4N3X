@@ -38,53 +38,45 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ## Featured project
 
-<table>
-  <tr>
-    <td width="96" align="center" valign="middle">
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="./assets/levyra/levyra-icon.png" width="80" alt="Levyra icon" />
-      </a>
-    </td>
-    <td valign="middle">
-      <h3><a href="https://github.com/LUC4N3X/Levyra-deepsound">Levyra</a></h3>
-      <p>Open-source music player for Android and Windows. Focused on low-latency playback with AndroidX Media3, offline downloads, synced lyrics, and a clean Compose interface.</p>
-      <p><code>Kotlin</code> · <code>Jetpack Compose</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Room</code></p>
-      <p>
-        <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · 
-        <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · 
-        <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
-      </p>
-    </td>
-  </tr>
-</table>
+<div align="center">
 
----
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <img src="./assets/levyra/levyra-showcase.svg" width="100%" alt="Levyra Native Android Music Experience" />
+</a>
 
-## Selected work
+<br />
 
-<table>
+<p>
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · 
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · 
+  <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
+</p>
+
+</div>
+
+<table width="100%">
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/LUC4N3X/antigravity-thalarch">antigravity-thalarch</a></h4>
-      <p>Reliability tooling for AI coding agents. Enforces environment inspection, independent review passes, and evidence validation before shipping code.</p>
-      <p><code>Python</code> · <code>AI agents</code> · <code>Validation</code> · <code>Developer tools</code></p>
+      <h4>Audio and playback</h4>
+      <p>AndroidX Media3 and ExoPlayer pipeline, custom audio session management, gapless playback, and queue persistence across app restarts.</p>
+      <p><code>Kotlin</code> · <code>Media3</code> · <code>ExoPlayer</code> · <code>Coroutines</code></p>
     </td>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/LUC4N3X/Instara-Crew">Instara-Crew</a></h4>
-      <p>Operations console for multi-account management. Uses job queues, persistent sessions, and Gemini integration to run repeatable tasks.</p>
-      <p><code>Python</code> · <code>FastAPI</code> · <code>Gemini API</code> · <code>AsyncIO</code></p>
+      <h4>Offline and storage</h4>
+      <p>Resumable background downloads, local cache hierarchy, duplicate prevention, audio tag embedding, and storage integrity checks.</p>
+      <p><code>Room DB</code> · <code>WorkManager</code> · <code>Cache architecture</code></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h4><a href="https://github.com/LUC4N3X/LevyraExtractor">LevyraExtractor</a></h4>
-      <p>Custom media extraction stack used by Levyra for metadata resolution, streaming URL parsing, and audio stream extraction.</p>
-      <p><code>Java</code> · <code>Kotlin</code> · <code>Media pipelines</code> · <code>Extractors</code></p>
+      <h4>Lyrics and discovery</h4>
+      <p>Real-time synchronized scrolling lyrics, multi-provider resolution scoring, metadata enrichment, and ambient discovery feeds.</p>
+      <p><code>REST APIs</code> · <code>LevyraExtractor</code> · <code>Lyrics engine</code></p>
     </td>
     <td width="50%" valign="top">
-      <h4>Streaming infrastructure (Private labs)</h4>
-      <p>High-throughput HLS reverse proxies and streaming gateways with fallback routing, FlareSolverr integration, and edge proxies.</p>
-      <p><code>Rust</code> · <code>Python</code> · <code>Docker</code> · <code>Reverse proxies</code></p>
+      <h4>Interface and experience</h4>
+      <p>Pure Jetpack Compose UI with Material You dynamic color adaptation, smooth gesture controls, desktop layout support, and refined micro-interactions.</p>
+      <p><code>Jetpack Compose</code> · <code>Material 3</code> · <code>Desktop Compose</code></p>
     </td>
   </tr>
 </table>
@@ -96,18 +88,6 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 - **Android:** Kotlin, Jetpack Compose, AndroidX Media3, ExoPlayer, Coroutines, Room
 - **Backend and APIs:** Python, FastAPI, Node.js, REST APIs, WebSockets, AsyncIO
 - **Infrastructure:** Docker, Linux, GitHub Actions, Cloudflare, PostgreSQL, Redis
-
----
-
-## Recent pull requests
-
-Recent contributions in [Levyra](https://github.com/LUC4N3X/Levyra-deepsound):
-
-- [#520 Add Levyra Ambient, Rediscover, artist exclusions, and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520)
-- [#519 Improve project-local RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519)
-- [#517 Update the extractor stack and client policies](https://github.com/LUC4N3X/Levyra-deepsound/pull/517)
-- [#516 Add authentic YouTube comment cards to the shelf](https://github.com/LUC4N3X/Levyra-deepsound/pull/516)
-- [#514 Polish collections, videos, resonance, and ambience](https://github.com/LUC4N3X/Levyra-deepsound/pull/514)
 
 ---
 
