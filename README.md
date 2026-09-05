@@ -84,28 +84,25 @@ My environment is built entirely on Linux. I prefer a focused, predictable set o
 
 ## How I build
 
-<div align="center">
+Software gets good when you test under real constraints and feel every rough edge yourself:
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/build-pipeline-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/build-pipeline.svg">
-  <img src="./assets/brand/build-pipeline-dark.svg" width="760" alt="How I build: Hardware, Root Cause, Surgical Diff, Daily Drive" />
-</picture>
+```diff
+- Rewrite entire subsystems because an edge case is hard to reproduce
++ Trace the callstack on real hardware and apply the smallest durable fix
 
-</div>
+- Rely on emulators and assume ideal desktop network conditions
++ Test against thermal throttling, spotty cellular handoffs, and aggressive OEM background killers
 
-<br />
+- Treat offline as an unexpected error state
++ Offline-first by default: local cache is primary, network is just for synchronization
 
-Software gets good when you test it under real constraints and feel every rough edge yourself:
-
-- **Physical silicon over simulation:** Emulators don't hit thermal limits, drop packets during cell tower handoffs, or face aggressive background task killers. I test on real devices early.
-- **Surgical fixes over broad rewrites:** Understand why an edge case happens before opening a PR. The cleanest solution is usually the smallest real diff.
-- **Offline-first durability:** If the network drops in a tunnel, playback shouldn't stop and state shouldn't vanish. Local cache and Room persistence come first.
-- **Daily-drive what I ship:** Using my own tools daily is the fastest way to spot friction. If an interaction stutters or feels clumsy, it gets fixed immediately.
-
-<br />
+- Rely solely on synthetic test suites to assess quality
++ Daily-drive what I ship and eliminate every friction firsthand
+```
 
 <div align="center">
+
+<br />
 
 <a href="https://github.com/LUC4N3X?tab=repositories">
   <picture>
