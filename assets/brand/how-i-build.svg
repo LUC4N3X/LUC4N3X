@@ -1,0 +1,60 @@
+<svg width="510" height="46" viewBox="0 0 510 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Code. Build. Improve. Repeat - Explore Repositories">
+  <defs>
+    <linearGradient id="hPillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D0D7DE"/>
+      <stop offset="45%" stop-color="#0969DA" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#0969DA" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#D0D7DE"/>
+    </linearGradient>
+
+    <linearGradient id="scrGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2BA6FF"/>
+      <stop offset="100%" stop-color="#0969DA"/>
+    </linearGradient>
+
+    <style>
+      @keyframes nudgeA {
+        0%, 100% { transform: translateX(0); }
+        50% { transform: translateX(3px); }
+      }
+      .arrow-nudge {
+        animation: nudgeA 1.8s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Capsule Outer Container -->
+  <rect x="1" y="1" width="508" height="44" rx="22" fill="#F6F8FA" stroke="url(#hPillGrad)" stroke-width="1.2"/>
+
+  <!-- Left: 💻 Code. Build. Improve. Repeat -->
+  <g transform="translate(18, 13)">
+    <!-- Crisp Vector Laptop -->
+    <rect x="2" y="1" width="18" height="12" rx="1.5" fill="#EAEEF2" stroke="#AFB8C1" stroke-width="1"/>
+    <rect x="3.5" y="2.5" width="15" height="9" rx="0.8" fill="url(#scrGrad)"/>
+    <line x1="5.5" y1="5" x2="8.5" y2="5" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" opacity="0.95"/>
+    <line x1="5.5" y1="7" x2="12" y2="7" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" opacity="0.95"/>
+    <line x1="5.5" y1="9" x2="10" y2="9" stroke="#FFFFFF" stroke-width="0.9" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 0 14 L 22 14 L 20 16.5 L 2 16.5 Z" fill="#AFB8C1"/>
+
+    <!-- Motto Typography -->
+    <text x="28" y="14" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="0.2">
+      Code<tspan fill="#0969DA">.</tspan> Build<tspan fill="#0969DA">.</tspan> Improve<tspan fill="#0969DA">.</tspan> Repeat
+    </text>
+  </g>
+
+  <!-- Vertical subtle separator -->
+  <line x1="340" y1="12" x2="340" y2="34" stroke="#D0D7DE" stroke-width="1.2"/>
+
+  <!-- Right: [ 🐙 Explore ↗ ] -->
+  <g transform="translate(354, 8)">
+    <rect x="0" y="0" width="140" height="30" rx="15" fill="#EAEEF2" stroke="#0969DA" stroke-width="1.1"/>
+    <!-- Octocat Mark -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10a4.5 4.5 0 00-1.42 8.77c.23.04.31-.1.31-.22v-.76c-1.25.27-1.51-.6-1.51-.6-.2-.52-.5-.67-.5-.67-.4-.28.03-.27.03-.27.45.03.69.46.69.46.4.68 1.05.49 1.31.37.04-.29.15-.49.28-.6-1-.11-2.05-.5-2.05-2.22 0-.49.17-.89.47-1.21-.05-.12-.2-.58.04-1.2 0 0 .38-.12 1.24.46.36-.1.75-.15 1.13-.15.38 0 .76.05 1.12.15.86-.58 1.24-.46 1.24-.46.25.62.09 1.08.04 1.2.3.32.47.72.47 1.21 0 1.73-1.05 2.1-2.06 2.21.16.14.3.41.3.84v1.24c0 .12.08.27.31.22A4.5 4.5 0 0018 10z" fill="#1F2328"/>
+    <text x="29" y="19" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="600">Explore</text>
+    <g transform="translate(112, 15)">
+      <g class="arrow-nudge">
+        <path d="M 0 0 L 8 0 M 5 -3 L 8 0 L 5 3" stroke="#0969DA" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+  </g>
+</svg>
