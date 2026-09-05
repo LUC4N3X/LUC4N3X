@@ -1,0 +1,61 @@
+<svg width="400" height="46" viewBox="0 0 400 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Code. Build. Improve. Repeat">
+  <defs>
+    <linearGradient id="dividerBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D0D7DE" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#D0D7DE" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#0969DA" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#D0D7DE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D0D7DE" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2BA6FF"/>
+      <stop offset="100%" stop-color="#0969DA"/>
+    </linearGradient>
+
+    <!-- Subtle, tasteful light shimmer across the divider beam (slow, calm, non-pacchiano) -->
+    <linearGradient id="beamShimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0969DA" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#0969DA" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0969DA" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      @keyframes beamSlide {
+        0% { transform: translateX(-120px); opacity: 0; }
+        20% { opacity: 0.7; }
+        80% { opacity: 0.7; }
+        100% { transform: translateX(380px); opacity: 0; }
+      }
+      .shimmer-bar {
+        animation: beamSlide 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Content Group (Centrally balanced in 400px viewBox) -->
+  <g transform="translate(18, 4)">
+    <!-- 💻 Crisp Vector Laptop with prompt lines -->
+    <g transform="translate(0, 3)">
+      <rect x="3" y="1" width="22" height="15" rx="2" fill="#EAEEF2" stroke="#AFB8C1" stroke-width="1.2"/>
+      <rect x="5" y="3" width="18" height="11" rx="1" fill="url(#screenGrad)"/>
+      <line x1="7" y1="6" x2="11" y2="6" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity="0.95"/>
+      <line x1="7" y1="8.5" x2="16" y2="8.5" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity="0.95"/>
+      <line x1="7" y1="11" x2="13" y2="11" stroke="#FFFFFF" stroke-width="1.1" stroke-linecap="round" opacity="0.8"/>
+      <path d="M 0 18.5 L 28 18.5 L 25 22 L 3 22 Z" fill="#AFB8C1"/>
+      <rect x="11" y="18.5" width="6" height="1" rx="0.5" fill="#D0D7DE"/>
+    </g>
+
+    <!-- Typography: Clean, elegant, readable, matching reference -->
+    <text x="36" y="19" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="18.5" font-weight="600" letter-spacing="0.2">
+      Code<tspan fill="#0969DA">.</tspan> Build<tspan fill="#0969DA">.</tspan> Improve<tspan fill="#0969DA">.</tspan> Repeat
+    </text>
+
+    <!-- Refined divider beam underneath -->
+    <rect x="0" y="32" width="364" height="1.2" rx="0.6" fill="url(#dividerBeam)"/>
+
+    <!-- Shimmer gleam -->
+    <g class="shimmer-bar">
+      <rect x="0" y="31.5" width="80" height="2" rx="1" fill="url(#beamShimmer)"/>
+    </g>
+  </g>
+</svg>
