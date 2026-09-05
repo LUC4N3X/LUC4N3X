@@ -69,14 +69,14 @@ Levyra is an open-source music player for Android and Windows. It focuses on low
 
 ## Technologies I work with
 
-<img align="right" alt="LUC4N3X mark" width="220" src="./assets/brand/luc4n3x-mark.svg" />
+<img align="right" alt="Core Stack Runtime" width="340" src="./assets/brand/tech-stack.svg" />
 
-I prefer a small set of tools I know inside out over a long list of buzzwords. If something is in my daily rotation, it is because I have had to debug it at 2 AM when a background service stopped responding:
+I keep my stack intentionally tight. Every tool here earned its spot by surviving actual production headaches, flaky networks, and 2 AM debugging sessions:
 
-- **Android core:** **Kotlin** and **Jetpack Compose** for building fluid UI without legacy XML overhead. **AndroidX Media3** and **ExoPlayer** for rock-solid media sessions, gapless audio, and foreground service lifecycles.
-- **Async & APIs:** **Python**, **FastAPI**, and **AsyncIO** for high-throughput concurrency, task queues, and automated workflows. **Node.js** when lightweight event-driven tooling is the right fit.
-- **Data & resilience:** **Room** and **SQLite** for clean offline-first state that never loses user data. **PostgreSQL** and **Redis** when caching and relational structure matter.
-- **Infrastructure:** **Docker** containers deployed on lean **Linux** instances, proxied through **Cloudflare**, and shipped with minimal, reproducible **GitHub Actions** pipelines.
+- **Mobile:** **Kotlin** and **Jetpack Compose** for reactive UI without XML legacy. **AndroidX Media3** and **ExoPlayer** for audio sessions and foreground services that never drop playback.
+- **Backend & APIs:** **Python** with **FastAPI** and **AsyncIO** for high-throughput concurrency and automated workers. **Node.js** for lightweight scrapers and edge utilities.
+- **Offline Vault:** **Room** and **SQLite** for dependable offline-first data that never vanishes on restart. **Redis** when caching speed is critical.
+- **Infrastructure:** **Docker** on lean **Linux** instances, reverse-proxied through **Cloudflare**, and shipped with reproducible **GitHub Actions** workflows.
 
 <br clear="right"/>
 
