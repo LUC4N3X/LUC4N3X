@@ -57,25 +57,25 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 ---
 
-### 👷 What I'm currently working on
+### 👷 What I'm working on
 
-- [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound) — music player for Android and Windows, with most of my current Android/product work
-- [**Instara-Crew**](https://github.com/LUC4N3X/Instara-Crew) — multi-account Instagram operations console with queues, persistent sessions and Gemini-assisted workflows
-- [**antigravity-thalarch**](https://github.com/LUC4N3X/antigravity-thalarch) — engineering skill and reliability layer for AI coding agents
+- [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound) — where most of my Android work goes. Music player for Android and Windows.
+- [**Instara-Crew**](https://github.com/LUC4N3X/Instara-Crew) — a multi-account Instagram console I built to make repetitive account work less painful.
+- [**antigravity-thalarch**](https://github.com/LUC4N3X/antigravity-thalarch) — tooling I use around coding agents when I want the workflow to be more predictable.
 
-### 🌱 Other public work
+### 🌱 Other things I've worked on
 
-- [**LevyraExtractor**](https://github.com/LUC4N3X/LevyraExtractor) — extractor work used around Levyra's media stack
-- [**apps.obtainium.imranr.dev**](https://github.com/LUC4N3X/apps.obtainium.imranr.dev) — contributions around the Obtainium app catalog
-- [**LUC4N3X**](https://github.com/LUC4N3X/LUC4N3X) — this profile and its branding
+- [**LevyraExtractor**](https://github.com/LUC4N3X/LevyraExtractor) — the extractor side of Levyra's media stack.
+- [**apps.obtainium.imranr.dev**](https://github.com/LUC4N3X/apps.obtainium.imranr.dev) — contributions around the Obtainium app catalog.
+- [**LUC4N3X**](https://github.com/LUC4N3X/LUC4N3X) — this profile repo and the branding around it.
 
 ### 🔨 Recent pull requests
 
-- [Add Levyra Ambient, Rediscover, artist exclusions, playlist tags and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520)
-- [Improve project-local RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519)
-- [Update the extractor stack and add per-capability client policy](https://github.com/LUC4N3X/Levyra-deepsound/pull/517)
-- [Add authentic YouTube comment cards to the Resonance shelf](https://github.com/LUC4N3X/Levyra-deepsound/pull/516)
-- [Polish Home collections, videos, resonance and ambience](https://github.com/LUC4N3X/Levyra-deepsound/pull/514)
+- [Ambient, Rediscover, artist exclusions, playlist tags and hidden playlists](https://github.com/LUC4N3X/Levyra-deepsound/pull/520) on [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound)
+- [Tighten RTK handling for ADB diagnostics](https://github.com/LUC4N3X/Levyra-deepsound/pull/519) on [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound)
+- [Update the extractor stack and client capability policy](https://github.com/LUC4N3X/Levyra-deepsound/pull/517) on [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound)
+- [Add real YouTube comment cards to Resonance](https://github.com/LUC4N3X/Levyra-deepsound/pull/516) on [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound)
+- [Polish Home collections, video, resonance and ambience](https://github.com/LUC4N3X/Levyra-deepsound/pull/514) on [**Levyra**](https://github.com/LUC4N3X/Levyra-deepsound)
 
 ---
 
