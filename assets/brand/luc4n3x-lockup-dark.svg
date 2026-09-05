@@ -1,83 +1,74 @@
-<svg width="920" height="200" viewBox="0 0 920 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X Logo">
+<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X">
   <defs>
-    <!-- Brand Gradient -->
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Master Brand Gradients -->
+    <linearGradient id="cyberX" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="60%" stop-color="#818CF8"/>
+      <stop offset="55%" stop-color="#818CF8"/>
       <stop offset="100%" stop-color="#0284C7"/>
     </linearGradient>
 
-    <!-- Emblem Container Gradient -->
-    <linearGradient id="emblemBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1F242D"/>
+    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#21262D"/>
       <stop offset="100%" stop-color="#111418"/>
     </linearGradient>
 
-    <!-- Subtle Beam Underline -->
-    <linearGradient id="beamUnderline" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9"/>
-      <stop offset="35%" stop-color="#818CF8" stop-opacity="0.8"/>
-      <stop offset="80%" stop-color="#30363D" stop-opacity="0.5"/>
+    <linearGradient id="shieldRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#30363D"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="beamHoriz" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="40%" stop-color="#818CF8"/>
+      <stop offset="80%" stop-color="#30363D" stop-opacity="0.6"/>
       <stop offset="100%" stop-color="#30363D" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Ambient Glow Filter -->
-    <filter id="coreGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <filter id="neonReflect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
     </filter>
   </defs>
 
-  <!-- LEFT: The Iconic Geometric Monogram Logo Emblem (144x144) -->
-  <g transform="translate(42, 28)">
-    <!-- Outer Shield / Hexagonal Tech Tile -->
-    <path d="M 72 6 L 134 40 L 134 104 L 72 138 L 10 104 L 10 40 Z" fill="url(#emblemBg)" stroke="#30363D" stroke-width="1.8"/>
-    <!-- Subtle Inner Rim Highlight -->
-    <path d="M 72 6 L 134 40 L 134 104 L 72 138 L 10 104 L 10 40 Z" stroke="url(#brandGrad)" stroke-width="1.8" opacity="0.5"/>
+  <!-- Centered Lockup Group -->
+  <g transform="translate(60, 20)">
+    <!-- 1. The Master Cyber Emblem (140 x 140) -->
+    <g transform="translate(10, 0)">
+      <!-- Hexagonal Tech Tile with Precision Chamfers -->
+      <path d="M 70 8 L 126 40 L 126 100 L 70 132 L 14 100 L 14 40 Z" fill="url(#shieldFill)" stroke="url(#shieldRim)" stroke-width="2"/>
 
-    <!-- Geometric 'L' Component (Clean, Solid, Architecture) -->
-    <path d="M 38 42 L 38 102 L 76 102" stroke="#F0F6FC" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Corner Tech Notches -->
+      <line x1="70" y1="12" x2="70" y2="20" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      <line x1="70" y1="120" x2="70" y2="128" stroke="#818CF8" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
 
-    <!-- Geometric 'X' Component (Dynamic, Luminous, Cyber Crossing) -->
-    <!-- Downward Diagonal -->
-    <path d="M 64 56 L 106 102" stroke="url(#brandGrad)" stroke-width="7.5" stroke-linecap="round" filter="url(#coreGlow)"/>
-    <!-- Upward Diagonal with clean break for depth -->
-    <path d="M 106 56 L 86 78 M 70 96 L 64 102" stroke="url(#brandGrad)" stroke-width="7.5" stroke-linecap="round"/>
+      <!-- 'L' Monogram Blade (Architectural Solid Base) -->
+      <path d="M 38 42 L 38 98 L 74 98" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <!-- Luminous Central Nexus Dot -->
-    <circle cx="72" cy="72" r="3.5" fill="#38BDF8"/>
-  </g>
+      <!-- 'X' Monogram Energy Cross (Precision Angled Blades) -->
+      <!-- Primary Laser Blade (Down-Right) -->
+      <path d="M 64 52 L 102 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round" filter="url(#neonReflect)"/>
+      
+      <!-- Counter Blade (Up-Right with Negative Space Interlock) -->
+      <path d="M 102 52 L 83 75" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
+      <path d="M 69 92 L 64 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
 
-  <!-- RIGHT: Typographic Brand Lockup -->
-  <g transform="translate(225, 42)">
-    <!-- Top Status / Role Pill -->
-    <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="138" height="24" rx="12" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-      <circle cx="12" cy="12" r="3.5" fill="#3FB950"/>
-      <text x="22" y="16" fill="#7EE787" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8">SYSTEMS DEV</text>
-      <text x="104" y="16" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="11">~</text>
+      <!-- Central Quantum Dot / Core Focus -->
+      <circle cx="70" cy="70" r="3" fill="#38BDF8"/>
     </g>
 
-    <!-- Brand Name: LUC4N3X (Bold, Precision Display Typography) -->
-    <text x="0" y="70" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif" font-size="54" font-weight="900" letter-spacing="3.5">
-      LUC4N3<tspan fill="url(#brandGrad)">X</tspan>
-    </text>
-
-    <!-- Underline Horizon Beam -->
-    <rect x="0" y="86" width="560" height="1.8" rx="0.9" fill="url(#beamUnderline)"/>
-
-    <!-- Subtitle Meta Information -->
-    <g transform="translate(0, 114)">
-      <text x="0" y="0" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14.5" font-weight="500" letter-spacing="0.3">
-        Android Engineering <tspan fill="#38BDF8">·</tspan> Media Pipelines <tspan fill="#38BDF8">·</tspan> Linux Tools
+    <!-- 2. The Master Wordmark (Pure, Bold, Authoritative, Zero Fluff) -->
+    <g transform="translate(195, 20)">
+      <!-- LUC4N3X Display Typography -->
+      <text x="0" y="72" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Montserrat', sans-serif" font-size="64" font-weight="900" letter-spacing="4">
+        LUC4N3<tspan fill="url(#cyberX)">X</tspan>
       </text>
 
-      <!-- Git Branch Pill on Right -->
-      <g transform="translate(480, -14)">
-        <rect x="0" y="0" width="76" height="20" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
-        <circle cx="8" cy="10" r="2.5" fill="#38BDF8"/>
-        <text x="16" y="14" fill="#8B949E" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">git:main</text>
-      </g>
+      <!-- Signature Horizon Beam (Dynamic, razor thin, laser refined) -->
+      <rect x="0" y="90" width="540" height="2" rx="1" fill="url(#beamHoriz)"/>
     </g>
   </g>
 </svg>
