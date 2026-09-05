@@ -1,0 +1,113 @@
+<svg width="440" height="300" viewBox="0 0 440 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Linux and Open Source Developer Workspace">
+  <defs>
+    <linearGradient id="screenBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#161B22"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="tuxGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2D3348"/>
+      <stop offset="50%" stop-color="#1B1F2F"/>
+      <stop offset="100%" stop-color="#0F121C"/>
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Shadow -->
+  <ellipse cx="230" cy="280" rx="180" ry="12" fill="#8B949E" opacity="0.12"/>
+
+  <!-- ==================== LINUX WORKSTATION MONITOR ==================== -->
+  <g transform="translate(190, 42)">
+    <!-- Monitor Outer Stand -->
+    <rect x="74" y="180" width="46" height="32" rx="4" fill="#30363D"/>
+    <rect x="52" y="210" width="90" height="12" rx="6" fill="#21262D" stroke="#30363D" stroke-width="1.5"/>
+
+    <!-- Monitor Outer Bezel -->
+    <rect width="194" height="142" rx="10" fill="#30363D" stroke="#484F58" stroke-width="1.5"/>
+
+    <!-- Monitor Inner Screen -->
+    <rect x="7" y="7" width="180" height="128" rx="6" fill="url(#screenBg)"/>
+
+    <!-- Window Header -->
+    <rect x="7" y="7" width="180" height="18" rx="4" fill="#161B22"/>
+    <circle cx="18" cy="16" r="3" fill="#484F58"/>
+    <circle cx="28" cy="16" r="3" fill="#484F58"/>
+    <circle cx="38" cy="16" r="3" fill="#484F58"/>
+    <text x="50" y="19" fill="#8B949E" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="8" font-weight="600">luc4n3x@linux:~</text>
+
+    <!-- Terminal Output -->
+    <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">
+      <text x="16" y="40" fill="#34D399" font-size="9" font-weight="700">$ uname -srm</text>
+      <text x="16" y="52" fill="#8B949E" font-size="8">Linux 6.12.8 x86_64</text>
+
+      <text x="16" y="68" fill="#38BDF8" font-size="9" font-weight="700">$ systemctl status</text>
+      <text x="16" y="80" fill="#34D399" font-size="8">● 0 degraded, running</text>
+
+      <text x="16" y="96" fill="#A78BFA" font-size="9" font-weight="700">$ docker ps</text>
+      <text x="16" y="108" fill="#F0F6FC" font-size="8">levyra-engine: up 42d</text>
+
+      <text x="16" y="123" fill="#38BDF8" font-size="9" font-weight="700">&gt; _</text>
+    </g>
+
+    <!-- Mini Server Box underneath -->
+    <g transform="translate(10, 196)">
+      <rect width="174" height="24" rx="4" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <circle cx="16" cy="12" r="3" fill="#34D399"/>
+      <circle cx="26" cy="12" r="3" fill="#38BDF8"/>
+      <circle cx="36" cy="12" r="3" fill="#A78BFA"/>
+      <line x1="50" y1="12" x2="160" y2="12" stroke="#21262D" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ==================== TUX THE LINUX MASCOT ==================== -->
+  <g transform="translate(45, 52)">
+    <!-- Feet -->
+    <ellipse cx="60" cy="216" rx="20" ry="9" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+    <ellipse cx="106" cy="216" rx="20" ry="9" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+
+    <!-- Body Base -->
+    <path d="M42 165 C32 195 44 218 83 218 C122 218 134 195 124 165 C118 135 112 110 83 110 C54 110 48 135 42 165 Z" fill="url(#tuxGrad)" stroke="#30363D" stroke-width="2"/>
+
+    <!-- White Belly -->
+    <ellipse cx="83" cy="172" rx="28" ry="38" fill="#F0F6FC"/>
+
+    <!-- Left Wing -->
+    <path d="M44 140 C28 160 30 188 48 198 C52 182 50 160 48 140 Z" fill="url(#tuxGrad)" stroke="#30363D" stroke-width="1.5"/>
+
+    <!-- Right Wing typing on keyboard -->
+    <path d="M122 140 C138 160 148 178 130 196 C124 182 118 160 118 140 Z" fill="url(#tuxGrad)" stroke="#30363D" stroke-width="1.5"/>
+
+    <!-- Head -->
+    <ellipse cx="83" cy="98" rx="33" ry="36" fill="url(#tuxGrad)" stroke="#30363D" stroke-width="2"/>
+
+    <!-- Eyes -->
+    <ellipse cx="73" cy="88" rx="6.5" ry="9.5" fill="#F0F6FC"/>
+    <circle cx="74.5" cy="90" r="3.5" fill="#0D1117"/>
+    <circle cx="75.5" cy="88.5" r="1.2" fill="#FFFFFF"/>
+
+    <ellipse cx="93" cy="88" rx="6.5" ry="9.5" fill="#F0F6FC"/>
+    <circle cx="91.5" cy="90" r="3.5" fill="#0D1117"/>
+    <circle cx="92.5" cy="88.5" r="1.2" fill="#FFFFFF"/>
+
+    <!-- Tux Beak -->
+    <path d="M71 100 Q83 114 95 100 Q83 122 71 100 Z" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+
+    <!-- Headphones (Signature purple & cyan from About Me workspace) -->
+    <path d="M50 96 C50 56 116 56 116 96" stroke="#7C5CFF" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <rect x="44" y="90" width="10" height="22" rx="5" fill="#4CC9F0" stroke="#7C5CFF" stroke-width="2"/>
+    <rect x="112" y="90" width="10" height="22" rx="5" fill="#4CC9F0" stroke="#7C5CFF" stroke-width="2"/>
+
+    <!-- Mini Mechanical Keyboard under wings -->
+    <rect x="70" y="210" width="76" height="14" rx="3.5" fill="#21262D" stroke="#30363D" stroke-width="1.5"/>
+    <circle cx="80" cy="217" r="2" fill="#7C5CFF"/>
+    <circle cx="88" cy="217" r="2" fill="#4CC9F0"/>
+    <circle cx="96" cy="217" r="2" fill="#F0F6FC" opacity="0.6"/>
+    <circle cx="104" cy="217" r="2" fill="#F0F6FC" opacity="0.6"/>
+    <circle cx="112" cy="217" r="2" fill="#F0F6FC" opacity="0.6"/>
+    <circle cx="120" cy="217" r="2" fill="#F0F6FC" opacity="0.6"/>
+    <circle cx="128" cy="217" r="2" fill="#F0F6FC" opacity="0.6"/>
+    <circle cx="136" cy="217" r="2" fill="#38BDF8"/>
+  </g>
+</svg>

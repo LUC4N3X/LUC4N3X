@@ -69,13 +69,13 @@ Levyra is an open-source music player for Android and Windows. It focuses on low
 
 ## Technologies I work with
 
-<img align="right" alt="Core Stack Runtime" width="340" src="./assets/brand/tech-stack.svg" />
+<img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
 
-I keep my stack intentionally tight. Every tool here earned its spot by surviving actual production headaches, flaky networks, and 2 AM debugging sessions:
+My environment is built entirely on Linux. I prefer a focused, predictable set of tools I can rely on when things get complicated:
 
-- **Mobile:** **Kotlin** and **Jetpack Compose** for reactive UI without XML legacy. **AndroidX Media3** and **ExoPlayer** for audio sessions and foreground services that never drop playback.
-- **Backend & APIs:** **Python** with **FastAPI** and **AsyncIO** for high-throughput concurrency and automated workers. **Node.js** for lightweight scrapers and edge utilities.
-- **Offline Vault:** **Room** and **SQLite** for dependable offline-first data that never vanishes on restart. **Redis** when caching speed is critical.
+- **Android core:** **Kotlin** and **Jetpack Compose** for building fluid UI without legacy XML overhead. **AndroidX Media3** and **ExoPlayer** for audio sessions and foreground services that never drop playback.
+- **Async & APIs:** **Python** with **FastAPI** and **AsyncIO** for high-throughput concurrency, task queues, and automated workers. **Node.js** for lightweight scrapers and edge utilities.
+- **Offline vault:** **Room** and **SQLite** for dependable offline-first data that never vanishes on restart. **Redis** when caching speed is critical.
 - **Infrastructure:** **Docker** on lean **Linux** instances, reverse-proxied through **Cloudflare**, and shipped with reproducible **GitHub Actions** workflows.
 
 <br clear="right"/>
