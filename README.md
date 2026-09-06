@@ -20,7 +20,7 @@
 
 ## About me
 
-<img align="right" alt="Luca at his developer workspace" width="300" src="./assets/brand/luc4n3x-workspace-avatar.png" />
+<img align="right" alt="Luca at his developer workspace" width="300" src="./assets/brand/luc4n3x-workspace.svg" />
 
 Hey, I'm Luca. I like taking rough ideas and turning them into software I can actually use.
 
