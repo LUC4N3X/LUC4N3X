@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup.svg" width="760" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup-dark.svg" width="760" alt="LUC4N3X" />
 </picture>
 
 <br />
@@ -14,7 +14,7 @@
 
 <br />
 
-<img src="./assets/brand/signal-divider.svg" width="100%" alt="" />
+<img src="./assets/brand/signal-divider.svg" width="560" alt="Section divider" />
 
 </div>
 
