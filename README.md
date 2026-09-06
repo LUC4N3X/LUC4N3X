@@ -3,7 +3,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup.svg" width="760" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup-dark.svg" width="760" alt="LUC4N3X" />
 </picture>
 
 <br />
@@ -14,7 +14,7 @@
 
 <br />
 
-<img src="./assets/brand/signal-divider.svg" width="100%" alt="" />
+<img src="./assets/brand/signal-divider.svg" width="560" alt="Section divider" />
 
 </div>
 
@@ -51,8 +51,8 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 <br />
 
 <p>
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> · 
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> · 
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> ·
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> ·
   <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
 </p>
 
@@ -90,15 +90,11 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
 
 <br />
 
-**💻 Code. Build. Improve. Repeat.**
-
-<br /><br />
-
 <a href="https://github.com/LUC4N3X?tab=repositories">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-cta-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-cta.svg">
-    <img src="./assets/brand/github-cta-dark.svg" width="320" alt="Explore open source repositories" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
+    <img src="./assets/brand/how-i-build-dark.svg" width="420" alt="Code. Build. Improve. Repeat. Explore repositories." />
   </picture>
 </a>
 
