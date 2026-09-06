@@ -1,74 +1,83 @@
-<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X">
+<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="LUC4N3X">
   <defs>
-    <!-- Master Brand Gradients -->
-    <linearGradient id="cyberX" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0969DA"/>
-      <stop offset="55%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#0550AE"/>
+    <!-- Brand Gradients for Light Mode -->
+    <linearGradient id="sapphireCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="50%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
     </linearGradient>
 
-    <linearGradient id="shieldFill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#EAEEF2"/>
+    <linearGradient id="sapphireIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="60%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
     </linearGradient>
 
-    <linearGradient id="shieldRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0969DA" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#D0D7DE"/>
-      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.8"/>
+    <linearGradient id="laserBeamLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="40%" stop-color="#4F46E5"/>
+      <stop offset="75%" stop-color="#0284C7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#E2E8F0" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="beamHoriz" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0969DA"/>
-      <stop offset="40%" stop-color="#6366F1"/>
-      <stop offset="80%" stop-color="#D0D7DE" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#D0D7DE" stop-opacity="0"/>
-    </linearGradient>
-
-    <filter id="neonReflect" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <!-- Drop Shadow for crisp elevation on pure white -->
+    <filter id="crispShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <!-- Centered Lockup Group -->
-  <g transform="translate(60, 20)">
-    <!-- 1. The Master Cyber Emblem (140 x 140) -->
-    <g transform="translate(10, 0)">
-      <!-- Hexagonal Tech Tile with Precision Chamfers -->
-      <path d="M 70 8 L 126 40 L 126 100 L 70 132 L 14 100 L 14 40 Z" fill="url(#shieldFill)" stroke="url(#shieldRim)" stroke-width="2"/>
+  <!-- Left: Pure Vector Minimalist Sapphire LX Monogram -->
+  <g transform="translate(45, 15)" filter="url(#crispShadow)">
+    <!-- 1. The L Monogram -->
+    <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
+          fill="url(#sapphireCyan)"/>
 
-      <!-- Corner Tech Notches -->
-      <line x1="70" y1="12" x2="70" y2="20" stroke="#0969DA" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
-      <line x1="70" y1="120" x2="70" y2="128" stroke="#6366F1" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+    <!-- Inner L Laser Core -->
+    <path d="M 35 30 L 35 109 L 80 109"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.95"/>
 
-      <!-- 'L' Monogram Blade (Architectural Solid Base) -->
-      <path d="M 38 42 L 38 98 L 74 98" stroke="#1F2328" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- 2. The Interlocking X Monogram -->
+    <!-- Diagonal 1: Top-Right to Bottom-Left -->
+    <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
+          fill="url(#sapphireIndigo)"/>
+    <line x1="110" y1="26" x2="63" y2="95" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
 
-      <!-- 'X' Monogram Energy Cross (Precision Angled Blades) -->
-      <!-- Primary Laser Blade (Down-Right) -->
-      <path d="M 64 52 L 102 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round" filter="url(#neonReflect)"/>
-      
-      <!-- Counter Blade (Up-Right with Negative Space Interlock) -->
-      <path d="M 102 52 L 83 75" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
-      <path d="M 69 92 L 64 98" stroke="url(#cyberX)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Diagonal 2: Top-Left to Bottom-Right -->
+    <g>
+      <!-- Upper segment -->
+      <path d="M 52 28 L 68 28 L 86 54 L 74 68 Z" fill="url(#sapphireCyan)"/>
+      <line x1="56" y1="32" x2="80" y2="61" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
 
-      <!-- Central Quantum Dot / Core Focus -->
-      <circle cx="70" cy="70" r="3" fill="#0969DA"/>
+      <!-- Lower segment passing through L -->
+      <path d="M 88 72 L 122 116 L 104 116 L 76 82 Z" fill="url(#sapphireCyan)"/>
+      <line x1="82" y1="77" x2="114" y2="114" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.95"/>
     </g>
 
-    <!-- 2. The Master Wordmark (Pure, Bold, Authoritative, Zero Fluff) -->
-    <g transform="translate(195, 20)">
-      <!-- LUC4N3X Display Typography -->
-      <text x="0" y="72" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Montserrat', sans-serif" font-size="64" font-weight="900" letter-spacing="4">
-        LUC4N3<tspan fill="url(#cyberX)">X</tspan>
-      </text>
+    <!-- Optical Interlock Shadow at Crossing -->
+    <polygon points="76,66 88,72 82,82 72,76" fill="#0A0E1A" opacity="0.45"/>
 
-      <!-- Signature Horizon Beam (Dynamic, razor thin, laser refined) -->
-      <rect x="0" y="90" width="540" height="2" rx="1" fill="url(#beamHoriz)"/>
-    </g>
+    <!-- Quantum Focus Center Pulse -->
+    <circle cx="80" cy="74" r="3" fill="#0284C7"/>
+  </g>
+
+  <!-- Right: Master Typography (Light Theme) -->
+  <g transform="translate(225, 20)">
+    <!-- Eyebrow -->
+    <circle cx="4" cy="18" r="3.5" fill="#0284C7"/>
+    <text x="16" y="22" fill="#0284C7" font-family="'JetBrains Mono', SFMono-Regular, Consolas, monospace" font-size="12" font-weight="600" letter-spacing="3.5">SOFTWARE ENGINEER &amp; CREATOR</text>
+
+    <!-- Wordmark -->
+    <text x="0" y="74" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Montserrat, sans-serif" font-size="64" font-weight="900" letter-spacing="4">
+      LUC4N3<tspan fill="url(#sapphireCyan)">X</tspan>
+    </text>
+
+    <!-- Horizon Line -->
+    <rect x="0" y="94" width="560" height="2.5" rx="1" fill="url(#laserBeamLight)"/>
+    <circle cx="0" cy="95" r="3.5" fill="#0284C7"/>
   </g>
 </svg>
