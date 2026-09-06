@@ -1,4 +1,4 @@
-<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="LUC4N3X">
+<svg width="800" height="180" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="LUC4N3X">
   <defs>
     <!-- Brand Gradients -->
     <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -15,9 +15,9 @@
 
     <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F2FE"/>
-      <stop offset="40%" stop-color="#6366F1"/>
-      <stop offset="75%" stop-color="#00F2FE" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#1E293B" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#6366F1"/>
+      <stop offset="70%" stop-color="#00F2FE" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
     </linearGradient>
 
     <!-- Diffuse Ambient Glow -->
@@ -44,19 +44,17 @@
     </filter>
   </defs>
 
-  <!-- Left: Pure Vector Minimalist Neon LX Monogram -->
-  <g transform="translate(45, 15)">
+  <!-- Left: Pure Vector Minimalist Neon LX Monogram (Centered at x=85) -->
+  <g transform="translate(85, 15)">
     <!-- Diffuse Aura -->
     <circle cx="75" cy="72" r="75" fill="url(#neonAura)"/>
 
     <!-- 1. The L Monogram (Double-Track Neon Blade) -->
-    <!-- Glow Under-layer -->
     <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
           fill="url(#neonCyan)"
           opacity="0.45"
           filter="url(#intenseGlow)"/>
 
-    <!-- Crisp Outer L Path -->
     <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
           fill="url(#neonCyan)"/>
 
@@ -70,7 +68,7 @@
           opacity="0.85"/>
 
     <!-- 2. The Interlocking X Monogram -->
-    <!-- Diagonal 1: Top-Right to Bottom-Left (Passing behind L's front blade) -->
+    <!-- Diagonal 1: Top-Right to Bottom-Left -->
     <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
           fill="url(#neonIndigo)"
           opacity="0.45"
@@ -79,13 +77,11 @@
           fill="url(#neonIndigo)"/>
     <line x1="110" y1="26" x2="63" y2="95" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
 
-    <!-- Diagonal 2: Top-Left to Bottom-Right (Forward Laser Blade with Optical Interlock) -->
+    <!-- Diagonal 2: Top-Left to Bottom-Right -->
     <g filter="url(#softGlow)">
-      <!-- Upper segment -->
       <path d="M 52 28 L 68 28 L 86 54 L 74 68 Z" fill="url(#neonCyan)"/>
       <line x1="56" y1="32" x2="80" y2="61" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
 
-      <!-- Lower segment passing through L -->
       <path d="M 88 72 L 122 116 L 104 116 L 76 82 Z" fill="url(#neonCyan)"/>
       <line x1="82" y1="77" x2="114" y2="114" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
     </g>
@@ -97,8 +93,8 @@
     <circle cx="80" cy="74" r="3" fill="#00F2FE" filter="url(#softGlow)"/>
   </g>
 
-  <!-- Right: Master Typography -->
-  <g transform="translate(225, 20)">
+  <!-- Right: Master Typography (Centered at x=265) -->
+  <g transform="translate(265, 20)">
     <!-- Eyebrow -->
     <circle cx="4" cy="18" r="3.5" fill="#00F2FE" filter="url(#softGlow)"/>
     <text x="16" y="22" fill="#38BDF8" font-family="'JetBrains Mono', SFMono-Regular, Consolas, monospace" font-size="12" font-weight="600" letter-spacing="3.5">SOFTWARE ENGINEER &amp; CREATOR</text>
@@ -108,8 +104,8 @@
       LUC4N3<tspan fill="url(#neonCyan)">X</tspan>
     </text>
 
-    <!-- Laser Horizon Line -->
-    <rect x="0" y="94" width="560" height="2.5" rx="1" fill="url(#laserBeam)"/>
+    <!-- Laser Horizon Line (Balanced to 450px) -->
+    <rect x="0" y="94" width="450" height="2.5" rx="1" fill="url(#laserBeam)"/>
     <circle cx="0" cy="95" r="3.5" fill="#00F2FE" filter="url(#softGlow)"/>
   </g>
 </svg>
