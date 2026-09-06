@@ -1,111 +1,47 @@
-<svg width="800" height="180" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="LUC4N3X">
+<svg width="800" height="180" viewBox="0 0 800 180" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LUC4N3X">
   <defs>
-    <!-- Brand Gradients -->
-    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00F2FE"/>
-      <stop offset="50%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#818CF8"/>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#00F2FE"/>
+      <stop offset="0.52" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#818CF8"/>
     </linearGradient>
-
-    <linearGradient id="neonIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="60%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#A855F7"/>
+    <linearGradient id="indigo" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.55" stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#A855F7"/>
     </linearGradient>
-
-    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00F2FE"/>
-      <stop offset="35%" stop-color="#6366F1"/>
-      <stop offset="70%" stop-color="#00F2FE" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#00F2FE"/>
+      <stop offset="0.36" stop-color="#6366F1"/>
+      <stop offset="0.72" stop-color="#00F2FE" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#0D1117" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- Diffuse Ambient Glow -->
-    <radialGradient id="neonAura" cx="80" cy="85" r="85" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.32"/>
-      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.14"/>
-      <stop offset="100%" stop-color="#0D1117" stop-opacity="0"/>
+    <radialGradient id="aura" cx="0" cy="0" r="1" gradientTransform="translate(151 89) rotate(90) scale(74)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8" stop-opacity="0.18"/>
+      <stop offset="0.62" stop-color="#6366F1" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#0D1117" stop-opacity="0"/>
     </radialGradient>
-
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="intenseGlow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
-
-  <!-- Left: Pure Vector Minimalist Neon LX Monogram (Centered at x=85) -->
-  <g transform="translate(85, 15)">
-    <!-- Diffuse Aura -->
-    <circle cx="75" cy="72" r="75" fill="url(#neonAura)"/>
-
-    <!-- 1. The L Monogram (Double-Track Neon Blade) -->
-    <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
-          fill="url(#neonCyan)"
-          opacity="0.45"
-          filter="url(#intenseGlow)"/>
-
-    <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
-          fill="url(#neonCyan)"/>
-
-    <!-- Inner L Line Reflection (Laser Core) -->
-    <path d="M 35 30 L 35 109 L 80 109"
-          fill="none"
-          stroke="#FFFFFF"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          opacity="0.85"/>
-
-    <!-- 2. The Interlocking X Monogram -->
-    <!-- Diagonal 1: Top-Right to Bottom-Left -->
-    <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
-          fill="url(#neonIndigo)"
-          opacity="0.45"
-          filter="url(#intenseGlow)"/>
-    <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
-          fill="url(#neonIndigo)"/>
-    <line x1="110" y1="26" x2="63" y2="95" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
-
-    <!-- Diagonal 2: Top-Left to Bottom-Right -->
-    <g filter="url(#softGlow)">
-      <path d="M 52 28 L 68 28 L 86 54 L 74 68 Z" fill="url(#neonCyan)"/>
-      <line x1="56" y1="32" x2="80" y2="61" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
-
-      <path d="M 88 72 L 122 116 L 104 116 L 76 82 Z" fill="url(#neonCyan)"/>
-      <line x1="82" y1="77" x2="114" y2="114" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+  <g transform="translate(76 14)">
+    <circle cx="76" cy="76" r="74" fill="url(#aura)"/>
+    <g filter="url(#glow)">
+      <path d="M22 20H40V110H76V128H22V20Z" fill="url(#cyan)"/>
+      <path d="M114 18H138L72 106H48L114 18Z" fill="url(#indigo)"/>
+      <path d="M52 24H74L138 128H116L52 24Z" fill="url(#cyan)"/>
+      <path d="M66 72H122V90H66V72Z" fill="url(#indigo)"/>
+      <path d="M104 48H122V112H104V48Z" fill="url(#indigo)"/>
     </g>
-
-    <!-- Optical Interlock Shadow at Crossing -->
-    <polygon points="76,66 88,72 82,82 72,76" fill="#0A0E1A" opacity="0.6"/>
-
-    <!-- Quantum Focus Center Pulse -->
-    <circle cx="80" cy="74" r="3" fill="#00F2FE" filter="url(#softGlow)"/>
+    <path d="M89 77L100 70L110 86L99 94L89 77Z" fill="#0D1117" opacity="0.92"/>
   </g>
-
-  <!-- Right: Master Typography (Centered at x=265) -->
-  <g transform="translate(265, 20)">
-    <!-- Eyebrow -->
-    <circle cx="4" cy="18" r="3.5" fill="#00F2FE" filter="url(#softGlow)"/>
+  <g transform="translate(265 20)">
+    <circle cx="4" cy="18" r="3.5" fill="#00F2FE" filter="url(#glow)"/>
     <text x="16" y="22" fill="#38BDF8" font-family="'JetBrains Mono', SFMono-Regular, Consolas, monospace" font-size="12" font-weight="600" letter-spacing="3.5">SOFTWARE ENGINEER &amp; CREATOR</text>
-
-    <!-- Wordmark -->
-    <text x="0" y="74" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Montserrat, sans-serif" font-size="64" font-weight="900" letter-spacing="4">
-      LUC4N3<tspan fill="url(#neonCyan)">X</tspan>
-    </text>
-
-    <!-- Laser Horizon Line (Balanced to 450px) -->
-    <rect x="0" y="94" width="450" height="2.5" rx="1" fill="url(#laserBeam)"/>
-    <circle cx="0" cy="95" r="3.5" fill="#00F2FE" filter="url(#softGlow)"/>
+    <text x="0" y="74" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Montserrat, sans-serif" font-size="64" font-weight="900" letter-spacing="4">LUC4N3<tspan fill="url(#cyan)">X</tspan></text>
+    <rect x="0" y="94" width="450" height="2.5" rx="1.25" fill="url(#beam)"/>
+    <circle cx="0" cy="95" r="3.5" fill="#00F2FE" filter="url(#glow)"/>
   </g>
 </svg>
