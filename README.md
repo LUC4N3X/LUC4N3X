@@ -90,19 +90,11 @@ Build the useful thing first. Run it on real devices. Find what breaks. Fix the 
 
 <br />
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/motto-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/motto.svg">
-  <img src="./assets/brand/motto-dark.svg" width="500" alt="Code. Build. Improve. Repeat." />
-</picture>
-
-<br /><br />
-
 <a href="https://github.com/LUC4N3X?tab=repositories">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/github-square-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/github-square.svg">
-    <img src="./assets/brand/github-square-dark.svg" width="96" alt="Explore open source repositories" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
+    <img src="./assets/brand/how-i-build-dark.svg" width="420" alt="Code. Build. Improve. Repeat. Explore repositories." />
   </picture>
 </a>
 
