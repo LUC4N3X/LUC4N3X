@@ -1,9 +1,9 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.svg">
-  <img src="./assets/brand/luc4n3x-lockup-dark.svg" width="760" alt="LUC4N3X" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup-light.png">
+  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="760" alt="LUC4N3X" />
 </picture>
 
 <br />
