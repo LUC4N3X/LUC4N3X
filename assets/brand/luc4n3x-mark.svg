@@ -1,31 +1,96 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
-  <title id="title">LUC4N3X mark</title>
-  <desc id="desc">Developer terminal mark built around the LUC4N3X signature X.</desc>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-label="LUC4N3X brand mark">
   <defs>
-    <linearGradient id="panel" x1="36" y1="36" x2="284" y2="284" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#161B22"/>
-      <stop offset="1" stop-color="#0D1117"/>
+    <!-- Background & Border Gradients -->
+    <linearGradient id="markBg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E1222"/>
+      <stop offset="100%" stop-color="#060814"/>
     </linearGradient>
-    <linearGradient id="accent" x1="74" y1="95" x2="256" y2="226" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#58A6FF"/>
-      <stop offset="1" stop-color="#2F81F7"/>
+
+    <linearGradient id="markBorder" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00F2FE" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0.6"/>
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+
+    <!-- Diffuse Ambient Underglow -->
+    <radialGradient id="markAura" cx="256" cy="256" r="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#060814" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="markCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <linearGradient id="markIndigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="60%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <filter id="markGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-  <rect x="28" y="28" width="264" height="264" rx="34" fill="url(#panel)" stroke="#30363D" stroke-width="3"/>
-  <circle cx="58" cy="58" r="5" fill="#484F58"/>
-  <circle cx="76" cy="58" r="5" fill="#484F58"/>
-  <circle cx="94" cy="58" r="5" fill="#484F58"/>
-  <path d="M28 82H292" stroke="#21262D" stroke-width="2"/>
-  <path d="M68 132L104 158L68 184" fill="none" stroke="url(#accent)" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" filter="url(#glow)"/>
-  <path d="M122 186H174" stroke="#F0F6FC" stroke-width="12" stroke-linecap="square"/>
-  <path d="M202 116L260 206" stroke="#F0F6FC" stroke-width="14" stroke-linecap="square"/>
-  <path d="M260 116L202 206" stroke="url(#accent)" stroke-width="14" stroke-linecap="square" filter="url(#glow)"/>
-  <rect x="248" y="232" width="14" height="14" fill="#58A6FF"/>
+
+  <!-- Squircle Base with Cyber Border -->
+  <rect x="20" y="20" width="472" height="472" rx="96" fill="url(#markBg)" stroke="url(#markBorder)" stroke-width="3"/>
+  <circle cx="256" cy="256" r="200" fill="url(#markAura)"/>
+
+  <!-- Centered Scaled Pure Vector Monogram (scale 2.6, centered at 256, 256) -->
+  <g transform="translate(60, 60) scale(2.6)">
+    <!-- 1. The L Monogram -->
+    <!-- Glow Under-layer -->
+    <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
+          fill="url(#markCyan)"
+          opacity="0.45"
+          filter="url(#markGlow)"/>
+
+    <!-- Crisp Outer L Path -->
+    <path d="M 28 22 L 28 116 L 86 116 L 86 102 L 42 102 L 42 22 Z"
+          fill="url(#markCyan)"/>
+
+    <!-- Inner L Line Reflection (Laser Core) -->
+    <path d="M 35 30 L 35 109 L 80 109"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          opacity="0.85"/>
+
+    <!-- 2. The Interlocking X Monogram -->
+    <!-- Diagonal 1: Top-Right to Bottom-Left -->
+    <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
+          fill="url(#markIndigo)"
+          opacity="0.45"
+          filter="url(#markGlow)"/>
+    <path d="M 122 22 L 100 22 L 54 86 L 54 104 L 72 104 L 122 36 Z"
+          fill="url(#markIndigo)"/>
+    <line x1="110" y1="26" x2="63" y2="95" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- Diagonal 2: Top-Left to Bottom-Right -->
+    <g filter="url(#markGlow)">
+      <!-- Upper segment -->
+      <path d="M 52 28 L 68 28 L 86 54 L 74 68 Z" fill="url(#markCyan)"/>
+      <line x1="56" y1="32" x2="80" y2="61" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+
+      <!-- Lower segment passing through L -->
+      <path d="M 88 72 L 122 116 L 104 116 L 76 82 Z" fill="url(#markCyan)"/>
+      <line x1="82" y1="77" x2="114" y2="114" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    </g>
+
+    <!-- Optical Interlock Shadow at Crossing -->
+    <polygon points="76,66 88,72 82,82 72,76" fill="#0A0E1A" opacity="0.6"/>
+
+    <!-- Quantum Focus Center Pulse -->
+    <circle cx="80" cy="74" r="3" fill="#00F2FE" filter="url(#markGlow)"/>
+  </g>
 </svg>
