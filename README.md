@@ -3,10 +3,8 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.png">
-  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="760" alt="LUC4N3X" />
+  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="640" alt="LUC4N3X — Software Engineer &amp; Creator" />
 </picture>
-
-<br />
 
 **I build software I want to use, and keep working on it until it feels right.**
 
@@ -14,7 +12,7 @@
 
 <br />
 
-<img src="./assets/brand/signal-divider.svg" width="560" alt="Section divider" />
+<img src="./assets/brand/signal-divider.svg" width="480" alt="Section divider" />
 
 </div>
 
