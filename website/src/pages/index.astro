@@ -6,19 +6,19 @@ import ArticleCard from '../components/ArticleCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
-import PressSection from '../components/PressSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Button from '../components/Button.astro';
 import { articles } from '../data/articles';
 import { siteConfig } from '../data/site';
 
 const featuredArticles = articles.slice(0, 2);
-const topics = [
-  { name: "Android Internals", color: "text-[#38bdf8] bg-sky-500/10 border-sky-500/20" },
-  { name: "Media3 & Audio", color: "text-[#818cf8] bg-indigo-500/10 border-indigo-500/20" },
-  { name: "Zero Telemetry", color: "text-[#34d399] bg-emerald-500/10 border-emerald-500/20" },
-  { name: "Reverse Engineering", color: "text-[#f43f5e] bg-rose-500/10 border-rose-500/20" },
-  { name: "Craftsmanship", color: "text-[#fbbf24] bg-amber-500/10 border-amber-500/20" }
+const popularArticles = articles;
+const categories = [
+  { name: "Android Internals", count: "2 notes", href: "/articles" },
+  { name: "Media3 & Audio", count: "1 note", href: "/articles" },
+  { name: "Zero Telemetry", count: "2 notes", href: "/articles" },
+  { name: "Reverse Engineering", count: "1 note", href: "/articles" },
+  { name: "Craftsmanship", count: "1 note", href: "/articles" }
 ];
 ---
 
@@ -32,43 +32,88 @@ const topics = [
 
   <section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-        <SectionHeader
-          eyebrow="Engineering Notes & Architecture"
-          title="Selected Writings"
-          subtitle="Deep-dives into Android internals, audio decode pipelines, reverse engineering, and pragmatic software craftsmanship."
-        />
-        <Button href="/articles" variant="secondary" size="md">
-          <span>All Articles ({articles.length})</span>
-          <span class="ml-1">→</span>
-        </Button>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-7 flex flex-col gap-8">
+          <div>
+            <SectionHeader
+              eyebrow="Engineering Notes & Architecture"
+              title="Articles and Tutorials"
+              subtitle="Deep-dives into Android internals, audio decode pipelines, reverse engineering, and pragmatic software craftsmanship."
+            />
+          </div>
+
+          <div class="flex flex-col gap-6">
+            {featuredArticles.map(article => (
+              <ArticleCard article={article} />
+            ))}
+          </div>
+
+          <div class="pt-4 flex justify-center sm:justify-start">
+            <Button href="/articles" variant="secondary" size="lg">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+              <span>Show more articles ({articles.length})</span>
+            </Button>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 flex flex-col gap-10 lg:pl-6 lg:border-l lg:border-white/[0.08]">
+          
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-white tracking-tight flex items-center gap-2">
+              <span>Browse By Category</span>
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {categories.map(cat => (
+                <a 
+                  href={cat.href}
+                  class="group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-[#0e131f] border border-white/[0.08] text-zinc-300 hover:text-white hover:border-indigo-500/40 hover:bg-indigo-500/10 transition-all duration-200"
+                >
+                  <span>{cat.name}</span>
+                  <span class="text-[10px] text-zinc-500 group-hover:text-indigo-400 font-normal">
+                    {cat.count}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-white tracking-tight">
+              Popular Content
+            </h3>
+            <ol class="space-y-3 text-sm">
+              {popularArticles.map(article => (
+                <li>
+                  <a 
+                    href={`/articles/${article.slug}`}
+                    class="group flex items-start gap-2.5 text-zinc-400 hover:text-[#38bdf8] transition-colors leading-relaxed"
+                  >
+                    <span class="text-[#818cf8] group-hover:translate-x-1 transition-transform duration-200 mt-0.5">
+                      →
+                    </span>
+                    <span class="font-medium group-hover:underline">
+                      {article.title}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="flex flex-wrap items-center gap-2 mb-10">
-        <span class="text-xs font-mono text-zinc-500 mr-2 uppercase tracking-wider">Browse by Topic:</span>
-        {topics.map(topic => (
-          <a 
-            href="/articles" 
-            class={`text-xs font-mono px-3 py-1 rounded-full border transition-all duration-200 hover:scale-105 ${topic.color}`}
-          >
-            {topic.name}
-          </a>
-        ))}
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-        {featuredArticles.map(article => (
-          <ArticleCard article={article} />
-        ))}
-      </div>
     </div>
   </section>
 
   <AboutSection />
 
   <OpenSourceSection />
-
-  <PressSection />
 
   <ContactSection />
 </Layout>
