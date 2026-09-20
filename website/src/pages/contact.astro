@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionHeader from '../components/SectionHeader.astro';
+import PageHero from '../components/PageHero.astro';
 import Button from '../components/Button.astro';
 import { siteConfig } from '../data/site';
 ---
@@ -9,12 +9,15 @@ import { siteConfig } from '../data/site';
   title={`Contact — ${siteConfig.name}`}
   description="Official contact channels for LUC4N3X: security disclosures, bug reports, and software inquiries."
 >
-  <div class="py-20 sm:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
-    <SectionHeader
-      eyebrow="Communication"
-      title="Contact LUC4N3X"
-      subtitle="Reach out directly for software questions, security advisories, bug reports, or collaboration."
-    />
+  <PageHero
+    badge="Direct Communication"
+    eyebrow="Get in Touch"
+    title="Let's Connect &"
+    highlight="Collaborate"
+    subtitle="Reach out directly for software inquiries, security advisories, bug reports, or technical discussions."
+  />
+
+  <div class="py-12 sm:py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
       <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col justify-between">

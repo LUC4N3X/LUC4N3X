@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
+import PageHero from '../../components/PageHero.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { articles } from '../../data/articles';
 import { siteConfig } from '../../data/site';
@@ -18,12 +18,15 @@ const topics = [
   title={`Articles & Engineering Notes — ${siteConfig.name}`}
   description="Technical deep-dives into Android internals, media streaming architecture, reverse engineering, and software craftsmanship by LUC4N3X."
 >
-  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
-    <SectionHeader
-      eyebrow="Engineering Notes & Writings"
-      title="Articles & Architecture"
-      subtitle="Deep-dives into Android internals, media pipelines, reverse engineering, and software craftsmanship by LUC4N3X."
-    />
+  <PageHero
+    badge="Writings & Research"
+    eyebrow="Engineering Notes"
+    title="Articles & Systems"
+    highlight="Architecture"
+    subtitle="Deep-dives into Android internals, low-latency media pipelines, reverse engineering, and software craftsmanship by LUC4N3X."
+  />
+
+  <div class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
 
     <div class="flex flex-wrap items-center gap-2 mb-12">
       <span class="text-xs font-mono text-zinc-500 mr-2 uppercase tracking-wider">Browse Topics:</span>
