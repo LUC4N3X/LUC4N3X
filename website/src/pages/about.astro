@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import SectionHeader from '../components/SectionHeader.astro';
+import PageHero from '../components/PageHero.astro';
 import Button from '../components/Button.astro';
 import TechBadge from '../components/TechBadge.astro';
 import { siteConfig } from '../data/site';
@@ -10,12 +10,15 @@ import { siteConfig } from '../data/site';
   title={`About & Philosophy — ${siteConfig.name}`}
   description="Learn about LUC4N3X: engineering philosophy, open-source principles, development environment, and software craftsmanship."
 >
-  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
-    <SectionHeader
-      eyebrow="Identity & Principles"
-      title="Engineering with Focus"
-      subtitle="The principles, environment, and mindset behind LUC4N3X open-source software."
-    />
+  <PageHero
+    badge="Identity & Philosophy"
+    eyebrow="Principles & Process"
+    title="Engineering with Focus &"
+    highlight="Craftsmanship"
+    subtitle="The principles, development environment, and mindset behind LUC4N3X open-source software."
+  />
+
+  <div class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
       <div class="lg:col-span-7 space-y-6 text-zinc-300 text-base leading-relaxed font-normal">

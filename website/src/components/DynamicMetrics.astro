@@ -3,90 +3,145 @@
 
 <script>
   (() => {
-    const updateMetrics = (data: any) => {
+    const CACHE_KEY = 'levyra_metrics_cache';
+    const CACHE_TTL = 300000;
+
+    const formatNumber = (num: number): string => {
+      if (num >= 1000) {
+        return `${(num / 1000).toFixed(1).replace(/\.0$/, '')}k`;
+      }
+      return String(num);
+    };
+
+    const applyMetrics = (data: { stars?: number | null; downloads?: number | null; version?: string | null; forks?: number | null }) => {
       if (!data) return;
 
-      const version = typeof data.release?.version === 'string' && data.release.version.trim().length > 0
-        ? data.release.version.trim()
-        : null;
-
-      document.querySelectorAll<HTMLElement>('[data-levyra-version]').forEach(el => {
-        if (version) {
-          el.textContent = `v${version}`;
+      if (typeof data.version === 'string' && data.version.trim().length > 0) {
+        const v = data.version.trim().replace(/^v/, '');
+        document.querySelectorAll<HTMLElement>('[data-levyra-version]').forEach(el => {
+          el.textContent = `v${v}`;
           el.classList.remove('hidden', 'opacity-0');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
+        });
+      }
 
-      const stars = typeof data.repository?.stars === 'number' && !isNaN(data.repository.stars)
-        ? data.repository.stars
-        : null;
-
-      document.querySelectorAll<HTMLElement>('[data-levyra-stars]').forEach(el => {
-        if (stars !== null) {
-          el.textContent = stars >= 1000
-            ? `${(stars / 1000).toFixed(1).replace(/\.0$/, '')}k+`
-            : String(stars);
+      if (typeof data.stars === 'number' && !isNaN(data.stars)) {
+        const starsText = formatNumber(data.stars);
+        document.querySelectorAll<HTMLElement>('[data-levyra-stars]').forEach(el => {
+          el.textContent = starsText;
           el.classList.remove('hidden', 'opacity-0');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
-
-      document.querySelectorAll<HTMLElement>('[data-levyra-stars-container]').forEach(el => {
-        if (stars !== null) {
+        });
+        document.querySelectorAll<HTMLElement>('[data-levyra-stars-container]').forEach(el => {
           el.classList.remove('hidden');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
+        });
+      }
 
-      const totalDownloads = typeof data.downloads?.total === 'number' && !isNaN(data.downloads.total) && data.downloads.total > 0
-        ? data.downloads.total
-        : null;
-
-      document.querySelectorAll<HTMLElement>('[data-levyra-downloads]').forEach(el => {
-        if (totalDownloads !== null) {
-          el.textContent = totalDownloads >= 1000
-            ? `${(totalDownloads / 1000).toFixed(1).replace(/\.0$/, '')}k+`
-            : String(totalDownloads);
+      if (typeof data.downloads === 'number' && !isNaN(data.downloads) && data.downloads > 0) {
+        const dlText = formatNumber(data.downloads);
+        document.querySelectorAll<HTMLElement>('[data-levyra-downloads]').forEach(el => {
+          el.textContent = dlText;
           el.classList.remove('hidden', 'opacity-0');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
-
-      document.querySelectorAll<HTMLElement>('[data-levyra-downloads-container]').forEach(el => {
-        if (totalDownloads !== null) {
+        });
+        document.querySelectorAll<HTMLElement>('[data-levyra-downloads-container]').forEach(el => {
           el.classList.remove('hidden');
-        } else {
-          el.classList.add('hidden');
-        }
-      });
+        });
+      }
+
+      if (typeof data.forks === 'number' && !isNaN(data.forks)) {
+        const forksText = formatNumber(data.forks);
+        document.querySelectorAll<HTMLElement>('[data-levyra-forks]').forEach(el => {
+          el.textContent = forksText;
+          el.classList.remove('hidden', 'opacity-0');
+        });
+      }
 
       document.querySelectorAll<HTMLElement>('[data-levyra-metrics-box]').forEach(el => {
-        if (stars !== null || totalDownloads !== null) {
-          el.classList.remove('hidden');
-          el.classList.add('grid');
-        }
+        el.classList.remove('hidden');
+        el.classList.add('grid');
       });
     };
 
-    const load = async () => {
+    const fetchDirectFromGitHub = async () => {
       try {
-        const res = await fetch('/api/levyra');
-        if (res.ok) {
-          const json = await res.json();
-          updateMetrics(json);
+        const [repoRes, relRes] = await Promise.all([
+          fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound'),
+          fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases')
+        ]);
+
+        let stars: number | null = null;
+        let forks: number | null = null;
+        let version: string | null = null;
+        let downloads: number | null = null;
+
+        if (repoRes.ok) {
+          const repo = await repoRes.json();
+          if (typeof repo.stargazers_count === 'number') stars = repo.stargazers_count;
+          if (typeof repo.forks_count === 'number') forks = repo.forks_count;
+        }
+
+        if (relRes.ok) {
+          const releases = await relRes.json();
+          if (Array.isArray(releases) && releases.length > 0) {
+            if (releases[0]?.tag_name) {
+              version = String(releases[0].tag_name).replace(/^v/, '');
+            }
+            let count = 0;
+            for (const r of releases) {
+              if (Array.isArray(r.assets)) {
+                for (const a of r.assets) {
+                  count += a.download_count || 0;
+                }
+              }
+            }
+            if (count > 0) downloads = count;
+          }
+        }
+
+        if (stars !== null || downloads !== null) {
+          const payload = { stars, downloads, version, forks, timestamp: Date.now() };
+          sessionStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+          applyMetrics(payload);
         }
       } catch {}
     };
 
+    const syncMetrics = async () => {
+      try {
+        const cached = sessionStorage.getItem(CACHE_KEY);
+        if (cached) {
+          const parsed = JSON.parse(cached);
+          if (parsed && Date.now() - (parsed.timestamp || 0) < CACHE_TTL) {
+            applyMetrics(parsed);
+          }
+        }
+      } catch {}
+
+      try {
+        const res = await fetch(`/api/levyra?t=${Date.now()}`);
+        if (res.ok) {
+          const json = await res.json();
+          const stars = typeof json.repository?.stars === 'number' ? json.repository.stars : null;
+          const forks = typeof json.repository?.forks === 'number' ? json.repository.forks : null;
+          const downloads = typeof json.downloads?.total === 'number' ? json.downloads.total : null;
+          const version = typeof json.release?.version === 'string' ? json.release.version : null;
+
+          if (stars !== null || downloads !== null) {
+            const payload = { stars, downloads, version, forks, timestamp: Date.now() };
+            sessionStorage.setItem(CACHE_KEY, JSON.stringify(payload));
+            applyMetrics(payload);
+            return;
+          }
+        }
+      } catch {}
+
+      await fetchDirectFromGitHub();
+    };
+
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', load);
+      document.addEventListener('DOMContentLoaded', syncMetrics);
     } else {
-      load();
+      syncMetrics();
     }
+
+    document.addEventListener('astro:page-load', syncMetrics);
   })();
 </script>

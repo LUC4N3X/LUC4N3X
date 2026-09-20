@@ -2,6 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
 import TechBadge from '../../components/TechBadge.astro';
+import CloudDivider from '../../components/CloudDivider.astro';
+import { getLevyraMetrics } from '../../utils/github';
+
+const metrics = await getLevyraMetrics();
+const starsFormatted = metrics.stars >= 1000
+  ? `${(metrics.stars / 1000).toFixed(1).replace(/\.0$/, '')}k`
+  : String(metrics.stars);
+const downloadsFormatted = metrics.downloads >= 1000
+  ? `${(metrics.downloads / 1000).toFixed(1).replace(/\.0$/, '')}k`
+  : String(metrics.downloads);
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -28,69 +38,105 @@ const schemaData = {
   image="/assets/levyra/levyra-lockup-dark.svg"
   schema={schemaData}
 >
-  <article class="relative overflow-hidden pt-16 pb-28 sm:pb-36 bg-[#080b11]">
+  <div class="relative overflow-hidden pt-36 sm:pt-44 md:pt-48 pb-6 sm:pb-10 bg-gradient-to-b from-[#091326] via-[#0d1d3a] to-[#080b11]">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] sm:w-[900px] h-[350px] bg-gradient-to-b from-sky-500/20 via-indigo-500/15 to-transparent rounded-full blur-[120px]"></div>
+      <div class="absolute top-10 left-10 w-72 h-48 bg-sky-400/15 rounded-full blur-[90px]"></div>
+      <div class="absolute top-16 right-10 w-80 h-52 bg-purple-500/15 rounded-full blur-[100px]"></div>
+
+      <div class="absolute top-12 -left-10 sm:left-10 w-44 sm:w-64 h-24 sm:h-28 opacity-35 animate-cloud-drift-slow">
+        <svg viewBox="0 0 240 100" fill="none" class="w-full h-full filter drop-shadow-[0_12px_24px_rgba(56,189,248,0.15)]">
+          <path d="M40 75C26.1929 75 15 63.8071 15 50C15 37.0673 24.819 26.4259 37.4243 25.143C42.8443 13.6826 54.4925 5.71429 68 5.71429C76.8373 5.71429 84.7735 9.77196 90.0461 16.149C95.2766 12.3392 101.768 10 108.8 10C124.968 10 138.212 22.0967 140.428 37.6974C144.38 35.3404 148.986 34 153.9 34C167.707 34 178.9 45.1929 178.9 59C178.9 60.0382 178.836 61.0614 178.712 62.0664C184.872 63.8344 189.4 69.4883 189.4 76.2C189.4 84.4843 182.684 91.2 174.4 91.2H45C31.1929 91.2 20 80.0071 20 66.2C20 65.7947 20.0097 65.3917 20.0289 64.9912C20.0195 64.6625 20.0148 64.3323 20.0148 64C20.0148 57.3726 25.3874 52 32.0148 52C33.3106 52 34.5615 52.2046 35.7345 52.5841C38.0772 50.9632 40.8933 50 43.9286 50C52.2129 50 58.9286 56.7157 58.9286 65C58.9286 65.6841 58.8829 66.3575 58.7944 67.0175C60.4631 66.3683 62.2828 66 64.1818 66C70.6698 66 75.9295 71.2223 75.9984 77.6946C76.9943 77.4988 78.0249 77.3913 79.08 77.3913C84.0506 77.3913 88.08 81.4207 88.08 86.3913C88.08 86.6669 88.0676 86.9396 88.0433 87.2087H40V75Z" fill="#38bdf8" fill-opacity="0.22" />
+          <path d="M48 70C36.9543 70 28 61.0457 28 50C28 39.5694 36.0028 30.9858 46.208 30.1042C50.5902 20.7303 60.0384 14.1667 71 14.1667C78.2327 14.1667 84.757 17.5147 89.0435 22.7538C93.308 19.6415 98.6015 17.7083 104.333 17.7083C117.514 17.7083 128.271 27.608 130.081 40.3756C133.298 38.4388 137.054 37.3333 141.083 37.3333C152.359 37.3333 161.5 46.4741 161.5 57.75C161.5 58.5997 161.448 59.4371 161.347 60.2598C166.368 61.7067 170.062 66.334 170.062 71.825C170.062 78.6053 164.568 84.1 157.788 84.1H48V70Z" fill="#e0f2fe" fill-opacity="0.32" />
+        </svg>
+      </div>
+
+      <div class="absolute top-16 -right-12 sm:right-10 w-48 sm:w-72 h-24 sm:h-32 opacity-30 animate-cloud-drift-mid">
+        <svg viewBox="0 0 260 110" fill="none" class="w-full h-full filter drop-shadow-[0_16px_32px_rgba(129,140,248,0.18)]">
+          <path d="M50 85C33.4315 85 20 71.5685 20 55C20 39.4808 31.7828 26.7111 46.9092 25.1716C53.4132 11.4191 67.391 1.875 83.6 1.875C94.2048 1.875 103.728 6.74415 110.055 14.3976C116.332 9.82584 124.122 7.01875 132.56 7.01875C151.962 7.01875 167.854 21.5348 170.514 40.2557C175.256 37.4273 180.783 35.8187 186.68 35.8187C203.249 35.8187 216.68 49.2502 216.68 65.8187C216.68 67.065 216.603 68.293 216.454 69.499C223.846 71.6206 229.28 78.4052 229.28 86.46C229.28 96.4011 221.221 104.46 211.28 104.46H50V85Z" fill="#818cf8" fill-opacity="0.22" />
+          <path d="M58 80C44.7452 80 34 69.2548 34 56C34 43.4833 43.6034 33.1829 55.8496 32.125C61.1082 20.8764 72.4461 13 85.6 13C94.2792 13 102.108 17.0176 107.252 23.3045C112.37 19.5698 118.722 17.25 125.6 17.25C141.417 17.25 154.325 29.1296 156.497 44.4507C160.358 42.1265 164.865 40.8 169.7 40.8C183.231 40.8 194.2 51.769 194.2 65.3C194.2 66.3197 194.138 67.3245 194.016 68.3115C200.042 70.0478 204.475 75.6006 204.475 82.19C204.475 90.3252 197.89 96.91 189.755 96.91H58V80Z" fill="#c7d2fe" fill-opacity="0.28" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+      <a 
+        href="/projects" 
+        class="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-[#38bdf8] transition-colors mb-6"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Back to Projects</span>
+      </a>
+
+      <div class="w-full max-w-md sm:max-w-lg mb-8">
+        <img 
+          src="/assets/levyra/levyra-lockup-dark.svg" 
+          alt="Levyra DeepSound Logo" 
+          class="w-full h-auto object-contain mx-auto drop-shadow-[0_20px_40px_rgba(56,189,248,0.2)]"
+          width="760"
+          height="180"
+        />
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6 max-w-4xl">
+        High-Fidelity Audio.<br class="hidden sm:inline" /> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f43f5e]">Zero Telemetry.</span> Complete Autonomy.
+      </h1>
+
+      <p class="text-zinc-300 text-base sm:text-lg md:text-xl leading-relaxed font-normal mb-8 max-w-2xl">
+        Levyra (DeepSound) was created out of frustration with modern music streaming apps: memory bloat, persistent analytics beacons, mandatory accounts, and aggressive background killers. Built natively from the ground up for listeners who care about quality, responsiveness, and privacy.
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8">
+        <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
+          <span>Download Latest Release</span>
+          <span data-levyra-version class="font-mono text-xs ml-1">v{metrics.version}</span>
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </Button>
+
+        <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="lg">
+          <span>GitHub Repository</span>
+          <svg class="w-4 h-4 ml-1 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+        </Button>
+
+        <Button href="https://hosted.weblate.org/engage/levyra/" target="_blank" variant="outline" size="lg">
+          <span>Translations (36 Languages)</span>
+          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+          </svg>
+        </Button>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
+        <div data-levyra-stars-container>
+          <span class="text-zinc-500">Stars</span>
+          <span data-levyra-stars class="text-sm font-semibold text-white ml-1.5">{starsFormatted}</span>
+        </div>
+        <span class="text-zinc-700">·</span>
+        <div data-levyra-downloads-container>
+          <span class="text-zinc-500">Downloads</span>
+          <span data-levyra-downloads class="text-sm font-semibold text-white ml-1.5">{downloadsFormatted}</span>
+        </div>
+        <span class="text-zinc-700">·</span>
+        <div>
+          <span class="text-zinc-500">License</span>
+          <span class="text-sm font-semibold text-white ml-1.5">GNU GPL-3.0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 sm:mt-14">
+      <CloudDivider fill="#080b11" />
+    </div>
+  </div>
+
+  <article class="relative overflow-hidden py-12 sm:py-16 bg-[#080b11]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      
-      <header class="flex flex-col items-center text-center max-w-3xl mx-auto mb-20">
-        <div class="w-full max-w-md sm:max-w-lg mb-10">
-          <img 
-            src="/assets/levyra/levyra-lockup-dark.svg" 
-            alt="Levyra DeepSound Logo" 
-            class="w-full h-auto object-contain mx-auto"
-            width="760"
-            height="180"
-          />
-        </div>
-
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight leading-tight mb-6">
-          High-Fidelity Audio.<br class="hidden sm:inline" /> Zero Telemetry. Complete Autonomy.
-        </h1>
-
-        <p class="text-zinc-300 text-lg sm:text-xl leading-relaxed font-normal mb-10 max-w-2xl">
-          Levyra (DeepSound) was created out of frustration with modern music streaming apps: memory bloat, persistent analytics beacons, mandatory accounts, and aggressive background killers. Built natively from the ground up for listeners who care about quality, responsiveness, and privacy.
-        </p>
-
-        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10">
-          <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
-            <span>Download Latest Release</span>
-            <span data-levyra-version class="font-mono text-xs hidden"></span>
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </Button>
-
-          <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="lg">
-            <span>GitHub Repository</span>
-            <svg class="w-4 h-4 ml-1 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-            </svg>
-          </Button>
-
-          <Button href="https://hosted.weblate.org/engage/levyra/" target="_blank" variant="outline" size="lg">
-            <span>Translations (36 Languages)</span>
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-            </svg>
-          </Button>
-        </div>
-
-        <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
-          <div>
-            <span class="text-zinc-500">Stars</span>
-            <span data-levyra-stars class="text-sm font-semibold text-white ml-1.5">-</span>
-          </div>
-          <span class="text-zinc-700">·</span>
-          <div>
-            <span class="text-zinc-500">Downloads</span>
-            <span data-levyra-downloads class="text-sm font-semibold text-white ml-1.5">-</span>
-          </div>
-          <span class="text-zinc-700">·</span>
-          <div>
-            <span class="text-zinc-500">License</span>
-            <span class="text-sm font-semibold text-white ml-1.5">GNU GPL-3.0</span>
-          </div>
-        </div>
-      </header>
 
       <section class="space-y-16 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
         

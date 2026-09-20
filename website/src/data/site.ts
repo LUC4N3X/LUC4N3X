@@ -15,7 +15,7 @@ export const siteConfig = {
   url: getSiteUrl(),
   ogImage: "/assets/brand/luc4n3x-lockup-dark.png",
   author: "LUC4N3X",
-  email: "luc4n3x@proton.me",
+  email: "lucanex@proton.me",
   github: "https://github.com/LUC4N3X",
   tagline: "Independent Developer · Open Source · Software & IT",
   secondaryTagline: "Software Developer · Creator of Levyra",

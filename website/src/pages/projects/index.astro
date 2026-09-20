@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
+import PageHero from '../../components/PageHero.astro';
 import FeaturedProject from '../../components/FeaturedProject.astro';
 import Button from '../../components/Button.astro';
 import { projects } from '../../data/projects';
@@ -13,13 +13,13 @@ const secondaryProjects = projects.filter(p => !p.featured);
   title={`Projects & Software — ${siteConfig.name}`}
   description="Open-source software, media playback systems, and developer utilities engineered by LUC4N3X with zero telemetry and local-first architecture."
 >
-  <div class="pt-20 sm:pt-28 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
-    <SectionHeader
-      eyebrow="Portfolio & Software"
-      title="Open Source Engineering"
-      subtitle="Software and media playback systems engineered with an uncompromising focus on local performance, zero telemetry, and technical transparency."
-    />
-  </div>
+  <PageHero
+    badge="Portfolio & Code"
+    eyebrow="Open Source Software"
+    title="Engineered for Performance &"
+    highlight="Zero Telemetry"
+    subtitle="Media playback engines, reverse engineering tools, and developer utilities built with an uncompromising focus on local speed and privacy."
+  />
 
   <FeaturedProject />
 
