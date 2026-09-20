@@ -5,8 +5,8 @@ import TechBadge from './TechBadge.astro';
 
 <section class="relative py-20 sm:py-28 border-t border-white/[0.08] bg-[#000000] overflow-hidden">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div class="rounded-3xl border border-white/[0.08] bg-[#0c0c0e] p-8 sm:p-12 relative overflow-hidden transition-all duration-300 hover:border-white/[0.14]">
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 mb-8 border-b border-white/[0.08]">
+    <div class="rounded-3xl border border-white/[0.08] bg-[#0c0c0e] p-8 sm:p-14 relative overflow-hidden transition-all duration-300 hover:border-white/[0.14]">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-10 mb-10 border-b border-white/[0.08]">
         <div>
           <div class="inline-flex items-center gap-2 mb-3">
             <span class="text-xs font-mono tracking-widest text-[#2997ff] uppercase font-semibold">
@@ -16,12 +16,12 @@ import TechBadge from './TechBadge.astro';
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight">
             Levyra (DeepSound)
           </h2>
-          <p class="text-base sm:text-lg text-zinc-400 mt-2 font-normal max-w-2xl">
-            High-fidelity, zero-telemetry Android audio player built with AndroidX Media3 and Jetpack Compose.
+          <p class="text-base sm:text-lg text-zinc-400 mt-3 font-normal max-w-2xl leading-relaxed">
+            High-fidelity, zero-telemetry music player for Android and Windows. Built from scratch with AndroidX Media3 and Jetpack Compose to deliver gapless playback, synchronized lyrics, and uncompromising privacy.
           </p>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2 flex-shrink-0">
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/[0.08] text-zinc-300">
             <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
@@ -40,40 +40,25 @@ import TechBadge from './TechBadge.astro';
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-        <div>
-          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-2 font-mono text-[#2997ff]">
-            Adaptive Audio Engine
-          </h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            ExoPlayer with custom ring-buffering, low-latency decode pipelines, and foreground service lifecycle resilience across diverse OEM Android distributions.
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10 text-zinc-400 text-sm leading-relaxed">
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-white tracking-tight">Low-Latency Media3 Core</h3>
+          <p>
+            Custom ExoPlayer session management with adaptive ring buffering and foreground service lifecycle handling designed to resist OEM background killers across diverse Android distributions.
           </p>
         </div>
 
-        <div>
-          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-2 font-mono text-[#2997ff]">
-            Zero Telemetry Privacy
-          </h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            Direct TLS 1.3 stream handshakes without intermediary analytics proxies, user tracking SDKs, or remote data retention. Your listening stays on-device.
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-white tracking-tight">Zero Telemetry & Local Data</h3>
+          <p>
+            Direct TLS 1.3 streams with no intermediate tracking proxies. Your listening history, playlists, and offline media remain strictly on-device in a local SQLite database.
           </p>
         </div>
 
-        <div>
-          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-2 font-mono text-[#2997ff]">
-            Synced Lyrics & Metadata
-          </h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            Real-time synchronized scrolling with LRCLIB integration, automatic ID3 tag embedding, and local SQLite caching for instantaneous offline access.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-2 font-mono text-[#2997ff]">
-            Bundled Extraction Subsystem
-          </h3>
-          <p class="text-sm text-zinc-400 leading-relaxed">
-            Internal media extraction engine with AST analysis and dynamic token evaluation, completely decoupled from brittle regular expressions.
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-white tracking-tight">Desktop & Synchronized Lyrics</h3>
+          <p>
+            Real-time line-by-line synced lyrics via LRCLIB, automatic ID3 tag embedding, and a companion Windows edition built with Compose Multiplatform and libvlc.
           </p>
         </div>
       </div>
@@ -88,10 +73,10 @@ import TechBadge from './TechBadge.astro';
         <TechBadge text="libvlc" variant="default" />
       </div>
 
-      <div class="flex flex-wrap items-center justify-between gap-4 pt-8 border-t border-white/[0.08]">
+      <div class="flex flex-wrap items-center justify-between gap-6 pt-8 border-t border-white/[0.08]">
         <div class="flex flex-wrap items-center gap-3">
           <Button href="/projects/levyra" variant="primary" size="md">
-            <span>Explore Levyra</span>
+            <span>Explore Levyra Architecture</span>
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
