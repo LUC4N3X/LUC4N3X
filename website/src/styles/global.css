@@ -53,3 +53,15 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #3b3732;
 }
+
+.bg-warm-dots {
+  background-image: radial-gradient(rgba(247, 245, 242, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-architect-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(247, 245, 242, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(247, 245, 242, 0.025) 1px, transparent 1px);
+}
