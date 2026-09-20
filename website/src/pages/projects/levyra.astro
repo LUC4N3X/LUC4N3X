@@ -52,7 +52,7 @@ const schemaData = {
   image="/assets/levyra/levyra-lockup-dark.svg"
   schema={schemaData}
 >
-  <div class="relative overflow-hidden pt-16 pb-24 sm:pb-32 bg-[#0e0d0c]">
+  <div class="relative overflow-hidden pt-16 pb-24 sm:pb-32 bg-black">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
         <div class="w-full max-w-md sm:max-w-xl mb-10">
@@ -65,30 +65,30 @@ const schemaData = {
           />
         </div>
 
-        <p class="text-xl sm:text-2xl font-medium text-[#f7f5f2] tracking-tight mb-4">
+        <p class="text-xl sm:text-2xl font-medium text-white tracking-tight mb-4">
           High-Fidelity Open-Source Music Player for Android & Windows
         </p>
 
-        <p class="text-[#a39e94] text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-normal">
+        <p class="text-zinc-400 text-base sm:text-lg md:text-xl leading-relaxed mb-8 max-w-2xl font-normal">
           Engineered for audio fidelity, responsiveness, and zero tracking. No accounts required, no telemetry, and direct stream connections.
         </p>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-5 sm:py-6 border-y border-[#26221d] w-full mb-10 text-left">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-5 sm:py-6 border-y border-white/[0.08] w-full mb-10 text-left">
           <div>
-            <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Platform</div>
-            <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">Android 8.0+ · Windows 10+</div>
+            <div class="text-xs font-mono font-semibold text-zinc-500 uppercase tracking-wider mb-1.5">Platform</div>
+            <div class="text-sm sm:text-base font-semibold text-white">Android 8.0+ · Windows 10+</div>
           </div>
           <div>
-            <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Audio Engine</div>
-            <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">AndroidX Media3 · ExoPlayer</div>
+            <div class="text-xs font-mono font-semibold text-zinc-500 uppercase tracking-wider mb-1.5">Audio Engine</div>
+            <div class="text-sm sm:text-base font-semibold text-white">AndroidX Media3 · ExoPlayer</div>
           </div>
           <div>
-            <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Privacy</div>
-            <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">Zero Telemetry · Local SQLite</div>
+            <div class="text-xs font-mono font-semibold text-zinc-500 uppercase tracking-wider mb-1.5">Privacy</div>
+            <div class="text-sm sm:text-base font-semibold text-white">Zero Telemetry · Local SQLite</div>
           </div>
           <div>
-            <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">License</div>
-            <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">GNU GPL-3.0</div>
+            <div class="text-xs font-mono font-semibold text-zinc-500 uppercase tracking-wider mb-1.5">License</div>
+            <div class="text-sm sm:text-base font-semibold text-white">GNU GPL-3.0</div>
           </div>
         </div>
 
@@ -103,7 +103,7 @@ const schemaData = {
 
           <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="lg">
             <span>GitHub Repository</span>
-            <svg class="w-4 h-4 ml-1 text-[#a39e94]" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 ml-1 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
             </svg>
           </Button>
@@ -116,97 +116,97 @@ const schemaData = {
           </Button>
         </div>
 
-        <div data-levyra-metrics-box class="hidden grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg p-5 rounded-2xl bg-[#171513] border border-[#27231e] text-center text-xs font-mono transition-all">
+        <div data-levyra-metrics-box class="hidden grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg p-5 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] text-center text-xs font-mono transition-all">
           <div data-levyra-stars-container class="hidden">
-            <span class="text-[#736e65] block mb-1">GitHub Stars</span>
-            <span data-levyra-stars class="text-lg font-semibold text-[#f7f5f2]"></span>
+            <span class="text-zinc-500 block mb-1">GitHub Stars</span>
+            <span data-levyra-stars class="text-lg font-semibold text-white"></span>
           </div>
           <div data-levyra-downloads-container class="hidden">
-            <span class="text-[#736e65] block mb-1">Total Downloads</span>
-            <span data-levyra-downloads class="text-lg font-semibold text-[#f7f5f2]"></span>
+            <span class="text-zinc-500 block mb-1">Total Downloads</span>
+            <span data-levyra-downloads class="text-lg font-semibold text-white"></span>
           </div>
           <div class="col-span-2 sm:col-span-1">
-            <span class="text-[#736e65] block mb-1">License</span>
-            <span class="text-lg font-semibold text-[#f7f5f2]">GPL-3.0</span>
+            <span class="text-zinc-500 block mb-1">License</span>
+            <span class="text-lg font-semibold text-white">GPL-3.0</span>
           </div>
         </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Audio Subsystem
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">AndroidX Media3 Pipeline</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">AndroidX Media3 Pipeline</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed font-normal">
               Custom ExoPlayer session management ensuring low latency, gapless track transitions, and rock-solid foreground audio stability.
             </p>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Storage Architecture
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">Offline Cache & Vault</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">Offline Cache & Vault</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed font-normal">
               Resumable background downloads, local cache hierarchy, and automatic ID3 metadata/artwork embedding for exported tracks.
             </p>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Lyric Synchronization
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">Synchronized Lyrics</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">Synchronized Lyrics</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed font-normal">
               Direct integration with LRCLIB, featuring real-time synchronized line-by-line scrolling and intelligent lyric scoring.
             </p>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Declarative UI
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">Pure Jetpack Compose</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">Pure Jetpack Compose</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed font-normal">
               Declarative UI built without legacy XML layouts, featuring dynamic Material You theming generated on the fly from current track artwork.
             </p>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Desktop Platform
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">Windows Desktop Edition</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">Windows Desktop Edition</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed font-normal">
               Full-featured desktop client powered by libvlc and Compose Multiplatform, packaged into clean MSI and EXE distributables.
             </p>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl bg-[#171513] border border-[#27231e] flex flex-col justify-between">
+        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
           <div>
-            <span class="text-xs font-mono font-semibold text-[#34a896] uppercase tracking-wider block mb-3">
+            <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-wider block mb-3">
               Internal Engine
             </span>
-            <h3 class="text-xl font-semibold text-[#f7f5f2] mb-3">Bundled Extraction Engine</h3>
-            <p class="text-sm text-[#a39e94] leading-relaxed mb-4 font-normal">
+            <h3 class="text-xl font-semibold text-white mb-3">Bundled Extraction Engine</h3>
+            <p class="text-sm text-zinc-400 leading-relaxed mb-4 font-normal">
               Levyra incorporates a tailored internal extraction engine directly within the repository for media resolution and streaming stability.
             </p>
             <a 
               href="https://github.com/LUC4N3X/Levyra-deepsound/tree/main/third_party/LevyraExtractor" 
               target="_blank" 
               rel="noopener noreferrer" 
-              class="text-xs font-mono text-[#34a896] hover:underline font-medium inline-flex items-center gap-1"
+              class="text-xs font-mono text-[#2997ff] hover:underline font-medium inline-flex items-center gap-1"
             >
               <span>View bundled source</span>
               <span>↗</span>
@@ -215,7 +215,7 @@ const schemaData = {
         </div>
       </div>
 
-      <div class="mb-24 p-8 sm:p-12 rounded-3xl bg-[#171513] border border-[#27231e]">
+      <div class="mb-24 p-8 sm:p-12 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
         <SectionHeader
           eyebrow="Privacy by Design"
           title="Zero Telemetry Guarantee"
@@ -223,46 +223,46 @@ const schemaData = {
         />
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-          <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a]">
-            <span class="text-xs font-mono text-[#736e65] uppercase block mb-1">Accounts</span>
-            <span class="text-base font-semibold text-[#f7f5f2] block mb-2">No Account Required</span>
-            <p class="text-xs text-[#a39e94]">All features, playlists, and cached media operate without login credentials.</p>
+          <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+            <span class="text-xs font-mono text-zinc-500 uppercase block mb-1">Accounts</span>
+            <span class="text-base font-semibold text-white block mb-2">No Account Required</span>
+            <p class="text-xs text-zinc-400">All features, playlists, and cached media operate without login credentials.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a]">
-            <span class="text-xs font-mono text-[#736e65] uppercase block mb-1">Telemetry</span>
-            <span class="text-base font-semibold text-[#f7f5f2] block mb-2">Zero Tracking</span>
-            <p class="text-xs text-[#a39e94]">No analytics SDKs, device fingerprinting, or crash-logging brokers.</p>
+          <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+            <span class="text-xs font-mono text-zinc-500 uppercase block mb-1">Telemetry</span>
+            <span class="text-base font-semibold text-white block mb-2">Zero Tracking</span>
+            <p class="text-xs text-zinc-400">No analytics SDKs, device fingerprinting, or crash-logging brokers.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a]">
-            <span class="text-xs font-mono text-[#736e65] uppercase block mb-1">Storage</span>
-            <span class="text-base font-semibold text-[#f7f5f2] block mb-2">On-Device SQLite</span>
-            <p class="text-xs text-[#a39e94]">Favorites, history, and settings are stored locally in Room database.</p>
+          <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+            <span class="text-xs font-mono text-zinc-500 uppercase block mb-1">Storage</span>
+            <span class="text-base font-semibold text-white block mb-2">On-Device SQLite</span>
+            <p class="text-xs text-zinc-400">Favorites, history, and settings are stored locally in Room database.</p>
           </div>
 
-          <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a]">
-            <span class="text-xs font-mono text-[#736e65] uppercase block mb-1">Network</span>
-            <span class="text-base font-semibold text-[#f7f5f2] block mb-2">Direct Connections</span>
-            <p class="text-xs text-[#a39e94]">Audio streams directly from content CDNs with no proxy interception.</p>
+          <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/[0.08]">
+            <span class="text-xs font-mono text-zinc-500 uppercase block mb-1">Network</span>
+            <span class="text-base font-semibold text-white block mb-2">Direct Connections</span>
+            <p class="text-xs text-zinc-400">Audio streams directly from content CDNs with no proxy interception.</p>
           </div>
         </div>
       </div>
 
-      <div class="p-8 sm:p-12 rounded-3xl bg-[#171513] border border-[#27231e]">
+      <div class="p-8 sm:p-12 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
         <SectionHeader
           eyebrow="Security & Android Permissions"
           title="Declared Permissions & Rationale"
           subtitle="Every permission requested by the Android application has a specific technical rationale. No background data mining is performed."
         />
 
-        <div class="divide-y divide-[#26221d]">
+        <div class="divide-y divide-white/[0.08]">
           {permissions.map(perm => (
             <div class="py-5 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
-              <div class="font-mono text-xs font-semibold text-[#f7f5f2] sm:w-1/3">
+              <div class="font-mono text-xs font-semibold text-white sm:w-1/3">
                 {perm.name}
               </div>
-              <div class="text-sm text-[#a39e94] sm:w-2/3 leading-relaxed">
+              <div class="text-sm text-zinc-400 sm:w-2/3 leading-relaxed">
                 {perm.purpose}
               </div>
             </div>

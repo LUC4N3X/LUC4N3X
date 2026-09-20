@@ -10,7 +10,7 @@ import { siteConfig } from '../data/site';
   title={`About & Philosophy — ${siteConfig.name}`}
   description="Learn about LUC4N3X: engineering philosophy, open-source principles, development environment, and software craftsmanship."
 >
-  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#0e0d0c]">
+  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
     <SectionHeader
       eyebrow="Identity & Principles"
       title="Engineering with Focus"
@@ -18,9 +18,9 @@ import { siteConfig } from '../data/site';
     />
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
-      <div class="lg:col-span-7 space-y-6 text-[#a39e94] text-base leading-relaxed font-normal">
-        <div class="p-8 sm:p-10 rounded-3xl border border-[#27231e] bg-[#171513] space-y-4">
-          <h3 class="text-2xl font-semibold text-[#f7f5f2]">Who I Am</h3>
+      <div class="lg:col-span-7 space-y-6 text-zinc-400 text-base leading-relaxed font-normal">
+        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+          <h3 class="text-2xl font-semibold text-white">Who I Am</h3>
           <p>
             Hey, I'm Luca (LUC4N3X). I am an independent software developer building tools, mobile applications, and network infrastructure that I actively use in my daily life.
           </p>
@@ -29,9 +29,9 @@ import { siteConfig } from '../data/site';
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-3xl border border-[#27231e] bg-[#171513] space-y-4">
-          <h3 class="text-2xl font-semibold text-[#f7f5f2]">The Core Rule: How I Build</h3>
-          <blockquote class="border-l-2 border-[#34a896] pl-4 py-1 text-[#f7f5f2] font-medium italic text-lg">
+        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+          <h3 class="text-2xl font-semibold text-white">The Core Rule: How I Build</h3>
+          <blockquote class="border-l-2 border-[#2997ff] pl-4 py-1 text-white font-medium italic text-lg">
             "Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish."
           </blockquote>
           <p>
@@ -39,8 +39,8 @@ import { siteConfig } from '../data/site';
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-3xl border border-[#27231e] bg-[#171513] space-y-4">
-          <h3 class="text-2xl font-semibold text-[#f7f5f2]">Why Privacy & Zero Telemetry Matter</h3>
+        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+          <h3 class="text-2xl font-semibold text-white">Why Privacy & Zero Telemetry Matter</h3>
           <p>
             Every software product I release operates under a strict principle: your device belongs to you. Software should not phone home, report user habits to third-party brokers, or require mandatory user accounts for features that can function entirely on-device.
           </p>
@@ -51,32 +51,32 @@ import { siteConfig } from '../data/site';
       </div>
 
       <div class="lg:col-span-5 flex flex-col gap-6">
-        <div class="rounded-3xl border border-[#27231e] bg-[#171513] p-6">
+        <div class="rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-6">
           <img 
             src="/assets/brand/luc4n3x-workspace.svg" 
             alt="Luca at his developer workspace" 
-            class="w-full h-auto object-contain rounded-2xl mb-4"
+            class="w-full h-auto object-contain rounded-xl mb-4"
             width="360"
             height="360"
           />
           <div class="text-center">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#34a896] font-semibold block mb-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] font-semibold block mb-1">
               Independent Software Craftsman
             </span>
-            <span class="text-xs text-[#a39e94]">
+            <span class="text-xs text-zinc-400">
               Focused on Android, Media Streaming & Distributed Systems
             </span>
           </div>
         </div>
 
-        <div class="p-8 rounded-3xl border border-[#27231e] bg-[#171513] space-y-4">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#736e65] font-semibold block">
+        <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold block">
             Primary Tooling
           </span>
           <div class="flex flex-wrap gap-1.5">
-            <TechBadge text="Kotlin" variant="teal" />
-            <TechBadge text="Jetpack Compose" variant="teal" />
-            <TechBadge text="AndroidX Media3" variant="teal" />
+            <TechBadge text="Kotlin" variant="blue" />
+            <TechBadge text="Jetpack Compose" variant="blue" />
+            <TechBadge text="AndroidX Media3" variant="blue" />
             <TechBadge text="Python 3.12+" variant="default" />
             <TechBadge text="FastAPI" variant="default" />
             <TechBadge text="Rust" variant="default" />
@@ -90,10 +90,10 @@ import { siteConfig } from '../data/site';
       </div>
     </div>
 
-    <div class="p-8 sm:p-12 rounded-3xl border border-[#27231e] bg-[#171513] flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="p-8 sm:p-12 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
-        <h3 class="text-2xl font-semibold text-[#f7f5f2] mb-2">Ready to explore the software?</h3>
-        <p class="text-[#a39e94] text-sm">Review the full collection of open-source projects or get in touch directly.</p>
+        <h3 class="text-2xl font-semibold text-white mb-2">Ready to explore the software?</h3>
+        <p class="text-zinc-400 text-sm">Review the full collection of open-source projects or get in touch directly.</p>
       </div>
       <div class="flex items-center gap-3">
         <Button href="/projects" variant="primary" size="md">

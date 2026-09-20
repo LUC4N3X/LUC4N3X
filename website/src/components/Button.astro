@@ -21,19 +21,19 @@ const {
   ariaLabel
 } = Astro.props;
 
-const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#34a896] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0e0d0c] disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff] focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]";
 
 const sizeStyles = {
   sm: "text-xs px-3.5 py-1.5 gap-1.5",
   md: "text-sm px-5 py-2 gap-2",
-  lg: "text-base px-6 py-3 gap-2.5"
+  lg: "text-base px-6 py-2.5 gap-2.5"
 };
 
 const variantStyles = {
-  primary: "bg-[#f7f5f2] text-[#0e0d0c] hover:bg-[#eae6df]",
-  secondary: "bg-[#1c1916] text-[#f7f5f2] border border-[#302c27] hover:bg-[#25221e]",
-  outline: "bg-transparent text-[#f7f5f2] border border-[#38332d] hover:border-[#4d463d] hover:bg-[#1a1815]",
-  ghost: "bg-transparent text-[#a39e94] hover:text-[#f7f5f2] hover:bg-[#1a1815]"
+  primary: "bg-[#0071e3] text-white hover:bg-[#0077ed] shadow-sm shadow-[#0071e3]/20",
+  secondary: "bg-white/[0.08] text-white border border-white/[0.1] hover:bg-white/[0.14] hover:border-white/[0.2]",
+  outline: "bg-transparent text-white border border-white/[0.15] hover:border-white/[0.3] hover:bg-white/[0.06]",
+  ghost: "bg-transparent text-zinc-400 hover:text-white hover:bg-white/[0.06]"
 };
 
 const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

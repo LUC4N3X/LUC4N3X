@@ -2,15 +2,15 @@
 
 @layer base {
   :root {
-    --bg-canvas: #0e0d0c;
-    --bg-surface: #171513;
-    --bg-surface-elevated: #211e1b;
-    --border-hairline: rgba(235, 230, 222, 0.08);
-    --border-hover: rgba(235, 230, 222, 0.16);
-    --accent-teal: #34a896;
-    --text-primary: #f7f5f2;
-    --text-secondary: #a39e94;
-    --text-muted: #6e6960;
+    --bg-canvas: #000000;
+    --bg-surface: #0c0c0e;
+    --bg-surface-elevated: #141418;
+    --border-hairline: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.16);
+    --accent-blue: #2997ff;
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
   }
 
   html {
@@ -23,15 +23,15 @@
   body {
     overflow-x: hidden;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.015em;
     background-color: var(--bg-canvas);
   }
 
   ::selection {
-    background-color: rgba(52, 168, 150, 0.28);
+    background-color: rgba(41, 151, 255, 0.3);
     color: #ffffff;
   }
 }
@@ -42,26 +42,25 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0e0d0c;
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #282522;
+  background: #27272a;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3b3732;
+  background: #3f3f46;
 }
 
-.bg-warm-dots {
-  background-image: radial-gradient(rgba(247, 245, 242, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
+.bg-apple-glow {
+  background-image: radial-gradient(circle at 50% 0%, rgba(41, 151, 255, 0.08) 0%, transparent 70%);
 }
 
-.bg-architect-grid {
-  background-size: 48px 48px;
+.bg-subtle-grid {
+  background-size: 64px 64px;
   background-image: 
-    linear-gradient(to right, rgba(247, 245, 242, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(247, 245, 242, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
