@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import { articles } from '../../data/articles';
+import { siteConfig } from '../../data/site';
+---
+
+<Layout 
+  title={`Articles & Engineering Notes — ${siteConfig.name}`}
+  description="Technical deep-dives into Android internals, media streaming architecture, reverse engineering, and software craftsmanship by LUC4N3X."
+>
+  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#0e0d0c]">
+    <SectionHeader
+      eyebrow="Engineering Notes & Writings"
+      title="Articles & Architecture"
+      subtitle="Deep-dives into Android internals, media pipelines, reverse engineering, and software craftsmanship by LUC4N3X."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {articles.map(article => (
+        <ArticleCard article={article} />
+      ))}
+    </div>
+  </div>
+</Layout>
