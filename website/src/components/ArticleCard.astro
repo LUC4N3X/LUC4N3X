@@ -9,24 +9,29 @@ interface Props {
 const { article } = Astro.props;
 ---
 
-<article class="group relative flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-7 sm:p-8 transition-all duration-300 hover:border-white/[0.18] hover:bg-[#111114]">
+<article class="group relative flex flex-col justify-between rounded-3xl border border-white/[0.08] bg-[#0e131f] p-7 sm:p-8 transition-all duration-300 hover:border-indigo-500/40 hover:bg-[#12192b] hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1">
   <div>
-    <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono text-zinc-500">
-      <time datetime={article.date}>
-        {new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
-      </time>
-      <span class="px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-400">
-        {article.readingTime}
+    <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono">
+      <div class="flex items-center gap-2 text-zinc-400">
+        <time datetime={article.date}>
+          {new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+        </time>
+        <span class="text-zinc-600">·</span>
+        <span>{article.readingTime}</span>
+      </div>
+      
+      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-mono bg-indigo-500/10 border border-indigo-500/25 text-[#818cf8]">
+        Engineering Note
       </span>
     </div>
 
-    <h3 class="text-xl font-semibold text-white tracking-tight mb-3 group-hover:text-[#2997ff] transition-colors">
+    <h3 class="text-xl sm:text-2xl font-semibold text-white tracking-tight mb-3 group-hover:text-[#38bdf8] transition-colors leading-snug">
       <a href={`/articles/${article.slug}`} class="focus-visible:outline-none focus-visible:underline">
         {article.title}
       </a>
     </h3>
 
-    <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
+    <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6 font-normal">
       {article.description}
     </p>
   </div>
@@ -34,23 +39,23 @@ const { article } = Astro.props;
   <div>
     <div class="flex flex-wrap gap-1.5 mb-6">
       {article.tags.map(tag => (
-        <TechBadge text={tag} />
+        <TechBadge text={tag} size="sm" />
       ))}
     </div>
 
     <div class="flex items-center justify-between pt-4 border-t border-white/[0.08] text-xs font-mono">
       <a 
         href={`/articles/${article.slug}`} 
-        class="text-[#2997ff] hover:text-[#52a9ff] font-medium transition-colors flex items-center gap-1.5"
+        class="text-[#38bdf8] hover:text-[#818cf8] font-medium transition-colors inline-flex items-center gap-1.5"
       >
-        <span>Read Article</span>
-        <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <span>Read Full Article</span>
+        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </a>
 
       <span class="text-zinc-500">
-        LUC4N3X Notes
+        LUC4N3X Archive
       </span>
     </div>
   </div>

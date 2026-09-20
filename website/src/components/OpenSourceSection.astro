@@ -4,7 +4,7 @@ import { techDomains } from '../data/skills';
 import TechBadge from './TechBadge.astro';
 ---
 
-<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-black relative">
+<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <SectionHeader
       eyebrow="Open Source & Architecture"
@@ -14,45 +14,45 @@ import TechBadge from './TechBadge.astro';
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
       <div class="lg:col-span-7 flex flex-col justify-between gap-6">
-        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+        <div class="p-8 sm:p-10 rounded-3xl bg-[#0e131f] border border-white/[0.08] hover:border-indigo-500/30 transition-colors">
           <h3 class="text-2xl font-semibold text-white mb-3">
             The Contribution Philosophy
           </h3>
-          <p class="text-zinc-400 text-base sm:text-lg leading-relaxed mb-6 font-normal">
+          <p class="text-zinc-300 text-base sm:text-lg leading-relaxed mb-6 font-normal">
             Build the useful thing first. Run it on real hardware. Find what breaks. Fix the smallest real cause, and keep working on it until it feels right.
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-zinc-400">
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#2997ff]"></span>
+              <span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
               <span>No user tracking or telemetry</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#2997ff]"></span>
+              <span class="w-2 h-2 rounded-full bg-[#818cf8]"></span>
               <span>Local-first data persistence</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#2997ff]"></span>
+              <span class="w-2 h-2 rounded-full bg-[#c084fc]"></span>
               <span>Direct service connections</span>
             </div>
             <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#2997ff]"></span>
+              <span class="w-2 h-2 rounded-full bg-[#f43f5e]"></span>
               <span>GNU GPL v3 & open licensing</span>
             </div>
           </div>
         </div>
 
-        <div class="p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+        <div class="p-8 rounded-3xl bg-[#0e131f] border border-white/[0.08] hover:border-indigo-500/30 transition-colors">
           <h3 class="text-2xl font-semibold text-white mb-3">
             Community Translations
           </h3>
-          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-4 font-normal">
+          <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4 font-normal">
             Levyra and related software are localized by community contributors worldwide through Weblate across 36 languages.
           </p>
           <a 
             href="https://hosted.weblate.org/engage/levyra/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="inline-flex items-center gap-2 text-xs font-mono text-[#2997ff] hover:underline font-medium"
+            class="inline-flex items-center gap-2 text-xs font-mono text-[#38bdf8] hover:underline font-medium"
           >
             <span>Contribute on Weblate</span>
             <span>→</span>
@@ -60,7 +60,7 @@ import TechBadge from './TechBadge.astro';
         </div>
       </div>
 
-      <div class="lg:col-span-5 flex items-center justify-center p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+      <div class="lg:col-span-5 flex items-center justify-center p-6 rounded-3xl bg-[#0e131f] border border-white/[0.08] hover:border-indigo-500/30 transition-colors">
         <div class="relative w-full max-w-sm rounded-2xl overflow-hidden p-4">
           <img 
             src="/assets/brand/luc4n3x-linux-stack.svg" 
@@ -76,9 +76,9 @@ import TechBadge from './TechBadge.astro';
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {techDomains.map(domain => (
-        <div class="rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-6 flex flex-col justify-between">
+        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 flex flex-col justify-between hover:border-indigo-500/30 transition-colors">
           <div>
-            <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] font-semibold mb-2 block">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold mb-2 block">
               {domain.category}
             </span>
             <h4 class="text-lg font-semibold text-white mb-2">

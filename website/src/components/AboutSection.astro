@@ -3,7 +3,7 @@ import SectionHeader from './SectionHeader.astro';
 import Button from './Button.astro';
 ---
 
-<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-black relative">
+<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 flex flex-col gap-6">
@@ -13,7 +13,7 @@ import Button from './Button.astro';
           subtitle="An independent developer building software with an uncompromising focus on user experience, performance, privacy, and open source."
         />
 
-        <div class="space-y-4 text-zinc-400 text-base sm:text-lg leading-relaxed font-normal">
+        <div class="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
           <p>
             Hey, I'm Luca. I take rough ideas and turn them into software I can actually use day in and day out.
           </p>
@@ -24,15 +24,15 @@ import Button from './Button.astro';
 
         <div class="space-y-2 border-t border-b border-white/[0.08] py-5 text-sm text-zinc-400">
           <div class="flex items-start gap-2">
-            <span class="text-[#2997ff] mt-0.5">·</span>
+            <span class="text-[#38bdf8] mt-0.5 font-bold">·</span>
             <span>Primarily working with Kotlin, Jetpack Compose, Python, Linux, and Docker</span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="text-[#2997ff] mt-0.5">·</span>
+            <span class="text-[#818cf8] mt-0.5 font-bold">·</span>
             <span>Focused on bugs that only trigger on specific hardware, network paths, or state transitions</span>
           </div>
           <div class="flex items-start gap-2">
-            <span class="text-[#2997ff] mt-0.5">·</span>
+            <span class="text-[#f43f5e] mt-0.5 font-bold">·</span>
             <span>A focused, verified fix is always preferred over an unvetted architectural rewrite</span>
           </div>
         </div>
@@ -46,18 +46,20 @@ import Button from './Button.astro';
       </div>
 
       <div class="lg:col-span-5 flex flex-col gap-5">
-        <div class="rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-6 flex flex-col sm:flex-row items-center gap-5">
-          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-[#2997ff]/40 shadow-lg shadow-[#2997ff]/10 flex-shrink-0">
-            <img 
-              src="/assets/brand/luc4n3x-avatar.png" 
-              alt="Luca Drogo (LUC4N3X)" 
-              class="w-full h-full object-cover"
-              width="112"
-              height="112"
-            />
+        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 flex flex-col sm:flex-row items-center gap-5 hover:border-indigo-500/30 transition-colors">
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-0.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-lg shadow-indigo-500/15 flex-shrink-0">
+            <div class="w-full h-full rounded-2xl overflow-hidden bg-[#080b11]">
+              <img 
+                src="/assets/brand/luc4n3x-avatar.png" 
+                alt="Luca Drogo (LUC4N3X)" 
+                class="w-full h-full object-cover"
+                width="112"
+                height="112"
+              />
+            </div>
           </div>
           <div class="flex flex-col text-center sm:text-left">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] font-semibold block mb-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold block mb-1">
               Luca Drogo
             </span>
             <span class="text-lg font-semibold text-white mb-1">
@@ -69,7 +71,7 @@ import Button from './Button.astro';
           </div>
         </div>
 
-        <div class="relative w-full rounded-2xl overflow-hidden border border-white/[0.08] bg-[#0c0c0e] p-6">
+        <div class="relative w-full rounded-3xl overflow-hidden border border-white/[0.08] bg-[#0e131f] p-6 hover:border-indigo-500/30 transition-colors">
           <img 
             src="/assets/brand/luc4n3x-workspace.svg" 
             alt="Luca at his developer workspace" 

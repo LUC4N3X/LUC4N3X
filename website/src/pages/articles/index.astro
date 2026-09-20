@@ -4,18 +4,35 @@ import SectionHeader from '../../components/SectionHeader.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
 import { articles } from '../../data/articles';
 import { siteConfig } from '../../data/site';
+
+const topics = [
+  { name: "Android Internals", color: "text-[#38bdf8] bg-sky-500/10 border-sky-500/20" },
+  { name: "Media3 & Audio", color: "text-[#818cf8] bg-indigo-500/10 border-indigo-500/20" },
+  { name: "Zero Telemetry", color: "text-[#34d399] bg-emerald-500/10 border-emerald-500/20" },
+  { name: "Reverse Engineering", color: "text-[#f43f5e] bg-rose-500/10 border-rose-500/20" },
+  { name: "Craftsmanship", color: "text-[#fbbf24] bg-amber-500/10 border-amber-500/20" }
+];
 ---
 
 <Layout 
   title={`Articles & Engineering Notes — ${siteConfig.name}`}
   description="Technical deep-dives into Android internals, media streaming architecture, reverse engineering, and software craftsmanship by LUC4N3X."
 >
-  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
+  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
     <SectionHeader
       eyebrow="Engineering Notes & Writings"
       title="Articles & Architecture"
       subtitle="Deep-dives into Android internals, media pipelines, reverse engineering, and software craftsmanship by LUC4N3X."
     />
+
+    <div class="flex flex-wrap items-center gap-2 mb-12">
+      <span class="text-xs font-mono text-zinc-500 mr-2 uppercase tracking-wider">Browse Topics:</span>
+      {topics.map(topic => (
+        <span class={`text-xs font-mono px-3 py-1 rounded-full border ${topic.color}`}>
+          {topic.name}
+        </span>
+      ))}
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       {articles.map(article => (
