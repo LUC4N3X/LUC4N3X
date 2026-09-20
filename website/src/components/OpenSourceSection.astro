@@ -60,11 +60,12 @@ import SectionHeader from './SectionHeader.astro';
       </div>
 
       <div class="lg:col-span-6 flex items-center justify-center">
-        <div class="relative w-full max-w-lg rounded-3xl p-1 bg-gradient-to-tr from-[#38bdf8]/20 via-[#818cf8]/15 to-[#f43f5e]/20 shadow-2xl shadow-indigo-500/10">
+        <div class="relative w-full max-w-lg">
+          <div class="absolute -inset-4 bg-gradient-to-tr from-[#38bdf8]/15 via-[#818cf8]/15 to-[#f43f5e]/15 rounded-3xl blur-2xl -z-10 pointer-events-none"></div>
           <img 
             src="/assets/brand/luc4n3x-craft-engine.svg" 
-            alt="LUC4N3X Architecture & Audio Pipeline Engine" 
-            class="w-full h-auto object-contain rounded-[26px]"
+            alt="LUC4N3X Architecture and Audio Pipeline Engine" 
+            class="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] transition-transform duration-500 hover:scale-[1.02]"
             loading="lazy"
             width="560"
             height="380"

@@ -4,109 +4,128 @@ import TechBadge from './TechBadge.astro';
 ---
 
 <section class="relative py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] overflow-hidden">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-8 sm:p-14 relative overflow-hidden transition-all duration-300 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
-      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-10 mb-10 border-b border-white/[0.08]">
-        <div>
-          <div class="inline-flex items-center gap-2 mb-3">
-            <span class="text-xs font-mono tracking-widest text-[#38bdf8] uppercase font-semibold px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/20">
-              FLAGSHIP OPEN SOURCE PROJECT
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-mono tracking-wider uppercase text-[#38bdf8] font-semibold w-fit">
+          <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse"></span>
+          <span>Flagship Open Source Project</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
+          Levyra <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f43f5e]">DeepSound</span>
+        </h2>
+
+        <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed">
+          A high-fidelity, zero-telemetry music player for Android and Windows. Built from scratch with AndroidX Media3 and Jetpack Compose to deliver gapless playback, synchronized lyrics, and uncompromising privacy.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
+          <div class="space-y-1.5 border-l-2 border-sky-500/40 pl-3.5">
+            <h3 class="text-sm font-semibold text-white tracking-tight">Media3 Audio Core</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Adaptive ring buffering to eliminate OEM background service terminations.</p>
+          </div>
+          <div class="space-y-1.5 border-l-2 border-indigo-500/40 pl-3.5">
+            <h3 class="text-sm font-semibold text-white tracking-tight">Zero Telemetry</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Direct TLS 1.3 streams. All listening history stays in on-device Room SQLite.</p>
+          </div>
+          <div class="space-y-1.5 border-l-2 border-rose-500/40 pl-3.5">
+            <h3 class="text-sm font-semibold text-white tracking-tight">Synced Lyrics</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">Real-time line-by-line synced lyrics via LRCLIB with offline caching.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-1">
+          <TechBadge text="Kotlin" variant="blue" />
+          <TechBadge text="Jetpack Compose" variant="blue" />
+          <TechBadge text="AndroidX Media3" variant="default" />
+          <TechBadge text="ExoPlayer" variant="default" />
+          <TechBadge text="Room SQLite" variant="default" />
+          <TechBadge text="LRCLIB" variant="default" />
+          <TechBadge text="libvlc" variant="default" />
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-white/[0.08]">
+          <div class="flex flex-wrap items-center gap-3">
+            <Button href="/projects/levyra" variant="primary" size="md">
+              <span>Explore Levyra Architecture</span>
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </Button>
+
+            <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
+              <span>GitHub Repository</span>
+              <svg class="w-3.5 h-3.5 ml-1 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </Button>
+
+            <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="outline" size="md">
+              <span>Latest Release</span>
+              <span data-levyra-version class="font-mono text-xs hidden"></span>
+            </Button>
+          </div>
+
+          <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
+            <div data-levyra-stars-container>
+              <span class="text-zinc-500 block">Stars</span>
+              <span data-levyra-stars class="text-sm font-semibold text-white">-</span>
+            </div>
+            <div data-levyra-downloads-container>
+              <span class="text-zinc-500 block">Downloads</span>
+              <span data-levyra-downloads class="text-sm font-semibold text-white">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+        <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
+          <div class="absolute -inset-8 bg-gradient-to-tr from-[#38bdf8]/25 via-[#818cf8]/20 to-[#f43f5e]/25 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+          
+          <div class="absolute -top-4 -right-2 z-20 px-3.5 py-1.5 rounded-full bg-[#0a0f1d]/90 border border-white/10 backdrop-blur-md shadow-xl flex items-center gap-2 text-xs font-mono text-white">
+            <span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
+            <span>48kHz Hi-Fi FLAC</span>
+          </div>
+
+          <div class="absolute -bottom-4 -left-2 z-20 px-3.5 py-1.5 rounded-full bg-[#0a0f1d]/90 border border-white/10 backdrop-blur-md shadow-xl flex items-center gap-2 text-xs font-mono text-white">
+            <span class="w-2 h-2 rounded-full bg-[#34d399]"></span>
+            <span>0ms LRCLIB Sync</span>
+          </div>
+
+          <img 
+            src="/assets/levyra/levyra-logo-3d.png" 
+            alt="Levyra DeepSound 3D Logo" 
+            class="relative z-10 w-full max-w-[340px] sm:max-w-[380px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-500 ease-out" 
+            loading="lazy"
+            width="380" 
+            height="380" 
+          />
+
+          <div class="mt-8 flex items-center justify-center gap-3 text-xs font-mono text-zinc-400">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              <svg class="w-3.5 h-3.5 text-[#34d399]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+              </svg>
+              Android
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              <svg class="w-3.5 h-3.5 text-[#38bdf8]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+              </svg>
+              Windows
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              GPL-3.0
             </span>
           </div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight">
-            Levyra (DeepSound)
-          </h2>
-          <p class="text-base sm:text-lg text-zinc-300 mt-3 font-normal max-w-2xl leading-relaxed">
-            High-fidelity, zero-telemetry music player for Android and Windows. Built from scratch with AndroidX Media3 and Jetpack Compose to deliver gapless playback, synchronized lyrics, and uncompromising privacy.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-2 flex-shrink-0">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-            <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
-            </svg>
-            Android
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-            <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
-            </svg>
-            Windows
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-            GPL-3.0
-          </span>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10 text-zinc-400 text-sm leading-relaxed">
-        <div class="space-y-2">
-          <h3 class="text-base font-semibold text-white tracking-tight">Low-Latency Media3 Core</h3>
-          <p>
-            Custom ExoPlayer session management with adaptive ring buffering and foreground service lifecycle handling designed to resist OEM background killers across diverse Android distributions.
-          </p>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-base font-semibold text-white tracking-tight">Zero Telemetry & Local Data</h3>
-          <p>
-            Direct TLS 1.3 streams with no intermediate tracking proxies. Your listening history, playlists, and offline media remain strictly on-device in a local SQLite database.
-          </p>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-base font-semibold text-white tracking-tight">Desktop & Synchronized Lyrics</h3>
-          <p>
-            Real-time line-by-line synced lyrics via LRCLIB, automatic ID3 tag embedding, and a companion Windows edition built with Compose Multiplatform and libvlc.
-          </p>
-        </div>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-2 mb-10">
-        <TechBadge text="Kotlin" variant="blue" />
-        <TechBadge text="Jetpack Compose" variant="blue" />
-        <TechBadge text="AndroidX Media3" variant="default" />
-        <TechBadge text="ExoPlayer" variant="default" />
-        <TechBadge text="Room SQLite" variant="default" />
-        <TechBadge text="LRCLIB" variant="default" />
-        <TechBadge text="libvlc" variant="default" />
-      </div>
-
-      <div class="flex flex-wrap items-center justify-between gap-6 pt-8 border-t border-white/[0.08]">
-        <div class="flex flex-wrap items-center gap-3">
-          <Button href="/projects/levyra" variant="primary" size="md">
-            <span>Explore Levyra Architecture</span>
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Button>
-
-          <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
-            <span>GitHub Repository</span>
-            <svg class="w-3.5 h-3.5 ml-1 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </Button>
-
-          <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="outline" size="md">
-            <span>Latest Release</span>
-            <span data-levyra-version class="font-mono text-xs hidden"></span>
-          </Button>
-        </div>
-
-        <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
-          <div>
-            <span class="text-zinc-500 block">Stars</span>
-            <span data-levyra-stars class="text-sm font-semibold text-white">-</span>
-          </div>
-          <div>
-            <span class="text-zinc-500 block">Downloads</span>
-            <span data-levyra-downloads class="text-sm font-semibold text-white">-</span>
-          </div>
-        </div>
-      </div>
     </div>
+
   </div>
 </section>
