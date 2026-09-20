@@ -144,21 +144,27 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       let accumulated = 0;
       let page = 1;
       const maxPages = 10;
-      let hasMore = true;
+      let completedSuccessfully = false;
 
-      while (hasMore && page <= maxPages) {
+      while (page <= maxPages) {
         const releasesRes = await fetch(
           `https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100&page=${page}`,
           { headers }
         );
 
         if (!releasesRes.ok) {
+          completedSuccessfully = false;
           break;
         }
 
         const releases = (await releasesRes.json()) as GitHubRelease[];
-        if (!Array.isArray(releases) || releases.length === 0) {
-          hasMore = false;
+        if (!Array.isArray(releases)) {
+          completedSuccessfully = false;
+          break;
+        }
+
+        if (releases.length === 0) {
+          completedSuccessfully = true;
           break;
         }
 
@@ -171,14 +177,17 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
         }
 
         if (releases.length < 100) {
-          hasMore = false;
-        } else {
-          page += 1;
+          completedSuccessfully = true;
+          break;
         }
+
+        page += 1;
       }
 
-      if (page > 1 || accumulated > 0) {
+      if (completedSuccessfully) {
         totalDownloads = accumulated;
+      } else {
+        totalDownloads = null;
       }
     } catch {
       totalDownloads = null;
