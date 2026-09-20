@@ -69,37 +69,5 @@ export const projects: Project[] = [
       "Gemini-powered contextual engagement synthesis",
       "Resilient task worker queue with automatic retry backoff"
     ]
-  },
-  {
-    id: "kraken-proxy",
-    name: "KrakenProxy",
-    tagline: "Resilient Media Proxy Gateway",
-    description: "High-throughput streaming reverse proxy and media gateway with hoster extraction, dynamic fallback routing, and stream optimization.",
-    featured: false,
-    platforms: ["Linux", "Docker"],
-    stack: ["Python", "FastAPI", "Docker", "HLS", "AsyncIO"],
-    github: "https://github.com/LUC4N3X/KrakenProxy",
-    status: "Active",
-    highlights: [
-      "Dynamic hoster stream extraction pipeline",
-      "Resilient edge failover routing",
-      "Low-overhead HLS segment buffering"
-    ]
-  },
-  {
-    id: "kraken-lightx",
-    name: "KrakenLightX",
-    tagline: "Lightweight Stream Gateway & Edge Proxy",
-    description: "High-efficiency hybrid media extraction and forwarding gateway engineered for minimal footprint edge deployments.",
-    featured: false,
-    platforms: ["Linux", "Android"],
-    stack: ["Rust", "Python", "Edge Proxy", "Media Streaming"],
-    github: "https://github.com/LUC4N3X/KrakenLightX",
-    status: "Active",
-    highlights: [
-      "Hybrid Rust core for minimal memory footprint",
-      "Zero-copy stream forwarding pipeline",
-      "Embedded Android proxy companion support"
-    ]
   }
 ];
