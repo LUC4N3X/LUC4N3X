@@ -3,15 +3,15 @@ import Button from './Button.astro';
 import TechBadge from './TechBadge.astro';
 ---
 
-<section class="relative py-20 sm:py-28 bg-[#080b11] overflow-hidden">
+<section class="relative py-16 sm:py-28 bg-[#080b11] overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
       
       <div class="lg:col-span-7 flex flex-col gap-6">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-mono tracking-wider uppercase text-[#38bdf8] font-semibold w-fit">
-          <span class="w-2 h-2 rounded-full bg-[#38bdf8] animate-pulse"></span>
-          <span>Flagship Open Source Project</span>
+        <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+          <span>Featured Project</span>
         </div>
 
         <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
@@ -22,7 +22,7 @@ import TechBadge from './TechBadge.astro';
           A high-fidelity, zero-telemetry music player for Android and Windows. Built from scratch with AndroidX Media3 and Jetpack Compose to deliver gapless playback, synchronized lyrics, and uncompromising privacy.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-2">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-2">
           <div class="space-y-1.5 border-l-2 border-sky-500/40 pl-3.5">
             <h3 class="text-sm font-semibold text-white tracking-tight">Media3 Audio Core</h3>
             <p class="text-xs text-zinc-400 leading-relaxed">Adaptive ring buffering to eliminate OEM background service terminations.</p>
@@ -37,7 +37,7 @@ import TechBadge from './TechBadge.astro';
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-2 pt-1">
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 pt-1">
           <TechBadge text="Android" variant="blue" />
           <TechBadge text="Windows" variant="blue" />
           <TechBadge text="GPL-3.0" variant="blue" />
@@ -50,29 +50,29 @@ import TechBadge from './TechBadge.astro';
           <TechBadge text="libvlc" variant="default" />
         </div>
 
-        <div class="flex flex-wrap items-center justify-between gap-6 pt-6 border-t border-white/[0.08]">
-          <div class="flex flex-wrap items-center gap-3">
-            <Button href="/projects/levyra" variant="primary" size="md">
-              <span>Explore Levyra Architecture</span>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-white/[0.08]">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+            <Button href="/projects/levyra" variant="primary" size="md" class="w-full sm:w-auto">
+              <span>Explore Architecture</span>
               <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </Button>
 
-            <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
+            <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md" class="w-full sm:w-auto">
               <span>GitHub Repository</span>
               <svg class="w-3.5 h-3.5 ml-1 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </Button>
 
-            <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="outline" size="md">
+            <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="outline" size="md" class="w-full sm:w-auto">
               <span>Latest Release</span>
               <span data-levyra-version class="font-mono text-xs hidden"></span>
             </Button>
           </div>
 
-          <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
+          <div class="flex items-center justify-around sm:justify-start gap-6 text-xs font-mono text-zinc-400 pt-3 sm:pt-0 border-t border-white/[0.05] sm:border-t-0">
             <div data-levyra-stars-container>
               <span class="text-zinc-500 block">Stars</span>
               <span data-levyra-stars class="text-sm font-semibold text-white">-</span>
@@ -86,13 +86,13 @@ import TechBadge from './TechBadge.astro';
       </div>
 
       <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
-        <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
+        <div class="relative w-full max-w-[340px] sm:max-w-[420px] mx-auto flex flex-col items-center justify-center">
           <div class="absolute -inset-10 bg-gradient-to-tr from-[#38bdf8]/30 via-[#818cf8]/25 to-[#f43f5e]/30 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
           
           <img 
             src="/assets/levyra/levyra-logo-3d.png" 
             alt="Levyra DeepSound 3D Logo" 
-            class="relative z-10 w-full max-w-[340px] sm:max-w-[400px] h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-500 ease-out" 
+            class="relative z-10 w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[400px] h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-500 ease-out" 
             loading="lazy"
             width="400" 
             height="400" 
