@@ -10,23 +10,23 @@ const { fill = "#080b11", flip = false, className = "" } = Astro.props;
 
 <div class={`relative w-full overflow-hidden leading-none select-none pointer-events-none -my-1 z-10 ${className}`}>
   <svg 
-    class={`block w-full h-12 sm:h-16 md:h-20 lg:h-24 ${flip ? 'rotate-180' : ''}`} 
-    viewBox="0 0 1440 120" 
+    class={`block w-full h-14 sm:h-20 md:h-24 lg:h-28 ${flip ? 'rotate-180' : ''}`} 
+    viewBox="0 0 1440 140" 
     fill="none" 
     preserveAspectRatio="none"
   >
     <path 
-      d="M0,35 C180,85 360,15 540,65 C720,115 900,30 1080,75 C1260,110 1380,45 1440,55 L1440,120 L0,120 Z" 
+      d="M0,60 C120,20 220,75 340,40 C460,5 560,55 680,25 C800,-5 900,45 1020,20 C1140,-10 1260,50 1440,30 L1440,140 L0,140 Z" 
       fill={fill} 
-      fill-opacity="0.35" 
+      fill-opacity="0.3" 
     />
     <path 
-      d="M0,60 C220,15 420,95 660,45 C900,-5 1120,80 1320,40 C1380,25 1420,50 1440,45 L1440,120 L0,120 Z" 
+      d="M0,80 C140,45 260,95 400,60 C540,25 660,85 800,50 C940,15 1060,75 1200,45 C1320,20 1380,60 1440,50 L1440,140 L0,140 Z" 
       fill={fill} 
       fill-opacity="0.65" 
     />
     <path 
-      d="M0,80 C160,45 320,105 500,75 C680,45 860,100 1040,70 C1220,40 1360,85 1440,75 L1440,120 L0,120 Z" 
+      d="M0,100 C110,75 210,110 320,85 C440,55 540,105 660,80 C780,50 890,95 1010,70 C1130,45 1240,90 1350,75 C1400,68 1420,78 1440,75 L1440,140 L0,140 Z" 
       fill={fill} 
     />
   </svg>
