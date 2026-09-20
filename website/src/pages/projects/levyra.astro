@@ -112,7 +112,7 @@ const schemaData = {
         <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
           <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300 flex items-center gap-1.5">
             <span>Android 8.0+</span>
-            <span data-levyra-version class="opacity-0 transition-opacity font-bold"></span>
+            <span data-levyra-version class="hidden font-bold"></span>
           </span>
           <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300">
             Windows 10+
@@ -128,7 +128,7 @@ const schemaData = {
         <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
           <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
             <span>Download Latest Release</span>
-            <span data-levyra-version class="font-mono text-xs opacity-0 transition-opacity"></span>
+            <span data-levyra-version class="font-mono text-xs hidden"></span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
@@ -149,14 +149,14 @@ const schemaData = {
           </Button>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg p-4 rounded-xl bg-[#0c1018] border border-white/8 text-center text-xs font-mono">
-          <div>
+        <div data-levyra-metrics-box class="hidden grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg p-4 rounded-xl bg-[#0c1018] border border-white/8 text-center text-xs font-mono transition-all">
+          <div data-levyra-stars-container class="hidden">
             <span class="text-slate-400 block mb-1">GitHub Stars</span>
-            <span data-levyra-stars class="text-base font-bold text-cyan-300 opacity-0 transition-opacity">--</span>
+            <span data-levyra-stars class="text-base font-bold text-cyan-300"></span>
           </div>
-          <div>
+          <div data-levyra-downloads-container class="hidden">
             <span class="text-slate-400 block mb-1">Total Downloads</span>
-            <span data-levyra-downloads class="text-base font-bold text-cyan-300 opacity-0 transition-opacity">--</span>
+            <span data-levyra-downloads class="text-base font-bold text-cyan-300"></span>
           </div>
           <div class="col-span-2 sm:col-span-1">
             <span class="text-slate-400 block mb-1">License</span>
