@@ -1,0 +1,14 @@
+dist/
+.astro/
+node_modules/
+.wrangler/
+_worker.bundle/
+_worker.bundle
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.production
+.DS_Store
+.idea/

@@ -1,0 +1,94 @@
+---
+import { siteConfig } from '../data/site';
+---
+
+<footer class="w-full border-t border-white/8 bg-[#05070a] py-12 sm:py-16 mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+      <div class="md:col-span-2 flex flex-col gap-4">
+        <a href="/" class="flex items-center gap-3 w-fit">
+          <div class="w-7 h-7 rounded-lg overflow-hidden border border-white/10 bg-[#0d111a] flex items-center justify-center">
+            <img 
+              src="/assets/brand/luc4n3x-mark.svg" 
+              alt="LUC4N3X" 
+              class="w-4 h-4 object-contain"
+              width="16"
+              height="16"
+            />
+          </div>
+          <span class="font-bold text-base tracking-wider text-white">LUC4N3X</span>
+        </a>
+        <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
+          {siteConfig.motto}
+        </p>
+        <div class="inline-flex items-center gap-2 text-xs font-mono text-slate-500">
+          <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
+          <span>Open source · Zero telemetry · Independent</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
+          Navigation
+        </span>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="/" class="text-slate-400 hover:text-cyan-400 transition-colors">Home</a>
+          </li>
+          <li>
+            <a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors">Projects</a>
+          </li>
+          <li>
+            <a href="/projects/levyra" class="text-slate-400 hover:text-cyan-400 transition-colors">Levyra (DeepSound)</a>
+          </li>
+          <li>
+            <a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors">About & Philosophy</a>
+          </li>
+          <li>
+            <a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
+          </li>
+          <li>
+            <a href="/legal" class="text-slate-400 hover:text-cyan-400 transition-colors">Legal & Licensing</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-3">
+        <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
+          Ecosystem
+        </span>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+              GitHub Profile ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+              Levyra Repository ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+              Weblate Translations ↗
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/LUC4N3X/LUC4N3X" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+              Profile Source ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+      <p>© {siteConfig.year} {siteConfig.name}. All rights reserved.</p>
+      <div class="flex items-center gap-4">
+        <span>Astro + Tailwind CSS</span>
+        <span>·</span>
+        <span>Cloudflare Pages</span>
+      </div>
+    </div>
+  </div>
+</footer>

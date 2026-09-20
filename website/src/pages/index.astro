@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import OpenSourceSection from '../components/OpenSourceSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import PressSection from '../components/PressSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Button from '../components/Button.astro';
+import { projects } from '../data/projects';
+import { siteConfig } from '../data/site';
+
+const selectedProjects = projects.filter(p => !p.featured).slice(0, 4);
+---
+
+<Layout 
+  title={`${siteConfig.name} — ${siteConfig.tagline}`}
+  description={siteConfig.description}
+>
+  <Hero />
+
+  <FeaturedProject />
+
+  <section class="py-16 sm:py-24 border-t border-white/8 bg-[#07090e] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <SectionHeader
+          eyebrow="Selected Works"
+          title="Built to be Useful"
+          subtitle="A selection of open-source tools, streaming proxies, and utilities built with Kotlin, Python, and Rust."
+        />
+        <Button href="/projects" variant="secondary" size="md">
+          <span>All Projects ({projects.length})</span>
+          <span>→</span>
+        </Button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {selectedProjects.map(project => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <OpenSourceSection />
+
+  <AboutSection />
+
+  <PressSection />
+
+  <ContactSection />
+</Layout>

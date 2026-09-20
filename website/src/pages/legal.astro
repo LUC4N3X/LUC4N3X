@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import { siteConfig } from '../data/site';
+---
+
+<Layout 
+  title={`Legal & Licensing — ${siteConfig.name}`}
+  description="Licensing, privacy policy, and legal disclosures for LUC4N3X software and website."
+>
+  <div class="py-16 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionHeader
+      eyebrow="Compliance & Governance"
+      title="Legal & Licensing"
+      subtitle="Open-source licensing terms, privacy principles, and third-party notices."
+    />
+
+    <div class="space-y-8 text-slate-300 text-sm leading-relaxed">
+      <section class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] space-y-4">
+        <h3 class="text-xl font-bold text-white">1. Open-Source Licensing</h3>
+        <p>
+          Software published by LUC4N3X is distributed under recognized open-source licenses:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+          <li>
+            <strong class="text-white">Levyra (DeepSound):</strong> Licensed under the <strong class="text-white">GNU General Public License v3.0 (GPL-3.0)</strong>. Anyone may inspect, modify, and redistribute the source code under the conditions of the GPL-3.0 license.
+          </li>
+          <li>
+            <strong class="text-white">Developer Tooling & Libraries:</strong> Distributed under either the <strong class="text-white">MIT License</strong> or the <strong class="text-white">GPL-3.0</strong>, as specified within their respective repository root directories.
+          </li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] space-y-4">
+        <h3 class="text-xl font-bold text-white">2. Privacy & Telemetry Policy</h3>
+        <p>
+          This website (<span class="font-mono text-cyan-400">{siteConfig.url}</span>) is a static site hosted via Cloudflare Pages:
+        </p>
+        <ul class="list-disc pl-5 space-y-2 text-slate-300">
+          <li>It uses no tracking cookies, analytics SDKs, session recording scripts, or user fingerprinting.</li>
+          <li>No personal data is collected, stored, monetized, or shared with third-party advertising networks.</li>
+          <li>Standard edge server routing logs may be temporarily processed by Cloudflare to ensure network availability, security, and DDoS protection in accordance with Cloudflare's privacy policy.</li>
+        </ul>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] space-y-4">
+        <h3 class="text-xl font-bold text-white">3. Software Usage & Lawful Compliance</h3>
+        <p>
+          Levyra is an open-source software audio player designed for personal media organization and streaming. Levyra does not operate streaming servers, host copyrighted audio files, or bypass content protections.
+        </p>
+        <p>
+          Users are solely responsible for ensuring that their playback, media acquisition, and data traffic comply with all applicable local copyright legislation and the terms of service of third-party platforms.
+        </p>
+      </section>
+
+      <section class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] space-y-4">
+        <h3 class="text-xl font-bold text-white">4. Trademarks & Disclaimers</h3>
+        <p>
+          Android is a trademark of Google LLC. Windows is a trademark of Microsoft Corporation. All other product names, logos, and brands mentioned on this website and within associated software are property of their respective owners. Their mention does not imply endorsement, affiliation, or sponsorship.
+        </p>
+        <p>
+          The software and website are provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

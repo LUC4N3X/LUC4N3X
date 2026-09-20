@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luc4n3x.pages.dev/sitemap-index.xml

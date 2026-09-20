@@ -1,0 +1,24 @@
+---
+interface Props {
+  text: string;
+  variant?: "default" | "cyan" | "muted";
+  size?: "sm" | "md";
+}
+
+const { text, variant = "default", size = "sm" } = Astro.props;
+
+const base = "inline-flex items-center font-mono rounded border transition-colors";
+const sizes = {
+  sm: "text-[11px] px-2 py-0.5 tracking-wide",
+  md: "text-xs px-2.5 py-1 tracking-wide"
+};
+const variants = {
+  default: "bg-[#0f1420] text-slate-300 border-white/8 hover:border-white/15",
+  cyan: "bg-cyan-950/40 text-cyan-300 border-cyan-500/25 hover:border-cyan-400/40",
+  muted: "bg-[#0b0e14] text-slate-400 border-white/5"
+};
+---
+
+<span class={`${base} ${sizes[size]} ${variants[variant]}`}>
+  {text}
+</span>
