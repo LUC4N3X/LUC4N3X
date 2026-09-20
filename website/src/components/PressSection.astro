@@ -1,0 +1,51 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { pressItems } from '../data/press';
+---
+
+<section class="py-16 sm:py-24 border-t border-white/8 bg-[#07090e] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionHeader
+      eyebrow="Ecosystem & Distribution"
+      title="Recognition & Platforms"
+      subtitle="Platforms, community hubs, and verified mirrors where LUC4N3X projects are published, localized, and referenced."
+    />
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {pressItems.map(item => (
+        <div class="group rounded-xl border border-white/8 bg-[#0c1018] p-6 transition-all duration-300 hover:border-cyan-500/25 hover:bg-[#101420] flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#151c2a] border border-white/10 text-cyan-300">
+                {item.badge}
+              </span>
+              <span class="text-[11px] font-mono text-slate-400">
+                {item.category}
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+              {item.name}
+            </h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              {item.description}
+            </p>
+          </div>
+
+          {item.url && (
+            <div class="pt-4 mt-4 border-t border-white/5">
+              <a 
+                href={item.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs font-mono text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors"
+              >
+                <span>Visit Platform</span>
+                <span>↗</span>
+              </a>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,146 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020817"/>
+      <stop offset="1" stop-color="#07111F"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#E2E8F0"/>
+      <stop offset="1" stop-color="#94A3B8"/>
+    </linearGradient>
+    <linearGradient id="line" x1="220" y1="260" x2="1030" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34D399"/>
+      <stop offset="0.5" stop-color="#86EFAC"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="1200" height="420" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+
+  <g opacity="0.08">
+    <circle cx="95" cy="62" r="2.5" fill="#38BDF8"/>
+    <circle cx="324" cy="60" r="2" fill="#7C3AED"/>
+    <circle cx="812" cy="346" r="2.5" fill="#22C55E"/>
+    <circle cx="1080" cy="72" r="2" fill="#F97316"/>
+  </g>
+
+  <g transform="translate(60,30)">
+    <g transform="translate(0,40) skewX(-32)">
+      <rect x="0" y="120" width="780" height="120" rx="10" fill="#122A1C" stroke="#1E4B33"/>
+      <path d="M0 180 H780" stroke="#1E4B33" opacity="0.45"/>
+      <path d="M0 150 H780" stroke="#1E4B33" opacity="0.45"/>
+      <path d="M0 210 H780" stroke="#1E4B33" opacity="0.45"/>
+      <path d="M60 120 V240 M120 120 V240 M180 120 V240 M240 120 V240 M300 120 V240 M360 120 V240 M420 120 V240 M480 120 V240 M540 120 V240 M600 120 V240 M660 120 V240 M720 120 V240" stroke="#1E4B33" opacity="0.35"/>
+    </g>
+
+    <g filter="url(#glow)">
+      <path d="M40 270 C 210 200, 330 188, 470 210 S 700 180, 840 130" stroke="url(#line)" stroke-width="5" fill="none" opacity="0.85"/>
+    </g>
+
+    <!-- isometric blocks -->
+    <g transform="translate(60,140)">
+      <!-- function: x step 48, y base desc -->
+      <!-- block group 1 -->
+      <g transform="translate(0,80)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,70 0,60" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,70 36,60" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(52,72)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#BBF7D0"/>
+        <polygon points="0,20 18,30 18,86 0,76" fill="#4ADE80"/>
+        <polygon points="36,20 18,30 18,86 36,76" fill="#22C55E"/>
+      </g>
+      <g transform="translate(104,86)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#F0FDF4"/>
+        <polygon points="0,20 18,30 18,60 0,50" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,60 36,50" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(156,58)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#BBF7D0"/>
+        <polygon points="0,20 18,30 18,112 0,102" fill="#4ADE80"/>
+        <polygon points="36,20 18,30 18,112 36,102" fill="#16A34A"/>
+      </g>
+      <g transform="translate(208,68)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,92 0,82" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,92 36,82" fill="#22C55E"/>
+      </g>
+      <g transform="translate(260,98)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#F0FDF4"/>
+        <polygon points="0,20 18,30 18,54 0,44" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,54 36,44" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(312,90)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,70 0,60" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,70 36,60" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(364,76)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#BBF7D0"/>
+        <polygon points="0,20 18,30 18,98 0,88" fill="#4ADE80"/>
+        <polygon points="36,20 18,30 18,98 36,88" fill="#22C55E"/>
+      </g>
+      <g transform="translate(416,104)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#F0FDF4"/>
+        <polygon points="0,20 18,30 18,46 0,36" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,46 36,36" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(468,96)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,66 0,56" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,66 36,56" fill="#4ADE80"/>
+      </g>
+      <g transform="translate(520,78)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#BBF7D0"/>
+        <polygon points="0,20 18,30 18,102 0,92" fill="#22C55E"/>
+        <polygon points="36,20 18,30 18,102 36,92" fill="#15803D"/>
+      </g>
+      <g transform="translate(572,84)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,84 0,74" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,84 36,74" fill="#22C55E"/>
+      </g>
+      <g transform="translate(624,60)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#86EFAC"/>
+        <polygon points="0,20 18,30 18,128 0,118" fill="#22C55E"/>
+        <polygon points="36,20 18,30 18,128 36,118" fill="#166534"/>
+      </g>
+      <g transform="translate(676,74)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#BBF7D0"/>
+        <polygon points="0,20 18,30 18,96 0,86" fill="#4ADE80"/>
+        <polygon points="36,20 18,30 18,96 36,86" fill="#16A34A"/>
+      </g>
+      <g transform="translate(728,94)">
+        <polygon points="0,20 18,10 36,20 18,30" fill="#DCFCE7"/>
+        <polygon points="0,20 18,30 18,62 0,52" fill="#86EFAC"/>
+        <polygon points="36,20 18,30 18,62 36,52" fill="#4ADE80"/>
+      </g>
+    </g>
+
+    <g transform="translate(850,70)">
+      <text x="0" y="0" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Steady Progress</text>
+      <text x="0" y="38" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="18">Built step by step, refined version by version.</text>
+
+      <g transform="translate(0,86)">
+        <circle cx="8" cy="8" r="5" fill="#34D399"/>
+        <text x="26" y="14" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22">Consistency matters</text>
+      </g>
+      <g transform="translate(0,128)">
+        <circle cx="8" cy="8" r="5" fill="#86EFAC"/>
+        <text x="26" y="14" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22">Improvement should be visible</text>
+      </g>
+      <g transform="translate(0,170)">
+        <circle cx="8" cy="8" r="5" fill="#22C55E"/>
+        <text x="26" y="14" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="22">Momentum builds stronger tools</text>
+      </g>
+    </g>
+  </g>
+</svg>

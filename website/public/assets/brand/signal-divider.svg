@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" role="img" aria-label="">
+  <defs>
+    <linearGradient id="leftLine" x1="80" y1="28" x2="522" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30363D" stop-opacity="0"/>
+      <stop offset="0.3" stop-color="#30363D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="rightLine" x1="678" y1="28" x2="1120" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF" stop-opacity="0.55"/>
+      <stop offset="0.7" stop-color="#30363D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#30363D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="559" y1="16" x2="641" y2="40" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#79C0FF"/>
+      <stop offset="1" stop-color="#2F81F7"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <path d="M80 28H522" stroke="url(#leftLine)" stroke-width="1.5"/>
+  <path d="M678 28H1120" stroke="url(#rightLine)" stroke-width="1.5"/>
+
+  <rect x="542" y="10" width="116" height="36" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.5"/>
+  <rect x="550" y="17" width="3" height="22" rx="1.5" fill="#21262D"/>
+  <rect x="647" y="17" width="3" height="22" rx="1.5" fill="#21262D"/>
+
+  <path d="M573 21L563 28L573 35" fill="none" stroke="#8C959F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M588 37L601 19" fill="none" stroke="url(#accent)" stroke-width="2.8" stroke-linecap="round" filter="url(#softGlow)"/>
+  <path d="M615 21L625 28L615 35" fill="none" stroke="#F0F6FC" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="522" cy="28" r="3" fill="#58A6FF"/>
+  <circle cx="678" cy="28" r="3" fill="#58A6FF"/>
+</svg>

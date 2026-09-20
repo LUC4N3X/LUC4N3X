@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import { siteConfig } from '../data/site';
+---
+
+<Layout 
+  title={`404: Not Found — ${siteConfig.name}`}
+  description="The requested page could not be found on LUC4N3X official website."
+>
+  <div class="min-h-[70vh] flex items-center justify-center py-16 px-4">
+    <div class="max-w-md mx-auto text-center flex flex-col items-center">
+      <div class="text-7xl sm:text-9xl font-black font-mono text-cyan-400/20 mb-4 select-none">
+        404
+      </div>
+      <h1 class="text-2xl sm:text-3xl font-bold text-white mb-3 tracking-tight">
+        Page Not Found
+      </h1>
+      <p class="text-sm sm:text-base text-slate-400 mb-8 leading-relaxed">
+        The route you requested does not exist or has been relocated.
+      </p>
+      <div class="flex items-center gap-3">
+        <Button href="/" variant="primary" size="md">
+          <span>Return Home</span>
+        </Button>
+        <Button href="/projects" variant="secondary" size="md">
+          <span>View Projects</span>
+        </Button>
+      </div>
+    </div>
+  </div>
+</Layout>
