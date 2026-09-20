@@ -1,100 +1,79 @@
 ---
 import SectionHeader from './SectionHeader.astro';
-import { techDomains } from '../data/skills';
-import TechBadge from './TechBadge.astro';
 ---
 
-<section class="py-16 sm:py-24 border-t border-white/8 bg-[#07090e] relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <SectionHeader
-      eyebrow="Open Source & Architecture"
-      title="Engineering Without Compromise"
-      subtitle="Software engineered with respect for user autonomy, device efficiency, and long-term maintainability. Zero telemetry, no dark patterns, and transparent architecture."
-    />
+<section class="py-20 sm:py-28 bg-[#080b11] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <div class="lg:col-span-6 flex flex-col gap-6">
+        <SectionHeader
+          eyebrow="Open Source & Architecture"
+          title="Engineering Without Compromise"
+          subtitle="Software engineered with respect for user autonomy, device efficiency, and long-term maintainability. Built on Arch Linux, zero telemetry, no dark patterns, and transparent architecture."
+        />
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
-      <div class="lg:col-span-7 flex flex-col gap-6">
-        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
-          <h3 class="text-xl font-bold text-white mb-2">
-            The Contribution Philosophy
-          </h3>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+        <div class="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
+          <p>
             Build the useful thing first. Run it on real hardware. Find what breaks. Fix the smallest real cause, and keep working on it until it feels right.
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-400">
-            <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>No user tracking or telemetry</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>Local-first data persistence</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>Direct service connections</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-              <span>GNU GPL v3 & open licensing</span>
-            </div>
-          </div>
+          <p class="text-zinc-400 text-sm sm:text-base">
+            Every layer in the system is designed to run locally by default: from the custom AndroidX Media3 decode buffers that mitigate OEM background kills, to on-device Room SQLite caching that ensures your listening data never leaves your device.
+          </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
-          <h3 class="text-xl font-bold text-white mb-2">
-            Community Translations
-          </h3>
-          <p class="text-slate-300 text-sm leading-relaxed mb-4">
-            Levyra and related software are localized by community contributors worldwide through Weblate across 36 languages.
-          </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-sky-500/10 border border-sky-500/25 text-[#38bdf8]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+            <span>Arch Linux</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-indigo-500/10 border border-indigo-500/25 text-[#818cf8]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#818cf8]"></span>
+            <span>Zero Telemetry</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-emerald-500/10 border border-emerald-500/25 text-[#34d399]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#34d399]"></span>
+            <span>Local-First SQLite</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono bg-rose-500/10 border border-rose-500/25 text-[#f43f5e]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
+            <span>GNU GPL v3</span>
+          </span>
+        </div>
+
+        <div class="pt-4 border-t border-white/[0.08] flex items-center justify-between text-sm">
+          <div>
+            <span class="text-xs font-mono text-zinc-500 uppercase block mb-0.5">Global Localization</span>
+            <span class="text-white font-medium">Translated into 36 languages on Weblate</span>
+          </div>
           <a 
             href="https://hosted.weblate.org/engage/levyra/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold"
+            class="text-xs font-mono text-[#38bdf8] hover:text-[#818cf8] font-medium transition-colors inline-flex items-center gap-1.5"
           >
-            <span>Contribute on Weblate</span>
+            <span>Contribute</span>
             <span>→</span>
           </a>
         </div>
       </div>
 
-      <div class="lg:col-span-5 flex items-center justify-center p-4">
-        <div class="relative w-full max-w-sm rounded-2xl overflow-hidden border border-white/10 bg-[#0c1018] p-4">
+      <div class="lg:col-span-6 flex items-center justify-center">
+        <div class="relative w-full max-w-md flex items-center justify-center">
+          <div class="absolute -inset-10 bg-gradient-to-tr from-[#38bdf8]/25 via-[#818cf8]/20 to-[#f43f5e]/15 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
           <img 
-            src="/assets/brand/luc4n3x-linux-stack.svg" 
-            alt="Linux & Android Tech Stack" 
-            class="w-full h-auto object-contain"
+            src="/assets/brand/arch-linux-logo.svg" 
+            alt="Official Arch Linux Logo" 
+            class="relative z-10 w-full max-w-[320px] sm:max-w-[360px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(23,147,209,0.35)] hover:scale-105 transition-transform duration-500 ease-out"
             loading="lazy"
-            width="340"
-            height="340"
+            width="360"
+            height="360"
           />
         </div>
       </div>
+
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {techDomains.map(domain => (
-        <div class="rounded-xl border border-white/8 bg-[#0b0e16] p-5 flex flex-col justify-between">
-          <div>
-            <span class="text-[11px] font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-2 block">
-              {domain.category}
-            </span>
-            <h4 class="text-base font-bold text-white mb-2">
-              {domain.title}
-            </h4>
-            <p class="text-xs text-slate-400 leading-relaxed mb-4">
-              {domain.description}
-            </p>
-          </div>
-          <div class="flex flex-wrap gap-1">
-            {domain.technologies.map(tech => (
-              <TechBadge text={tech} size="sm" />
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
   </div>
 </section>

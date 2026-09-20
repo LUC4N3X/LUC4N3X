@@ -2,93 +2,121 @@
 import { siteConfig } from '../data/site';
 ---
 
-<footer class="w-full border-t border-white/8 bg-[#05070a] py-12 sm:py-16 mt-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-      <div class="md:col-span-2 flex flex-col gap-4">
-        <a href="/" class="flex items-center gap-3 w-fit">
-          <div class="w-7 h-7 rounded-lg overflow-hidden border border-white/10 bg-[#0d111a] flex items-center justify-center">
-            <img 
-              src="/assets/brand/luc4n3x-mark.svg" 
-              alt="LUC4N3X" 
-              class="w-4 h-4 object-contain"
-              width="16"
-              height="16"
-            />
-          </div>
-          <span class="font-bold text-base tracking-wider text-white">LUC4N3X</span>
-        </a>
-        <p class="text-slate-400 text-sm max-w-sm leading-relaxed">
-          {siteConfig.motto}
-        </p>
-        <div class="inline-flex items-center gap-2 text-xs font-mono text-slate-500">
-          <span class="w-2 h-2 rounded-full bg-emerald-400/80"></span>
-          <span>Open source · Zero telemetry · Independent</span>
+<footer class="w-full relative mt-28 overflow-hidden">
+  <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none">
+    <svg class="relative block w-full h-36 sm:h-52 md:h-64 lg:h-72" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+      <path 
+        d="M0,140 C140,50 260,180 420,100 C580,20 720,160 880,80 C1020,10 1160,140 1300,70 C1380,20 1420,80 1440,90 L1440,280 L0,280 Z" 
+        fill="#10192e" 
+        fill-opacity="0.8"
+      />
+      <path 
+        d="M0,180 C160,90 300,210 480,130 C640,60 760,190 920,120 C1080,40 1200,160 1340,100 C1400,70 1430,110 1440,120 L1440,280 L0,280 Z" 
+        fill="#0a0f1d"
+      />
+    </svg>
+
+    <div class="absolute left-1/2 -translate-x-1/2 top-4 sm:top-8 md:top-12 z-20 flex flex-col items-center pointer-events-auto">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full p-1.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-2xl shadow-indigo-500/50 transform hover:scale-105 transition-transform duration-300">
+        <div class="w-full h-full rounded-full overflow-hidden bg-[#0a0f1d]">
+          <img 
+            src="/assets/brand/luc4n3x-avatar.png" 
+            alt="LUC4N3X" 
+            class="w-full h-full object-cover"
+            width="128"
+            height="128"
+          />
         </div>
       </div>
-
-      <div class="flex flex-col gap-3">
-        <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
-          Navigation
-        </span>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="/" class="text-slate-400 hover:text-cyan-400 transition-colors">Home</a>
-          </li>
-          <li>
-            <a href="/projects" class="text-slate-400 hover:text-cyan-400 transition-colors">Projects</a>
-          </li>
-          <li>
-            <a href="/projects/levyra" class="text-slate-400 hover:text-cyan-400 transition-colors">Levyra (DeepSound)</a>
-          </li>
-          <li>
-            <a href="/about" class="text-slate-400 hover:text-cyan-400 transition-colors">About & Philosophy</a>
-          </li>
-          <li>
-            <a href="/contact" class="text-slate-400 hover:text-cyan-400 transition-colors">Contact</a>
-          </li>
-          <li>
-            <a href="/legal" class="text-slate-400 hover:text-cyan-400 transition-colors">Legal & Licensing</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="flex flex-col gap-3">
-        <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold">
-          Ecosystem
-        </span>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
-              GitHub Profile ↗
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
-              Levyra Repository ↗
-            </a>
-          </li>
-          <li>
-            <a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
-              Weblate Translations ↗
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/LUC4N3X/LUC4N3X" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
-              Profile Source ↗
-            </a>
-          </li>
-        </ul>
-      </div>
     </div>
+  </div>
 
-    <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
-      <p>© {siteConfig.year} {siteConfig.name}. All rights reserved.</p>
-      <div class="flex items-center gap-4">
-        <span>Astro + Tailwind CSS</span>
-        <span>·</span>
-        <span>Cloudflare Pages</span>
+  <div class="w-full bg-[#0a0f1d] pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
+        
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              LUC4N3X <span class="text-zinc-500 text-lg font-normal">(@LUC4N3X)</span>
+            </h3>
+            <p class="text-sm sm:text-base text-zinc-400 mt-1 font-normal leading-relaxed">
+              Software engineered with craft and respect for your autonomy. 💙
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <span class="text-xs font-mono text-zinc-400 block mb-2">
+              Want to collaborate, report an issue, or say hello?
+            </span>
+            <form action="/contact" method="get" class="flex items-center gap-2 max-w-md">
+              <input 
+                type="text" 
+                name="message" 
+                placeholder="hello@example.com or your message..." 
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.05] border border-white/[0.12] text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#818cf8] transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="px-5 py-3 rounded-xl bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-semibold transition-all duration-200 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 hover:scale-105"
+                aria-label="Send message"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <p class="text-xs font-mono text-zinc-600 pt-2">
+            © {siteConfig.year} LUC4N3X. All Rights Reserved.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold">
+              Browse By Topic
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/articles" class="hover:text-white transition-colors">Android Internals</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Media3 & Audio</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Zero Telemetry</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Reverse Engineering</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Craftsmanship</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#818cf8] font-semibold">
+              Software & Projects
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/projects/levyra" class="hover:text-white transition-colors">Levyra (DeepSound)</a></li>
+              <li><a href="/projects" class="hover:text-white transition-colors">Thalarch Layer</a></li>
+              <li><a href="/projects" class="hover:text-white transition-colors">Instara-Crew</a></li>
+              <li><a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Profile ↗</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#f43f5e] font-semibold">
+              General & Mirrors
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/about" class="hover:text-white transition-colors">About LUC4N3X</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Engineering Notes</a></li>
+              <li><a href="https://f-droid.org/packages/com.luc4n3x.levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">F-Droid Package ↗</a></li>
+              <li><a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Weblate L10n ↗</a></li>
+              <li><a href="https://sourceforge.net/projects/levyra.mirror/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">SourceForge ↗</a></li>
+              <li><a href="/legal" class="hover:text-white transition-colors">Privacy & Terms</a></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
+
     </div>
   </div>
 </footer>
