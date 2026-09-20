@@ -1,3 +1,5 @@
+import { siteConfig } from './site';
+
 export interface SocialLink {
   name: string;
   url: string;
@@ -8,14 +10,14 @@ export interface SocialLink {
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/LUC4N3X",
+    url: siteConfig.github,
     label: "@LUC4N3X",
     category: "code"
   },
   {
     name: "Email",
-    url: "mailto:luca.testing96@gmail.com",
-    label: "luca.testing96@gmail.com",
+    url: `mailto:${siteConfig.email}`,
+    label: siteConfig.email,
     category: "contact"
   },
   {

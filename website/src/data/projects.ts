@@ -19,8 +19,8 @@ export const projects: Project[] = [
   {
     id: "levyra",
     name: "Levyra",
-    tagline: "High-Fidelity Open-Source Music Player",
-    description: "An open-source music player for Android and Windows with zero tracking, no account requirement, low-latency playback via AndroidX Media3, offline downloads, synced lyrics through LRCLIB, and a fluid Jetpack Compose UI.",
+    tagline: "Open-Source Music Player for Android & Windows",
+    description: "An open-source music player built for Android and Windows with zero tracking, no account requirement, low-latency playback via AndroidX Media3, offline downloads, synced lyrics through LRCLIB, and a fluid Jetpack Compose UI.",
     featured: true,
     platforms: ["Android", "Windows"],
     stack: ["Kotlin", "Jetpack Compose", "AndroidX Media3", "ExoPlayer", "Room", "SQLite", "LRCLIB", "libvlc"],
@@ -41,8 +41,8 @@ export const projects: Project[] = [
   {
     id: "thalarch",
     name: "Thalarch",
-    tagline: "Autonomous Multi-Agent Reliability & Engineering Layer",
-    description: "High-rigor multi-agent orchestration skill, visual-production system, and determinism framework for autonomous AI coding agents.",
+    tagline: "Engineering Skill & Multi-Agent Reliability Layer",
+    description: "Multi-agent orchestration skill, visual-production system, and determinism framework for autonomous AI coding agents.",
     featured: false,
     platforms: ["Cross-Platform", "AI Agents"],
     stack: ["TypeScript", "Python", "Multi-Agent Systems", "Prompt Architecture"],
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     status: "Active",
     highlights: [
       "Staged planning and verifiable execution loops",
-      "Cold-read verification and adversarial QA gates",
+      "Cold-read verification and adversarial review gates",
       "Deterministic tool-calling and context governance"
     ],
     icon: "/assets/thalarch/thalarch-icon.png"
@@ -58,8 +58,8 @@ export const projects: Project[] = [
   {
     id: "instara-crew",
     name: "Instara-Crew",
-    tagline: "Autonomous Operations Console Powered by Gemini",
-    description: "Multi-account operations automation console with persistent sessions, semantic content generation, and background job queue orchestration.",
+    tagline: "Operations Console with Gemini",
+    description: "Multi-account operations console with persistent sessions, semantic content generation, and background job queue orchestration.",
     featured: false,
     platforms: ["Server", "CLI"],
     stack: ["Python", "FastAPI", "Gemini API", "AsyncIO", "Docker"],
@@ -74,8 +74,8 @@ export const projects: Project[] = [
   {
     id: "kraken-proxy",
     name: "KrakenProxy",
-    tagline: "Resilient HLS / MP4 Media Reverse Gateway",
-    description: "High-throughput streaming proxy and media gateway with intelligent hoster extraction, dynamic fallback routing, and stream optimization.",
+    tagline: "Resilient Media Proxy Gateway",
+    description: "High-throughput streaming reverse proxy and media gateway with hoster extraction, dynamic fallback routing, and stream optimization.",
     featured: false,
     platforms: ["Linux", "Docker"],
     stack: ["Python", "FastAPI", "Docker", "HLS", "AsyncIO"],
@@ -90,7 +90,7 @@ export const projects: Project[] = [
   {
     id: "kraken-lightx",
     name: "KrakenLightX",
-    tagline: "Ultra-Light Stream Gateway & Edge Proxy",
+    tagline: "Lightweight Stream Gateway & Edge Proxy",
     description: "High-efficiency hybrid media extraction and forwarding gateway engineered for minimal footprint edge deployments.",
     featured: false,
     platforms: ["Linux", "Android"],
@@ -98,25 +98,9 @@ export const projects: Project[] = [
     github: "https://github.com/LUC4N3X/KrakenLightX",
     status: "Active",
     highlights: [
-      "Hybrid Rust core for near-zero memory footprint",
+      "Hybrid Rust core for minimal memory footprint",
       "Zero-copy stream forwarding pipeline",
       "Embedded Android proxy companion support"
-    ]
-  },
-  {
-    id: "levyra-extractor",
-    name: "LevyraExtractor",
-    tagline: "Media Extraction & Resolution Engine",
-    description: "Custom-tuned media resolution and metadata parsing engine optimized for high-reliability audio streaming.",
-    featured: false,
-    platforms: ["JVM", "Android"],
-    stack: ["Java", "Kotlin", "Gradle"],
-    github: "https://github.com/LUC4N3X/LevyraExtractor",
-    status: "Active",
-    highlights: [
-      "Adaptive stream resolution failover",
-      "Encrypted cipher and signature solving",
-      "Deep integration with Levyra audio pipeline"
     ]
   }
 ];

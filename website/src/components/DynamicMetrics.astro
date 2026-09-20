@@ -1,0 +1,48 @@
+---
+---
+
+<script>
+  (() => {
+    const updateMetrics = (data: any) => {
+      if (!data) return;
+
+      if (data.release?.version) {
+        document.querySelectorAll<HTMLElement>('[data-levyra-version]').forEach(el => {
+          el.textContent = `v${data.release.version}`;
+          el.classList.remove('opacity-0');
+        });
+      }
+
+      if (typeof data.repository?.stars === 'number') {
+        document.querySelectorAll<HTMLElement>('[data-levyra-stars]').forEach(el => {
+          el.textContent = `${data.repository.stars}`;
+          el.classList.remove('opacity-0');
+        });
+      }
+
+      if (typeof data.downloads?.total === 'number' && data.downloads.total > 0) {
+        document.querySelectorAll<HTMLElement>('[data-levyra-downloads]').forEach(el => {
+          const count = data.downloads.total;
+          el.textContent = count >= 1000 ? `${(count / 1000).toFixed(1)}k+` : `${count}`;
+          el.classList.remove('opacity-0');
+        });
+      }
+    };
+
+    const load = async () => {
+      try {
+        const res = await fetch('/api/levyra');
+        if (res.ok) {
+          const json = await res.json();
+          updateMetrics(json);
+        }
+      } catch {}
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', load);
+    } else {
+      load();
+    }
+  })();
+</script>
