@@ -13,13 +13,13 @@ const downloadsFormatted = metrics.downloads >= 1000
   : String(metrics.downloads);
 ---
 
-<section class="relative pt-16 sm:pt-24 pb-20 sm:pb-32 bg-gradient-to-b from-[#080b11] via-[#091428] to-[#0d1d3a] overflow-hidden">
+<section class="relative pt-16 sm:pt-24 pb-0 bg-gradient-to-b from-[#080b11] via-[#091428] to-[#0d1d3a] overflow-hidden flex flex-col justify-between">
   <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
     <div class="absolute top-1/2 right-1/4 w-[500px] h-[350px] bg-sky-500/10 rounded-full blur-[120px]"></div>
     <div class="absolute bottom-10 left-10 w-[400px] h-[250px] bg-indigo-500/10 rounded-full blur-[100px]"></div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-6 sm:pb-10">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
       
@@ -119,7 +119,5 @@ const downloadsFormatted = metrics.downloads >= 1000
 
   </div>
 
-  <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 z-20 mt-12 sm:mt-20">
-    <CloudDivider fill="#080b11" />
-  </div>
+  <CloudDivider fill="#080b11" className="mt-12 sm:mt-20" />
 </section>

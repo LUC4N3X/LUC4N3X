@@ -29,8 +29,8 @@ const categories = [
 
   <FeaturedProject />
 
-  <section class="py-16 sm:py-28 bg-[#080b11] relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="pt-16 sm:pt-24 pb-0 bg-[#080b11] relative overflow-hidden flex flex-col justify-between">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-16 w-full">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
         
@@ -128,13 +128,11 @@ const categories = [
       </div>
 
     </div>
+
+    <CloudDivider fill="#0a0f1d" crestFill="#172554" midFill="#0d1d3a" />
   </section>
 
-  <CloudDivider fill="#0a0f1d" />
-
   <AboutSection />
-
-  <CloudDivider fill="#080b11" />
 
   <OpenSourceSection />
 </Layout>

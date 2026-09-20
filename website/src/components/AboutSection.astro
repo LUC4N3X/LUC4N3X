@@ -1,14 +1,15 @@
 ---
 import SectionHeader from './SectionHeader.astro';
 import Button from './Button.astro';
+import CloudDivider from './CloudDivider.astro';
 ---
 
-<section class="py-20 sm:py-28 bg-[#0a0f1d] relative overflow-hidden">
+<section class="pt-16 sm:pt-24 pb-0 bg-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
   <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
     <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-sky-500/10 via-indigo-500/10 to-rose-500/8 rounded-full blur-[100px]"></div>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-10 sm:pb-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
       <div class="lg:col-span-7 flex flex-col gap-6">
@@ -90,4 +91,6 @@ import Button from './Button.astro';
 
     </div>
   </div>
+
+  <CloudDivider fill="#080b11" crestFill="#1e1b4b" midFill="#0f172a" />
 </section>

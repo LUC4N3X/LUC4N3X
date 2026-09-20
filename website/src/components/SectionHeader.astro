@@ -4,14 +4,15 @@ interface Props {
   title: string;
   subtitle?: string;
   align?: "left" | "center";
+  className?: string;
 }
 
-const { eyebrow, title, subtitle, align = "left" } = Astro.props;
+const { eyebrow, title, subtitle, align = "left", className = "" } = Astro.props;
 
 const alignmentClasses = align === "center" ? "text-center items-center" : "text-left items-start";
 ---
 
-<div class={`flex flex-col gap-3 mb-12 sm:mb-16 ${alignmentClasses}`}>
+<div class={`flex flex-col gap-2.5 mb-6 sm:mb-8 ${alignmentClasses} ${className}`}>
   {eyebrow && (
     <div class="inline-flex items-center gap-2">
       <span class="text-xs font-mono tracking-widest text-[#2997ff] uppercase font-semibold">
@@ -23,7 +24,7 @@ const alignmentClasses = align === "center" ? "text-center items-center" : "text
     {title}
   </h2>
   {subtitle && (
-    <p class="text-zinc-400 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed font-normal">
+    <p class="text-zinc-400 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed font-normal">
       {subtitle}
     </p>
   )}
