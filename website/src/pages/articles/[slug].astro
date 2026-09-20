@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import TechBadge from '../../components/TechBadge.astro';
+import { articles } from '../../data/articles';
+import { siteConfig } from '../../data/site';
+
+export function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+const otherArticles = articles.filter(a => a.slug !== article.slug).slice(0, 2);
+---
+
+<Layout 
+  title={`${article.title} — ${siteConfig.name}`}
+  description={article.description}
+>
+  <article class="py-16 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#0e0d0c]">
+    <div class="mb-10">
+      <a 
+        href="/articles" 
+        class="inline-flex items-center gap-2 text-xs font-mono text-[#a39e94] hover:text-[#48c9b0] transition-colors mb-8"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Back to all articles</span>
+      </a>
+
+      <div class="flex items-center gap-3 text-xs font-mono text-[#736e65] mb-4">
+        <time datetime={article.date}>
+          {new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        <span>·</span>
+        <span>{article.readingTime}</span>
+        <span>·</span>
+        <span class="text-[#34a896]">Engineering Note</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#f7f5f2] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <p class="text-lg sm:text-xl text-[#a39e94] leading-relaxed font-normal mb-8 pb-8 border-b border-[#26221d]">
+        {article.description}
+      </p>
+
+      <div class="flex flex-wrap gap-2">
+        {article.tags.map(tag => (
+          <TechBadge text={tag} variant="teal" />
+        ))}
+      </div>
+    </div>
+
+    <div class="space-y-6 text-[#c5c0b6] text-base sm:text-lg leading-relaxed font-normal mb-16">
+      {article.content.map(paragraph => (
+        <p class="leading-relaxed">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+
+    <div class="p-8 rounded-3xl border border-[#27231e] bg-[#171513] mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full overflow-hidden border border-[#2e2a25] bg-[#1c1916] flex items-center justify-center flex-shrink-0">
+          <img 
+            src="/assets/brand/luc4n3x-mark.svg" 
+            alt="LUC4N3X" 
+            class="w-6 h-6 object-contain"
+            width="24"
+            height="24"
+          />
+        </div>
+        <div>
+          <span class="text-sm font-semibold text-[#f7f5f2] block">LUC4N3X</span>
+          <span class="text-xs text-[#a39e94]">Independent software developer & systems craftsman</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <Button href="/about" variant="secondary" size="sm">
+          <span>About Luca</span>
+        </Button>
+        <Button href={siteConfig.github} target="_blank" variant="outline" size="sm">
+          <span>GitHub</span>
+        </Button>
+      </div>
+    </div>
+
+    {otherArticles.length > 0 && (
+      <div class="border-t border-[#26221d] pt-12">
+        <h3 class="text-xl font-semibold text-[#f7f5f2] mb-6 tracking-tight">
+          More Engineering Notes
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {otherArticles.map(item => (
+            <a 
+              href={`/articles/${item.slug}`}
+              class="p-5 rounded-2xl border border-[#27231e] bg-[#141210] hover:border-[#3d372f] transition-colors block group"
+            >
+              <span class="text-xs font-mono text-[#736e65] block mb-1">{item.readingTime}</span>
+              <span class="text-sm font-semibold text-[#f7f5f2] group-hover:text-[#48c9b0] transition-colors block">
+                {item.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </article>
+</Layout>

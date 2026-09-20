@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import FeaturedProject from '../components/FeaturedProject.astro';
 import ProjectCard from '../components/ProjectCard.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
@@ -10,9 +11,11 @@ import PressSection from '../components/PressSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Button from '../components/Button.astro';
 import { projects } from '../data/projects';
+import { articles } from '../data/articles';
 import { siteConfig } from '../data/site';
 
 const selectedProjects = projects.filter(p => !p.featured).slice(0, 4);
+const featuredArticles = articles.slice(0, 2);
 ---
 
 <Layout 
@@ -45,9 +48,31 @@ const selectedProjects = projects.filter(p => !p.featured).slice(0, 4);
     </div>
   </section>
 
-  <OpenSourceSection />
+  <section class="py-20 sm:py-28 border-t border-[#24211d] bg-[#110f0d] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <SectionHeader
+          eyebrow="Engineering Notes & Architecture"
+          title="Selected Writings"
+          subtitle="Deep-dives into Android internals, audio decode pipelines, reverse engineering, and pragmatic software craftsmanship."
+        />
+        <Button href="/articles" variant="secondary" size="md">
+          <span>All Articles ({articles.length})</span>
+          <span class="ml-1">→</span>
+        </Button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {featuredArticles.map(article => (
+          <ArticleCard article={article} />
+        ))}
+      </div>
+    </div>
+  </section>
 
   <AboutSection />
+
+  <OpenSourceSection />
 
   <PressSection />
 
