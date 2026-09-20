@@ -3,99 +3,120 @@ import Button from './Button.astro';
 import TechBadge from './TechBadge.astro';
 ---
 
-<section class="relative py-20 sm:py-28 border-t border-white/[0.08] bg-black overflow-hidden">
+<section class="relative py-20 sm:py-28 border-t border-[#24211d] bg-[#0e0d0c] overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-4">
       <div>
         <div class="inline-flex items-center gap-2 mb-3">
-          <span class="text-xs font-semibold tracking-widest text-[#2997ff] uppercase">
+          <span class="text-xs font-mono tracking-widest text-[#34a896] uppercase font-semibold">
             Featured Flagship System
           </span>
         </div>
-        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#f5f5f7] tracking-tight">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#f7f5f2] tracking-tight">
           Levyra (DeepSound)
         </h2>
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.06] border border-white/[0.08] text-[#86868b]">
-          <svg class="w-3.5 h-3.5 text-[#f5f5f7]" viewBox="0 0 24 24" fill="currentColor">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#1c1916] border border-[#2e2a25] text-[#a39e94]">
+          <svg class="w-3.5 h-3.5 text-[#f7f5f2]" viewBox="0 0 24 24" fill="currentColor">
             <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
           </svg>
           Android
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.06] border border-white/[0.08] text-[#86868b]">
-          <svg class="w-3.5 h-3.5 text-[#f5f5f7]" viewBox="0 0 24 24" fill="currentColor">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#1c1916] border border-[#2e2a25] text-[#a39e94]">
+          <svg class="w-3.5 h-3.5 text-[#f7f5f2]" viewBox="0 0 24 24" fill="currentColor">
             <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
           </svg>
           Windows 10+
         </span>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-white/[0.06] border border-white/[0.08] text-[#86868b]">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#1c1916] border border-[#2e2a25] text-[#a39e94]">
           GPL-3.0
         </span>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-[#161617] border border-white/[0.08] rounded-3xl p-6 sm:p-10 relative overflow-hidden">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 py-5 sm:py-6 border-y border-[#26221d] mb-10">
+      <div>
+        <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Engine</div>
+        <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">AndroidX Media3</div>
+      </div>
+      <div>
+        <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Privacy</div>
+        <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">Zero Telemetry</div>
+      </div>
+      <div>
+        <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Platforms</div>
+        <div class="text-sm sm:text-base font-semibold text-[#f7f5f2]">Android & Windows</div>
+      </div>
+      <div>
+        <div class="text-xs font-mono font-semibold text-[#736e65] uppercase tracking-wider mb-1.5">Repository</div>
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" rel="noopener noreferrer" class="text-sm sm:text-base font-semibold text-[#f7f5f2] hover:text-[#48c9b0] transition-colors">
+          Levyra-deepsound ↗
+        </a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-[#171513] border border-[#27231e] rounded-3xl p-6 sm:p-10 relative overflow-hidden">
       <div class="lg:col-span-7 flex flex-col justify-between gap-8">
         <div>
-          <p class="text-[#f5f5f7] text-lg sm:text-xl font-normal leading-relaxed mb-8">
+          <p class="text-[#f7f5f2] text-lg sm:text-xl font-normal leading-relaxed mb-8">
             An open-source music streaming and offline player built for listeners who care about audio fidelity, responsiveness, and privacy. Engineered from scratch with zero telemetry, no tracking proxies, and direct CDN audio delivery.
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            <div class="p-5 rounded-2xl bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
-              <div class="text-[#2997ff] font-mono text-xs font-semibold uppercase tracking-wider">
+            <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a] flex flex-col gap-1.5">
+              <div class="text-[#34a896] font-mono text-xs font-semibold uppercase tracking-wider">
                 Audio Engine
               </div>
-              <div class="text-[#f5f5f7] font-medium text-sm">
+              <div class="text-[#f7f5f2] font-medium text-sm">
                 AndroidX Media3 & ExoPlayer
               </div>
-              <p class="text-[#86868b] text-xs leading-normal">
+              <p class="text-[#a39e94] text-xs leading-normal font-normal">
                 Gapless low-latency playback pipeline with resilient foreground session stability.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
-              <div class="text-[#2997ff] font-mono text-xs font-semibold uppercase tracking-wider">
+            <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a] flex flex-col gap-1.5">
+              <div class="text-[#34a896] font-mono text-xs font-semibold uppercase tracking-wider">
                 Synced Lyrics
               </div>
-              <div class="text-[#f5f5f7] font-medium text-sm">
+              <div class="text-[#f7f5f2] font-medium text-sm">
                 LRCLIB Integration
               </div>
-              <p class="text-[#86868b] text-xs leading-normal">
+              <p class="text-[#a39e94] text-xs leading-normal font-normal">
                 Real-time synchronized lyric scrolling and localized TTML time-sync scoring.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
-              <div class="text-[#2997ff] font-mono text-xs font-semibold uppercase tracking-wider">
+            <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a] flex flex-col gap-1.5">
+              <div class="text-[#34a896] font-mono text-xs font-semibold uppercase tracking-wider">
                 Offline Vault
               </div>
-              <div class="text-[#f5f5f7] font-medium text-sm">
+              <div class="text-[#f7f5f2] font-medium text-sm">
                 Resumable Local Downloads
               </div>
-              <p class="text-[#86868b] text-xs leading-normal">
+              <p class="text-[#a39e94] text-xs leading-normal font-normal">
                 Background downloads with audio tag embedding and persistent SQLite storage.
               </p>
             </div>
 
-            <div class="p-5 rounded-2xl bg-black/40 border border-white/[0.06] flex flex-col gap-1.5">
-              <div class="text-[#2997ff] font-mono text-xs font-semibold uppercase tracking-wider">
+            <div class="p-5 rounded-2xl bg-[#100f0d] border border-[#24201a] flex flex-col gap-1.5">
+              <div class="text-[#34a896] font-mono text-xs font-semibold uppercase tracking-wider">
                 Privacy Standard
               </div>
-              <div class="text-[#f5f5f7] font-medium text-sm">
+              <div class="text-[#f7f5f2] font-medium text-sm">
                 Zero Tracking / No Account
               </div>
-              <p class="text-[#86868b] text-xs leading-normal">
+              <p class="text-[#a39e94] text-xs leading-normal font-normal">
                 No ads, no analytics, no third-party telemetry. Direct media connections exclusively.
               </p>
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-1.5">
-            <TechBadge text="Kotlin" variant="blue" />
-            <TechBadge text="Jetpack Compose" variant="blue" />
+            <TechBadge text="Kotlin" variant="teal" />
+            <TechBadge text="Jetpack Compose" variant="teal" />
             <TechBadge text="AndroidX Media3" variant="default" />
             <TechBadge text="ExoPlayer" variant="default" />
             <TechBadge text="Room SQLite" variant="default" />
@@ -104,7 +125,7 @@ import TechBadge from './TechBadge.astro';
           </div>
         </div>
 
-        <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-white/[0.08]">
+        <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-[#26221d]">
           <Button href="/projects/levyra" variant="primary" size="md">
             <span>Explore Levyra</span>
             <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +135,7 @@ import TechBadge from './TechBadge.astro';
 
           <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
             <span>GitHub Repository</span>
-            <svg class="w-3.5 h-3.5 ml-1 text-[#86868b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 ml-1 text-[#a39e94]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </Button>
@@ -126,53 +147,53 @@ import TechBadge from './TechBadge.astro';
         </div>
       </div>
 
-      <div class="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-black/60 border border-white/[0.06]">
+      <div class="lg:col-span-5 flex flex-col justify-between p-6 sm:p-8 rounded-2xl bg-[#100f0d] border border-[#24201a]">
         <div>
-          <div class="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#86868b]">
+          <div class="flex items-center justify-between pb-4 mb-6 border-b border-[#26221d]">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#736e65]">
               Engineering Specifications
             </span>
-            <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-white/[0.06] text-[#f5f5f7]">
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#1c1916] text-[#f7f5f2]">
               v2 Architecture
             </span>
           </div>
 
           <div class="space-y-5">
             <div>
-              <span class="text-xs font-mono text-[#86868b] block mb-1">Playback Pipeline</span>
-              <p class="text-sm font-medium text-[#f5f5f7]">ExoPlayer with AndroidX Media3 Session Integration</p>
+              <span class="text-xs font-mono text-[#736e65] block mb-1">Playback Pipeline</span>
+              <p class="text-sm font-medium text-[#f7f5f2]">ExoPlayer with AndroidX Media3 Session Integration</p>
             </div>
 
             <div>
-              <span class="text-xs font-mono text-[#86868b] block mb-1">State & UI Layer</span>
-              <p class="text-sm font-medium text-[#f5f5f7]">Declarative Jetpack Compose with Material You dynamic color extraction</p>
+              <span class="text-xs font-mono text-[#736e65] block mb-1">State & UI Layer</span>
+              <p class="text-sm font-medium text-[#f7f5f2]">Declarative Jetpack Compose with Material You dynamic color extraction</p>
             </div>
 
             <div>
-              <span class="text-xs font-mono text-[#86868b] block mb-1">Data Storage</span>
-              <p class="text-sm font-medium text-[#f5f5f7]">Zero cloud requirement · On-device Room SQLite database</p>
+              <span class="text-xs font-mono text-[#736e65] block mb-1">Data Storage</span>
+              <p class="text-sm font-medium text-[#f7f5f2]">Zero cloud requirement · On-device Room SQLite database</p>
             </div>
 
             <div>
-              <span class="text-xs font-mono text-[#86868b] block mb-1">Extraction Subsystem</span>
-              <p class="text-sm font-medium text-[#f5f5f7]">Bundled internal media extraction engine</p>
+              <span class="text-xs font-mono text-[#736e65] block mb-1">Extraction Subsystem</span>
+              <p class="text-sm font-medium text-[#f7f5f2]">Bundled internal media extraction engine</p>
             </div>
 
             <div>
-              <span class="text-xs font-mono text-[#86868b] block mb-1">Desktop Runtime</span>
-              <p class="text-sm font-medium text-[#f5f5f7]">Compose Multiplatform + libvlc audio rendering</p>
+              <span class="text-xs font-mono text-[#736e65] block mb-1">Desktop Runtime</span>
+              <p class="text-sm font-medium text-[#f7f5f2]">Compose Multiplatform + libvlc audio rendering</p>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 mt-6 border-t border-white/[0.08] grid grid-cols-2 gap-4 text-xs font-mono">
+        <div class="pt-6 mt-6 border-t border-[#26221d] grid grid-cols-2 gap-4 text-xs font-mono">
           <div>
-            <span class="text-[#86868b] block mb-1">GitHub Stars</span>
-            <span data-levyra-stars class="text-base font-semibold text-[#f5f5f7]">-</span>
+            <span class="text-[#736e65] block mb-1">GitHub Stars</span>
+            <span data-levyra-stars class="text-base font-semibold text-[#f7f5f2]">-</span>
           </div>
           <div>
-            <span class="text-[#86868b] block mb-1">Total Downloads</span>
-            <span data-levyra-downloads class="text-base font-semibold text-[#f5f5f7]">-</span>
+            <span class="text-[#736e65] block mb-1">Total Downloads</span>
+            <span data-levyra-downloads class="text-base font-semibold text-[#f7f5f2]">-</span>
           </div>
         </div>
       </div>

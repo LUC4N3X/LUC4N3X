@@ -2,16 +2,15 @@
 
 @layer base {
   :root {
-    --bg-canvas: #000000;
-    --bg-surface: #161617;
-    --bg-surface-elevated: #1d1d1f;
-    --border-hairline: rgba(255, 255, 255, 0.08);
-    --border-hover: rgba(255, 255, 255, 0.16);
-    --accent-blue: #2997ff;
-    --accent-action: #0071e3;
-    --text-primary: #f5f5f7;
-    --text-secondary: #86868b;
-    --text-muted: #6e6e73;
+    --bg-canvas: #0e0d0c;
+    --bg-surface: #171513;
+    --bg-surface-elevated: #211e1b;
+    --border-hairline: rgba(235, 230, 222, 0.08);
+    --border-hover: rgba(235, 230, 222, 0.16);
+    --accent-teal: #34a896;
+    --text-primary: #f7f5f2;
+    --text-secondary: #a39e94;
+    --text-muted: #6e6960;
   }
 
   html {
@@ -24,14 +23,15 @@
   body {
     overflow-x: hidden;
     min-height: 100vh;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", system-ui, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.012em;
+    background-color: var(--bg-canvas);
   }
 
   ::selection {
-    background-color: rgba(41, 151, 255, 0.3);
+    background-color: rgba(52, 168, 150, 0.28);
     color: #ffffff;
   }
 }
@@ -42,14 +42,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0e0d0c;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #272729;
+  background: #282522;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3a3a3c;
+  background: #3b3732;
 }
