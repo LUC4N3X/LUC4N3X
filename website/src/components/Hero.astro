@@ -3,38 +3,46 @@ import Button from './Button.astro';
 import { siteConfig } from '../data/site';
 ---
 
-<section class="relative min-h-[85vh] flex flex-col justify-between overflow-hidden pt-16 sm:pt-24 bg-[#070a12]">
+<section class="relative min-h-[90vh] flex flex-col justify-between overflow-hidden pt-16 sm:pt-24 bg-[#070a12]">
   <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[350px] bg-gradient-to-tr from-sky-500/15 via-indigo-500/12 to-rose-500/10 rounded-full blur-[100px]"></div>
-    <div class="absolute top-10 left-10 w-72 h-40 bg-sky-500/8 rounded-full blur-3xl"></div>
-    <div class="absolute top-32 right-10 w-80 h-48 bg-purple-500/8 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-sky-500/18 via-indigo-500/15 to-rose-500/12 rounded-full blur-[120px]"></div>
+    <div class="absolute top-12 left-8 w-80 h-48 bg-sky-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-28 right-8 w-96 h-56 bg-purple-500/10 rounded-full blur-3xl"></div>
   </div>
 
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full text-center flex flex-col items-center z-10 my-auto pb-16">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full text-center flex flex-col items-center z-10 my-auto pb-12 sm:pb-16">
     
     <div class="relative mb-8 group">
-      <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-2xl shadow-indigo-500/30 transition-transform duration-500 group-hover:scale-105">
-        <div class="w-full h-full rounded-full overflow-hidden bg-[#080b11]">
+      <div class="absolute -inset-4 bg-gradient-to-tr from-[#00F2FE]/30 via-[#818CF8]/25 to-[#f43f5e]/20 rounded-[38px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+      <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-[32px] p-1 bg-gradient-to-tr from-[#00F2FE] via-[#818CF8] to-[#f43f5e] shadow-2xl shadow-sky-500/30 transition-transform duration-500 group-hover:scale-105">
+        <div class="w-full h-full rounded-[28px] overflow-hidden bg-[#070a14] p-1 border border-white/10">
           <img 
             src="/assets/brand/luc4n3x-avatar.png" 
             alt="LUC4N3X" 
-            class="w-full h-full object-cover"
-            width="112"
-            height="112"
+            class="w-full h-full object-cover rounded-[24px]"
+            width="128"
+            height="128"
             loading="eager"
           />
         </div>
       </div>
-      <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3.5 py-1 rounded-full bg-[#0c101d] border border-white/[0.14] text-[11px] font-mono text-zinc-300 shadow-xl whitespace-nowrap flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-[#34d399] animate-pulse"></span>
-        <span class="text-white font-medium">Independent Craftsman</span>
+
+      <div class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#080c18]/90 border border-sky-500/30 text-[11px] font-mono text-zinc-200 shadow-2xl backdrop-blur-md whitespace-nowrap flex items-center gap-2">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34d399] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#34d399]"></span>
+        </span>
+        <span class="font-bold tracking-wider text-white">LUC4N3X</span>
+        <span class="text-zinc-600">·</span>
+        <span class="text-[#38bdf8]">SYSTEMS CRAFTSMAN</span>
       </div>
     </div>
 
     <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/[0.1] bg-white/[0.04] mb-6 text-xs font-mono text-zinc-300 backdrop-blur-md shadow-lg">
-      <span class="text-[#38bdf8] font-semibold">LUC4N3X</span>
+      <span class="text-[#38bdf8] font-semibold">Arch Linux</span>
       <span class="text-zinc-600">/</span>
-      <span class="text-zinc-400">Arch Linux · Android Internals</span>
+      <span class="text-zinc-400">AndroidX Media3 & Systems Internals</span>
     </div>
 
     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.1] mb-6">
@@ -92,19 +100,36 @@ import { siteConfig } from '../data/site';
   </div>
 
   <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 z-20">
-    <svg class="block w-full h-16 sm:h-24 md:h-28 lg:h-36" viewBox="0 0 1440 160" fill="none" preserveAspectRatio="none">
+    <svg class="block w-full h-36 sm:h-52 md:h-64 lg:h-80" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="crestCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+          <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"/>
+        </linearGradient>
+        <linearGradient id="crestViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#818cf8" stop-opacity="0.5"/>
+          <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#818cf8" stop-opacity="0.2"/>
+        </linearGradient>
+      </defs>
+
       <path 
-        d="M0,60 C240,130 460,20 720,80 C980,140 1200,30 1440,75 L1440,160 L0,160 Z" 
-        fill="#080b11" 
-        fill-opacity="0.4"
-      />
-      <path 
-        d="M0,90 C200,35 440,125 680,75 C920,25 1160,110 1440,65 L1440,160 L0,160 Z" 
-        fill="#080b11" 
+        d="M0,100 C180,30 320,150 500,70 C680,-10 820,130 1000,50 C1160,-20 1300,110 1440,60 L1440,280 L0,280 Z" 
+        fill="#141e38" 
         fill-opacity="0.75"
+        stroke="url(#crestCyan)"
+        stroke-width="1.5"
       />
       <path 
-        d="M0,115 C180,65 380,140 560,105 C740,70 920,135 1100,95 C1280,55 1380,105 1440,100 L1440,160 L0,160 Z" 
+        d="M0,150 C150,75 300,195 480,120 C660,40 800,165 960,95 C1120,30 1260,140 1440,90 L1440,280 L0,280 Z" 
+        fill="#0f172a" 
+        fill-opacity="0.9"
+        stroke="url(#crestViolet)"
+        stroke-width="1.5"
+      />
+      <path 
+        d="M0,195 C160,120 320,230 500,165 C680,95 840,205 1020,145 C1180,75 1320,175 1440,135 L1440,280 L0,280 Z" 
         fill="#080b11"
       />
     </svg>
