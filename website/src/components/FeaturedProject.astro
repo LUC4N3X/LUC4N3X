@@ -1,6 +1,7 @@
 ---
 import Button from './Button.astro';
 import TechBadge from './TechBadge.astro';
+import CloudDivider from './CloudDivider.astro';
 import { getLevyraMetrics } from '../utils/github';
 
 const metrics = await getLevyraMetrics();
@@ -116,5 +117,9 @@ const downloadsFormatted = metrics.downloads >= 1000
 
     </div>
 
+  </div>
+
+  <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 z-20 mt-12 sm:mt-20">
+    <CloudDivider fill="#080b11" />
   </div>
 </section>
