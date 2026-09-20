@@ -12,8 +12,13 @@ const downloadsFormatted = metrics.downloads >= 1000
   : String(metrics.downloads);
 ---
 
-<section class="relative py-16 sm:py-28 bg-[#080b11] overflow-hidden">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<section class="relative pt-16 sm:pt-24 pb-20 sm:pb-32 bg-gradient-to-b from-[#080b11] via-[#091428] to-[#0d1d3a] overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
+    <div class="absolute top-1/2 right-1/4 w-[500px] h-[350px] bg-sky-500/10 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-10 left-10 w-[400px] h-[250px] bg-indigo-500/10 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
       
