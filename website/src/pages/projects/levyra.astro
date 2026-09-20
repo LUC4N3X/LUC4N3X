@@ -110,23 +110,25 @@ const schemaData = {
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
-          <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300">
-            Android 8.0+ (v2.5.9)
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300 flex items-center gap-1.5">
+            <span>Android 8.0+</span>
+            <span data-levyra-version class="opacity-0 transition-opacity font-bold"></span>
           </span>
           <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300">
-            Windows 10+ (v1.2.0)
+            Windows 10+
           </span>
           <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
             GNU GPL v3.0
           </span>
           <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-300">
-            36 Languages
+            Community Translations
           </span>
         </div>
 
-        <div class="flex flex-wrap items-center justify-center gap-4">
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
           <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
             <span>Download Latest Release</span>
+            <span data-levyra-version class="font-mono text-xs opacity-0 transition-opacity"></span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
@@ -145,6 +147,21 @@ const schemaData = {
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
             </svg>
           </Button>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full max-w-lg p-4 rounded-xl bg-[#0c1018] border border-white/8 text-center text-xs font-mono">
+          <div>
+            <span class="text-slate-400 block mb-1">GitHub Stars</span>
+            <span data-levyra-stars class="text-base font-bold text-cyan-300 opacity-0 transition-opacity">--</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block mb-1">Total Downloads</span>
+            <span data-levyra-downloads class="text-base font-bold text-cyan-300 opacity-0 transition-opacity">--</span>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <span class="text-slate-400 block mb-1">License</span>
+            <span class="text-base font-bold text-emerald-300">GPL-3.0</span>
+          </div>
         </div>
       </div>
 
@@ -203,10 +220,19 @@ const schemaData = {
           <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
             06
           </div>
-          <h3 class="text-lg font-bold text-white mb-2">Private & Transparent</h3>
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Zero telemetry, zero advertising SDKs, and zero middleman proxy servers. All listening data remains strictly local to your device.
+          <h3 class="text-lg font-bold text-white mb-2">Bundled Extraction Engine</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-3">
+            Levyra incorporates a tailored internal extraction engine directly within the repository for media resolution and streaming stability.
           </p>
+          <a 
+            href="https://github.com/LUC4N3X/Levyra-deepsound/tree/main/third_party/LevyraExtractor" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center gap-1"
+          >
+            <span>View bundled source</span>
+            <span>↗</span>
+          </a>
         </div>
       </div>
 
@@ -272,19 +298,19 @@ const schemaData = {
               Android & Desktop Compilation
             </h3>
             <p class="text-sm text-slate-300 leading-relaxed mb-4">
-              Levyra can be built entirely from source with standard open-source toolchains: JDK 17, Android Platform 37, and Gradle 9.7 for Android; JDK 21 LTS, libvlc, and WiX Toolset for Windows.
+              Levyra can be built entirely from source using standard open-source toolchains for Android and Windows.
             </p>
             <div class="rounded-lg bg-[#07090e] border border-white/5 p-4 font-mono text-xs text-slate-300 overflow-x-auto mb-4">
               <code>git clone https://github.com/LUC4N3X/Levyra-deepsound.git<br/>cd Levyra-deepsound<br/>./gradlew clean assembleRelease</code>
             </div>
           </div>
           <a 
-            href="https://github.com/LUC4N3X/Levyra-deepsound#readme" 
+            href="https://github.com/LUC4N3X/Levyra-deepsound#building-from-source" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center gap-1"
           >
-            <span>Read full build documentation</span>
+            <span>See official build instructions</span>
             <span>→</span>
           </a>
         </div>
@@ -304,9 +330,15 @@ const schemaData = {
               <code>./gradlew --no-daemon -PlevyraFdroidBuild=true :app:assembleRelease</code>
             </div>
           </div>
-          <div class="text-xs font-mono text-slate-400">
-            Version Contract: levyraVersionName=2.5.9 · levyraVersionCode=2050900
-          </div>
+          <a 
+            href="https://github.com/LUC4N3X/Levyra-deepsound#readme" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold inline-flex items-center gap-1"
+          >
+            <span>View repository documentation</span>
+            <span>→</span>
+          </a>
         </div>
       </div>
 
