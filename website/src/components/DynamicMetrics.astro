@@ -64,7 +64,7 @@
       try {
         const [repoRes, relRes] = await Promise.all([
           fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound'),
-          fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases')
+          fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100')
         ]);
 
         let stars: number | null = null;
@@ -86,7 +86,7 @@
             }
             let count = 0;
             for (const r of releases) {
-              if (Array.isArray(r.assets)) {
+              if (!r.draft && Array.isArray(r.assets)) {
                 for (const a of r.assets) {
                   count += a.download_count || 0;
                 }

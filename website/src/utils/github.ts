@@ -7,10 +7,10 @@ export interface LevyraMetrics {
 
 export async function getLevyraMetrics(): Promise<LevyraMetrics> {
   const fallback: LevyraMetrics = {
-    stars: 390,
-    downloads: 5633,
+    stars: 393,
+    downloads: 6192,
     version: "2.5.9",
-    forks: 6
+    forks: 7
   };
 
   try {
@@ -25,7 +25,7 @@ export async function getLevyraMetrics(): Promise<LevyraMetrics> {
 
     const [repoRes, releasesRes] = await Promise.all([
       fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound", { headers }),
-      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases", { headers })
+      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100", { headers })
     ]);
 
     let stars = fallback.stars;
@@ -51,7 +51,7 @@ export async function getLevyraMetrics(): Promise<LevyraMetrics> {
         }
         let total = 0;
         for (const rel of releases) {
-          if (Array.isArray(rel.assets)) {
+          if (!rel.draft && Array.isArray(rel.assets)) {
             for (const asset of rel.assets) {
               total += asset.download_count || 0;
             }
