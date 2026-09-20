@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import FeaturedProject from '../components/FeaturedProject.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import SectionHeader from '../components/SectionHeader.astro';
 import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import Button from '../components/Button.astro';
@@ -14,11 +13,11 @@ import { siteConfig } from '../data/site';
 const featuredArticles = articles.slice(0, 2);
 const popularArticles = articles;
 const categories = [
-  { name: "Android Internals", count: "2 notes", href: "/articles", color: "text-[#38bdf8] bg-sky-500/10 border-sky-500/25" },
-  { name: "Media3 & Audio", count: "1 note", href: "/articles", color: "text-[#818cf8] bg-indigo-500/10 border-indigo-500/25" },
-  { name: "Zero Telemetry", count: "2 notes", href: "/articles", color: "text-[#34d399] bg-emerald-500/10 border-emerald-500/25" },
-  { name: "Reverse Engineering", count: "1 note", href: "/articles", color: "text-[#f43f5e] bg-rose-500/10 border-rose-500/25" },
-  { name: "Craftsmanship", count: "1 note", href: "/articles", color: "text-[#fbbf24] bg-amber-500/10 border-amber-500/25" }
+  { name: "Android Internals", count: "2 notes", href: "/articles" },
+  { name: "Media3 & Audio", count: "1 note", href: "/articles" },
+  { name: "Zero Telemetry", count: "2 notes", href: "/articles" },
+  { name: "Reverse Engineering", count: "1 note", href: "/articles" },
+  { name: "Craftsmanship", count: "1 note", href: "/articles" }
 ];
 ---
 
@@ -32,28 +31,35 @@ const categories = [
 
   <CloudDivider fill="#080b11" />
 
-  <section class="py-20 sm:py-28 bg-[#080b11] relative">
+  <section class="py-16 sm:py-28 bg-[#080b11] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
         
-        <div class="lg:col-span-7 flex flex-col gap-8">
-          <div>
-            <SectionHeader
-              eyebrow="Engineering Notes & Architecture"
-              title="Articles and Tutorials"
-              subtitle="Deep-dives into Android internals, audio decode pipelines, reverse engineering, and pragmatic software craftsmanship."
-            />
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+              <span>Engineering Notes & Architecture</span>
+            </div>
+            
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+              Articles and Tutorials
+            </h2>
+
+            <p class="text-zinc-400 text-base sm:text-lg leading-relaxed font-normal max-w-2xl">
+              Deep-dives into Android internals, audio decode pipelines, reverse engineering, and pragmatic software craftsmanship.
+            </p>
           </div>
 
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-6 pt-2">
             {featuredArticles.map(article => (
               <ArticleCard article={article} />
             ))}
           </div>
 
           <div class="pt-4 flex justify-center sm:justify-start">
-            <Button href="/articles" variant="secondary" size="lg">
+            <Button href="/articles" variant="secondary" size="lg" class="w-full sm:w-auto justify-center">
               <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
               </svg>
@@ -62,20 +68,24 @@ const categories = [
           </div>
         </div>
 
-        <div class="lg:col-span-5 flex flex-col gap-10 lg:pl-8 lg:border-l lg:border-white/[0.08]">
+        <div class="lg:col-span-5 flex flex-col gap-10 lg:pl-10 lg:border-l lg:border-white/[0.08]">
           
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-white tracking-tight flex items-center gap-2">
+            <h3 class="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#818cf8]"></span>
               <span>Browse By Category</span>
             </h3>
-            <div class="flex flex-wrap gap-2">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               {categories.map(cat => (
                 <a 
                   href={cat.href}
-                  class={`group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono ${cat.color} border hover:scale-105 transition-all duration-200`}
+                  class="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.07] border border-white/[0.06] hover:border-sky-500/30 transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  <span class="font-medium">{cat.name}</span>
-                  <span class="text-[10px] opacity-75 font-normal">
+                  <span class="text-xs font-medium text-zinc-200 group-hover:text-white transition-colors">
+                    {cat.name}
+                  </span>
+                  <span class="text-[11px] font-mono text-zinc-500 group-hover:text-[#38bdf8] transition-colors ml-2">
                     {cat.count}
                   </span>
                 </a>
@@ -84,22 +94,31 @@ const categories = [
           </div>
 
           <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-white tracking-tight">
-              Popular Content
+            <h3 class="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
+              <span>Popular Content</span>
             </h3>
-            <ol class="space-y-3.5 text-sm">
+
+            <ol class="space-y-3">
               {popularArticles.map((article, idx) => (
                 <li>
                   <a 
                     href={`/articles/${article.slug}`}
-                    class="group flex items-start gap-3 text-zinc-400 hover:text-white transition-colors leading-relaxed"
+                    class="group flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-sky-500/25 transition-all duration-200 hover:translate-x-1"
                   >
-                    <span class="font-mono text-xs font-bold text-[#818cf8] group-hover:text-[#38bdf8] transition-colors mt-0.5 w-5 flex-shrink-0">
-                      {String(idx + 1).padStart(2, '0')}
-                    </span>
-                    <span class="font-medium group-hover:underline">
-                      {article.title}
-                    </span>
+                    <div class="w-6 h-6 rounded-lg bg-sky-500/10 border border-sky-500/25 text-[#38bdf8] flex items-center justify-center font-mono text-xs font-bold flex-shrink-0 mt-0.5 group-hover:bg-[#38bdf8] group-hover:text-[#080b11] transition-colors">
+                      {idx + 1}
+                    </div>
+                    <div class="flex-1 min-w-0">
+                      <h4 class="text-sm font-semibold text-zinc-200 group-hover:text-white group-hover:underline transition-colors leading-snug">
+                        {article.title}
+                      </h4>
+                      <div class="flex items-center gap-2 mt-1.5 text-[11px] font-mono text-zinc-500">
+                        <span class="text-zinc-400">{article.category}</span>
+                        <span>·</span>
+                        <span>{article.readingTime}</span>
+                      </div>
+                    </div>
                   </a>
                 </li>
               ))}

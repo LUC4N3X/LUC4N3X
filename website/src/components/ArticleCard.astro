@@ -9,19 +9,19 @@ interface Props {
 const { article } = Astro.props;
 
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
-  "Android Internals": { bg: "bg-sky-500/15", text: "text-[#38bdf8]", border: "border-sky-500/30" },
-  "Media3 & Audio": { bg: "bg-indigo-500/15", text: "text-[#818cf8]", border: "border-indigo-500/30" },
-  "Zero Telemetry": { bg: "bg-emerald-500/15", text: "text-[#34d399]", border: "border-emerald-500/30" },
-  "Reverse Engineering": { bg: "bg-rose-500/15", text: "text-[#f43f5e]", border: "border-rose-500/30" },
-  "Craftsmanship": { bg: "bg-amber-500/15", text: "text-[#fbbf24]", border: "border-amber-500/30" }
+  "Android Internals": { bg: "bg-sky-500/10", text: "text-[#38bdf8]", border: "border-sky-500/25" },
+  "Media3 & Audio": { bg: "bg-indigo-500/10", text: "text-[#818cf8]", border: "border-indigo-500/25" },
+  "Zero Telemetry": { bg: "bg-emerald-500/10", text: "text-[#34d399]", border: "border-emerald-500/25" },
+  "Reverse Engineering": { bg: "bg-rose-500/10", text: "text-[#f43f5e]", border: "border-rose-500/25" },
+  "Craftsmanship": { bg: "bg-amber-500/10", text: "text-[#fbbf24]", border: "border-amber-500/25" }
 };
 
-const categoryStyle = categoryColors[article.category] || { bg: "bg-indigo-500/15", text: "text-[#818cf8]", border: "border-indigo-500/30" };
+const categoryStyle = categoryColors[article.category] || { bg: "bg-indigo-500/10", text: "text-[#818cf8]", border: "border-indigo-500/25" };
 ---
 
-<article class="group relative flex flex-col justify-between rounded-3xl border border-white/[0.08] bg-[#0c101d]/90 backdrop-blur-sm p-7 sm:p-9 transition-all duration-300 hover:border-indigo-500/40 hover:bg-[#11172a] hover:shadow-2xl hover:shadow-indigo-500/15 hover:-translate-y-1">
+<article class="group relative flex flex-col justify-between rounded-3xl border border-white/[0.08] bg-gradient-to-br from-[#0c1220]/90 via-[#0a0f1d]/90 to-[#080b11] p-7 sm:p-9 transition-all duration-300 hover:border-sky-500/35 hover:shadow-2xl hover:shadow-sky-500/10 hover:-translate-y-1">
   <div>
-    <div class="flex items-center justify-between gap-2 mb-4 text-xs font-mono">
+    <div class="flex items-center justify-between gap-3 mb-4 text-xs font-mono">
       <div class="flex items-center gap-2 text-zinc-400">
         <time datetime={article.date}>
           {new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
@@ -35,13 +35,13 @@ const categoryStyle = categoryColors[article.category] || { bg: "bg-indigo-500/1
       </span>
     </div>
 
-    <h3 class="text-xl sm:text-2xl lg:text-[26px] font-bold text-white tracking-tight mb-3 group-hover:text-[#38bdf8] transition-colors leading-snug">
+    <h3 class="text-xl sm:text-2xl lg:text-[25px] font-bold text-white tracking-tight mb-3 group-hover:text-[#38bdf8] transition-colors leading-snug">
       <a href={`/articles/${article.slug}`} class="focus-visible:outline-none focus-visible:underline">
         {article.title}
       </a>
     </h3>
 
-    <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6 font-normal">
+    <p class="text-sm sm:text-base text-zinc-300/90 leading-relaxed mb-6 font-normal">
       {article.description}
     </p>
   </div>
@@ -53,14 +53,17 @@ const categoryStyle = categoryColors[article.category] || { bg: "bg-indigo-500/1
       ))}
     </div>
 
-    <div class="flex items-center justify-between pt-4 border-t border-white/[0.08] text-xs font-mono">
+    <div class="flex items-center justify-between pt-5 border-t border-white/[0.08] text-xs font-mono">
       <a 
         href={`/articles/${article.slug}`} 
-        class="text-[#38bdf8] group-hover:text-[#818cf8] font-medium transition-colors inline-flex items-center gap-2"
+        class="group/link text-[#38bdf8] group-hover:text-[#818cf8] font-semibold transition-colors inline-flex items-center gap-2.5"
       >
-        <span>Read Full Article</span>
-        <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        <span>Read full article</span>
+        <svg width="32" height="10" viewBox="0 0 32 10" fill="none" class="overflow-visible">
+          <path d="M0 5H10 M5 1L10 5L5 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-0 group-hover/link:opacity-100 group-hover/link:translate-x-1 transition-all duration-200" />
+          <path d="M14 9L18 5L14 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover/link:translate-x-1 transition-transform duration-200" />
+          <path d="M21 9L25 5L21 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.65" class="group-hover/link:translate-x-1.5 transition-transform duration-200 delay-75" />
+          <path d="M28 9L32 5L28 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.35" class="group-hover/link:translate-x-2 transition-transform duration-200 delay-150" />
         </svg>
       </a>
 
