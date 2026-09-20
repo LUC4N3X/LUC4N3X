@@ -1,0 +1,84 @@
+---
+import { siteConfig } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+  type?: string;
+  schema?: Record<string, any>;
+}
+
+const {
+  title = siteConfig.title,
+  description = siteConfig.description,
+  image = siteConfig.ogImage,
+  canonicalUrl = Astro.url.href,
+  type = "website",
+  schema
+} = Astro.props;
+
+const siteUrl = siteConfig.url;
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+const defaultSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#person`,
+      "name": "LUC4N3X",
+      "alternateName": "Luca",
+      "url": siteUrl,
+      "sameAs": [
+        "https://github.com/LUC4N3X",
+        "https://hosted.weblate.org/engage/levyra/"
+      ],
+      "jobTitle": "Independent Software Developer",
+      "description": siteConfig.description
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": siteConfig.name,
+      "description": siteConfig.description,
+      "publisher": {
+        "@id": `${siteUrl}/#person`
+      }
+    }
+  ]
+};
+
+const finalSchema = schema || defaultSchema;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<link rel="icon" type="image/svg+xml" href="/assets/brand/luc4n3x-mark.svg" />
+<link rel="icon" type="image/png" href="/assets/brand/luc4n3x-mark-dark.png" />
+<link rel="apple-touch-icon" href="/assets/brand/luc4n3x-mark-dark.png" />
+
+<meta property="og:site_name" content={siteConfig.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:type" content={type} />
+<meta property="og:image" content={fullImageUrl} />
+<meta property="og:image:alt" content={title} />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullImageUrl} />
+
+<meta name="theme-color" content="#07090e" />
+<meta name="color-scheme" content="dark" />
+
+<script type="application/ld+json" set:html={JSON.stringify(finalSchema)} />

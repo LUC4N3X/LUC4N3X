@@ -1,0 +1,100 @@
+---
+import SectionHeader from './SectionHeader.astro';
+import { techDomains } from '../data/skills';
+import TechBadge from './TechBadge.astro';
+---
+
+<section class="py-16 sm:py-24 border-t border-white/8 bg-[#07090e] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <SectionHeader
+      eyebrow="Open Source & Architecture"
+      title="Engineering Without Compromise"
+      subtitle="Software engineered with respect for user autonomy, device efficiency, and long-term maintainability. Zero telemetry, no dark patterns, and transparent architecture."
+    />
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-16">
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <h3 class="text-xl font-bold text-white mb-2">
+            The Contribution Philosophy
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+            Build the useful thing first. Run it on real hardware. Find what breaks. Fix the smallest real cause, and keep working on it until it feels right.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-400">
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>No user tracking or telemetry</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>Local-first data persistence</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>Direct service connections</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+              <span>GNU GPL v3 & open licensing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <h3 class="text-xl font-bold text-white mb-2">
+            Community Translations
+          </h3>
+          <p class="text-slate-300 text-sm leading-relaxed mb-4">
+            Levyra and related software are localized by community contributors worldwide through Weblate across 36 languages.
+          </p>
+          <a 
+            href="https://hosted.weblate.org/engage/levyra/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold"
+          >
+            <span>Contribute on Weblate</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex items-center justify-center p-4">
+        <div class="relative w-full max-w-sm rounded-2xl overflow-hidden border border-white/10 bg-[#0c1018] p-4">
+          <img 
+            src="/assets/brand/luc4n3x-linux-stack.svg" 
+            alt="Linux & Android Tech Stack" 
+            class="w-full h-auto object-contain"
+            loading="lazy"
+            width="340"
+            height="340"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {techDomains.map(domain => (
+        <div class="rounded-xl border border-white/8 bg-[#0b0e16] p-5 flex flex-col justify-between">
+          <div>
+            <span class="text-[11px] font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-2 block">
+              {domain.category}
+            </span>
+            <h4 class="text-base font-bold text-white mb-2">
+              {domain.title}
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              {domain.description}
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            {domain.technologies.map(tech => (
+              <TechBadge text={tech} size="sm" />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

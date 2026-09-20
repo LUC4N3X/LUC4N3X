@@ -1,0 +1,334 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import TechBadge from '../../components/TechBadge.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+
+const screenshots = [
+  {
+    src: "/assets/levyra/player_nowplaying.webp",
+    title: "Now Playing",
+    caption: "Low-latency playback controls with dynamic gradient backgrounds derived from album art."
+  },
+  {
+    src: "/assets/levyra/lyrics_synced.webp",
+    title: "Synchronized Lyrics",
+    caption: "Real-time lyric scrolling powered by LRCLIB and TTML time-sync scoring."
+  },
+  {
+    src: "/assets/levyra/home_top50.webp",
+    title: "Discovery & Charts",
+    caption: "Global top charts, trending releases, and curated category exploration."
+  },
+  {
+    src: "/assets/levyra/library_quickpicks.webp",
+    title: "Library & Quick Picks",
+    caption: "Instant access to cached favorites, recent tracks, and custom playlists."
+  },
+  {
+    src: "/assets/levyra/03_search_and_artist.webp",
+    title: "Search & Artist Pages",
+    caption: "Comprehensive catalog queries with detailed artist discographies and related tracks."
+  },
+  {
+    src: "/assets/levyra/04_library_and_pulse.webp",
+    title: "Offline Vault & Pulse",
+    caption: "Local listening telemetry stored exclusively on-device with zero remote tracking."
+  }
+];
+
+const permissions = [
+  {
+    name: "INTERNET / ACCESS_NETWORK_STATE",
+    purpose: "Required to stream audio data, query lyrics from LRCLIB, and fetch album artwork."
+  },
+  {
+    name: "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    purpose: "Enables gapless, uninterrupted playback and system media controls when the app is backgrounded."
+  },
+  {
+    name: "POST_NOTIFICATIONS",
+    purpose: "Displays the active playback notification and status for background download tasks."
+  },
+  {
+    name: "WAKE_LOCK",
+    purpose: "Prevents device CPU sleep during active audio playback while the screen is locked."
+  },
+  {
+    name: "RECORD_AUDIO",
+    purpose: "Optional. Only used on-demand when the user chooses microphone-based audio identification."
+  }
+];
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Levyra",
+  "operatingSystem": "Android, Windows",
+  "applicationCategory": "MultimediaApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "LUC4N3X"
+  },
+  "description": "Open-source, privacy-focused music player for Android and Windows with low-latency playback via AndroidX Media3, synced lyrics, and offline caching."
+};
+---
+
+<Layout 
+  title="Levyra (DeepSound) — Official Open Source Music Player"
+  description="Official overview of Levyra: an open-source, zero-tracking music player for Android and Windows featuring AndroidX Media3, synced lyrics, and offline caching."
+  image="/assets/levyra/levyra-lockup-dark.svg"
+  schema={schemaData}
+>
+  <div class="relative overflow-hidden pt-12 pb-20 sm:pb-28">
+    <div class="absolute inset-0 bg-radial-gradient opacity-40 pointer-events-none"></div>
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="flex flex-col items-center text-center max-w-4xl mx-auto mb-16">
+        <div class="w-full max-w-md sm:max-w-xl mb-8">
+          <img 
+            src="/assets/levyra/levyra-lockup-dark.svg" 
+            alt="Levyra DeepSound Lockup" 
+            class="w-full h-auto object-contain mx-auto"
+            width="760"
+            height="180"
+          />
+        </div>
+
+        <p class="text-lg sm:text-2xl font-medium text-cyan-300 mb-6">
+          High-Fidelity Open-Source Music Player for Android & Windows
+        </p>
+
+        <p class="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed mb-8 max-w-2xl">
+          Engineered for audio fidelity, responsiveness, and zero tracking. No accounts required, no telemetry, and direct stream connections.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8">
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300">
+            Android 8.0+ (v2.5.9)
+          </span>
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#121724] border border-cyan-500/20 text-cyan-300">
+            Windows 10+ (v1.2.0)
+          </span>
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
+            GNU GPL v3.0
+          </span>
+          <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-950/40 border border-cyan-500/30 text-cyan-300">
+            36 Languages
+          </span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
+            <span>Download Latest Release</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </Button>
+
+          <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="lg">
+            <span>GitHub Repository</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+          </Button>
+
+          <Button href="https://hosted.weblate.org/engage/levyra/" target="_blank" variant="outline" size="lg">
+            <span>Translations</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+            </svg>
+          </Button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            01
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">AndroidX Media3 Pipeline</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Custom ExoPlayer session management ensuring low latency, gapless track transitions, and rock-solid foreground audio stability.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            02
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Offline Cache & Vault</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Resumable background downloads, local cache hierarchy, and automatic ID3 metadata/artwork embedding for exported tracks.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            03
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Synchronized Lyrics</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Direct integration with LRCLIB, featuring real-time synchronized line-by-line scrolling and intelligent lyric scoring.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            04
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Pure Jetpack Compose</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Declarative UI built without legacy XML layouts, featuring dynamic Material You theming generated on the fly from current track artwork.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            05
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Windows Desktop Edition</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Full-featured desktop client powered by libvlc and Compose Multiplatform, packaged into clean MSI and EXE distributables.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-[#0c1018] border border-white/8">
+          <div class="w-10 h-10 rounded-xl bg-cyan-950/50 border border-cyan-500/20 text-cyan-400 flex items-center justify-center mb-4 font-mono font-bold">
+            06
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Private & Transparent</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Zero telemetry, zero advertising SDKs, and zero middleman proxy servers. All listening data remains strictly local to your device.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-20">
+        <SectionHeader
+          eyebrow="Interface & Design"
+          title="Designed for Fluidity"
+          subtitle="Explore the user interface: Material You dynamic color extraction, synchronized lyric view, and responsive layouts."
+        />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {screenshots.map(shot => (
+            <div class="group rounded-2xl border border-white/8 bg-[#0c1018] overflow-hidden p-3 transition-all duration-300 hover:border-cyan-500/30">
+              <div class="rounded-xl overflow-hidden bg-[#07090e] mb-3 aspect-[9/16] relative">
+                <img 
+                  src={shot.src} 
+                  alt={shot.title} 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  width="400"
+                  height="711"
+                />
+              </div>
+              <div class="p-2">
+                <h4 class="text-sm font-bold text-white mb-1">{shot.title}</h4>
+                <p class="text-xs text-slate-400 leading-relaxed">{shot.caption}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="mb-20">
+        <SectionHeader
+          eyebrow="Security & Transparency"
+          title="Privacy Blueprint & Permissions"
+          subtitle="Every permission requested by Levyra is scoped strictly to local audio playback and file export operations."
+        />
+
+        <div class="rounded-2xl border border-white/8 bg-[#0c1018] overflow-hidden">
+          <div class="divide-y divide-white/5">
+            {permissions.map(perm => (
+              <div class="p-4 sm:p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-6">
+                <div class="font-mono text-xs sm:text-sm font-semibold text-cyan-300 sm:w-1/3">
+                  {perm.name}
+                </div>
+                <div class="text-xs sm:text-sm text-slate-300 sm:w-2/3 leading-relaxed">
+                  {perm.purpose}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400 font-semibold mb-2 block">
+              Build From Source
+            </span>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Android & Desktop Compilation
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4">
+              Levyra can be built entirely from source with standard open-source toolchains: JDK 17, Android Platform 37, and Gradle 9.7 for Android; JDK 21 LTS, libvlc, and WiX Toolset for Windows.
+            </p>
+            <div class="rounded-lg bg-[#07090e] border border-white/5 p-4 font-mono text-xs text-slate-300 overflow-x-auto mb-4">
+              <code>git clone https://github.com/LUC4N3X/Levyra-deepsound.git<br/>cd Levyra-deepsound<br/>./gradlew clean assembleRelease</code>
+            </div>
+          </div>
+          <a 
+            href="https://github.com/LUC4N3X/Levyra-deepsound#readme" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold inline-flex items-center gap-1"
+          >
+            <span>Read full build documentation</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-2xl border border-white/8 bg-[#0c1018] flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold mb-2 block">
+              F-Droid Contract
+            </span>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Deterministic Reproducible Builds
+            </h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-4">
+              Levyra supports strict reproducible verification for independent distribution catalogs:
+            </p>
+            <div class="rounded-lg bg-[#07090e] border border-white/5 p-4 font-mono text-xs text-slate-300 overflow-x-auto mb-4">
+              <code>./gradlew --no-daemon -PlevyraFdroidBuild=true :app:assembleRelease</code>
+            </div>
+          </div>
+          <div class="text-xs font-mono text-slate-400">
+            Version Contract: levyraVersionName=2.5.9 · levyraVersionCode=2050900
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 sm:p-8 rounded-2xl border border-white/10 bg-[#0a0d15] relative overflow-hidden">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div class="max-w-3xl">
+            <span class="text-xs font-mono uppercase tracking-widest text-slate-400 font-semibold mb-2 block">
+              Legal Notice & Usage Policy
+            </span>
+            <h3 class="text-lg sm:text-xl font-bold text-white mb-2">
+              Open-Source Software Notice
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Levyra is an open-source software audio player licensed under the GNU General Public License v3.0. It is engineered solely as a local media player and streaming interface. Levyra does not host, distribute, or facilitate the unauthorized distribution of copyrighted media. End users remain solely responsible for ensuring that their playback, media acquisition, and network requests strictly adhere to applicable local laws and third-party terms of service.
+            </p>
+          </div>
+          <Button href="https://github.com/LUC4N3X/Levyra-deepsound/blob/main/docs/legal/LEGAL.md" target="_blank" variant="secondary" size="md">
+            <span>Read Full Legal Notice</span>
+            <span>↗</span>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
