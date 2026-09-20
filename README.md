@@ -8,6 +8,12 @@
 
 **I build software I want to use, and keep working on it until it feels right.**
 
+<br />
+
+🌐 **[luc4n3x.pages.dev](https://luc4n3x.pages.dev)** — *Official Website & Engineering Notes*
+
+<br />
+
 `Android` · `Kotlin` · `Jetpack Compose` · `Python` · `APIs` · `Docker`
 
 <br />
@@ -18,9 +24,9 @@
 
 ## About me
 
-<img align="right" alt="Luca at his developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
+<img align="right" alt="LUC4N3X developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-Hey, I'm Luca. I like taking rough ideas and turning them into software I can actually use.
+Hey, I'm LUC4N3X. I like taking rough ideas and turning them into software I can actually use.
 
 Most days I bounce between **Android apps, backend services, tooling and infrastructure**. I enjoy the part after something starts working: finding what still feels off, fixing the weird edge cases and making the whole thing cleaner.
 

@@ -1,36 +1,68 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
 import FeaturedProject from '../../components/FeaturedProject.astro';
+import Button from '../../components/Button.astro';
 import { projects } from '../../data/projects';
 import { siteConfig } from '../../data/site';
 
-const nonFeaturedProjects = projects.filter(p => !p.featured);
+const secondaryProjects = projects.filter(p => !p.featured);
 ---
 
 <Layout 
-  title={`Projects — ${siteConfig.name}`}
-  description="Explore open-source software, media streaming engines, and developer tooling built by LUC4N3X."
+  title={`Projects & Software — ${siteConfig.name}`}
+  description="Open-source software, media playback systems, and developer utilities engineered by LUC4N3X with zero telemetry and local-first architecture."
 >
-  <div class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="pt-20 sm:pt-28 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
     <SectionHeader
       eyebrow="Portfolio & Software"
-      title="Open Source Projects"
-      subtitle="Software, media engines, and infrastructure tools built with a focus on local performance, zero telemetry, and privacy."
+      title="Open Source Engineering"
+      subtitle="Software and media playback systems engineered with an uncompromising focus on local performance, zero telemetry, and technical transparency."
     />
+  </div>
 
-    <div class="mb-16">
-      <FeaturedProject />
-    </div>
+  <FeaturedProject />
 
-    <div class="pt-8">
-      <h3 class="text-xl sm:text-2xl font-bold text-white mb-8 tracking-tight">
-        Additional Systems & Tooling
-      </h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-        {nonFeaturedProjects.map(project => (
-          <ProjectCard project={project} />
+  <div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
+    <div class="border-t border-white/[0.08] pt-16">
+      <div class="mb-10">
+        <h3 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+          Additional Tools & Utilities
+        </h3>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl font-normal">
+          Lightweight specialized tools built for specific automation and media scraping workflows.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {secondaryProjects.map(project => (
+          <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-8 flex flex-col justify-between transition-all duration-300 hover:border-indigo-500/30">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <h4 class="text-xl font-semibold text-white tracking-tight">
+                  {project.name}
+                </h4>
+                <span class="text-xs font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08]">
+                  {project.status}
+                </span>
+              </div>
+              <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
+                {project.description}
+              </p>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 pt-6 border-t border-white/[0.08]">
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+                {project.stack.map(t => (
+                  <span class="text-zinc-500">#{t}</span>
+                ))}
+              </div>
+              <Button href={project.github} target="_blank" variant="secondary" size="sm">
+                <span>GitHub</span>
+                <span class="ml-1">↗</span>
+              </Button>
+            </div>
+          </div>
         ))}
       </div>
     </div>

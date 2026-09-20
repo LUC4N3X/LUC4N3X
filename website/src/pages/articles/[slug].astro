@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+import TechBadge from '../../components/TechBadge.astro';
+import { articles } from '../../data/articles';
+import { siteConfig } from '../../data/site';
+
+export function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+const otherArticles = articles.filter(a => a.slug !== article.slug).slice(0, 2);
+---
+
+<Layout 
+  title={`${article.title} — ${siteConfig.name}`}
+  description={article.description}
+>
+  <article class="py-16 sm:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
+    <div class="mb-10">
+      <a 
+        href="/articles" 
+        class="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-[#2997ff] transition-colors mb-8"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>Back to all articles</span>
+      </a>
+
+      <div class="flex items-center gap-3 text-xs font-mono text-zinc-500 mb-4">
+        <time datetime={article.date}>
+          {new Date(article.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
+        <span>·</span>
+        <span>{article.readingTime}</span>
+        <span>·</span>
+        <span class="text-[#2997ff]">Engineering Note</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <p class="text-lg sm:text-xl text-zinc-400 leading-relaxed font-normal mb-8 pb-8 border-b border-white/[0.08]">
+        {article.description}
+      </p>
+
+      <div class="flex flex-wrap gap-2">
+        {article.tags.map(tag => (
+          <TechBadge text={tag} variant="blue" />
+        ))}
+      </div>
+    </div>
+
+    <div class="space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal mb-16">
+      {article.content.map(paragraph => (
+        <p class="leading-relaxed">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+
+    <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full overflow-hidden border border-[#2997ff]/40 bg-white/[0.04] flex items-center justify-center flex-shrink-0 shadow-md shadow-[#2997ff]/10">
+          <img 
+            src="/assets/brand/luc4n3x-avatar.png" 
+            alt="LUC4N3X" 
+            class="w-full h-full object-cover"
+            width="56"
+            height="56"
+          />
+        </div>
+        <div>
+          <span class="text-base font-semibold text-white block">LUC4N3X</span>
+          <span class="text-xs text-zinc-400">Independent software developer & systems craftsman</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <Button href="/about" variant="secondary" size="sm">
+          <span>About LUC4N3X</span>
+        </Button>
+        <Button href={siteConfig.github} target="_blank" variant="outline" size="sm">
+          <span>GitHub</span>
+        </Button>
+      </div>
+    </div>
+
+    {otherArticles.length > 0 && (
+      <div class="border-t border-white/[0.08] pt-12">
+        <h3 class="text-xl font-semibold text-white mb-6 tracking-tight">
+          More Engineering Notes
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {otherArticles.map(item => (
+            <a 
+              href={`/articles/${item.slug}`}
+              class="p-5 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] hover:border-white/[0.18] transition-colors block group"
+            >
+              <span class="text-xs font-mono text-zinc-500 block mb-1">{item.readingTime}</span>
+              <span class="text-sm font-semibold text-white group-hover:text-[#2997ff] transition-colors block">
+                {item.title}
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </article>
+</Layout>

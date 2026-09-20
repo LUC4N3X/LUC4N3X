@@ -3,7 +3,7 @@ import SectionHeader from './SectionHeader.astro';
 import { pressItems } from '../data/press';
 ---
 
-<section class="py-16 sm:py-24 border-t border-white/8 bg-[#07090e] relative">
+<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <SectionHeader
       eyebrow="Ecosystem & Distribution"
@@ -13,31 +13,31 @@ import { pressItems } from '../data/press';
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {pressItems.map(item => (
-        <div class="group rounded-xl border border-white/8 bg-[#0c1018] p-6 transition-all duration-300 hover:border-cyan-500/25 hover:bg-[#101420] flex flex-col justify-between">
+        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-7 flex flex-col justify-between hover:border-indigo-500/30 transition-colors">
           <div>
-            <div class="flex items-center justify-between gap-2 mb-3">
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-[#151c2a] border border-white/10 text-cyan-300">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs font-mono px-3 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
                 {item.badge}
               </span>
-              <span class="text-[11px] font-mono text-slate-400">
+              <span class="text-[11px] font-mono text-zinc-500">
                 {item.category}
               </span>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+            <h3 class="text-lg font-semibold text-white mb-2">
               {item.name}
             </h3>
-            <p class="text-xs text-slate-400 leading-relaxed">
+            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
               {item.description}
             </p>
           </div>
 
           {item.url && (
-            <div class="pt-4 mt-4 border-t border-white/5">
+            <div class="pt-5 mt-5 border-t border-white/[0.08]">
               <a 
                 href={item.url} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="text-xs font-mono text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors"
+                class="text-xs font-mono text-[#38bdf8] hover:underline inline-flex items-center gap-1 font-medium"
               >
                 <span>Visit Platform</span>
                 <span>↗</span>

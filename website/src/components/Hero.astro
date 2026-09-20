@@ -3,64 +3,135 @@ import Button from './Button.astro';
 import { siteConfig } from '../data/site';
 ---
 
-<section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-12 pb-20 sm:py-28">
-  <div class="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none"></div>
-  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[350px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent pointer-events-none"></div>
+<section class="relative min-h-[90vh] flex flex-col justify-between overflow-hidden pt-16 sm:pt-24 bg-[#070a12]">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] sm:w-[900px] h-[400px] bg-gradient-to-tr from-sky-500/18 via-indigo-500/15 to-rose-500/12 rounded-full blur-[120px]"></div>
+    <div class="absolute top-12 left-8 w-80 h-48 bg-sky-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-28 right-8 w-96 h-56 bg-purple-500/10 rounded-full blur-3xl"></div>
+  </div>
 
-  <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-[#0c1018]/80 backdrop-blur-md mb-8 text-xs font-mono text-slate-300">
-      <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse"></span>
-      <span class="tracking-widest uppercase text-cyan-300/90 font-semibold">LUC4N3X</span>
-      <span class="text-slate-600">/</span>
-      <span class="text-slate-400">BUILD</span>
-      <span class="text-slate-600">/</span>
-      <span class="text-slate-400">OPEN SOURCE</span>
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full text-center flex flex-col items-center z-10 my-auto pb-12 sm:pb-16">
+    
+    <div class="relative mb-8 group">
+      <div class="absolute -inset-4 bg-gradient-to-tr from-[#00F2FE]/30 via-[#818CF8]/25 to-[#f43f5e]/20 rounded-[38px] blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+
+      <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-[32px] p-1 bg-gradient-to-tr from-[#00F2FE] via-[#818CF8] to-[#f43f5e] shadow-2xl shadow-sky-500/30 transition-transform duration-500 group-hover:scale-105">
+        <div class="w-full h-full rounded-[28px] overflow-hidden bg-[#070a14] p-1 border border-white/10">
+          <img 
+            src="/assets/brand/luc4n3x-avatar.png" 
+            alt="LUC4N3X" 
+            class="w-full h-full object-cover rounded-[24px]"
+            width="128"
+            height="128"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      <div class="absolute -bottom-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#080c18]/90 border border-sky-500/30 text-[11px] font-mono text-zinc-200 shadow-2xl backdrop-blur-md whitespace-nowrap flex items-center gap-2">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34d399] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#34d399]"></span>
+        </span>
+        <span class="font-bold tracking-wider text-white">LUC4N3X</span>
+        <span class="text-zinc-600">·</span>
+        <span class="text-[#38bdf8]">SYSTEMS CRAFTSMAN</span>
+      </div>
     </div>
 
-    <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tight text-white mb-6 uppercase select-none">
-      LUC4N3X
+    <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-white/[0.1] bg-white/[0.04] mb-6 text-xs font-mono text-zinc-300 backdrop-blur-md shadow-lg">
+      <span class="text-[#38bdf8] font-semibold">Arch Linux</span>
+      <span class="text-zinc-600">/</span>
+      <span class="text-zinc-400">AndroidX Media3 & Systems Internals</span>
+    </div>
+
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.1] mb-6">
+      Crafting high-performance audio engines & <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f43f5e]">zero-telemetry software</span>.
     </h1>
 
-    <p class="text-base sm:text-xl md:text-2xl font-medium text-cyan-400 tracking-wide mb-6 max-w-3xl">
-      {siteConfig.tagline}
+    <p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed mb-10">
+      Hey, I'm LUC4N3X. I design and engineer native Android applications, low-latency audio pipelines, and developer tooling. Built with precision for real hardware, with zero trackers, zero ads, and complete user privacy.
     </p>
 
-    <p class="text-slate-300 text-lg sm:text-xl md:text-2xl max-w-2xl font-normal leading-relaxed mb-10">
-      {siteConfig.motto}
-    </p>
-
-    <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-      <Button href="/projects" variant="primary" size="lg">
-        <span>View Projects</span>
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
+      <Button href="/projects/levyra" variant="primary" size="lg">
+        <span>Explore Levyra</span>
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
         </svg>
       </Button>
 
-      <Button href={siteConfig.github} target="_blank" variant="secondary" size="lg">
-        <svg class="w-5 h-5 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
+      <Button href="/articles" variant="secondary" size="lg">
+        <span>Read Engineering Notes</span>
+        <span class="ml-1 text-xs font-mono text-[#38bdf8]">4 Notes</span>
+      </Button>
+
+      <Button href={siteConfig.github} target="_blank" variant="outline" size="lg">
+        <svg class="w-4 h-4 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
           <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
         </svg>
         <span>GitHub</span>
       </Button>
-
-      <Button href="/projects/levyra" variant="outline" size="lg">
-        <span>Explore Levyra</span>
-        <span data-levyra-version class="text-xs font-mono px-1.5 py-0.5 rounded bg-cyan-950/60 border border-cyan-500/30 hidden"></span>
-      </Button>
     </div>
 
-    <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs font-mono text-slate-400">
-      <span>Android & Kotlin</span>
-      <span class="text-slate-700">·</span>
-      <span>Jetpack Compose</span>
-      <span class="text-slate-700">·</span>
-      <span>AndroidX Media3</span>
-      <span class="text-slate-700">·</span>
-      <span>Python & APIs</span>
-      <span class="text-slate-700">·</span>
-      <span>Docker & Linux</span>
+    <div class="flex flex-wrap items-center justify-center gap-2 max-w-2xl text-xs font-mono">
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#1793d1]/10 border border-[#1793d1]/30 text-[#38bdf8]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+        <span>Arch Linux</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#818cf8]"></span>
+        <span>AndroidX Media3</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+        <span>Jetpack Compose</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#34d399]"></span>
+        <span>Zero Telemetry</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
+        <span>On-Device SQLite</span>
+      </span>
     </div>
+
+  </div>
+
+  <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none -mb-1 z-20">
+    <svg class="block w-full h-36 sm:h-52 md:h-64 lg:h-80" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="crestCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+          <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.3"/>
+        </linearGradient>
+        <linearGradient id="crestViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#818cf8" stop-opacity="0.5"/>
+          <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#818cf8" stop-opacity="0.2"/>
+        </linearGradient>
+      </defs>
+
+      <path 
+        d="M0,100 C180,30 320,150 500,70 C680,-10 820,130 1000,50 C1160,-20 1300,110 1440,60 L1440,280 L0,280 Z" 
+        fill="#141e38" 
+        fill-opacity="0.75"
+        stroke="url(#crestCyan)"
+        stroke-width="1.5"
+      />
+      <path 
+        d="M0,150 C150,75 300,195 480,120 C660,40 800,165 960,95 C1120,30 1260,140 1440,90 L1440,280 L0,280 Z" 
+        fill="#0f172a" 
+        fill-opacity="0.9"
+        stroke="url(#crestViolet)"
+        stroke-width="1.5"
+      />
+      <path 
+        d="M0,195 C160,120 320,230 500,165 C680,95 840,205 1020,145 C1180,75 1320,175 1440,135 L1440,280 L0,280 Z" 
+        fill="#080b11"
+      />
+    </svg>
   </div>
 </section>
