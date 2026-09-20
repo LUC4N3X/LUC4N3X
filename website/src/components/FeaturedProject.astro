@@ -1,0 +1,152 @@
+---
+import Button from './Button.astro';
+import TechBadge from './TechBadge.astro';
+---
+
+<section class="relative py-16 sm:py-24 border-t border-white/8 bg-[#090c13] overflow-hidden">
+  <div class="absolute inset-0 bg-radial-gradient opacity-30 pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4">
+      <div>
+        <div class="inline-flex items-center gap-2 mb-2">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+          <span class="text-xs font-mono tracking-widest text-cyan-400 uppercase font-semibold">
+            Featured Flagship Project
+          </span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+          Levyra (DeepSound)
+        </h2>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#121624] border border-cyan-500/20 text-cyan-300">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
+          </svg>
+          Android
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-[#121624] border border-cyan-500/20 text-cyan-300">
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
+          </svg>
+          Windows
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono bg-emerald-950/40 border border-emerald-500/30 text-emerald-300">
+          Open Source · GPL-3.0
+        </span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0d1019] border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
+      <div class="absolute -top-32 -right-32 w-96 h-96 bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none"></div>
+
+      <div class="lg:col-span-7 flex flex-col gap-6">
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+          Levyra is an open-source music streaming and offline player built for listeners who care about audio fidelity, responsiveness, and privacy. Engineered from scratch with zero telemetry, no tracking proxies, and direct CDN audio delivery.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-[#121724] border border-white/5 flex flex-col gap-1.5">
+            <div class="text-cyan-400 font-mono text-xs font-semibold uppercase tracking-wider">
+              Audio Engine
+            </div>
+            <div class="text-white font-medium text-sm">
+              AndroidX Media3 & ExoPlayer
+            </div>
+            <p class="text-slate-400 text-xs leading-normal">
+              Gapless low-latency playback pipeline with resilient session management and foreground stability.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#121724] border border-white/5 flex flex-col gap-1.5">
+            <div class="text-cyan-400 font-mono text-xs font-semibold uppercase tracking-wider">
+              Synced Lyrics
+            </div>
+            <div class="text-white font-medium text-sm">
+              LRCLIB Integration
+            </div>
+            <p class="text-slate-400 text-xs leading-normal">
+              Real-time synchronized lyric scrolling, accurate time-sync scoring, and localized TTML parsing.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#121724] border border-white/5 flex flex-col gap-1.5">
+            <div class="text-cyan-400 font-mono text-xs font-semibold uppercase tracking-wider">
+              Offline Vault
+            </div>
+            <div class="text-white font-medium text-sm">
+              Resumable Local Downloads
+            </div>
+            <p class="text-slate-400 text-xs leading-normal">
+              Background downloads with audio tag embedding and persistent SQLite metadata storage.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-[#121724] border border-white/5 flex flex-col gap-1.5">
+            <div class="text-cyan-400 font-mono text-xs font-semibold uppercase tracking-wider">
+              Privacy Standard
+            </div>
+            <div class="text-white font-medium text-sm">
+              Zero Tracking / No Account
+            </div>
+            <p class="text-slate-400 text-xs leading-normal">
+              No ads, no analytics, no third-party telemetry. Direct connections exclusively for media playback.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2 pt-2">
+          <TechBadge text="Kotlin" variant="cyan" />
+          <TechBadge text="Jetpack Compose" variant="cyan" />
+          <TechBadge text="AndroidX Media3" variant="default" />
+          <TechBadge text="ExoPlayer" variant="default" />
+          <TechBadge text="Room SQLite" variant="default" />
+          <TechBadge text="LRCLIB" variant="default" />
+          <TechBadge text="libvlc" variant="default" />
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 pt-4 border-t border-white/5">
+          <Button href="/projects/levyra" variant="primary" size="md">
+            <span>Explore Levyra</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Button>
+
+          <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
+            <span>GitHub Repository</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </Button>
+
+          <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="outline" size="md">
+            <span>Latest Release</span>
+          </Button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col items-center justify-center">
+        <div class="relative w-full max-w-md mx-auto group">
+          <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 to-blue-600/30 rounded-2xl blur-lg opacity-60 group-hover:opacity-100 transition-opacity"></div>
+          <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-[#0a0d14]">
+            <img 
+              src="/assets/levyra/home_top50.webp" 
+              alt="Levyra Player Interface" 
+              class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+              width="600"
+              height="800"
+            />
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between w-full max-w-md px-2 text-xs font-mono text-slate-400">
+          <span>Jetpack Compose UI</span>
+          <span>Material You Dynamic Theme</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

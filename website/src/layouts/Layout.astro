@@ -1,0 +1,45 @@
+---
+import '../styles/global.css';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+  schema?: Record<string, any>;
+}
+
+const { title, description, image, canonicalUrl, schema } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <SEO 
+      title={title}
+      description={description}
+      image={image}
+      canonicalUrl={canonicalUrl}
+      schema={schema}
+    />
+  </head>
+  <body class="min-h-screen bg-[#07090e] text-slate-100 flex flex-col selection:bg-cyan-500/20 selection:text-cyan-200 antialiased">
+    <a 
+      href="#main-content" 
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-cyan-400 text-slate-950 font-bold rounded-md shadow-lg outline-none ring-2 ring-white"
+    >
+      Skip to main content
+    </a>
+
+    <Header />
+
+    <main id="main-content" class="flex-grow">
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

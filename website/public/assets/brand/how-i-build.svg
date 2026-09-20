@@ -1,0 +1,56 @@
+<svg width="420" height="135" viewBox="0 0 420 135" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Code Build Improve Repeat - Repositories">
+  <defs>
+    <!-- Background Radial Glow that smoothly dissolves into GitHub light #FFFFFF -->
+    <radialGradient id="vGlowLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.06"/>
+      <stop offset="60%" stop-color="#6366F1" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vPulseLight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="vLineGradLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="sqBgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F6F8FA"/>
+    </linearGradient>
+    <linearGradient id="sqBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#D0D7DE" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Ambient Glow behind the whole composition -->
+  <rect x="0" y="0" width="420" height="135" fill="url(#vGlowLight)"/>
+
+  <!-- Pulse Bars at top -->
+  <g transform="translate(210, 18)">
+    <rect x="-21" y="-3" width="2.5" height="6" rx="1.25" fill="url(#vPulseLight)"/>
+    <rect x="-14" y="-6" width="2.5" height="12" rx="1.25" fill="url(#vPulseLight)"/>
+    <rect x="-7" y="-10" width="2.5" height="20" rx="1.25" fill="url(#vPulseLight)"/>
+    <rect x="-1.25" y="-13" width="2.5" height="26" rx="1.25" fill="#0284C7"/>
+    <rect x="4.5" y="-10" width="2.5" height="20" rx="1.25" fill="url(#vPulseLight)"/>
+    <rect x="11.5" y="-6" width="2.5" height="12" rx="1.25" fill="url(#vPulseLight)"/>
+    <rect x="18.5" y="-3" width="2.5" height="6" rx="1.25" fill="url(#vPulseLight)"/>
+  </g>
+
+  <!-- Motto text tightly placed directly under pulse -->
+  <text x="210" y="44" text-anchor="middle" fill="#1F2328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="700" letter-spacing="2.8">
+    CODE <tspan fill="#0284C7">·</tspan> BUILD <tspan fill="#0284C7">·</tspan> IMPROVE <tspan fill="#0284C7">·</tspan> REPEAT
+  </text>
+
+  <!-- Seamless connecting micro line / indicator -->
+  <line x1="210" y1="52" x2="210" y2="64" stroke="url(#vLineGradLight)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Square Badge 58x58 docked closely below -->
+  <g transform="translate(181, 66)">
+    <rect x="0" y="0" width="58" height="58" rx="13" fill="url(#sqBgLight)" stroke="url(#sqBorderLight)" stroke-width="1.2"/>
+    <!-- Octocat centered -->
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M29 13C21.82 13 16 18.82 16 26C16 31.74 19.72 36.62 24.88 38.34C25.53 38.46 25.77 38.06 25.77 37.71C25.77 37.4 25.76 36.42 25.75 35.34C22.14 36.13 21.37 33.73 21.37 33.73C20.78 32.23 19.93 31.83 19.93 31.83C18.75 31.02 20.02 31.04 20.02 31.04C21.32 31.13 22.01 32.38 22.01 32.38C23.17 34.37 25.05 33.79 25.79 33.46C25.91 32.62 26.25 32.04 26.62 31.72C23.73 31.39 20.7 30.28 20.7 25.31C20.7 23.89 21.21 22.73 22.03 21.82C21.9 21.49 21.45 20.17 22.16 18.38C22.16 18.38 23.25 18.03 25.73 19.71C26.76 19.42 27.88 19.28 28.99 19.27C30.1 19.28 31.22 19.42 32.25 19.71C34.73 18.03 35.82 18.38 35.82 18.38C36.53 20.17 36.08 21.49 35.95 21.82C36.79 22.73 37.29 23.89 37.29 25.31C37.29 30.3 34.25 31.39 31.35 31.71C31.82 32.11 32.23 32.9 32.23 34.11C32.23 35.85 32.22 37.25 32.22 37.71C32.22 38.06 32.45 38.47 33.11 38.34C38.27 36.61 42 31.73 42 26C42 18.82 36.18 13 29 13Z" fill="#24292F"/>
+    <text x="29" y="50" text-anchor="middle" fill="#0284C7" font-family="ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, monospace" font-size="8" font-weight="700" letter-spacing="1">REPOS ↗</text>
+  </g>
+</svg>

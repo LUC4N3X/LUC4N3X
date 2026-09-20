@@ -1,0 +1,20 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GitHub Repositories">
+  <defs>
+    <linearGradient id="sqBorderLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D0D7DE"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1.5" y="1.5" width="93" height="93" rx="16" fill="#F6F8FA" stroke="url(#sqBorderLight)" stroke-width="1.2"/>
+
+  <!-- Centered GitHub Octocat (Dark Slate) -->
+  <g transform="translate(32, 20)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 0C7.16 0 0 7.16 0 16c0 7.08 4.58 13.07 10.94 15.2.8.15 1.06-.35 1.06-.77v-2.7c-4.43.96-5.37-2.14-5.37-2.14-.73-1.86-1.78-2.35-1.78-2.35-1.45-.99.11-.97.11-.97 1.6 1.12 2.45 1.65 2.45 1.65 1.39 2.43 3.74 1.71 4.65 1.33.16-1.04.56-1.74 1.01-2.14-3.55-.4-7.28-1.78-7.28-7.87 0-1.78.61-3.17 1.65-4.34-.16-.4-.72-2.06.16-4.22 0 0 1.34-.43 4.4 1.63 1.26-.35 2.64-.53 4-.53s2.74.18 4 .53c3.06-2.06 4.4-1.63 4.4-1.63.88 2.16.32 3.82.16 4.22 1.04 1.17 1.65 2.56 1.65 4.34 0 6.11-3.74 7.46-7.31 7.86.58.5 1.1 1.47 1.1 2.96V30.4c0 .43.26.94 1.07.8C27.42 29.07 32 23.08 32 16c0-8.84-7.16-16-16-16z" fill="#0F172A"/>
+  </g>
+
+  <text x="48" y="72" text-anchor="middle" fill="#57606A" font-family="'JetBrains Mono', SFMono-Regular, monospace" font-size="8.5" font-weight="600" letter-spacing="1.5">
+    REPOS
+  </text>
+  <path d="M 64 68 L 68 64 M 65 64 L 68 64 L 68 67" stroke="#0284C7" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
