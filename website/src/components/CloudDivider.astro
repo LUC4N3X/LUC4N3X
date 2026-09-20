@@ -1,0 +1,33 @@
+---
+interface Props {
+  fill?: string;
+  flip?: boolean;
+  className?: string;
+}
+
+const { fill = "#080b11", flip = false, className = "" } = Astro.props;
+---
+
+<div class={`relative w-full overflow-hidden leading-none select-none pointer-events-none -my-1 z-10 ${className}`}>
+  <svg 
+    class={`block w-full h-12 sm:h-16 md:h-20 lg:h-24 ${flip ? 'rotate-180' : ''}`} 
+    viewBox="0 0 1440 120" 
+    fill="none" 
+    preserveAspectRatio="none"
+  >
+    <path 
+      d="M0,35 C180,85 360,15 540,65 C720,115 900,30 1080,75 C1260,110 1380,45 1440,55 L1440,120 L0,120 Z" 
+      fill={fill} 
+      fill-opacity="0.35" 
+    />
+    <path 
+      d="M0,60 C220,15 420,95 660,45 C900,-5 1120,80 1320,40 C1380,25 1420,50 1440,45 L1440,120 L0,120 Z" 
+      fill={fill} 
+      fill-opacity="0.65" 
+    />
+    <path 
+      d="M0,80 C160,45 320,105 500,75 C680,45 860,100 1040,70 C1220,40 1360,85 1440,75 L1440,120 L0,120 Z" 
+      fill={fill} 
+    />
+  </svg>
+</div>
