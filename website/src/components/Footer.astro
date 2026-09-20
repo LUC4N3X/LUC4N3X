@@ -2,117 +2,119 @@
 import { siteConfig } from '../data/site';
 ---
 
-<footer class="w-full relative mt-24">
-  <div class="relative w-full overflow-hidden leading-none">
-    <svg class="relative block w-full h-20 sm:h-32 md:h-40" viewBox="0 0 1440 180" fill="none" preserveAspectRatio="none">
-      <path d="M0,45 C180,100 360,10 540,55 C720,100 900,20 1080,70 C1260,120 1380,50 1440,65 L1440,180 L0,180 Z" fill="#06090f" fill-opacity="0.7"/>
-      <path d="M0,80 C220,145 440,45 660,100 C880,155 1100,55 1300,110 C1380,130 1410,100 1440,105 L1440,180 L0,180 Z" fill="#0a0f1d"/>
+<footer class="w-full relative mt-28 overflow-hidden">
+  <div class="relative w-full overflow-hidden leading-none select-none pointer-events-none">
+    <svg class="relative block w-full h-36 sm:h-52 md:h-64 lg:h-72" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+      <path 
+        d="M0,140 C140,50 260,180 420,100 C580,20 720,160 880,80 C1020,10 1160,140 1300,70 C1380,20 1420,80 1440,90 L1440,280 L0,280 Z" 
+        fill="#10192e" 
+        fill-opacity="0.8"
+      />
+      <path 
+        d="M0,180 C160,90 300,210 480,130 C640,60 760,190 920,120 C1080,40 1200,160 1340,100 C1400,70 1430,110 1440,120 L1440,280 L0,280 Z" 
+        fill="#0a0f1d"
+      />
     </svg>
-    <div class="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-4 z-10 flex flex-col items-center">
-      <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-1 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-2xl shadow-indigo-500/40 transform hover:scale-110 transition-transform duration-300">
-        <div class="w-full h-full rounded-full overflow-hidden bg-[#080b11]">
+
+    <div class="absolute left-1/2 -translate-x-1/2 top-4 sm:top-8 md:top-12 z-20 flex flex-col items-center pointer-events-auto">
+      <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full p-1.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-2xl shadow-indigo-500/50 transform hover:scale-105 transition-transform duration-300">
+        <div class="w-full h-full rounded-full overflow-hidden bg-[#0a0f1d]">
           <img 
             src="/assets/brand/luc4n3x-avatar.png" 
             alt="Luca Drogo (LUC4N3X)" 
             class="w-full h-full object-cover"
-            width="96"
-            height="96"
+            width="128"
+            height="128"
           />
         </div>
       </div>
     </div>
   </div>
 
-  <div class="w-full bg-[#0a0f1d] pt-14 pb-16 border-t border-white/[0.04]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="w-full bg-[#0a0f1d] pt-8 pb-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
       
-      <div class="text-center max-w-xl mx-auto mb-16">
-        <h3 class="text-xl sm:text-2xl font-semibold text-white tracking-tight mb-2">
-          Luca Drogo <span class="text-zinc-500">(@LUC4N3X)</span>
-        </h3>
-        <p class="text-sm sm:text-base text-zinc-400 font-normal leading-relaxed">
-          Software engineered with craftsmanship, local performance, and respect for user autonomy. 💙
-        </p>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
+        
+        <div class="lg:col-span-5 flex flex-col gap-5">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+              Luca Drogo <span class="text-zinc-500 text-lg font-normal">(@LUC4N3X)</span>
+            </h3>
+            <p class="text-sm sm:text-base text-zinc-400 mt-1 font-normal leading-relaxed">
+              Software engineered with craft and respect for your autonomy. 💙
+            </p>
+          </div>
 
-        <form action="/contact" method="get" class="flex items-center gap-2 max-w-md mx-auto mt-6">
-          <input 
-            type="text" 
-            name="message" 
-            placeholder="Have a question or want to collaborate?" 
-            class="w-full px-4 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-indigo-500 transition-colors"
-          />
-          <button 
-            type="submit" 
-            class="px-4 py-2.5 rounded-xl bg-[#818cf8] hover:bg-[#6366f1] text-white font-medium transition-colors flex items-center justify-center flex-shrink-0"
-            aria-label="Send message"
-          >
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </button>
-        </form>
-      </div>
+          <div class="pt-2">
+            <span class="text-xs font-mono text-zinc-400 block mb-2">
+              Want to collaborate, report an issue, or say hello?
+            </span>
+            <form action="/contact" method="get" class="flex items-center gap-2 max-w-md">
+              <input 
+                type="text" 
+                name="message" 
+                placeholder="hello@example.com or your message..." 
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.05] border border-white/[0.12] text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#818cf8] transition-colors"
+              />
+              <button 
+                type="submit" 
+                class="px-5 py-3 rounded-xl bg-[#fbbf24] hover:bg-[#f59e0b] text-slate-950 font-semibold transition-all duration-200 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20 hover:scale-105"
+                aria-label="Send message"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </button>
+            </form>
+          </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-white/[0.08] text-sm">
-        <div class="flex flex-col gap-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold">
-            Browse Topics
-          </span>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/articles" class="hover:text-white transition-colors">Android Internals</a></li>
-            <li><a href="/articles" class="hover:text-white transition-colors">Media3 & Audio</a></li>
-            <li><a href="/articles" class="hover:text-white transition-colors">Zero Telemetry</a></li>
-            <li><a href="/articles" class="hover:text-white transition-colors">Reverse Engineering</a></li>
-            <li><a href="/articles" class="hover:text-white transition-colors">Craftsmanship</a></li>
-          </ul>
+          <p class="text-xs font-mono text-zinc-600 pt-2">
+            © {siteConfig.year} Luca Drogo. All Rights Reserved.
+          </p>
         </div>
 
-        <div class="flex flex-col gap-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#818cf8] font-semibold">
-            Software
-          </span>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/projects/levyra" class="hover:text-white transition-colors">Levyra (DeepSound)</a></li>
-            <li><a href="/projects" class="hover:text-white transition-colors">Thalarch Layer</a></li>
-            <li><a href="/projects" class="hover:text-white transition-colors">Instara-Crew</a></li>
-            <li><a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">All Repositories ↗</a></li>
-          </ul>
+        <div class="lg:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 text-sm">
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold">
+              Browse By Topic
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/articles" class="hover:text-white transition-colors">Android Internals</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Media3 & Audio</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Zero Telemetry</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Reverse Engineering</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Craftsmanship</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#818cf8] font-semibold">
+              Software & Projects
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/projects/levyra" class="hover:text-white transition-colors">Levyra (DeepSound)</a></li>
+              <li><a href="/projects" class="hover:text-white transition-colors">Thalarch Layer</a></li>
+              <li><a href="/projects" class="hover:text-white transition-colors">Instara-Crew</a></li>
+              <li><a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Profile ↗</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#f43f5e] font-semibold">
+              General & Mirrors
+            </span>
+            <ul class="space-y-2.5 text-zinc-400">
+              <li><a href="/about" class="hover:text-white transition-colors">About Luca</a></li>
+              <li><a href="/articles" class="hover:text-white transition-colors">Engineering Notes</a></li>
+              <li><a href="https://f-droid.org/packages/com.luc4n3x.levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">F-Droid Package ↗</a></li>
+              <li><a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Weblate L10n ↗</a></li>
+              <li><a href="https://sourceforge.net/projects/levyra.mirror/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">SourceForge ↗</a></li>
+              <li><a href="/legal" class="hover:text-white transition-colors">Privacy & Terms</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="flex flex-col gap-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#c084fc] font-semibold">
-            General
-          </span>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/about" class="hover:text-white transition-colors">About Luca</a></li>
-            <li><a href="/articles" class="hover:text-white transition-colors">Engineering Notes</a></li>
-            <li><a href="/contact" class="hover:text-white transition-colors">Get in Touch</a></li>
-            <li><a href="/legal" class="hover:text-white transition-colors">Legal & Licensing</a></li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col gap-3">
-          <span class="text-xs font-mono uppercase tracking-widest text-[#f43f5e] font-semibold">
-            Verified Mirrors
-          </span>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="https://f-droid.org/packages/com.luc4n3x.levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">F-Droid Package ↗</a></li>
-            <li><a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Weblate Translations ↗</a></li>
-            <li><a href="https://sourceforge.net/projects/levyra.mirror/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">SourceForge Mirror ↗</a></li>
-            <li><a href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub Release ↗</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
-        <p>© {siteConfig.year} Luca Drogo (LUC4N3X). All rights reserved.</p>
-        <div class="flex items-center gap-3">
-          <a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
-          <span>·</span>
-          <a href="https://hosted.weblate.org/engage/levyra/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Weblate</a>
-          <span>·</span>
-          <a href="/legal" class="hover:text-white transition-colors">Privacy & Terms</a>
-        </div>
       </div>
 
     </div>
