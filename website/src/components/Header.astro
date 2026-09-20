@@ -11,35 +11,37 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-black/80 backdrop-blur-xl transition-colors">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff] rounded-full p-1">
-      <div class="relative w-8 h-8 rounded-full overflow-hidden border border-white/[0.12] bg-white/[0.04] flex items-center justify-center group-hover:border-[#2997ff]/60 transition-colors">
-        <img 
-          src="/assets/brand/luc4n3x-avatar.png" 
-          alt="Luca Drogo (LUC4N3X)" 
-          class="w-full h-full object-cover"
-          width="32"
-          height="32"
-        />
+<header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#080b11]/80 backdrop-blur-xl transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-full p-1">
+      <div class="relative w-9 h-9 rounded-full p-0.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
+        <div class="w-full h-full rounded-full overflow-hidden bg-[#080b11]">
+          <img 
+            src="/assets/brand/luc4n3x-avatar.png" 
+            alt="Luca Drogo (LUC4N3X)" 
+            class="w-full h-full object-cover"
+            width="36"
+            height="36"
+          />
+        </div>
       </div>
       <div class="flex flex-col">
-        <span class="font-semibold text-sm sm:text-base tracking-tight text-white group-hover:text-[#2997ff] transition-colors">
+        <span class="font-semibold text-sm sm:text-base tracking-tight text-white group-hover:text-[#38bdf8] transition-colors">
           LUC4N3X
         </span>
       </div>
     </a>
 
-    <nav class="hidden md:flex items-center gap-1" aria-label="Main Navigation">
+    <nav class="hidden md:flex items-center gap-1.5" aria-label="Main Navigation">
       {navItems.map(item => {
         const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
         return (
           <a
             href={item.href}
-            class={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
+            class={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
               isActive 
-                ? 'text-white bg-white/[0.08]' 
-                : 'text-zinc-400 hover:text-white hover:bg-white/[0.04]'
+                ? 'text-white bg-white/[0.1] shadow-sm' 
+                : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
             }`}
           >
             {item.label}
@@ -53,7 +55,7 @@ const currentPath = Astro.url.pathname;
         href="https://github.com/LUC4N3X" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="text-zinc-400 hover:text-white p-2 rounded-full hover:bg-white/[0.06] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff]"
+        class="text-zinc-400 hover:text-white p-2 rounded-full hover:bg-white/[0.06] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
         aria-label="GitHub Profile"
       >
         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -69,7 +71,7 @@ const currentPath = Astro.url.pathname;
     <button 
       type="button" 
       id="mobile-menu-toggle"
-      class="md:hidden text-zinc-400 hover:text-white p-2 rounded-full hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff]"
+      class="md:hidden text-zinc-400 hover:text-white p-2 rounded-full hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
@@ -85,7 +87,7 @@ const currentPath = Astro.url.pathname;
 
   <div 
     id="mobile-menu" 
-    class="hidden md:hidden border-b border-white/[0.08] bg-black/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2 transition-all"
+    class="hidden md:hidden border-b border-white/[0.08] bg-[#080b11]/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2 transition-all"
   >
     {navItems.map(item => {
       const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
@@ -94,7 +96,7 @@ const currentPath = Astro.url.pathname;
           href={item.href}
           class={`block px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             isActive 
-              ? 'text-white bg-white/[0.08]' 
+              ? 'text-white bg-white/[0.1]' 
               : 'text-zinc-400 hover:text-white hover:bg-white/[0.04]'
           }`}
         >
@@ -104,7 +106,7 @@ const currentPath = Astro.url.pathname;
     })}
     <a
       href="/projects/levyra"
-      class="block px-4 py-2 rounded-full text-sm font-medium text-[#2997ff] bg-white/[0.04] border border-white/[0.08]"
+      class="block px-4 py-2 rounded-full text-sm font-medium text-[#38bdf8] bg-white/[0.04] border border-white/[0.08]"
     >
       Explore Levyra →
     </a>

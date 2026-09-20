@@ -10,7 +10,7 @@ import { siteConfig } from '../data/site';
   title={`About & Philosophy — ${siteConfig.name}`}
   description="Learn about LUC4N3X: engineering philosophy, open-source principles, development environment, and software craftsmanship."
 >
-  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
+  <div class="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
     <SectionHeader
       eyebrow="Identity & Principles"
       title="Engineering with Focus"
@@ -18,8 +18,8 @@ import { siteConfig } from '../data/site';
     />
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
-      <div class="lg:col-span-7 space-y-6 text-zinc-400 text-base leading-relaxed font-normal">
-        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+      <div class="lg:col-span-7 space-y-6 text-zinc-300 text-base leading-relaxed font-normal">
+        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
           <h3 class="text-2xl font-semibold text-white">Who I Am</h3>
           <p>
             Hey, I'm Luca (LUC4N3X). I am an independent software developer building tools, mobile applications, and network infrastructure that I actively use in my daily life.
@@ -29,9 +29,9 @@ import { siteConfig } from '../data/site';
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
           <h3 class="text-2xl font-semibold text-white">The Core Rule: How I Build</h3>
-          <blockquote class="border-l-2 border-[#2997ff] pl-4 py-1 text-white font-medium italic text-lg">
+          <blockquote class="border-l-2 border-[#818cf8] pl-4 py-1 text-white font-medium italic text-lg">
             "Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish."
           </blockquote>
           <p>
@@ -39,7 +39,7 @@ import { siteConfig } from '../data/site';
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
           <h3 class="text-2xl font-semibold text-white">Why Privacy & Zero Telemetry Matter</h3>
           <p>
             Every software product I release operates under a strict principle: your device belongs to you. Software should not phone home, report user habits to third-party brokers, or require mandatory user accounts for features that can function entirely on-device.
@@ -51,18 +51,20 @@ import { siteConfig } from '../data/site';
       </div>
 
       <div class="lg:col-span-5 flex flex-col gap-6">
-        <div class="rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-6 flex flex-col sm:flex-row items-center gap-5">
-          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-[#2997ff]/40 shadow-lg shadow-[#2997ff]/10 flex-shrink-0">
-            <img 
-              src="/assets/brand/luc4n3x-avatar.png" 
-              alt="Luca Drogo (LUC4N3X)" 
-              class="w-full h-full object-cover"
-              width="112"
-              height="112"
-            />
+        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 flex flex-col sm:flex-row items-center gap-5 hover:border-indigo-500/30 transition-colors">
+          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-0.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-lg shadow-indigo-500/15 flex-shrink-0">
+            <div class="w-full h-full rounded-2xl overflow-hidden bg-[#080b11]">
+              <img 
+                src="/assets/brand/luc4n3x-avatar.png" 
+                alt="Luca Drogo (LUC4N3X)" 
+                class="w-full h-full object-cover"
+                width="112"
+                height="112"
+              />
+            </div>
           </div>
           <div class="flex flex-col text-center sm:text-left">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] font-semibold block mb-1">
+            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold block mb-1">
               Luca Drogo
             </span>
             <span class="text-lg font-semibold text-white mb-1">
@@ -74,7 +76,7 @@ import { siteConfig } from '../data/site';
           </div>
         </div>
 
-        <div class="rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-6">
+        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 hover:border-indigo-500/30 transition-colors">
           <img 
             src="/assets/brand/luc4n3x-workspace.svg" 
             alt="Luca at his developer workspace" 
@@ -87,7 +89,7 @@ import { siteConfig } from '../data/site';
           </div>
         </div>
 
-        <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <div class="p-8 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
           <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold block">
             Primary Tooling
           </span>
@@ -108,7 +110,7 @@ import { siteConfig } from '../data/site';
       </div>
     </div>
 
-    <div class="p-8 sm:p-12 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-indigo-500/30 transition-colors">
       <div>
         <h3 class="text-2xl font-semibold text-white mb-2">Ready to explore the software?</h3>
         <p class="text-zinc-400 text-sm">Review the full collection of open-source projects or get in touch directly.</p>

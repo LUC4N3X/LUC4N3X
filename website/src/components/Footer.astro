@@ -2,26 +2,28 @@
 import { siteConfig } from '../data/site';
 ---
 
-<footer class="w-full border-t border-white/[0.08] bg-black py-16 sm:py-20 mt-20">
+<footer class="w-full border-t border-white/[0.08] bg-[#080b11] py-16 sm:py-20 mt-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
       <div class="md:col-span-2 flex flex-col gap-4">
-        <a href="/" class="flex items-center gap-3 w-fit">
-          <div class="w-7 h-7 rounded-full overflow-hidden border border-white/[0.08] bg-white/[0.04] flex items-center justify-center">
-            <img 
-              src="/assets/brand/luc4n3x-mark.svg" 
-              alt="LUC4N3X" 
-              class="w-3.5 h-3.5 object-contain"
-              width="14"
-              height="14"
-            />
+        <a href="/" class="flex items-center gap-3 w-fit group">
+          <div class="w-8 h-8 rounded-full p-0.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] group-hover:scale-105 transition-transform">
+            <div class="w-full h-full rounded-full overflow-hidden bg-[#080b11]">
+              <img 
+                src="/assets/brand/luc4n3x-avatar.png" 
+                alt="LUC4N3X" 
+                class="w-full h-full object-cover"
+                width="32"
+                height="32"
+              />
+            </div>
           </div>
-          <span class="font-semibold text-base tracking-tight text-white">LUC4N3X</span>
+          <span class="font-semibold text-base tracking-tight text-white group-hover:text-[#38bdf8] transition-colors">LUC4N3X</span>
         </a>
         <p class="text-zinc-400 text-sm max-w-sm leading-relaxed font-normal">
           {siteConfig.motto}
         </p>
-        <div class="inline-flex items-center gap-2 text-xs font-mono text-zinc-600">
+        <div class="inline-flex items-center gap-2 text-xs font-mono text-zinc-500">
           <span>Open source · Zero telemetry · Independent</span>
         </div>
       </div>

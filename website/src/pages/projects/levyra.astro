@@ -28,7 +28,7 @@ const schemaData = {
   image="/assets/levyra/levyra-lockup-dark.svg"
   schema={schemaData}
 >
-  <article class="relative overflow-hidden pt-16 pb-28 sm:pb-36 bg-black">
+  <article class="relative overflow-hidden pt-16 pb-28 sm:pb-36 bg-[#080b11]">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       
       <header class="flex flex-col items-center text-center max-w-3xl mx-auto mb-20">
@@ -46,7 +46,7 @@ const schemaData = {
           High-Fidelity Audio.<br class="hidden sm:inline" /> Zero Telemetry. Complete Autonomy.
         </h1>
 
-        <p class="text-zinc-400 text-lg sm:text-xl leading-relaxed font-normal mb-10 max-w-2xl">
+        <p class="text-zinc-300 text-lg sm:text-xl leading-relaxed font-normal mb-10 max-w-2xl">
           Levyra (DeepSound) was created out of frustration with modern music streaming apps: memory bloat, persistent analytics beacons, mandatory accounts, and aggressive background killers. Built natively from the ground up for listeners who care about quality, responsiveness, and privacy.
         </p>
 
@@ -94,8 +94,8 @@ const schemaData = {
 
       <section class="space-y-16 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
         
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] space-y-6">
-          <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-widest block">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
+          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
             The Philosophy
           </span>
           <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
@@ -109,8 +109,8 @@ const schemaData = {
           </p>
         </div>
 
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] space-y-6">
-          <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-widest block">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
+          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
             Audio Engineering
           </span>
           <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
@@ -124,19 +124,19 @@ const schemaData = {
           </p>
           <div class="space-y-4 text-base text-zinc-400 pl-2">
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#38bdf8] font-bold">·</span>
               <div>
                 <strong class="text-white">Custom Adaptive Ring Buffering:</strong> Pre-allocates decode buffers dynamically to absorb network latency spikes and prevent audible dropouts during mobile network cell handoffs.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#818cf8] font-bold">·</span>
               <div>
                 <strong class="text-white">Foreground Service Resilience:</strong> Strict adherence to Android 14+ foreground service types with audio focus contracts, ensuring seamless continuity even when the operating system aggressively reclaims background memory.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#f43f5e] font-bold">·</span>
               <div>
                 <strong class="text-white">Gapless Playback & Seamless Transitions:</strong> Automatic track pre-fetching eliminates silence between songs, preserving the intended flow of live recordings and concept albums.
               </div>
@@ -144,8 +144,8 @@ const schemaData = {
           </div>
         </div>
 
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] space-y-6">
-          <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-widest block">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
+          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
             Privacy Architecture
           </span>
           <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
@@ -156,19 +156,19 @@ const schemaData = {
           </p>
           <div class="space-y-4 text-base text-zinc-400 pl-2">
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#38bdf8] font-bold">·</span>
               <div>
                 <strong class="text-white">On-Device SQLite Database:</strong> Playlists, favorites, and playback state are stored locally using Android Room. There are no remote sync databases or user profiling servers.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#818cf8] font-bold">·</span>
               <div>
                 <strong class="text-white">Direct TLS 1.3 Connections:</strong> When streaming or resolving media, requests connect straight to the source distribution servers without routing through intermediate proxy servers that could log client IPs or request metadata.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-bold">·</span>
+              <span class="text-[#f43f5e] font-bold">·</span>
               <div>
                 <strong class="text-white">Zero Tracking SDKs:</strong> The application contains no Google Firebase Analytics, no Sentry crash aggregators, and no third-party behavioral trackers.
               </div>
@@ -176,8 +176,8 @@ const schemaData = {
           </div>
         </div>
 
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] space-y-6">
-          <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-widest block">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
+          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
             System Integration
           </span>
           <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
@@ -188,25 +188,25 @@ const schemaData = {
           </p>
           <div class="space-y-4 text-base text-zinc-400 pl-2">
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-mono text-sm">INTERNET</span>
+              <span class="text-[#38bdf8] font-mono text-sm">INTERNET</span>
               <div>
                 Streams audio chunks, fetches synchronized lyrics from LRCLIB, and downloads high-resolution album artwork on demand.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-mono text-sm">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
+              <span class="text-[#818cf8] font-mono text-sm">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
               <div>
                 Allows the audio engine to remain active and controllable via system media controls when the application is minimized or the screen is turned off.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-mono text-sm">POST_NOTIFICATIONS</span>
+              <span class="text-[#c084fc] font-mono text-sm">POST_NOTIFICATIONS</span>
               <div>
                 Required on modern Android versions to display the interactive media notification and show download progress for offline tracks.
               </div>
             </div>
             <div class="flex items-start gap-3">
-              <span class="text-[#2997ff] font-mono text-sm">WAKE_LOCK</span>
+              <span class="text-[#f43f5e] font-mono text-sm">WAKE_LOCK</span>
               <div>
                 Prevents the CPU from entering deep sleep during active audio decoding while the display is locked.
               </div>
@@ -214,8 +214,8 @@ const schemaData = {
           </div>
         </div>
 
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] space-y-6">
-          <span class="text-xs font-mono font-semibold text-[#2997ff] uppercase tracking-widest block">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
+          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
             Cross-Platform Desktop
           </span>
           <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
@@ -229,7 +229,7 @@ const schemaData = {
           </p>
         </div>
 
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col sm:flex-row items-center justify-between gap-8">
+        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] flex flex-col sm:flex-row items-center justify-between gap-8 hover:border-indigo-500/30 transition-colors">
           <div>
             <h3 class="text-2xl font-semibold text-white mb-2">Experience Levyra Today</h3>
             <p class="text-zinc-400 text-sm">Download the latest APK for Android, grab the Windows installer, or inspect the source on GitHub.</p>
