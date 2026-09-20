@@ -1,21 +1,22 @@
 ---
 interface Props {
   text: string;
-  variant?: "default" | "cyan" | "muted";
+  variant?: "default" | "cyan" | "muted" | "blue";
   size?: "sm" | "md";
 }
 
 const { text, variant = "default", size = "sm" } = Astro.props;
 
-const base = "inline-flex items-center font-mono rounded border transition-colors";
+const base = "inline-flex items-center font-mono rounded-full border transition-colors";
 const sizes = {
-  sm: "text-[11px] px-2 py-0.5 tracking-wide",
-  md: "text-xs px-2.5 py-1 tracking-wide"
+  sm: "text-[11px] px-2.5 py-0.5 tracking-wide",
+  md: "text-xs px-3 py-1 tracking-wide"
 };
 const variants = {
-  default: "bg-[#0f1420] text-slate-300 border-white/8 hover:border-white/15",
-  cyan: "bg-cyan-950/40 text-cyan-300 border-cyan-500/25 hover:border-cyan-400/40",
-  muted: "bg-[#0b0e14] text-slate-400 border-white/5"
+  default: "bg-white/[0.06] text-[#86868b] border-white/[0.08] hover:text-[#f5f5f7]",
+  cyan: "bg-[#0071e3]/10 text-[#2997ff] border-[#0071e3]/20",
+  blue: "bg-[#0071e3]/10 text-[#2997ff] border-[#0071e3]/20",
+  muted: "bg-transparent text-[#6e6e73] border-white/[0.05]"
 };
 ---
 

@@ -21,19 +21,19 @@ const {
   ariaLabel
 } = Astro.props;
 
-const baseStyles = "inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#07090e] disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
+const baseStyles = "inline-flex items-center justify-center font-medium rounded-full transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff] focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]";
 
 const sizeStyles = {
-  sm: "text-xs px-3 py-1.5 rounded-md gap-1.5",
-  md: "text-sm px-4 py-2.5 rounded-lg gap-2",
-  lg: "text-base px-6 py-3.5 rounded-xl gap-2.5 font-semibold"
+  sm: "text-xs px-3.5 py-1.5 gap-1.5",
+  md: "text-sm px-5 py-2 gap-2",
+  lg: "text-base px-6 py-3 gap-2.5"
 };
 
 const variantStyles = {
-  primary: "bg-cyan-400 text-slate-950 hover:bg-cyan-300 shadow-[0_0_20px_rgba(0,212,255,0.25)] hover:shadow-[0_0_25px_rgba(0,212,255,0.4)]",
-  secondary: "bg-[#121622] text-slate-200 border border-white/10 hover:border-white/20 hover:bg-[#181e2e] hover:text-white",
-  outline: "bg-transparent text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/10",
-  ghost: "bg-transparent text-slate-300 hover:text-white hover:bg-white/5"
+  primary: "bg-[#0071e3] text-white hover:bg-[#0077ed]",
+  secondary: "bg-white/[0.08] text-[#f5f5f7] border border-white/[0.12] hover:bg-white/[0.14] hover:text-white backdrop-blur-md",
+  outline: "bg-transparent text-[#2997ff] border border-[#2997ff]/40 hover:border-[#2997ff] hover:bg-[#2997ff]/10",
+  ghost: "bg-transparent text-[#86868b] hover:text-[#f5f5f7] hover:bg-white/[0.06]"
 };
 
 const combinedClasses = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

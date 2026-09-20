@@ -10,24 +10,21 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-white/8 bg-[#07090e]/80 backdrop-blur-md transition-colors">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded-lg p-1">
-      <div class="relative w-8 h-8 sm:w-9 sm:h-9 rounded-lg overflow-hidden border border-white/10 bg-[#0d111a] flex items-center justify-center group-hover:border-cyan-500/50 transition-colors">
+<header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-black/80 backdrop-blur-xl transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff] rounded-full p-1">
+      <div class="relative w-8 h-8 rounded-full overflow-hidden border border-white/[0.1] bg-white/[0.05] flex items-center justify-center group-hover:border-white/30 transition-colors">
         <img 
           src="/assets/brand/luc4n3x-mark.svg" 
           alt="LUC4N3X Monogram" 
-          class="w-5 h-5 sm:w-6 sm:h-6 object-contain"
-          width="24"
-          height="24"
+          class="w-4 h-4 sm:w-5 sm:h-5 object-contain"
+          width="20"
+          height="20"
         />
       </div>
       <div class="flex flex-col">
-        <span class="font-bold text-base sm:text-lg tracking-wider text-white group-hover:text-cyan-300 transition-colors">
+        <span class="font-semibold text-sm sm:text-base tracking-tight text-[#f5f5f7] group-hover:text-white transition-colors">
           LUC4N3X
-        </span>
-        <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase hidden sm:block">
-          Open Source
         </span>
       </div>
     </a>
@@ -38,10 +35,10 @@ const currentPath = Astro.url.pathname;
         return (
           <a
             href={item.href}
-            class={`px-3.5 py-1.5 rounded-lg text-sm font-medium transition-all ${
+            class={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${
               isActive 
-                ? 'text-cyan-300 bg-cyan-950/30 border border-cyan-500/20' 
-                : 'text-slate-300 hover:text-white hover:bg-white/5 border border-transparent'
+                ? 'text-[#f5f5f7] bg-white/[0.08]' 
+                : 'text-[#86868b] hover:text-[#f5f5f7] hover:bg-white/[0.04]'
             }`}
           >
             {item.label}
@@ -54,17 +51,16 @@ const currentPath = Astro.url.pathname;
       <a 
         href="https://github.com/LUC4N3X" 
         target="_blank" 
-        rel="noopener noreferrer"
-        class="text-slate-400 hover:text-white p-2 rounded-lg hover:bg-white/5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+        rel="noopener noreferrer" 
+        class="text-[#86868b] hover:text-[#f5f5f7] p-2 rounded-full hover:bg-white/[0.04] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff]"
         aria-label="GitHub Profile"
       >
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
         </svg>
       </a>
 
       <Button href="/projects/levyra" variant="secondary" size="sm">
-        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
         <span>Levyra</span>
       </Button>
     </div>
@@ -72,15 +68,15 @@ const currentPath = Astro.url.pathname;
     <button 
       type="button" 
       id="mobile-menu-toggle"
-      class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+      class="md:hidden text-[#86868b] hover:text-[#f5f5f7] p-2 rounded-full hover:bg-white/[0.04] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2997ff]"
       aria-label="Toggle navigation menu"
       aria-expanded="false"
       aria-controls="mobile-menu"
     >
-      <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
-      <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
@@ -88,17 +84,17 @@ const currentPath = Astro.url.pathname;
 
   <div 
     id="mobile-menu" 
-    class="hidden md:hidden border-b border-white/8 bg-[#07090e]/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2 transition-all"
+    class="hidden md:hidden border-b border-white/[0.08] bg-black/95 backdrop-blur-xl px-4 pt-2 pb-6 space-y-2 transition-all"
   >
     {navItems.map(item => {
       const isActive = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
       return (
         <a
           href={item.href}
-          class={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
+          class={`block px-4 py-2 rounded-full text-sm font-medium transition-colors ${
             isActive 
-              ? 'text-cyan-300 bg-cyan-950/40 border border-cyan-500/20' 
-              : 'text-slate-300 hover:text-white hover:bg-white/5'
+              ? 'text-[#f5f5f7] bg-white/[0.08]' 
+              : 'text-[#86868b] hover:text-[#f5f5f7] hover:bg-white/[0.04]'
           }`}
         >
           {item.label}
@@ -107,7 +103,7 @@ const currentPath = Astro.url.pathname;
     })}
     <a
       href="/projects/levyra"
-      class="block px-3 py-2 rounded-lg text-base font-medium text-cyan-400 bg-[#0f1420] border border-cyan-500/30 hover:border-cyan-400"
+      class="block px-4 py-2 rounded-full text-sm font-medium text-[#2997ff] bg-white/[0.04] border border-white/[0.08]"
     >
       Explore Levyra →
     </a>
@@ -115,7 +111,7 @@ const currentPath = Astro.url.pathname;
       href="https://github.com/LUC4N3X"
       target="_blank"
       rel="noopener noreferrer"
-      class="block px-3 py-2 rounded-lg text-base font-medium text-slate-400 hover:text-white"
+      class="block px-4 py-2 rounded-full text-sm font-medium text-[#86868b] hover:text-[#f5f5f7]"
     >
       GitHub Profile ↗
     </a>

@@ -35,8 +35,7 @@ export const projects: Project[] = [
       "Material You dynamic theming and desktop UI via Jetpack Compose",
       "Zero telemetry, no ads, and direct CDN connection without intermediary proxies"
     ],
-    icon: "/assets/levyra/levyra-icon.svg",
-    showcaseImage: "/assets/levyra/home_top50.webp"
+    icon: "/assets/levyra/levyra-icon.svg"
   },
   {
     id: "thalarch",
