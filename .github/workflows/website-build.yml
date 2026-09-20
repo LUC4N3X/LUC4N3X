@@ -33,3 +33,7 @@ jobs:
       - name: Build site
         working-directory: website
         run: npm run build
+
+      - name: Build Pages Functions
+        working-directory: website
+        run: npm run build:functions

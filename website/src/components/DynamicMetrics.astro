@@ -6,27 +6,71 @@
     const updateMetrics = (data: any) => {
       if (!data) return;
 
-      if (data.release?.version) {
-        document.querySelectorAll<HTMLElement>('[data-levyra-version]').forEach(el => {
-          el.textContent = `v${data.release.version}`;
-          el.classList.remove('opacity-0');
-        });
-      }
+      const version = typeof data.release?.version === 'string' && data.release.version.trim().length > 0
+        ? data.release.version.trim()
+        : null;
 
-      if (typeof data.repository?.stars === 'number') {
-        document.querySelectorAll<HTMLElement>('[data-levyra-stars]').forEach(el => {
-          el.textContent = `${data.repository.stars}`;
-          el.classList.remove('opacity-0');
-        });
-      }
+      document.querySelectorAll<HTMLElement>('[data-levyra-version]').forEach(el => {
+        if (version) {
+          el.textContent = `v${version}`;
+          el.classList.remove('hidden', 'opacity-0');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
 
-      if (typeof data.downloads?.total === 'number' && data.downloads.total > 0) {
-        document.querySelectorAll<HTMLElement>('[data-levyra-downloads]').forEach(el => {
-          const count = data.downloads.total;
-          el.textContent = count >= 1000 ? `${(count / 1000).toFixed(1)}k+` : `${count}`;
-          el.classList.remove('opacity-0');
-        });
-      }
+      const stars = typeof data.repository?.stars === 'number' && !isNaN(data.repository.stars)
+        ? data.repository.stars
+        : null;
+
+      document.querySelectorAll<HTMLElement>('[data-levyra-stars]').forEach(el => {
+        if (stars !== null) {
+          el.textContent = stars >= 1000
+            ? `${(stars / 1000).toFixed(1).replace(/\.0$/, '')}k+`
+            : String(stars);
+          el.classList.remove('hidden', 'opacity-0');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll<HTMLElement>('[data-levyra-stars-container]').forEach(el => {
+        if (stars !== null) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      const totalDownloads = typeof data.downloads?.total === 'number' && !isNaN(data.downloads.total) && data.downloads.total > 0
+        ? data.downloads.total
+        : null;
+
+      document.querySelectorAll<HTMLElement>('[data-levyra-downloads]').forEach(el => {
+        if (totalDownloads !== null) {
+          el.textContent = totalDownloads >= 1000
+            ? `${(totalDownloads / 1000).toFixed(1).replace(/\.0$/, '')}k+`
+            : String(totalDownloads);
+          el.classList.remove('hidden', 'opacity-0');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll<HTMLElement>('[data-levyra-downloads-container]').forEach(el => {
+        if (totalDownloads !== null) {
+          el.classList.remove('hidden');
+        } else {
+          el.classList.add('hidden');
+        }
+      });
+
+      document.querySelectorAll<HTMLElement>('[data-levyra-metrics-box]').forEach(el => {
+        if (stars !== null || totalDownloads !== null) {
+          el.classList.remove('hidden');
+          el.classList.add('grid');
+        }
+      });
     };
 
     const load = async () => {

@@ -21,6 +21,28 @@ interface GitHubRepo {
   pushed_at: string;
 }
 
+interface ApiResponse {
+  repository: {
+    stars: number | null;
+    forks: number | null;
+    openIssues: number | null;
+  };
+  release: {
+    version: string | null;
+    tag: string | null;
+    publishedAt: string | null;
+    url: string;
+  };
+  downloads: {
+    latestRelease: number | null;
+    total: number | null;
+  };
+  localization: {
+    label: string;
+  };
+  updatedAt: string;
+}
+
 export const onRequestGet: PagesFunction<Env> = async (context) => {
   const cache = caches.default;
   const cacheKey = new Request(context.request.url, context.request);
@@ -41,21 +63,21 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     headers["Authorization"] = `Bearer ${context.env.GITHUB_TOKEN}`;
   }
 
-  const fallback = {
+  const emptyFallback: ApiResponse = {
     repository: {
-      stars: 378,
-      forks: 6,
-      openIssues: 1
+      stars: null,
+      forks: null,
+      openIssues: null
     },
     release: {
-      version: "2.5.9",
-      tag: "v2.5.9",
-      publishedAt: "2026-09-18T20:40:27Z",
+      version: null,
+      tag: null,
+      publishedAt: null,
       url: "https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"
     },
     downloads: {
-      latestRelease: 0,
-      total: 6000
+      latestRelease: null,
+      total: null
     },
     localization: {
       label: "Community Translations"
@@ -64,64 +86,119 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   };
 
   try {
-    const [repoRes, latestReleaseRes, allReleasesRes] = await Promise.all([
+    const [repoRes, latestReleaseRes] = await Promise.all([
       fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound", { headers }),
-      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases/latest", { headers }),
-      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100", { headers })
+      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases/latest", { headers })
     ]);
 
-    if (!repoRes.ok || !latestReleaseRes.ok) {
-      return new Response(JSON.stringify(fallback), {
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-          "Cache-Control": "public, max-age=300, s-maxage=600",
-          "Access-Control-Allow-Origin": "*"
+    let stars: number | null = null;
+    let forks: number | null = null;
+    let openIssues: number | null = null;
+
+    if (repoRes.ok) {
+      try {
+        const repoData = (await repoRes.json()) as GitHubRepo;
+        if (typeof repoData.stargazers_count === "number") {
+          stars = repoData.stargazers_count;
         }
-      });
+        if (typeof repoData.forks_count === "number") {
+          forks = repoData.forks_count;
+        }
+        if (typeof repoData.open_issues_count === "number") {
+          openIssues = repoData.open_issues_count;
+        }
+      } catch {}
     }
 
-    const repoData = (await repoRes.json()) as GitHubRepo;
-    const latestRelease = (await latestReleaseRes.json()) as GitHubRelease;
+    let version: string | null = null;
+    let tag: string | null = null;
+    let publishedAt: string | null = null;
+    let releaseUrl = "https://github.com/LUC4N3X/Levyra-deepsound/releases/latest";
+    let latestDownloads: number | null = null;
 
-    let latestDownloads = 0;
-    if (Array.isArray(latestRelease.assets)) {
-      for (const asset of latestRelease.assets) {
-        latestDownloads += asset.download_count || 0;
-      }
+    if (latestReleaseRes.ok) {
+      try {
+        const latestRelease = (await latestReleaseRes.json()) as GitHubRelease;
+        if (latestRelease && typeof latestRelease.tag_name === "string" && latestRelease.tag_name) {
+          tag = latestRelease.tag_name;
+          version = tag.replace(/^v/, "");
+        }
+        if (latestRelease && latestRelease.published_at) {
+          publishedAt = latestRelease.published_at;
+        }
+        if (latestRelease && latestRelease.html_url) {
+          releaseUrl = latestRelease.html_url;
+        }
+        if (latestRelease && Array.isArray(latestRelease.assets)) {
+          let count = 0;
+          for (const asset of latestRelease.assets) {
+            count += asset.download_count || 0;
+          }
+          latestDownloads = count;
+        }
+      } catch {}
     }
 
-    let totalDownloads = 0;
-    if (allReleasesRes.ok) {
-      const allReleases = (await allReleasesRes.json()) as GitHubRelease[];
-      if (Array.isArray(allReleases)) {
-        for (const rel of allReleases) {
+    let totalDownloads: number | null = null;
+    try {
+      let accumulated = 0;
+      let page = 1;
+      const maxPages = 10;
+      let hasMore = true;
+
+      while (hasMore && page <= maxPages) {
+        const releasesRes = await fetch(
+          `https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100&page=${page}`,
+          { headers }
+        );
+
+        if (!releasesRes.ok) {
+          break;
+        }
+
+        const releases = (await releasesRes.json()) as GitHubRelease[];
+        if (!Array.isArray(releases) || releases.length === 0) {
+          hasMore = false;
+          break;
+        }
+
+        for (const rel of releases) {
           if (!rel.draft && Array.isArray(rel.assets)) {
             for (const asset of rel.assets) {
-              totalDownloads += asset.download_count || 0;
+              accumulated += asset.download_count || 0;
             }
           }
         }
+
+        if (releases.length < 100) {
+          hasMore = false;
+        } else {
+          page += 1;
+        }
       }
+
+      if (page > 1 || accumulated > 0) {
+        totalDownloads = accumulated;
+      }
+    } catch {
+      totalDownloads = null;
     }
 
-    const rawTag = latestRelease.tag_name || "v2.5.9";
-    const cleanVersion = rawTag.replace(/^v/, "");
-
-    const payload = {
+    const payload: ApiResponse = {
       repository: {
-        stars: typeof repoData.stargazers_count === "number" ? repoData.stargazers_count : fallback.repository.stars,
-        forks: typeof repoData.forks_count === "number" ? repoData.forks_count : fallback.repository.forks,
-        openIssues: typeof repoData.open_issues_count === "number" ? repoData.open_issues_count : fallback.repository.openIssues
+        stars,
+        forks,
+        openIssues
       },
       release: {
-        version: cleanVersion,
-        tag: rawTag,
-        publishedAt: latestRelease.published_at || fallback.release.publishedAt,
-        url: latestRelease.html_url || fallback.release.url
+        version,
+        tag,
+        publishedAt,
+        url: releaseUrl
       },
       downloads: {
         latestRelease: latestDownloads,
-        total: totalDownloads > 0 ? totalDownloads : fallback.downloads.total
+        total: totalDownloads
       },
       localization: {
         label: "Community Translations"
@@ -129,24 +206,30 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       updatedAt: new Date().toISOString()
     };
 
+    const hasAnyData = stars !== null || version !== null || totalDownloads !== null;
+
     const response = new Response(JSON.stringify(payload), {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "public, max-age=1800, s-maxage=3600, stale-while-revalidate=86400",
+        "Cache-Control": hasAnyData
+          ? "public, max-age=1800, s-maxage=3600, stale-while-revalidate=86400"
+          : "public, max-age=60, s-maxage=120",
         "Access-Control-Allow-Origin": "*"
       }
     });
 
-    try {
-      context.waitUntil(cache.put(cacheKey, response.clone()));
-    } catch {}
+    if (hasAnyData) {
+      try {
+        context.waitUntil(cache.put(cacheKey, response.clone()));
+      } catch {}
+    }
 
     return response;
   } catch {
-    return new Response(JSON.stringify(fallback), {
+    return new Response(JSON.stringify(emptyFallback), {
       headers: {
         "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "public, max-age=300, s-maxage=600",
+        "Cache-Control": "public, max-age=60, s-maxage=120",
         "Access-Control-Allow-Origin": "*"
       }
     });
