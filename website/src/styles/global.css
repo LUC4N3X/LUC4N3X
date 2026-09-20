@@ -80,3 +80,76 @@
   border-color: rgba(129, 140, 248, 0.35);
   box-shadow: 0 16px 36px -12px rgba(99, 102, 241, 0.18);
 }
+
+@keyframes cloudDriftSlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(28px, -8px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cloudDriftMid {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-34px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cloudDriftReverse {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-22px, -6px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cloudBob {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-cloud-drift-slow {
+  animation: cloudDriftSlow 18s ease-in-out infinite;
+}
+
+.animate-cloud-drift-mid {
+  animation: cloudDriftMid 24s ease-in-out infinite;
+}
+
+.animate-cloud-drift-reverse {
+  animation: cloudDriftReverse 20s ease-in-out infinite;
+}
+
+.animate-cloud-bob {
+  animation: cloudBob 14s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cloud-drift-slow,
+  .animate-cloud-drift-mid,
+  .animate-cloud-drift-reverse,
+  .animate-cloud-bob {
+    animation: none !important;
+  }
+}

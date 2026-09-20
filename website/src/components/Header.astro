@@ -11,7 +11,7 @@ const navItems = [
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-white/[0.08] bg-[#080b11]/80 backdrop-blur-xl transition-colors">
+<header id="site-header" class="sticky top-0 z-50 w-full transition-all duration-300 border-b border-transparent bg-transparent">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 rounded-2xl p-1">
       <div class="relative w-9 h-9 rounded-xl p-0.5 bg-gradient-to-tr from-[#00F2FE] via-[#38BDF8] to-[#818CF8] shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
@@ -136,5 +136,20 @@ const currentPath = Astro.url.pathname;
       hamburgerIcon.classList.toggle('hidden');
       closeIcon.classList.toggle('hidden');
     });
+  }
+
+  const siteHeader = document.getElementById('site-header');
+  if (siteHeader) {
+    const onScroll = () => {
+      if (window.scrollY > 20) {
+        siteHeader.classList.remove('border-transparent', 'bg-transparent');
+        siteHeader.classList.add('border-white/[0.08]', 'bg-[#080b11]/85', 'backdrop-blur-xl');
+      } else {
+        siteHeader.classList.add('border-transparent', 'bg-transparent');
+        siteHeader.classList.remove('border-white/[0.08]', 'bg-[#080b11]/85', 'backdrop-blur-xl');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 </script>
