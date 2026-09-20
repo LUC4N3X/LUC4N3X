@@ -9,7 +9,7 @@ import { siteConfig } from '../data/site';
   title={`Contact — ${siteConfig.name}`}
   description="Official contact channels for LUC4N3X: security disclosures, bug reports, and software inquiries."
 >
-  <div class="py-20 sm:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#0e0d0c]">
+  <div class="py-20 sm:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
     <SectionHeader
       eyebrow="Communication"
       title="Contact LUC4N3X"
@@ -17,40 +17,40 @@ import { siteConfig } from '../data/site';
     />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-      <div class="p-8 rounded-3xl border border-[#27231e] bg-[#171513] flex flex-col justify-between">
+      <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col justify-between">
         <div>
-          <div class="w-10 h-10 rounded-full bg-[#1c1916] border border-[#2e2a25] text-[#f7f5f2] flex items-center justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.08] text-white flex items-center justify-center mb-4">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[#f7f5f2] mb-2">Direct Email</h3>
-          <p class="text-sm text-[#a39e94] leading-relaxed mb-6 font-normal">
+          <h3 class="text-xl font-semibold text-white mb-2">Direct Email</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
             For general correspondence, private inquiries, or security-related matters.
           </p>
         </div>
-        <div class="pt-5 border-t border-[#26221d] flex flex-col gap-3">
-          <span class="font-mono text-xs text-[#34a896] select-all">{siteConfig.email}</span>
+        <div class="pt-5 border-t border-white/[0.08] flex flex-col gap-3">
+          <span class="font-mono text-xs text-[#2997ff] select-all">{siteConfig.email}</span>
           <Button href={`mailto:${siteConfig.email}`} variant="primary" size="md">
             <span>Send Email</span>
           </Button>
         </div>
       </div>
 
-      <div class="p-8 rounded-3xl border border-[#27231e] bg-[#171513] flex flex-col justify-between">
+      <div class="p-8 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] flex flex-col justify-between">
         <div>
-          <div class="w-10 h-10 rounded-full bg-[#1c1916] border border-[#2e2a25] text-[#f7f5f2] flex items-center justify-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.08] text-white flex items-center justify-center mb-4">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-[#f7f5f2] mb-2">GitHub Issues & Discussions</h3>
-          <p class="text-sm text-[#a39e94] leading-relaxed mb-6 font-normal">
+          <h3 class="text-xl font-semibold text-white mb-2">GitHub Issues & Discussions</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
             For bugs, technical questions, feature suggestions, or pull requests across any repository.
           </p>
         </div>
-        <div class="pt-5 border-t border-[#26221d] flex flex-col gap-3">
-          <span class="font-mono text-xs text-[#34a896]">github.com/LUC4N3X</span>
+        <div class="pt-5 border-t border-white/[0.08] flex flex-col gap-3">
+          <span class="font-mono text-xs text-[#2997ff]">github.com/LUC4N3X</span>
           <Button href={siteConfig.github} target="_blank" variant="secondary" size="md">
             <span>Open GitHub Profile</span>
             <span class="ml-1">↗</span>
@@ -59,10 +59,10 @@ import { siteConfig } from '../data/site';
       </div>
     </div>
 
-    <div class="p-8 sm:p-10 rounded-3xl border border-[#27231e] bg-[#171513] space-y-3">
-      <h3 class="text-lg font-semibold text-[#f7f5f2]">Responsible Vulnerability Disclosure</h3>
-      <p class="text-sm text-[#a39e94] leading-relaxed font-normal">
-        If you discover a security vulnerability or sensitive flaw in Levyra, proxy gateways, or related infrastructure, please send an encrypted or direct email to <span class="font-mono text-[#34a896]">{siteConfig.email}</span> prior to opening a public GitHub issue. Reports are reviewed and addressed promptly.
+    <div class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-3">
+      <h3 class="text-lg font-semibold text-white">Responsible Vulnerability Disclosure</h3>
+      <p class="text-sm text-zinc-400 leading-relaxed font-normal">
+        If you discover a security vulnerability or sensitive flaw in Levyra, proxy gateways, or related infrastructure, please send an encrypted or direct email to <span class="font-mono text-[#2997ff]">{siteConfig.email}</span> prior to opening a public GitHub issue. Reports are reviewed and addressed promptly.
       </p>
     </div>
   </div>
