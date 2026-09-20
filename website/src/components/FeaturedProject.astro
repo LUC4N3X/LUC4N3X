@@ -3,7 +3,7 @@ import Button from './Button.astro';
 import TechBadge from './TechBadge.astro';
 ---
 
-<section class="relative py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] overflow-hidden">
+<section class="relative py-20 sm:py-28 bg-[#080b11] overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -38,8 +38,11 @@ import TechBadge from './TechBadge.astro';
         </div>
 
         <div class="flex flex-wrap items-center gap-2 pt-1">
-          <TechBadge text="Kotlin" variant="blue" />
-          <TechBadge text="Jetpack Compose" variant="blue" />
+          <TechBadge text="Android" variant="blue" />
+          <TechBadge text="Windows" variant="blue" />
+          <TechBadge text="GPL-3.0" variant="blue" />
+          <TechBadge text="Kotlin" variant="default" />
+          <TechBadge text="Jetpack Compose" variant="default" />
           <TechBadge text="AndroidX Media3" variant="default" />
           <TechBadge text="ExoPlayer" variant="default" />
           <TechBadge text="Room SQLite" variant="default" />
@@ -84,44 +87,16 @@ import TechBadge from './TechBadge.astro';
 
       <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
         <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
-          <div class="absolute -inset-8 bg-gradient-to-tr from-[#38bdf8]/25 via-[#818cf8]/20 to-[#f43f5e]/25 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+          <div class="absolute -inset-10 bg-gradient-to-tr from-[#38bdf8]/30 via-[#818cf8]/25 to-[#f43f5e]/30 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
           
-          <div class="absolute -top-4 -right-2 z-20 px-3.5 py-1.5 rounded-full bg-[#0a0f1d]/90 border border-white/10 backdrop-blur-md shadow-xl flex items-center gap-2 text-xs font-mono text-white">
-            <span class="w-2 h-2 rounded-full bg-[#38bdf8]"></span>
-            <span>48kHz Hi-Fi FLAC</span>
-          </div>
-
-          <div class="absolute -bottom-4 -left-2 z-20 px-3.5 py-1.5 rounded-full bg-[#0a0f1d]/90 border border-white/10 backdrop-blur-md shadow-xl flex items-center gap-2 text-xs font-mono text-white">
-            <span class="w-2 h-2 rounded-full bg-[#34d399]"></span>
-            <span>0ms LRCLIB Sync</span>
-          </div>
-
           <img 
             src="/assets/levyra/levyra-logo-3d.png" 
             alt="Levyra DeepSound 3D Logo" 
-            class="relative z-10 w-full max-w-[340px] sm:max-w-[380px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.6)] hover:scale-105 transition-transform duration-500 ease-out" 
+            class="relative z-10 w-full max-w-[340px] sm:max-w-[400px] h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-500 ease-out" 
             loading="lazy"
-            width="380" 
-            height="380" 
+            width="400" 
+            height="400" 
           />
-
-          <div class="mt-8 flex items-center justify-center gap-3 text-xs font-mono text-zinc-400">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              <svg class="w-3.5 h-3.5 text-[#34d399]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993s-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9994.4482.9994.9993s-.4483.9997-.9994.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.4107 13.8533 8 12 8s-3.5902.4107-5.1367.9507L4.841 5.4477a.416.416 0 00-.5677-.1521.416.416 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3432-4.1021-2.6889-7.5743-6.1185-9.4396"/>
-              </svg>
-              Android
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              <svg class="w-3.5 h-3.5 text-[#38bdf8]" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.95-1.801"/>
-              </svg>
-              Windows
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              GPL-3.0
-            </span>
-          </div>
         </div>
       </div>
 

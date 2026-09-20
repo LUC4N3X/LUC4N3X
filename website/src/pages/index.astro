@@ -7,6 +7,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import Button from '../components/Button.astro';
+import CloudDivider from '../components/CloudDivider.astro';
 import { articles } from '../data/articles';
 import { siteConfig } from '../data/site';
 
@@ -27,9 +28,13 @@ const categories = [
 >
   <Hero />
 
+  <CloudDivider fill="#080b11" />
+
   <FeaturedProject />
 
-  <section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
+  <CloudDivider fill="#080b11" />
+
+  <section class="py-20 sm:py-28 bg-[#080b11] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -110,7 +115,11 @@ const categories = [
     </div>
   </section>
 
+  <CloudDivider fill="#0a0f1d" />
+
   <AboutSection />
+
+  <CloudDivider fill="#080b11" />
 
   <OpenSourceSection />
 </Layout>
