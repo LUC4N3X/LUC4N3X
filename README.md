@@ -10,7 +10,7 @@ I build software I want to use, and keep working on it until it feels right.
 
 <br />
 
-🌐 **[luc4n3x.pages.dev](https://luc4n3x.pages.dev)**: *Official Website & Engineering Notes*
+[luc4n3x.pages.dev](https://luc4n3x.pages.dev) · Personal site and notes
 
 <br />
 
@@ -26,15 +26,11 @@ I build software I want to use, and keep working on it until it feels right.
 
 <img align="right" alt="LUC4N3X developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-Hey, I'm LUC4N3X. I build software for myself and share what turns out useful.
+Hey, I'm LUC4N3X. I build software for myself and keep at it until it actually works the way I want.
 
-Most days I work on Android apps, backend APIs, and small automation tools. I spend most of my time on the details that make software pleasant to use: fixing edge cases, tracking down device-specific bugs, and keeping the codebase straightforward.
+Most of my time goes into Android apps, backend APIs, and small self-hosted tools. Getting a feature to run the first time is usually the easy part. What I actually enjoy is everything that comes after: chasing down the weird edge cases, fixing bugs that only show up on one obscure phone, and stripping out complexity until the code is straightforward.
 
-- Primary stack: Kotlin, Jetpack Compose, Python, Node.js, Linux, and Docker
-- I enjoy tracking down tricky bugs that only happen on specific devices or weird network paths
-- I prefer a small, focused fix over an unnecessary rewrite
-- Most of my active Android development goes into Levyra
-- Always interested in audio engineering, self-hosting, and practical developer tools
+A lot of my ideas end up in Levyra, my open-source music player. When I am not working on that, I am usually tinkering with local-first setups, audio pipelines, or small Linux utilities.
 
 <br clear="right"/>
 
@@ -62,12 +58,7 @@ Most days I work on Android apps, backend APIs, and small automation tools. I sp
 
 </div>
 
-Levyra is an open-source music player for Android and Windows, built for native audio playback, offline downloads, synced lyrics, and local-first privacy with no accounts or tracking.
-
-- Audio engine: AndroidX Media3 / ExoPlayer pipeline with gapless playback and custom session handling
-- Offline storage: Resumable background downloads with embedded metadata and artwork
-- Synced lyrics: Synchronized lyrics via LRCLIB with manual offset controls
-- Interface: Pure Jetpack Compose with Material You theming and desktop support
+Levyra started because I wanted a music player that didn't demand an account just to save playlists or stream tracks. It runs on Android and Windows, plays local and remote audio through native engines (Media3 on Android, libvlc on Windows), downloads real M4A files to your storage, and pulls synced lyrics from LRCLIB. Everything stays on your device, with no telemetry or tracking.
 
 ---
 
@@ -75,12 +66,9 @@ Levyra is an open-source music player for Android and Windows, built for native 
 
 <img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
 
-My daily environment runs on Linux. I prefer a compact, dependable stack that stays out of the way:
+My daily setup runs entirely on Linux. I stick to tools that stay predictable when things get complicated:
 
-- Android: Kotlin and Jetpack Compose for UI, AndroidX Media3 and ExoPlayer for audio playback and foreground services
-- Backend & APIs: Python with FastAPI and AsyncIO for services and background workers, Node.js for small utilities
-- Persistence & caching: SQLite and Room for local offline data, Redis when fast in-memory caching is needed
-- Infrastructure: Docker on Linux hosts, Cloudflare for reverse proxying, and GitHub Actions for CI/CD
+On Android, I write Kotlin and Jetpack Compose for the UI, with AndroidX Media3 and ExoPlayer handling background playback sessions without dropping audio. On the backend, I use Python with FastAPI and AsyncIO for APIs and background tasks, plus Node.js for smaller scrapers and web utilities. Data stays in SQLite and Room for local offline storage, with Redis when caching speed matters. Everything runs in Docker containers behind Cloudflare, deployed through GitHub Actions.
 
 <br clear="right"/>
 
@@ -88,7 +76,7 @@ My daily environment runs on Linux. I prefer a compact, dependable stack that st
 
 ## How I build
 
-Start with something actually useful, run it on real hardware, fix what breaks, and refine the interface once the foundation is solid.
+Build the useful thing first, test it on real hardware, fix what breaks, and polish the interface once the foundation is solid.
 
 <div align="center">
 
