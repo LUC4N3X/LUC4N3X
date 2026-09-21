@@ -3,14 +3,14 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.png">
-  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="640" alt="LUC4N3X — Software Engineer &amp; Creator" />
+  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="640" alt="LUC4N3X, Software Engineer and Creator" />
 </picture>
 
-**I build software I want to use, and keep working on it until it feels right.**
+I build software I want to use, and keep working on it until it feels right.
 
 <br />
 
-🌐 **[luc4n3x.pages.dev](https://luc4n3x.pages.dev)** — *Official Website & Engineering Notes*
+🌐 **[luc4n3x.pages.dev](https://luc4n3x.pages.dev)**: *Official Website & Engineering Notes*
 
 <br />
 
@@ -26,15 +26,15 @@
 
 <img align="right" alt="LUC4N3X developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-Hey, I'm LUC4N3X. I like taking rough ideas and turning them into software I can actually use.
+Hey, I'm LUC4N3X. I build software for myself and share what turns out useful.
 
-Most days I bounce between **Android apps, backend services, tooling and infrastructure**. I enjoy the part after something starts working: finding what still feels off, fixing the weird edge cases and making the whole thing cleaner.
+Most days I work on Android apps, backend APIs, and small automation tools. I spend most of my time on the details that make software pleasant to use: fixing edge cases, tracking down device-specific bugs, and keeping the codebase straightforward.
 
-- I work mostly with **Kotlin, Jetpack Compose, Python, Node.js, Linux and Docker**
-- I like bugs that only show up on one device, one network or one very specific path
-- I prefer a focused fix I understand well over a rewrite just because the diff looks impressive
-- **Levyra** is where a lot of my Android and product ideas end up
-- If it involves **Android, self-hosting, APIs, performance or useful tools**, I'm probably interested
+- Primary stack: Kotlin, Jetpack Compose, Python, Node.js, Linux, and Docker
+- I enjoy tracking down tricky bugs that only happen on specific devices or weird network paths
+- I prefer a small, focused fix over an unnecessary rewrite
+- Most of my active Android development goes into Levyra
+- Always interested in audio engineering, self-hosting, and practical developer tools
 
 <br clear="right"/>
 
@@ -62,12 +62,12 @@ Most days I bounce between **Android apps, backend services, tooling and infrast
 
 </div>
 
-Levyra is an open-source music player for Android and Windows. It focuses on low-latency playback with AndroidX Media3, offline downloads, synced lyrics via LRCLIB, and a fluid Jetpack Compose interface with zero tracking.
+Levyra is an open-source music player for Android and Windows, built for native audio playback, offline downloads, synced lyrics, and local-first privacy with no accounts or tracking.
 
-- **Audio engine:** AndroidX Media3 and ExoPlayer pipeline, custom session handling, gapless playback
-- **Offline vault:** Resumable background downloads, local cache hierarchy, audio tag embedding
-- **Synced lyrics:** Real-time synchronized lyrics scoring and custom extraction pipeline
-- **Interface:** Pure Jetpack Compose with Material You dynamic theming and desktop support
+- Audio engine: AndroidX Media3 / ExoPlayer pipeline with gapless playback and custom session handling
+- Offline storage: Resumable background downloads with embedded metadata and artwork
+- Synced lyrics: Synchronized lyrics via LRCLIB with manual offset controls
+- Interface: Pure Jetpack Compose with Material You theming and desktop support
 
 ---
 
@@ -75,12 +75,12 @@ Levyra is an open-source music player for Android and Windows. It focuses on low
 
 <img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
 
-My environment is built entirely on Linux. I prefer a focused, predictable set of tools I can rely on when things get complicated:
+My daily environment runs on Linux. I prefer a compact, dependable stack that stays out of the way:
 
-- **Android core:** **Kotlin** and **Jetpack Compose** for building fluid UI without legacy XML overhead. **AndroidX Media3** and **ExoPlayer** for audio sessions and foreground services that never drop playback.
-- **Async & APIs:** **Python** with **FastAPI** and **AsyncIO** for high-throughput concurrency, task queues, and automated workers. **Node.js** for lightweight scrapers and edge utilities.
-- **Offline vault:** **Room** and **SQLite** for dependable offline-first data that never vanishes on restart. **Redis** when caching speed is critical.
-- **Infrastructure:** **Docker** on lean **Linux** instances, reverse-proxied through **Cloudflare**, and shipped with reproducible **GitHub Actions** workflows.
+- Android: Kotlin and Jetpack Compose for UI, AndroidX Media3 and ExoPlayer for audio playback and foreground services
+- Backend & APIs: Python with FastAPI and AsyncIO for services and background workers, Node.js for small utilities
+- Persistence & caching: SQLite and Room for local offline data, Redis when fast in-memory caching is needed
+- Infrastructure: Docker on Linux hosts, Cloudflare for reverse proxying, and GitHub Actions for CI/CD
 
 <br clear="right"/>
 
@@ -88,7 +88,7 @@ My environment is built entirely on Linux. I prefer a focused, predictable set o
 
 ## How I build
 
-Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish.
+Start with something actually useful, run it on real hardware, fix what breaks, and refine the interface once the foundation is solid.
 
 <div align="center">
 
