@@ -1,130 +1,70 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
+import FeaturedProject from '../../components/FeaturedProject.astro';
 import Button from '../../components/Button.astro';
 import { projects } from '../../data/projects';
 import { siteConfig } from '../../data/site';
-import { getLevyraMetrics, formatMetricNumber } from '../../utils/github';
 
-const flagship = projects.find(p => p.id === 'levyra')!;
-const otherProjects = projects.filter(p => p.id !== 'levyra');
-
-const metrics = await getLevyraMetrics();
-const starsFormatted = formatMetricNumber(metrics.stars);
-const downloadsFormatted = formatMetricNumber(metrics.downloads);
+const secondaryProjects = projects.filter(p => !p.featured);
 ---
 
 <Layout 
-  title={`Projects | ${siteConfig.name}`}
-  description="Open-source software by LUC4N3X: Levyra (Android and Windows music player), Thalarch Layer (Arch Linux setup), and Instara-Crew."
+  title={`Projects & Software | ${siteConfig.name}`}
+  description="Open-source software, media playback systems, and developer utilities engineered by LUC4N3X with zero telemetry and local-first architecture."
 >
   <PageHero
-    eyebrow="Software & Repositories"
-    title="Projects"
-    subtitle="Open-source applications, Arch Linux configurations, and command-line utilities I build and maintain."
+    badge="Portfolio & Code"
+    eyebrow="Open Source Software"
+    title="Engineered for Performance &"
+    highlight="Zero Telemetry"
+    subtitle="Audio players, Arch Linux system configurations, and command-line utilities built to run fast and locally."
   />
 
-  <section class="py-16 sm:py-24 bg-black">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-      
-      <div class="rounded-3xl border border-white/[0.08] bg-[#0c0c0e] p-8 sm:p-12 lg:p-14">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div class="lg:col-span-8">
-            <div class="flex flex-wrap items-center gap-3 mb-5">
-              <span class="text-xs font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#2997ff]">
-                {flagship.status} · <span data-levyra-version>v{metrics.version}</span>
-              </span>
-              <span data-levyra-stars-container class="text-xs font-mono px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-                ★ <span data-levyra-stars class="text-white font-semibold">{starsFormatted}</span> stars
-              </span>
-              <span data-levyra-downloads-container class="text-xs font-mono px-2.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-                ↓ <span data-levyra-downloads class="text-white font-semibold">{downloadsFormatted}</span> downloads
-              </span>
-              {flagship.platforms.map(p => (
-                <span class="text-xs font-mono text-zinc-500">{p}</span>
-              ))}
+  <FeaturedProject />
+
+  <div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
+    <div class="border-t border-white/[0.08] pt-16">
+      <div class="mb-10">
+        <h3 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
+          Additional Tools & Utilities
+        </h3>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-2xl font-normal">
+          Lightweight specialized tools built for specific automation and media scraping workflows.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {secondaryProjects.map(project => (
+          <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-8 flex flex-col justify-between transition-all duration-300 hover:border-indigo-500/30">
+            <div>
+              <div class="flex items-center justify-between gap-4 mb-4">
+                <h4 class="text-xl font-semibold text-white tracking-tight">
+                  {project.name}
+                </h4>
+                <span class="text-xs font-mono text-zinc-400 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08]">
+                  {project.status}
+                </span>
+              </div>
+              <p class="text-sm text-zinc-400 leading-relaxed mb-6 font-normal">
+                {project.description}
+              </p>
             </div>
 
-            <div class="flex items-center gap-4 mb-3">
-              <img src="/assets/levyra/levyra-icon.svg" alt="Levyra icon" class="w-12 h-12 rounded-2xl" width="48" height="48" />
-              <h2 class="text-3xl sm:text-5xl font-semibold text-white tracking-tight">
-                {flagship.name}
-              </h2>
-            </div>
-
-            <p class="text-sm font-mono text-[#2997ff] mb-5">
-              {flagship.tagline}
-            </p>
-
-            <p class="text-base text-zinc-400 leading-relaxed mb-8 max-w-2xl font-normal">
-              {flagship.longDescription}
-            </p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-              {flagship.highlights.map(item => (
-                <div class="flex items-start gap-2.5 text-sm text-zinc-300">
-                  <span class="text-[#2997ff] font-bold">✓</span>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div class="flex flex-wrap items-center gap-3">
-              <Button href="/projects/levyra" variant="primary" size="md">
-                <span>Full Project Page →</span>
-              </Button>
-              <Button href={flagship.releasesUrl} variant="secondary" size="md" external>
-                <span>Latest Release</span>
-              </Button>
-              <Button href={flagship.github} variant="ghost" size="md" external>
-                <span>GitHub Repository ↗</span>
+            <div class="flex items-center justify-between gap-4 pt-6 border-t border-white/[0.08]">
+              <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+                {project.stack.map(t => (
+                  <span class="text-zinc-500">#{t}</span>
+                ))}
+              </div>
+              <Button href={project.github} target="_blank" variant="secondary" size="sm">
+                <span>GitHub</span>
+                <span class="ml-1">↗</span>
               </Button>
             </div>
           </div>
-
-          <div class="lg:col-span-4 flex flex-col gap-3 p-6 rounded-2xl bg-black border border-white/[0.08]">
-            <div class="flex items-center justify-center py-4 mb-2">
-              <img src="/assets/levyra/levyra-logo-3d.png" alt="Levyra DeepSound" class="w-36 h-36 object-contain" width="144" height="144" />
-            </div>
-            <div class="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-1">
-              Distribution Channels
-            </div>
-            <a href={flagship.releasesUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-colors text-xs font-mono text-zinc-300">
-              <span>GitHub Releases (APK / EXE / MSI)</span>
-              <span class="text-[#2997ff]">↗</span>
-            </a>
-            <a href={flagship.fdroidUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-colors text-xs font-mono text-zinc-300">
-              <span>F-Droid Official</span>
-              <span class="text-[#2997ff]">↗</span>
-            </a>
-            <a href={flagship.izzyUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-colors text-xs font-mono text-zinc-300">
-              <span>IzzyOnDroid Repo</span>
-              <span class="text-[#2997ff]">↗</span>
-            </a>
-            <a href={flagship.sourceforgeUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-colors text-xs font-mono text-zinc-300">
-              <span>SourceForge Mirror</span>
-              <span class="text-[#2997ff]">↗</span>
-            </a>
-            <a href={flagship.weblateUrl} target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-colors text-xs font-mono text-zinc-300">
-              <span>Hosted Weblate (37 Languages)</span>
-              <span class="text-[#2997ff]">↗</span>
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
-
-      <div>
-        <h2 class="text-2xl font-semibold text-white mb-8 tracking-tight">
-          Additional Repositories &amp; Tooling
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {otherProjects.map(project => (
-            <ProjectCard project={project} />
-          ))}
-        </div>
-      </div>
-
     </div>
-  </section>
+  </div>
 </Layout>

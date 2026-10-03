@@ -1,31 +1,33 @@
-export interface SkillCategory {
+export interface TechDomain {
   title: string;
-  subtitle: string;
-  icon: string;
-  skills: string[];
+  category: string;
   description: string;
+  technologies: string[];
 }
 
-export const skillCategories: SkillCategory[] = [
+export const techDomains: TechDomain[] = [
   {
-    title: "Android & Multiplatform",
-    subtitle: "Kotlin · Compose · Media3",
-    icon: "smartphone",
-    description: "Building native Android and Windows applications with Kotlin Multiplatform, Jetpack Compose, Media3/ExoPlayer, and custom audio DSP pipelines.",
-    skills: ["Kotlin", "Kotlin Multiplatform", "Jetpack Compose", "Media3 / ExoPlayer", "libVLC / vlcj", "Material 3", "Coroutines & Flow", "Gradle"]
+    title: "Android & Audio Core",
+    category: "Mobile",
+    description: "Modern Android development without legacy XML overhead. Low-latency playback pipelines and foreground services that never drop playback.",
+    technologies: ["Kotlin", "Jetpack Compose", "AndroidX Media3", "ExoPlayer", "Material You", "Coroutines & Flow"]
   },
   {
-    title: "Linux & CLI Tooling",
-    subtitle: "Arch Linux · Shell · Python",
-    icon: "terminal",
-    description: "Writing shell scripts, Python CLI tools, and reproducible system configurations for Arch Linux and headless servers.",
-    skills: ["Arch Linux", "Bash / Zsh", "Python", "Git", "Systemd", "Dotfiles", "Linux Internals", "Device Qualification"]
+    title: "Async, APIs & Gateways",
+    category: "Backend",
+    description: "High-throughput asynchronous services, resilient proxy gateways, and automated workers engineered for reliability.",
+    technologies: ["Python", "FastAPI", "AsyncIO", "Rust", "Node.js", "HLS / Streaming", "REST APIs"]
   },
   {
-    title: "Reverse Engineering & Diagnostics",
-    subtitle: "Static Analysis · Network Inspection",
-    icon: "cpu",
-    description: "Inspecting APK packages, tracing media and network protocols, and auditing apps for hidden trackers or unnecessary permissions.",
-    skills: ["APK Analysis", "Protocol Inspection", "JADX / Decompilation", "ADB & Perfetto", "FFmpeg / Audio Codecs", "Static Security Audits", "Zero-Telemetry Design"]
+    title: "Local-First & Offline Vault",
+    category: "Data",
+    description: "Offline-first architecture where data belongs to the user and never vanishes on restart. Fast caching and structured storage.",
+    technologies: ["SQLite", "Room", "Redis", "Encrypted Preferences", "LRCLIB API"]
+  },
+  {
+    title: "Infrastructure & Systems",
+    category: "DevOps",
+    description: "Lean Linux environments, reproducible container builds, edge proxies, and continuous integration workflows.",
+    technologies: ["Docker", "Linux (Debian/Arch)", "Cloudflare Pages", "GitHub Actions", "Git"]
   }
 ];

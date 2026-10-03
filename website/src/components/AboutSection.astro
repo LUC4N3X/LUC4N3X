@@ -1,80 +1,96 @@
 ---
 import SectionHeader from './SectionHeader.astro';
 import Button from './Button.astro';
+import CloudDivider from './CloudDivider.astro';
 ---
 
-<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-black relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="pt-16 sm:pt-24 pb-0 bg-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
+  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
+    <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-sky-500/10 via-indigo-500/10 to-rose-500/8 rounded-full blur-[100px]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-10 sm:pb-16">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
       
-      <div class="lg:col-span-6">
+      <div class="lg:col-span-7 flex flex-col gap-6">
         <SectionHeader
-          eyebrow="How I Work"
-          title="Software built to be used and inspected"
-          subtitle="I build software I want to use every day, and keep working on it until it feels right."
+          eyebrow="Independent Creator"
+          title="About LUC4N3X"
+          subtitle="I build software I want to use, and keep working on it until it feels right."
         />
 
-        <div class="space-y-4 text-zinc-400 text-base leading-relaxed mb-8 font-normal">
+        <div class="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
           <p>
-            Most consumer apps ship with analytics SDKs, crash trackers, and sign-in walls before you even get to the main screen. I prefer tools that start fast, keep data on your own disk, and only touch the network when you ask them to.
+            Hey, I'm LUC4N3X. I take rough ideas and turn them into software I can actually use day in and day out.
           </p>
           <p>
-            Whether I am working on Levyra's audio pipeline in Kotlin, maintaining my Arch Linux setup in Thalarch Layer, or writing a Python CLI script, the goal stays the same: readable code, low memory overhead, and zero background tracking.
+            Most days are spent between Android applications, high-throughput backend services, media pipelines, and infrastructure. What matters most is the phase after something starts working: finding what feels off, fixing the strange edge cases, and refining until the interface stays out of your way.
           </p>
         </div>
 
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="space-y-2 border-t border-b border-white/[0.08] py-5 text-sm text-zinc-400">
+          <div class="flex items-start gap-2.5">
+            <span class="text-[#38bdf8] mt-0.5 font-bold text-base leading-none">·</span>
+            <span>Primarily working with Kotlin, Jetpack Compose, Python, Linux, and Docker</span>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-[#818cf8] mt-0.5 font-bold text-base leading-none">·</span>
+            <span>Focused on bugs that only trigger on specific hardware, network paths, or state transitions</span>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <span class="text-[#f43f5e] mt-0.5 font-bold text-base leading-none">·</span>
+            <span>A focused, verified fix is always preferred over an unvetted architectural rewrite</span>
+          </div>
+        </div>
+
+        <div class="pt-2">
           <Button href="/about" variant="secondary" size="md">
-            <span>More About Me</span>
-          </Button>
-          <Button href="https://github.com/LUC4N3X" variant="ghost" size="md" external>
-            <span>Explore Repositories →</span>
+            <span>Read Full Story & Principles</span>
+            <span class="ml-1">→</span>
           </Button>
         </div>
       </div>
 
-      <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#2997ff] mb-5 font-mono text-sm font-semibold">
-            01
-          </div>
-          <h3 class="text-white font-semibold text-lg mb-2 tracking-tight">Zero Telemetry</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            No analytics SDKs, no remote crash reporters, and no user profiling. Static APK audits on Apptizo confirm 0 trackers and 0 ad libraries.
-          </p>
-        </div>
+      <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+        <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
+          <div class="absolute -inset-8 bg-gradient-to-tr from-[#38bdf8]/20 via-[#818cf8]/20 to-[#f43f5e]/15 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
 
-        <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#2997ff] mb-5 font-mono text-sm font-semibold">
-            02
+          <div class="relative z-10 w-full rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-white/[0.08] via-white/[0.03] to-white/[0.06] border border-white/[0.1] shadow-2xl shadow-indigo-500/10 backdrop-blur-sm group hover:border-indigo-500/40 transition-all duration-300">
+            <img 
+              src="/assets/brand/luc4n3x-workspace.svg" 
+              alt="LUC4N3X developer workspace" 
+              class="w-full h-auto object-contain rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+              loading="lazy"
+              width="400"
+              height="400"
+            />
+            <div class="py-3 px-4 flex items-center justify-between text-xs font-mono border-t border-white/[0.08] bg-[#080b11]/60">
+              <div class="flex items-center gap-2 text-zinc-300">
+                <span class="w-2 h-2 rounded-full bg-[#34d399] animate-pulse"></span>
+                <span>Arch Linux · Wayland</span>
+              </div>
+              <span class="text-zinc-500">
+                Dev Environment
+              </span>
+            </div>
           </div>
-          <h3 class="text-white font-semibold text-lg mb-2 tracking-tight">Native Runtime</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Built with Kotlin, Jetpack Media3 on Android, and native libVLC on Windows instead of heavy Electron or WebView wrappers.
-          </p>
-        </div>
 
-        <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#2997ff] mb-5 font-mono text-sm font-semibold">
-            03
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-zinc-400">
+            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              Dual 4K Setup
+            </span>
+            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              Neovim & Android Studio
+            </span>
+            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
+              Local Hardware Testing
+            </span>
           </div>
-          <h3 class="text-white font-semibold text-lg mb-2 tracking-tight">Public Source &amp; CI</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Public commit history, automated quality gates, real-device ADB qualification scripts, and reproducible F-Droid builds.
-          </p>
-        </div>
-
-        <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
-          <div class="w-10 h-10 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center text-[#2997ff] mb-5 font-mono text-sm font-semibold">
-            04
-          </div>
-          <h3 class="text-white font-semibold text-lg mb-2 tracking-tight">37 Languages</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Translated into 37 languages through Hosted Weblate with 100% Android translation coverage and active community releases.
-          </p>
         </div>
       </div>
 
     </div>
   </div>
+
+  <CloudDivider fill="#080b11" crestFill="#1e1b4b" midFill="#0f172a" />
 </section>

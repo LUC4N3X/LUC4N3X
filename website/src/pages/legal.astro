@@ -1,53 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import PageHero from '../components/PageHero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 import { siteConfig } from '../data/site';
 ---
 
 <Layout 
-  title={`Privacy & Legal | ${siteConfig.name}`}
-  description="Privacy policy, open-source licensing, and zero-telemetry statement for LUC4N3X and Levyra."
+  title={`Legal & Licensing | ${siteConfig.name}`}
+  description="Licensing, privacy policy, and legal disclosures for LUC4N3X software and website."
 >
-  <PageHero
-    eyebrow="Transparency & Terms"
-    title="Privacy & Legal"
-    subtitle="How this website and LUC4N3X software handle privacy, telemetry, and open-source licensing."
-  />
+  <div class="py-20 sm:py-28 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-black">
+    <SectionHeader
+      eyebrow="Compliance & Governance"
+      title="Legal & Licensing"
+      subtitle="Open-source licensing terms, privacy principles, and third-party notices."
+    />
 
-  <section class="py-16 sm:py-24 bg-black">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 text-zinc-300 text-sm sm:text-base leading-relaxed">
-      
-      <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">1. Zero-Telemetry Software Policy</h2>
-        <p class="text-zinc-400 font-normal">
-          Software developed and distributed by <strong class="text-white font-medium">LUC4N3X</strong> (including <strong class="text-white font-medium">Levyra</strong>) is built with zero telemetry. Our applications do not bundle analytics SDKs, advertising frameworks, or remote user profiling scripts.
+    <div class="space-y-8 text-zinc-400 text-base leading-relaxed font-normal">
+      <section class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <h3 class="text-2xl font-semibold text-white">1. Open-Source Licensing</h3>
+        <p>
+          Software published by LUC4N3X is distributed under recognized open-source licenses:
         </p>
-        <p class="text-zinc-400 font-normal">
-          All user data, including playlists, offline tracks, equalizer settings, and listening history, is stored locally on your device.
-        </p>
-      </div>
+        <ul class="list-disc pl-5 space-y-2 text-zinc-400">
+          <li>
+            <strong class="text-white">Levyra (DeepSound):</strong> Licensed under the <strong class="text-white">GNU General Public License v3.0 (GPL-3.0)</strong>. Anyone may inspect, modify, and redistribute the source code under the conditions of the GPL-3.0 license.
+          </li>
+          <li>
+            <strong class="text-white">Developer Tooling & Libraries:</strong> Distributed under either the <strong class="text-white">MIT License</strong> or the <strong class="text-white">GPL-3.0</strong>, as specified within their respective repository root directories.
+          </li>
+        </ul>
+      </section>
 
-      <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">2. Website Privacy</h2>
-        <p class="text-zinc-400 font-normal">
-          This website is a static site built with Astro. It uses no tracking cookies, no behavioral analytics pixels, and no third-party advertising scripts.
+      <section class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <h3 class="text-2xl font-semibold text-white">2. Privacy & Telemetry Policy</h3>
+        <p>
+          This website (<span class="font-mono text-[#2997ff]">{siteConfig.url}</span>) is a static site hosted via Cloudflare Pages:
         </p>
-      </div>
+        <ul class="list-disc pl-5 space-y-2 text-zinc-400">
+          <li>It uses no tracking cookies, analytics SDKs, session recording scripts, or user fingerprinting.</li>
+          <li>No personal data is collected, stored, monetized, or shared with third-party advertising networks.</li>
+          <li>Standard edge server routing logs may be temporarily processed by Cloudflare to ensure network availability, security, and DDoS protection in accordance with Cloudflare's privacy policy.</li>
+        </ul>
+      </section>
 
-      <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">3. Open-Source Licensing</h2>
-        <p class="text-zinc-400 font-normal">
-          Each repository published under <a href="https://github.com/LUC4N3X" target="_blank" rel="noopener noreferrer" class="text-[#2997ff] hover:underline">github.com/LUC4N3X</a> contains its own <code class="font-mono text-xs bg-white/[0.06] px-1.5 py-0.5 rounded text-zinc-200">LICENSE</code> and <code class="font-mono text-xs bg-white/[0.06] px-1.5 py-0.5 rounded text-zinc-200">THIRD_PARTY_NOTICES.md</code> files governing source code usage, redistribution, and attribution.
+      <section class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <h3 class="text-2xl font-semibold text-white">3. Software Usage & Lawful Compliance</h3>
+        <p>
+          Levyra is an open-source software audio player designed for personal media organization and streaming. Levyra does not operate streaming servers, host copyrighted audio files, or bypass content protections.
         </p>
-      </div>
-
-      <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">4. Contact</h2>
-        <p class="text-zinc-400 font-normal">
-          For legal inquiries, copyright questions, or security disclosures, contact <a href={`mailto:${siteConfig.email}`} class="text-[#2997ff] hover:underline font-mono">{siteConfig.email}</a>.
+        <p>
+          Users are solely responsible for ensuring that their playback, media acquisition, and data traffic comply with all applicable local copyright legislation and the terms of service of third-party platforms.
         </p>
-      </div>
+      </section>
 
+      <section class="p-8 sm:p-10 rounded-2xl border border-white/[0.08] bg-[#0c0c0e] space-y-4">
+        <h3 class="text-2xl font-semibold text-white">4. Trademarks & Disclaimers</h3>
+        <p>
+          Android is a trademark of Google LLC. Windows is a trademark of Microsoft Corporation. All other product names, logos, and brands mentioned on this website and within associated software are property of their respective owners. Their mention does not imply endorsement, affiliation, or sponsorship.
+        </p>
+        <p>
+          The software and website are provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement.
+        </p>
+      </section>
     </div>
-  </section>
+  </div>
 </Layout>
