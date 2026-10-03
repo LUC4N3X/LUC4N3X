@@ -1,51 +1,71 @@
 ---
 import SectionHeader from './SectionHeader.astro';
-import { pressItems } from '../data/press';
+import { pressMentions, ecosystemPlatforms } from '../data/press';
 ---
 
-<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-[#080b11] relative">
+<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-black relative">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <SectionHeader
-      eyebrow="Ecosystem & Distribution"
-      title="Recognition & Platforms"
-      subtitle="Platforms, community hubs, and verified mirrors where LUC4N3X projects are published, localized, and referenced."
+      eyebrow="Press & Community Coverage"
+      title="Featured articles and independent reviews"
+      subtitle="Reviews, developer spotlights, and technical coverage of Levyra across international tech publications and open-source directories."
+      align="center"
     />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {pressItems.map(item => (
-        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-7 flex flex-col justify-between hover:border-indigo-500/30 transition-colors">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+      {pressMentions.map(item => (
+        <a 
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] hover:bg-[#111114] transition-all flex flex-col justify-between"
+        >
           <div>
-            <div class="flex items-center justify-between gap-2 mb-4">
-              <span class="text-xs font-mono px-3 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-                {item.badge}
-              </span>
-              <span class="text-[11px] font-mono text-zinc-500">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#38bdf8]">
                 {item.category}
               </span>
+              <span class="text-zinc-600 group-hover:text-white transition-colors text-xs">↗</span>
             </div>
-            <h3 class="text-lg font-semibold text-white mb-2">
+            <h3 class="text-lg font-semibold text-white group-hover:text-[#38bdf8] transition-colors mb-2 tracking-tight">
               {item.name}
             </h3>
-            <p class="text-xs text-zinc-400 leading-relaxed font-normal">
+            <p class="text-xs text-zinc-400 leading-relaxed">
               {item.description}
             </p>
           </div>
-
-          {item.url && (
-            <div class="pt-5 mt-5 border-t border-white/[0.08]">
-              <a 
-                href={item.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="text-xs font-mono text-[#38bdf8] hover:underline inline-flex items-center gap-1 font-medium"
-              >
-                <span>Visit Platform</span>
-                <span>↗</span>
-              </a>
-            </div>
-          )}
-        </div>
+          <div class="mt-5 pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors truncate">
+            {item.url.replace(/^https?:\/\/(www\.)?/, '')}
+          </div>
+        </a>
       ))}
+    </div>
+
+    <div class="rounded-2xl bg-[#0c0c0e] border border-white/[0.08] p-6 sm:p-8">
+      <div class="text-xs font-mono uppercase tracking-wider text-zinc-500 mb-6 text-center">
+        Audits, Mirrors &amp; Open-Source Registries
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {ecosystemPlatforms.map(platform => (
+          <a 
+            href={platform.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group p-4 rounded-xl bg-black border border-white/[0.08] hover:border-white/[0.18] transition-all"
+          >
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-sm font-semibold text-white group-hover:text-[#2997ff] transition-colors">
+                {platform.name}
+              </span>
+              <span class="text-zinc-600 group-hover:text-zinc-400 text-xs">↗</span>
+            </div>
+            <span class="text-[11px] font-mono text-zinc-500 block mb-2">{platform.category}</span>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              {platform.description}
+            </p>
+          </a>
+        ))}
+      </div>
     </div>
   </div>
 </section>
