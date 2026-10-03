@@ -2,99 +2,62 @@
 import SectionHeader from './SectionHeader.astro';
 ---
 
-<section class="py-20 sm:py-28 border-t border-white/[0.08] bg-black relative">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <SectionHeader
-      eyebrow="Distribution & Verification"
-      title="Reproducible builds and independent audits"
-      subtitle="Levyra is built from public source, checked by independent security scanners, and distributed across open-source app stores."
-      align="center"
-    />
+<section class="py-20 sm:py-28 bg-[#080b11] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      
+      <div class="lg:col-span-6 flex flex-col gap-6">
+        <SectionHeader
+          eyebrow="Open Source & Architecture"
+          title="Built for Real Hardware"
+          subtitle="Software built with respect for your device, battery, and privacy. Developed on Arch Linux with local SQLite storage and zero background trackers."
+        />
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-      <a 
-        href="https://f-droid.org/packages/com.luc4n3x.levyra/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all flex flex-col justify-between"
-      >
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[11px] font-mono uppercase tracking-wider text-[#2997ff]">F-Droid Official</span>
-            <span class="text-zinc-600 group-hover:text-white transition-colors text-xs">↗</span>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Reproducible Builds</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Compiled directly from source on F-Droid build servers with no proprietary blobs or tracking libraries.
+        <div class="space-y-3 text-zinc-300 text-sm sm:text-base leading-relaxed font-normal">
+          <p>
+            Build the useful thing first. Run it on real hardware. Find what breaks. Fix the smallest real cause, and keep working on it until it feels right.
+          </p>
+          <p class="text-zinc-400 text-xs sm:text-sm">
+            Every layer runs locally by default: from custom AndroidX Media3 decode buffers that prevent OEM background kills, to on-device Room SQLite tables that keep your listening history on your own phone.
           </p>
         </div>
-        <div class="mt-6 pt-4 border-t border-white/[0.08] text-[11px] font-mono text-zinc-500">
-          com.luc4n3x.levyra
-        </div>
-      </a>
 
-      <a 
-        href="https://apptizo.com/app/levyra/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all flex flex-col justify-between"
-      >
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[11px] font-mono uppercase tracking-wider text-emerald-400">Apptizo Audit</span>
-            <span class="text-zinc-600 group-hover:text-white transition-colors text-xs">↗</span>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">0 Trackers · 0 Ads</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Independent static APK audit confirming 0 tracking SDKs, 0 advertising libraries, and 5 minimal Android permissions.
-          </p>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-sky-500/10 border border-sky-500/25 text-[#38bdf8]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+            <span>Arch Linux</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/10 border border-indigo-500/25 text-[#818cf8]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#818cf8]"></span>
+            <span>Zero Telemetry</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 border border-emerald-500/25 text-[#34d399]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#34d399]"></span>
+            <span>Local-First SQLite</span>
+          </span>
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-rose-500/10 border border-rose-500/25 text-[#f43f5e]">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
+            <span>GNU GPL v3</span>
+          </span>
         </div>
-        <div class="mt-6 pt-4 border-t border-white/[0.08] text-[11px] font-mono text-zinc-500">
-          apptizo.com/app/levyra
-        </div>
-      </a>
+      </div>
 
-      <a 
-        href="https://apt.izzysoft.de/fdroid/index/apk/com.luc4n3x.levyra"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all flex flex-col justify-between"
-      >
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[11px] font-mono uppercase tracking-wider text-[#2997ff]">IzzyOnDroid</span>
-            <span class="text-zinc-600 group-hover:text-white transition-colors text-xs">↗</span>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Fast Repository</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Listed in the IzzyOnDroid F-Droid repository with automated scanner checks on every release APK.
-          </p>
+      <div class="lg:col-span-6 flex items-center justify-center">
+        <div class="relative w-full max-w-md flex items-center justify-center">
+          <div class="absolute -inset-10 bg-gradient-to-tr from-[#38bdf8]/25 via-[#818cf8]/20 to-[#f43f5e]/15 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
+          <img 
+            src="/assets/brand/arch-linux-logo.svg" 
+            alt="Official Arch Linux Logo" 
+            class="relative z-10 w-full max-w-[320px] sm:max-w-[360px] h-auto object-contain drop-shadow-[0_25px_50px_rgba(23,147,209,0.35)] hover:scale-105 transition-transform duration-500 ease-out"
+            loading="lazy"
+            width="360"
+            height="360"
+          />
         </div>
-        <div class="mt-6 pt-4 border-t border-white/[0.08] text-[11px] font-mono text-zinc-500">
-          apt.izzysoft.de
-        </div>
-      </a>
+      </div>
 
-      <a 
-        href="https://hosted.weblate.org/engage/levyra/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="group p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all flex flex-col justify-between"
-      >
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-[11px] font-mono uppercase tracking-wider text-[#2997ff]">Hosted Weblate</span>
-            <span class="text-zinc-600 group-hover:text-white transition-colors text-xs">↗</span>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">37 Languages</h3>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Community-maintained localization with 100% Android translation coverage across 37 languages.
-          </p>
-        </div>
-        <div class="mt-6 pt-4 border-t border-white/[0.08] text-[11px] font-mono text-zinc-500">
-          hosted.weblate.org
-        </div>
-      </a>
     </div>
+
   </div>
 </section>

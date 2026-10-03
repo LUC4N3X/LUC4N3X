@@ -1,78 +1,93 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-banner.svg">
-    <img src="./assets/brand/luc4n3x-banner-dark.svg" width="100%" alt="LUC4N3X" />
-  </picture>
 
-  <br />
-
-  <sub>Independent software developer · Creator of <a href="https://github.com/LUC4N3X/Levyra-deepsound"><b>Levyra</b></a></sub>
-
-  <br /><br />
-
-  <p>
-    <a href="https://luc4n3x.pages.dev"><b>Website</b></a> ·
-    <a href="https://github.com/LUC4N3X/Levyra-deepsound"><b>Levyra</b></a> ·
-    <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><b>Latest Release</b></a> ·
-    <a href="mailto:lucadrog0@outlook.it"><b>Email</b></a>
-  </p>
-</div>
-
----
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.png">
+  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="640" alt="LUC4N3X, Software Engineer and Creator" />
+</picture>
 
 I build software I want to use, and keep working on it until it feels right.
 
-Most of my work is around **Android & Kotlin**, **Linux & CLI tools**, and **reverse engineering**. I care about performance, clear interfaces, and tools that respect the user.
+<br />
 
----
+[luc4n3x.pages.dev](https://luc4n3x.pages.dev) · Personal site and notes
 
-### Flagship Project
+<br />
 
-<div align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/levyra/levyra-lockup-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/levyra/levyra-lockup.svg">
-      <img src="./assets/levyra/levyra-lockup-dark.svg" width="760" alt="Levyra" />
-    </picture>
-  </a>
+`Android` · `Kotlin` · `Jetpack Compose` · `Python` · `APIs` · `Docker`
+
+<br />
+
+<img src="./assets/brand/signal-divider.svg" width="480" alt="Section divider" />
+
 </div>
 
-**[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)** is an open-source music player for **Android** and **Windows**, built with Kotlin, Compose Multiplatform, Jetpack Media3, and libVLC.
+## About me
 
-- Streaming (verified 320 kbps AAC) and local library playback with synced lyrics and offline downloads
-- Levyra Enhanced Audio DSP (2048-point FFT cutoff detection and spectral band replication)
-- Equalizer, audio effects, and encrypted local backup
-- No telemetry, no ads, and no accounts (`0 trackers` verified by [Apptizo](https://apptizo.com/app/levyra/))
-- Available on [GitHub Releases](https://github.com/LUC4N3X/Levyra-deepsound/releases/latest), [F-Droid](https://f-droid.org/packages/com.luc4n3x.levyra/), [IzzyOnDroid](https://apt.izzysoft.de/fdroid/index/apk/com.luc4n3x.levyra), [OpenAPK](https://www.openapk.net/levyra/com.luc4n3x.levyra/), and [SourceForge](https://sourceforge.net/projects/levyra.mirror/)
-- Community translations in 37 languages on [Hosted Weblate](https://hosted.weblate.org/engage/levyra/)
+<img align="right" alt="LUC4N3X developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
 
-#### Featured
+Hey, I'm LUC4N3X. I build software for myself and keep at it until it actually works the way I want.
 
-- **Kotlin Weekly** · [mailchi.mp/kotlinweekly/kotlin-weekly-530](https://mailchi.mp/kotlinweekly/kotlin-weekly-530)
-- **Techno360** · [techno360.in/levyra-review](https://techno360.in/levyra-review/)
-- **Australia By Aussie** · [australiabyaussie.com/levyra-open-source-music-player-gains-kotlin-spotlight](https://australiabyaussie.com/levyra-open-source-music-player-gains-kotlin-spotlight/)
-- **OSCHINA 开源中国** · [oschina.net/news/502584](https://www.oschina.net/news/502584)
-- **CSDN** · [blog.csdn.net/techforward/article/details/165886477](https://blog.csdn.net/techforward/article/details/165886477)
-- **SecurityLab.ru** · [securitylab.ru/blog/personal/SimlpeHacker/362601.php](https://www.securitylab.ru/blog/personal/SimlpeHacker/362601.php)
-- **GeekParadize** · [geekparadize.fr/articles/levyra-lecteur-musical-open-source-android-windows](https://www.geekparadize.fr/articles/levyra-lecteur-musical-open-source-android-windows)
-- **OpenSalerno** · [opensalerno.it/levyra-musica-libera-da-account...](https://www.opensalerno.it/levyra-musica-libera-da-account-pubblicita-e-tracciamento-un-nuovo-player-open-source-android-e)
-- **Techolay** · [techolay.net/levyra-android-ve-windows-icin-acik-kaynak-muzik-oynaticisi](https://techolay.net/levyra-android-ve-windows-icin-acik-kaynak-muzik-oynaticisi/)
-- **Hysen Labs** · [hysenlabs.com/en/projects/luc4n3x-levyra-deepsound](https://hysenlabs.com/en/projects/luc4n3x-levyra-deepsound)
-- **PitchHut** · [pitchhut.com/project/levyra-music-player](https://www.pitchhut.com/project/levyra-music-player)
+Most of my time goes into Android apps, backend APIs, and small self-hosted tools. Getting a feature to run the first time is usually the easy part. What I actually enjoy is everything that comes after: chasing down the weird edge cases, fixing bugs that only show up on one obscure phone, and stripping out complexity until the code is straightforward.
+
+A lot of my ideas end up in Levyra, my open-source music player. When I am not working on that, I am usually tinkering with local-first setups, audio pipelines, or small Linux utilities.
+
+<br clear="right"/>
 
 ---
 
-### Other Repositories
+## Featured project
 
-- **[thalarch-layer](https://github.com/LUC4N3X/thalarch-layer)**: Personal Arch Linux setup, dotfiles, and system scripts
-- **[Instara-Crew](https://github.com/LUC4N3X/Instara-Crew)**: Small Python CLI utility for account analysis
+<div align="center">
+
+<a href="https://github.com/LUC4N3X/Levyra-deepsound">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/levyra/levyra-lockup-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/levyra/levyra-lockup.svg">
+    <img src="./assets/levyra/levyra-lockup-dark.svg" width="760" alt="Levyra" />
+  </picture>
+</a>
+
+<br />
+
+<p>
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Repository</strong></a> ·
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><strong>Latest release</strong></a> ·
+  <a href="https://levyra.dpdns.org"><strong>Website</strong></a>
+</p>
+
+</div>
+
+Levyra started because I wanted a music player that didn't demand an account just to save playlists or stream tracks. It runs on Android and Windows, plays local and remote audio through native engines (Media3 on Android, libvlc on Windows), downloads real M4A files to your storage, and pulls synced lyrics from LRCLIB. Everything stays on your device, with no telemetry or tracking.
 
 ---
 
-### Contact
+## Technologies I work with
 
-- **Website:** [luc4n3x.pages.dev](https://luc4n3x.pages.dev)
-- **Email:** [lucadrog0@outlook.it](mailto:lucadrog0@outlook.it)
-- **GitHub:** [@LUC4N3X](https://github.com/LUC4N3X)
+<img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
+
+My daily setup runs entirely on Linux. I stick to tools that stay predictable when things get complicated:
+
+On Android, I write Kotlin and Jetpack Compose for the UI, with AndroidX Media3 and ExoPlayer handling background playback sessions without dropping audio. On the backend, I use Python with FastAPI and AsyncIO for APIs and background tasks, plus Node.js for smaller scrapers and web utilities. Data stays in SQLite and Room for local offline storage, with Redis when caching speed matters. Everything runs in Docker containers behind Cloudflare, deployed through GitHub Actions.
+
+<br clear="right"/>
+
+---
+
+## How I build
+
+Build the useful thing first, test it on real hardware, fix what breaks, and polish the interface once the foundation is solid.
+
+<div align="center">
+
+<br />
+
+<a href="https://github.com/LUC4N3X?tab=repositories">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
+    <img src="./assets/brand/how-i-build-dark.svg" width="420" alt="Code. Build. Improve. Repeat. Explore repositories." />
+  </picture>
+</a>
+
+</div>
