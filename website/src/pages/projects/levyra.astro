@@ -2,298 +2,308 @@
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
 import TechBadge from '../../components/TechBadge.astro';
-import CloudDivider from '../../components/CloudDivider.astro';
-import { getLevyraMetrics } from '../../utils/github';
+import PressSection from '../../components/PressSection.astro';
+import { projects } from '../../data/projects';
+import { siteConfig } from '../../data/site';
+import { getLevyraMetrics, formatMetricNumber } from '../../utils/github';
 
+const levyra = projects.find(p => p.id === 'levyra')!;
 const metrics = await getLevyraMetrics();
-const starsFormatted = metrics.stars >= 1000
-  ? `${(metrics.stars / 1000).toFixed(1).replace(/\.0$/, '')}k`
-  : String(metrics.stars);
-const downloadsFormatted = metrics.downloads >= 1000
-  ? `${(metrics.downloads / 1000).toFixed(1).replace(/\.0$/, '')}k`
-  : String(metrics.downloads);
+const starsFormatted = formatMetricNumber(metrics.stars);
+const downloadsFormatted = formatMetricNumber(metrics.downloads);
 
-const schemaData = {
+const screenshots = [
+  {
+    src: "/assets/levyra/home_top50.webp",
+    title: "Home & Top 50",
+    caption: "Discovery feed and regional charts with fast cover art loading."
+  },
+  {
+    src: "/assets/levyra/player_nowplaying.webp",
+    title: "Now Playing",
+    caption: "Adaptive player sheet with waveform seekbar, codec badge, and queue controls."
+  },
+  {
+    src: "/assets/levyra/lyrics_synced.webp",
+    title: "Word-Synced Lyrics",
+    caption: "60fps LRC and word-by-word lyrics with translation and romanization."
+  },
+  {
+    src: "/assets/levyra/library_quickpicks.webp",
+    title: "Quick Picks & Vault",
+    caption: "Local library management and offline tracks stored on your device."
+  },
+  {
+    src: "/assets/levyra/03_search_and_artist.webp",
+    title: "Search & Artist View",
+    caption: "Multi-source search across tracks, albums, artists, and community playlists."
+  },
+  {
+    src: "/assets/levyra/04_library_and_pulse.webp",
+    title: "Listening Pulse",
+    caption: "On-device listening stats and history calculated locally without remote tracking."
+  }
+];
+
+const levyraSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Levyra",
-  "operatingSystem": "Android, Windows",
+  "operatingSystem": "Android 8.0+, Windows 10/11 (x64)",
   "applicationCategory": "MultimediaApplication",
+  "description": levyra.longDescription,
+  "url": `${siteConfig.url}/projects/levyra`,
+  "downloadUrl": levyra.releasesUrl,
+  "softwareVersion": metrics.version,
+  "author": {
+    "@type": "Person",
+    "name": "LUC4N3X",
+    "url": siteConfig.url
+  },
   "offers": {
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "LUC4N3X"
-  },
-  "description": "Open-source, privacy-focused music player for Android and Windows with low-latency playback via AndroidX Media3, synced lyrics, and offline caching."
+  }
 };
 ---
 
 <Layout 
-  title="Levyra (DeepSound) — Flagship Open Source Audio Player"
-  description="High-fidelity, zero-telemetry music player for Android and Windows. Built natively with AndroidX Media3, Jetpack Compose, and local SQLite."
+  title={`Levyra | Open-Source Music Player for Android & Windows by ${siteConfig.name}`}
+  description={levyra.longDescription}
   image="/assets/levyra/levyra-lockup-dark.svg"
-  schema={schemaData}
+  schema={levyraSchema}
 >
-  <div class="relative overflow-hidden pt-36 sm:pt-44 md:pt-48 pb-6 sm:pb-10 bg-gradient-to-b from-[#091326] via-[#0d1d3a] to-[#080b11]">
-    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[700px] sm:w-[900px] h-[350px] bg-gradient-to-b from-sky-500/20 via-indigo-500/15 to-transparent rounded-full blur-[120px]"></div>
-      <div class="absolute top-10 left-10 w-72 h-48 bg-sky-400/15 rounded-full blur-[90px]"></div>
-      <div class="absolute top-16 right-10 w-80 h-52 bg-purple-500/15 rounded-full blur-[100px]"></div>
-
-      <div class="absolute top-12 -left-10 sm:left-10 w-44 sm:w-64 h-24 sm:h-28 opacity-35 animate-cloud-drift-slow">
-        <svg viewBox="0 0 240 100" fill="none" class="w-full h-full filter drop-shadow-[0_12px_24px_rgba(56,189,248,0.15)]">
-          <path d="M40 75C26.1929 75 15 63.8071 15 50C15 37.0673 24.819 26.4259 37.4243 25.143C42.8443 13.6826 54.4925 5.71429 68 5.71429C76.8373 5.71429 84.7735 9.77196 90.0461 16.149C95.2766 12.3392 101.768 10 108.8 10C124.968 10 138.212 22.0967 140.428 37.6974C144.38 35.3404 148.986 34 153.9 34C167.707 34 178.9 45.1929 178.9 59C178.9 60.0382 178.836 61.0614 178.712 62.0664C184.872 63.8344 189.4 69.4883 189.4 76.2C189.4 84.4843 182.684 91.2 174.4 91.2H45C31.1929 91.2 20 80.0071 20 66.2C20 65.7947 20.0097 65.3917 20.0289 64.9912C20.0195 64.6625 20.0148 64.3323 20.0148 64C20.0148 57.3726 25.3874 52 32.0148 52C33.3106 52 34.5615 52.2046 35.7345 52.5841C38.0772 50.9632 40.8933 50 43.9286 50C52.2129 50 58.9286 56.7157 58.9286 65C58.9286 65.6841 58.8829 66.3575 58.7944 67.0175C60.4631 66.3683 62.2828 66 64.1818 66C70.6698 66 75.9295 71.2223 75.9984 77.6946C76.9943 77.4988 78.0249 77.3913 79.08 77.3913C84.0506 77.3913 88.08 81.4207 88.08 86.3913C88.08 86.6669 88.0676 86.9396 88.0433 87.2087H40V75Z" fill="#38bdf8" fill-opacity="0.22" />
-          <path d="M48 70C36.9543 70 28 61.0457 28 50C28 39.5694 36.0028 30.9858 46.208 30.1042C50.5902 20.7303 60.0384 14.1667 71 14.1667C78.2327 14.1667 84.757 17.5147 89.0435 22.7538C93.308 19.6415 98.6015 17.7083 104.333 17.7083C117.514 17.7083 128.271 27.608 130.081 40.3756C133.298 38.4388 137.054 37.3333 141.083 37.3333C152.359 37.3333 161.5 46.4741 161.5 57.75C161.5 58.5997 161.448 59.4371 161.347 60.2598C166.368 61.7067 170.062 66.334 170.062 71.825C170.062 78.6053 164.568 84.1 157.788 84.1H48V70Z" fill="#e0f2fe" fill-opacity="0.32" />
-        </svg>
-      </div>
-
-      <div class="absolute top-16 -right-12 sm:right-10 w-48 sm:w-72 h-24 sm:h-32 opacity-30 animate-cloud-drift-mid">
-        <svg viewBox="0 0 260 110" fill="none" class="w-full h-full filter drop-shadow-[0_16px_32px_rgba(129,140,248,0.18)]">
-          <path d="M50 85C33.4315 85 20 71.5685 20 55C20 39.4808 31.7828 26.7111 46.9092 25.1716C53.4132 11.4191 67.391 1.875 83.6 1.875C94.2048 1.875 103.728 6.74415 110.055 14.3976C116.332 9.82584 124.122 7.01875 132.56 7.01875C151.962 7.01875 167.854 21.5348 170.514 40.2557C175.256 37.4273 180.783 35.8187 186.68 35.8187C203.249 35.8187 216.68 49.2502 216.68 65.8187C216.68 67.065 216.603 68.293 216.454 69.499C223.846 71.6206 229.28 78.4052 229.28 86.46C229.28 96.4011 221.221 104.46 211.28 104.46H50V85Z" fill="#818cf8" fill-opacity="0.22" />
-          <path d="M58 80C44.7452 80 34 69.2548 34 56C34 43.4833 43.6034 33.1829 55.8496 32.125C61.1082 20.8764 72.4461 13 85.6 13C94.2792 13 102.108 17.0176 107.252 23.3045C112.37 19.5698 118.722 17.25 125.6 17.25C141.417 17.25 154.325 29.1296 156.497 44.4507C160.358 42.1265 164.865 40.8 169.7 40.8C183.231 40.8 194.2 51.769 194.2 65.3C194.2 66.3197 194.138 67.3245 194.016 68.3115C200.042 70.0478 204.475 75.6006 204.475 82.19C204.475 90.3252 197.89 96.91 189.755 96.91H58V80Z" fill="#c7d2fe" fill-opacity="0.28" />
-        </svg>
-      </div>
-    </div>
-
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
-      <a 
-        href="/projects" 
-        class="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-[#38bdf8] transition-colors mb-6"
-      >
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-        </svg>
-        <span>Back to Projects</span>
-      </a>
-
-      <div class="w-full max-w-md sm:max-w-lg mb-8">
+  <section class="relative pt-24 pb-16 sm:pt-32 sm:pb-24 border-b border-white/[0.08] bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 flex justify-center">
         <img 
           src="/assets/levyra/levyra-lockup-dark.svg" 
-          alt="Levyra DeepSound Logo" 
-          class="w-full h-auto object-contain mx-auto drop-shadow-[0_20px_40px_rgba(56,189,248,0.2)]"
-          width="760"
-          height="180"
+          alt="Levyra Flagship Audio Engine" 
+          class="w-full max-w-3xl h-auto rounded-2xl border border-white/[0.08] bg-[#0c0c0e] p-3 sm:p-5"
+          width="1280"
+          height="300"
         />
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.15] mb-6 max-w-4xl">
-        High-Fidelity Audio.<br class="hidden sm:inline" /> <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#38bdf8] via-[#818cf8] to-[#f43f5e]">Zero Telemetry.</span> Complete Autonomy.
-      </h1>
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-[#2997ff] text-xs font-mono mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#2997ff]"></span>
+          <span>Open-Source Audio Player · Android &amp; Windows</span>
+          <span data-levyra-version class="font-mono text-xs ml-1">v{metrics.version}</span>
+        </div>
 
-      <p class="text-zinc-300 text-base sm:text-lg md:text-xl leading-relaxed font-normal mb-8 max-w-2xl">
-        Levyra (DeepSound) was created out of frustration with modern music streaming apps: memory bloat, persistent analytics beacons, mandatory accounts, and aggressive background killers. Built natively from the ground up for listeners who care about quality, responsiveness, and privacy.
+        <h1 class="text-4xl sm:text-6xl font-semibold tracking-tight text-white mb-6 leading-[1.08]">
+          Verified 320 kbps audio and local library playback.
+        </h1>
+
+        <p class="text-base sm:text-xl text-zinc-400 leading-relaxed mb-8 font-normal">
+          Levyra is a native music player for <strong class="text-zinc-200 font-medium">Android 8.0+</strong> and <strong class="text-zinc-200 font-medium">Windows 10/11 (x64)</strong>. It combines Jetpack Media3 on Android and libVLC on Windows with a shared Kotlin Multiplatform core, real-time spectral restoration for low-bitrate tracks, word-synced lyrics, and encrypted local backups.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+          <div data-levyra-stars-container class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#0c0c0e] border border-white/[0.08] text-xs font-mono text-zinc-400">
+            <span class="text-amber-400">★</span>
+            <span data-levyra-stars class="text-sm font-semibold text-white ml-1.5">{starsFormatted}</span>
+            <span class="ml-1">GitHub Stars</span>
+          </div>
+          <div data-levyra-downloads-container class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#0c0c0e] border border-white/[0.08] text-xs font-mono text-zinc-400">
+            <span class="text-emerald-400">↓</span>
+            <span data-levyra-downloads class="text-sm font-semibold text-white ml-1.5">{downloadsFormatted}</span>
+            <span class="ml-1">Downloads</span>
+          </div>
+          <a href="https://apptizo.com/app/levyra/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#0c0c0e] border border-white/[0.08] hover:border-emerald-400/40 text-xs font-mono text-emerald-400 transition-colors">
+            <span>✓ 0 Trackers · 0 Ads (Apptizo Audit)</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+          <Button href={levyra.releasesUrl} variant="primary" size="lg" external>
+            <span>Download Latest Release</span>
+          </Button>
+          <Button href={levyra.fdroidUrl} variant="secondary" size="lg" external>
+            <span>Get on F-Droid</span>
+          </Button>
+          <Button href={levyra.github} variant="ghost" size="lg" external>
+            <span>Source Code on GitHub ↗</span>
+          </Button>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-2">
+          {levyra.stack.map(tech => (
+            <TechBadge text={tech} variant="accent" />
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 sm:py-28 border-b border-white/[0.08] bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] block mb-2">Interface Overview</span>
+        <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight">Built around playback and lyrics</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {screenshots.map(shot => (
+          <div class="group rounded-2xl bg-[#0c0c0e] border border-white/[0.08] p-5 flex flex-col justify-between hover:border-white/[0.18] transition-all">
+            <div class="rounded-xl overflow-hidden bg-black mb-4 flex items-center justify-center p-2">
+              <img 
+                src={shot.src} 
+                alt={shot.title} 
+                class="max-h-[420px] w-auto object-contain rounded-lg group-hover:scale-[1.01] transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <h3 class="text-base font-semibold text-white mb-1">{shot.title}</h3>
+              <p class="text-xs text-zinc-400 leading-relaxed">{shot.caption}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 sm:py-28 border-b border-white/[0.08] bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-5">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] block mb-2">Audio Pipeline &amp; Runtime</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-4">
+            How Levyra works under the hood
+          </h2>
+          <p class="text-zinc-400 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+            Levyra shares its core logic and UI across Android and Windows with Kotlin Multiplatform, while binding to native audio engines on each OS instead of running inside a web wrapper.
+          </p>
+          <div class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-3 text-xs font-mono text-zinc-400">
+            <div class="flex justify-between border-b border-white/[0.08] pb-2">
+              <span class="text-zinc-500">Android Engine:</span>
+              <span class="text-zinc-200">Jetpack Media3 / ExoPlayer</span>
+            </div>
+            <div class="flex justify-between border-b border-white/[0.08] pb-2">
+              <span class="text-zinc-500">Windows Engine:</span>
+              <span class="text-zinc-200">JVM 21 + libVLC (vlcj)</span>
+            </div>
+            <div class="flex justify-between border-b border-white/[0.08] pb-2">
+              <span class="text-zinc-500">Stream Verification:</span>
+              <span class="text-zinc-200">320 kbps AAC-LC (44.1 kHz)</span>
+            </div>
+            <div class="flex justify-between border-b border-white/[0.08] pb-2">
+              <span class="text-zinc-500">DSP Restoration:</span>
+              <span class="text-zinc-200">2048-pt FFT + IIR Hilbert SBR</span>
+            </div>
+            <div class="flex justify-between border-b border-white/[0.08] pb-2">
+              <span class="text-zinc-500">Localization:</span>
+              <span class="text-zinc-200">37 Languages (100% Android)</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="text-zinc-500">Trackers &amp; Ads:</span>
+              <span class="text-emerald-400">0 Trackers · 0 Ad SDKs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Verified 320 kbps &amp; Local Lossless</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Streams genuine 320 kbps AAC-LC at 44.1 kHz stereo (verified up to 20 kHz via ffprobe and FFT spectrograms) alongside local FLAC, ALAC, WAV, OGG, and MP3 files.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Levyra Enhanced Audio DSP</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Runs a 2048-point FFT analyzer to detect brickwall codec cutoffs on lower-bitrate tracks and rebuilds the upper band via single-sideband IIR Hilbert modulation, while bypassing 320 kbps and lossless files bit-identically.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Native Windows Build (No Electron)</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Runs natively on JVM 21 with Compose Multiplatform (Skia on DirectX/OpenGL) and libVLC C bindings, using 60% to 75% less RAM than Chromium/Electron wrappers.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">10-Band EQ &amp; Audio Effects</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Includes a 10-band parametric equalizer, bass boost, virtualizer, loudness enhancer, crossfade, playback speed/pitch control, and silence skipping.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Word-Synced Lyrics &amp; Translation</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Supports plain, line-synced LRC, and word-by-word karaoke lyrics with translation, romanization for CJK/Cyrillic/Arabic scripts, and tap-to-seek.
+            </p>
+          </div>
+
+          <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08]">
+            <h3 class="text-lg font-semibold text-white mb-2 tracking-tight">Offline Vault &amp; Encrypted Backups</h3>
+            <p class="text-xs text-zinc-400 leading-relaxed">
+              Downloads tracks, artwork, and synced lyrics for offline listening, with password-encrypted local backup export and M3U8/CSV playlist import.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <PressSection />
+
+  <section class="py-20 sm:py-28 bg-black border-t border-white/[0.08]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-semibold text-white mb-4 tracking-tight">
+        Download or build Levyra
+      </h2>
+      <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-10 font-normal">
+        Install signed binaries from GitHub Releases, F-Droid, IzzyOnDroid, Obtainium, or SourceForge, or help translate Levyra on Hosted Weblate.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-8">
-        <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="lg">
-          <span>Download Latest Release</span>
-          <span data-levyra-version class="font-mono text-xs ml-1">v{metrics.version}</span>
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
-        </Button>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+        <a href={levyra.releasesUrl} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">GitHub Releases</div>
+          <div class="text-base font-semibold text-white mb-1">Android APK &amp; Windows MSI/EXE</div>
+          <p class="text-xs text-zinc-400">Direct signed installers for Android 8.0+ and Windows 10/11 (x64).</p>
+        </a>
 
-        <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="lg">
-          <span>GitHub Repository</span>
-          <svg class="w-4 h-4 ml-1 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-          </svg>
-        </Button>
+        <a href={levyra.fdroidUrl} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">F-Droid Official</div>
+          <div class="text-base font-semibold text-white mb-1">Reproducible Android Builds</div>
+          <p class="text-xs text-zinc-400">Compiled from source and signed by the official F-Droid repository.</p>
+        </a>
 
-        <Button href="https://hosted.weblate.org/engage/levyra/" target="_blank" variant="outline" size="lg">
-          <span>Translations (36 Languages)</span>
-          <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-          </svg>
-        </Button>
-      </div>
+        <a href={levyra.izzyUrl} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">IzzyOnDroid</div>
+          <div class="text-base font-semibold text-white mb-1">Fast F-Droid Repo</div>
+          <p class="text-xs text-zinc-400">Rapid updates via the IzzyOnDroid repository with scanner checks.</p>
+        </a>
 
-      <div class="flex items-center gap-6 text-xs font-mono text-zinc-400">
-        <div data-levyra-stars-container>
-          <span class="text-zinc-500">Stars</span>
-          <span data-levyra-stars class="text-sm font-semibold text-white ml-1.5">{starsFormatted}</span>
-        </div>
-        <span class="text-zinc-700">·</span>
-        <div data-levyra-downloads-container>
-          <span class="text-zinc-500">Downloads</span>
-          <span data-levyra-downloads class="text-sm font-semibold text-white ml-1.5">{downloadsFormatted}</span>
-        </div>
-        <span class="text-zinc-700">·</span>
-        <div>
-          <span class="text-zinc-500">License</span>
-          <span class="text-sm font-semibold text-white ml-1.5">GNU GPL-3.0</span>
-        </div>
+        <a href={levyra.sourceforgeUrl} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">SourceForge</div>
+          <div class="text-base font-semibold text-white mb-1">Global Release Mirror</div>
+          <p class="text-xs text-zinc-400">Redundant mirror for all Android and Windows release binaries.</p>
+        </a>
+
+        <a href={levyra.weblateUrl} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">Hosted Weblate</div>
+          <div class="text-base font-semibold text-white mb-1">Translate Levyra (37 Languages)</div>
+          <p class="text-xs text-zinc-400">Contribute translations and review strings across 37 supported languages.</p>
+        </a>
+
+        <a href={levyra.github} target="_blank" rel="noopener noreferrer" class="p-6 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] hover:border-white/[0.18] transition-all">
+          <div class="text-xs font-mono text-[#2997ff] mb-1">GitHub Source</div>
+          <div class="text-base font-semibold text-white mb-1">Browse Code &amp; Issues</div>
+          <p class="text-xs text-zinc-400">Clone the repo, run the quality gates, or report bugs on GitHub.</p>
+        </a>
       </div>
     </div>
-
-    <div class="mt-10 sm:mt-14">
-      <CloudDivider fill="#080b11" />
-    </div>
-  </div>
-
-  <article class="relative overflow-hidden py-12 sm:py-16 bg-[#080b11]">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-
-      <section class="space-y-16 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
-        
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
-            The Philosophy
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-            Why Build an Independent Audio Player?
-          </h2>
-          <p>
-            Mainstream audio players have stopped being audio players. They have evolved into recommendation engines and advertisement brokers designed to keep your screen on, collect listening habits, and lock you into closed ecosystems.
-          </p>
-          <p>
-            Levyra was built with a fundamentally opposite mindset. It is an audio tool, not an attention trap. You open it, select or search for what you want to hear, and the music plays immediately with zero friction, zero sign-in screens, and zero background analytics.
-          </p>
-        </div>
-
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
-            Audio Engineering
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-            The AndroidX Media3 Core
-          </h2>
-          <p>
-            Audio on Android is notoriously difficult to get right. Aggressive background process management by aggressive OEM distributions (such as MIUI, ColorOS, and OneUI) frequently terminates media players during screen-off transitions or memory pressure.
-          </p>
-          <p>
-            Levyra solves this by leveraging a custom architecture on top of AndroidX Media3 and ExoPlayer:
-          </p>
-          <div class="space-y-4 text-base text-zinc-400 pl-2">
-            <div class="flex items-start gap-3">
-              <span class="text-[#38bdf8] font-bold">·</span>
-              <div>
-                <strong class="text-white">Custom Adaptive Ring Buffering:</strong> Pre-allocates decode buffers dynamically to absorb network latency spikes and prevent audible dropouts during mobile network cell handoffs.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#818cf8] font-bold">·</span>
-              <div>
-                <strong class="text-white">Foreground Service Resilience:</strong> Strict adherence to Android 14+ foreground service types with audio focus contracts, ensuring seamless continuity even when the operating system aggressively reclaims background memory.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#f43f5e] font-bold">·</span>
-              <div>
-                <strong class="text-white">Gapless Playback & Seamless Transitions:</strong> Automatic track pre-fetching eliminates silence between songs, preserving the intended flow of live recordings and concept albums.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
-            Privacy Architecture
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-            Zero Telemetry: Local by Default
-          </h2>
-          <p>
-            Your listening habits, favorite tracks, and search history should never leave your hardware. In Levyra, privacy is not a marketing setting you toggle in a sub-menu; it is the foundational architectural constraint.
-          </p>
-          <div class="space-y-4 text-base text-zinc-400 pl-2">
-            <div class="flex items-start gap-3">
-              <span class="text-[#38bdf8] font-bold">·</span>
-              <div>
-                <strong class="text-white">On-Device SQLite Database:</strong> Playlists, favorites, and playback state are stored locally using Android Room. There are no remote sync databases or user profiling servers.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#818cf8] font-bold">·</span>
-              <div>
-                <strong class="text-white">Direct TLS 1.3 Connections:</strong> When streaming or resolving media, requests connect straight to the source distribution servers without routing through intermediate proxy servers that could log client IPs or request metadata.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#f43f5e] font-bold">·</span>
-              <div>
-                <strong class="text-white">Zero Tracking SDKs:</strong> The application contains no Google Firebase Analytics, no Sentry crash aggregators, and no third-party behavioral trackers.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
-            System Integration
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-            The Android Permissions Philosophy
-          </h2>
-          <p>
-            Every permission declared in Levyra's manifest serves a single, transparent technical purpose. There are no blanket requests, no contact list access, no fine-grained location tracking, and no access to private user storage outside the standard scoped media directory:
-          </p>
-          <div class="space-y-4 text-base text-zinc-400 pl-2">
-            <div class="flex items-start gap-3">
-              <span class="text-[#38bdf8] font-mono text-sm">INTERNET</span>
-              <div>
-                Streams audio chunks, fetches synchronized lyrics from LRCLIB, and downloads high-resolution album artwork on demand.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#818cf8] font-mono text-sm">FOREGROUND_SERVICE_MEDIA_PLAYBACK</span>
-              <div>
-                Allows the audio engine to remain active and controllable via system media controls when the application is minimized or the screen is turned off.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#c084fc] font-mono text-sm">POST_NOTIFICATIONS</span>
-              <div>
-                Required on modern Android versions to display the interactive media notification and show download progress for offline tracks.
-              </div>
-            </div>
-            <div class="flex items-start gap-3">
-              <span class="text-[#f43f5e] font-mono text-sm">WAKE_LOCK</span>
-              <div>
-                Prevents the CPU from entering deep sleep during active audio decoding while the display is locked.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-6 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono font-semibold text-[#38bdf8] uppercase tracking-widest block">
-            Cross-Platform Desktop
-          </span>
-          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">
-            Windows Desktop Edition
-          </h2>
-          <p>
-            Levyra is not confined to mobile. The Windows edition brings the identical zero-telemetry listening experience to the desktop, engineered with Compose Multiplatform and powered by libvlc for rock-solid native decoding across all standard audio formats.
-          </p>
-          <p class="text-zinc-400 text-base">
-            Packaged as clean, native MSI installers and standalone executables with zero bundled adware or telemetry runtimes.
-          </p>
-        </div>
-
-        <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] flex flex-col sm:flex-row items-center justify-between gap-8 hover:border-indigo-500/30 transition-colors">
-          <div>
-            <h3 class="text-2xl font-semibold text-white mb-2">Experience Levyra Today</h3>
-            <p class="text-zinc-400 text-sm">Download the latest APK for Android, grab the Windows installer, or inspect the source on GitHub.</p>
-          </div>
-          <div class="flex flex-wrap items-center gap-3 flex-shrink-0">
-            <Button href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest" target="_blank" variant="primary" size="md">
-              <span>Get Levyra</span>
-              <span class="ml-1">↓</span>
-            </Button>
-            <Button href="https://github.com/LUC4N3X/Levyra-deepsound" target="_blank" variant="secondary" size="md">
-              <span>View Source</span>
-              <span class="ml-1">↗</span>
-            </Button>
-          </div>
-        </div>
-
-      </section>
-
-    </div>
-  </article>
+  </section>
 </Layout>

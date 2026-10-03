@@ -1,24 +1,15 @@
-const getSiteUrl = () => {
-  if (typeof process !== "undefined" && process.env?.PUBLIC_SITE_URL) {
-    return process.env.PUBLIC_SITE_URL;
-  }
-  if (typeof import.meta !== "undefined" && import.meta.env?.PUBLIC_SITE_URL) {
-    return import.meta.env.PUBLIC_SITE_URL;
-  }
-  return "https://luc4n3x.pages.dev";
-};
-
 export const siteConfig = {
   name: "LUC4N3X",
-  title: "LUC4N3X — Independent Developer & Open Source Creator",
-  description: "Independent developer and creator of Levyra. Building software focused on user experience, performance, privacy, and open source.",
-  url: getSiteUrl(),
-  ogImage: "/assets/brand/luc4n3x-lockup-dark.png",
-  author: "LUC4N3X",
-  email: "lucanex@proton.me",
+  handle: "@LUC4N3X",
+  title: "LUC4N3X | Independent Software Developer",
+  tagline: "Independent software developer · Creator of Levyra",
+  heroHeadline: "Software that respects your device.",
+  heroSubtitle: "I build software I want to use and keep working on it until it feels right. Most of my time goes into Android and desktop audio with Kotlin, Linux CLI tools, and low-level system inspection.",
+  description: "Personal site of LUC4N3X. Independent developer working on Levyra (an open-source Android and Windows music player), Linux tooling, and system internals.",
+  url: "https://luc4n3x.pages.dev",
+  email: "lucadrog0@outlook.it",
   github: "https://github.com/LUC4N3X",
-  tagline: "Independent Developer · Open Source · Software & IT",
-  secondaryTagline: "Software Developer · Creator of Levyra",
-  motto: "I build software I want to use, and keep working on it until it feels right.",
-  year: new Date().getFullYear()
+  location: "Europe",
+  ogImage: "/assets/brand/luc4n3x-banner-dark.svg",
+  year: new Date().getFullYear(),
 };

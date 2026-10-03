@@ -1,131 +1,108 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHero from '../components/PageHero.astro';
-import Button from '../components/Button.astro';
 import TechBadge from '../components/TechBadge.astro';
+import Button from '../components/Button.astro';
+import { skillCategories } from '../data/skills';
 import { siteConfig } from '../data/site';
 ---
 
 <Layout 
-  title={`About & Philosophy — ${siteConfig.name}`}
-  description="Learn about LUC4N3X: engineering philosophy, open-source principles, development environment, and software craftsmanship."
+  title={`About | ${siteConfig.name}`}
+  description="About LUC4N3X: independent software developer building Levyra, Linux CLI tools, and zero-telemetry software."
 >
   <PageHero
-    badge="Identity & Philosophy"
-    eyebrow="Principles & Process"
-    title="Engineering with Focus &"
-    highlight="Craftsmanship"
-    subtitle="The principles, development environment, and mindset behind LUC4N3X open-source software."
+    eyebrow="Identity & Stack"
+    title="About LUC4N3X"
+    subtitle="I build software I want to use, and keep working on it until it feels right."
   />
 
-  <div class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
-      <div class="lg:col-span-7 space-y-6 text-zinc-300 text-base leading-relaxed font-normal">
-        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
-          <h3 class="text-2xl font-semibold text-white">Who I Am</h3>
+  <section class="py-16 sm:py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-7 space-y-5 text-zinc-300 text-base leading-relaxed font-normal">
+          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight mb-4">
+            How I approach software
+          </h2>
           <p>
-            Hey, I'm LUC4N3X. I am an independent software developer building tools, mobile applications, and network infrastructure that I actively use in my daily life.
+            I'm <strong class="text-white font-medium">LUC4N3X</strong>, an independent software developer based in Europe. Most of my work focuses on <strong class="text-white font-medium">Android and Windows development with Kotlin</strong>, <strong class="text-white font-medium">Linux command-line tools</strong>, and <strong class="text-white font-medium">low-level system and audio analysis</strong>.
           </p>
           <p>
-            I spend most of my time across Android applications, high-throughput asynchronous services, media streaming engines, and Linux container infrastructure. I find the most satisfaction in the phase after something first starts functioning: hunting down what feels unresponsive, eliminating edge-case crashes, and refining the architecture until every interaction is instantaneous.
+            I care about performance, clear interfaces, and tools that respect the person using them. When you install an app I maintain, it starts without an account wall, keeps its database on your own storage, and never phones home to analytics or advertising networks.
           </p>
-        </div>
-
-        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
-          <h3 class="text-2xl font-semibold text-white">The Core Rule: How I Build</h3>
-          <blockquote class="border-l-2 border-[#818cf8] pl-4 py-1 text-white font-medium italic text-lg">
-            "Build the useful thing first. Run it on real devices. Find what breaks. Fix the smallest real cause. Then go back for the polish."
-          </blockquote>
           <p>
-            I do not build software to inflate metrics or follow transient industry hypes. If a dependency does not deliver a clear, tangible performance or user advantage, it gets removed. A small, deeply understood pull request is infinitely more valuable than a massive rewrite performed just because the diff looks impressive.
+            My main project is <a href="/projects/levyra" class="text-[#2997ff] hover:underline font-medium">Levyra</a>, an open-source music player for Android and Windows built with Kotlin Multiplatform, Jetpack Media3, and native libVLC. Alongside Levyra, I maintain my Arch Linux environment in <a href="https://github.com/LUC4N3X/thalarch-layer" target="_blank" rel="noopener noreferrer" class="text-[#2997ff] hover:underline font-medium">Thalarch Layer</a> and write small Python utilities like <a href="https://github.com/LUC4N3X/Instara-Crew" target="_blank" rel="noopener noreferrer" class="text-[#2997ff] hover:underline font-medium">Instara-Crew</a>.
           </p>
         </div>
 
-        <div class="p-8 sm:p-10 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
-          <h3 class="text-2xl font-semibold text-white">Why Privacy & Zero Telemetry Matter</h3>
-          <p>
-            Every software product I release operates under a strict principle: your device belongs to you. Software should not phone home, report user habits to third-party brokers, or require mandatory user accounts for features that can function entirely on-device.
-          </p>
-          <p>
-            With projects like Levyra, listening telemetry and favorites are stored locally in an on-device SQLite database. When network requests are necessary, they connect directly to content distribution endpoints with zero intermediary telemetry proxies.
-          </p>
-        </div>
-      </div>
+        <div class="lg:col-span-5 p-8 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] space-y-6">
+          <div class="text-xs font-mono uppercase tracking-wider text-[#2997ff]">
+            Working Principles
+          </div>
 
-      <div class="lg:col-span-5 flex flex-col gap-6">
-        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 flex flex-col sm:flex-row items-center gap-5 hover:border-indigo-500/30 transition-colors">
-          <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl p-0.5 bg-gradient-to-tr from-[#38bdf8] via-[#818cf8] to-[#f43f5e] shadow-lg shadow-indigo-500/15 flex-shrink-0">
-            <div class="w-full h-full rounded-2xl overflow-hidden bg-[#080b11]">
-              <img 
-                src="/assets/brand/luc4n3x-avatar.png" 
-                alt="LUC4N3X" 
-                class="w-full h-full object-cover"
-                width="112"
-                height="112"
-              />
+          <div class="space-y-4">
+            <div class="border-b border-white/[0.08] pb-4">
+              <div class="text-sm font-semibold text-white mb-1">1. Local-First Ownership</div>
+              <p class="text-xs text-zinc-400">Your playlists, listening history, and configuration files stay on your device in standard, exportable formats.</p>
+            </div>
+            <div class="border-b border-white/[0.08] pb-4">
+              <div class="text-sm font-semibold text-white mb-1">2. Zero Telemetry by Default</div>
+              <p class="text-xs text-zinc-400">No crash reporters, no behavioral analytics, and no ad SDKs. Verified by static APK scanners and F-Droid builds.</p>
+            </div>
+            <div class="border-b border-white/[0.08] pb-4">
+              <div class="text-sm font-semibold text-white mb-1">3. Native Toolchains</div>
+              <p class="text-xs text-zinc-400">Using Kotlin, Media3, libVLC, and shell tools directly instead of shipping a full Chromium browser for a desktop utility.</p>
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-white mb-1">4. Public History &amp; Real-Device Checks</div>
+              <p class="text-xs text-zinc-400">Every commit, pull request, quality gate script, and release binary is public and inspectable on GitHub.</p>
             </div>
           </div>
-          <div class="flex flex-col text-center sm:text-left">
-            <span class="text-xs font-mono uppercase tracking-widest text-[#38bdf8] font-semibold block mb-1">
-              LUC4N3X
-            </span>
-            <span class="text-lg font-semibold text-white mb-1">
-              Independent Craftsman
-            </span>
-            <span class="text-xs text-zinc-400">
-              Android Internals, Media Streaming & Systems
-            </span>
-          </div>
-        </div>
-
-        <div class="rounded-3xl border border-white/[0.08] bg-[#0e131f] p-6 hover:border-indigo-500/30 transition-colors">
-          <img 
-            src="/assets/brand/luc4n3x-workspace.svg" 
-            alt="LUC4N3X developer workspace" 
-            class="w-full h-auto object-contain rounded-xl mb-4"
-            width="360"
-            height="360"
-          />
-          <div class="text-center text-xs font-mono text-zinc-500">
-            Developer Workspace · Linux Environment
-          </div>
-        </div>
-
-        <div class="p-8 rounded-3xl border border-white/[0.08] bg-[#0e131f] space-y-4 hover:border-indigo-500/30 transition-colors">
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 font-semibold block">
-            Primary Tooling
-          </span>
-          <div class="flex flex-wrap gap-1.5">
-            <TechBadge text="Kotlin" variant="blue" />
-            <TechBadge text="Jetpack Compose" variant="blue" />
-            <TechBadge text="AndroidX Media3" variant="blue" />
-            <TechBadge text="Python 3.12+" variant="default" />
-            <TechBadge text="FastAPI" variant="default" />
-            <TechBadge text="Rust" variant="default" />
-            <TechBadge text="Docker" variant="default" />
-            <TechBadge text="Linux (Debian/Arch)" variant="default" />
-            <TechBadge text="Room / SQLite" variant="default" />
-            <TechBadge text="Cloudflare Pages" variant="default" />
-            <TechBadge text="GitHub Actions" variant="default" />
-          </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8 sm:p-12 rounded-3xl border border-white/[0.08] bg-[#0e131f] flex flex-col sm:flex-row items-center justify-between gap-6 hover:border-indigo-500/30 transition-colors">
       <div>
-        <h3 class="text-2xl font-semibold text-white mb-2">Ready to explore the software?</h3>
-        <p class="text-zinc-400 text-sm">Review the full collection of open-source projects or get in touch directly.</p>
+        <div class="mb-10">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#2997ff] block mb-2">Technical Stack</span>
+          <h2 class="text-2xl sm:text-3xl font-semibold text-white tracking-tight">Areas of focus</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {skillCategories.map(cat => (
+            <div class="p-7 rounded-2xl bg-[#0c0c0e] border border-white/[0.08] flex flex-col justify-between">
+              <div>
+                <span class="text-xs font-mono text-[#2997ff] block mb-1">{cat.subtitle}</span>
+                <h3 class="text-xl font-semibold text-white mb-3 tracking-tight">{cat.title}</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed mb-6">
+                  {cat.description}
+                </p>
+              </div>
+              <div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/[0.08]">
+                {cat.skills.map(skill => (
+                  <TechBadge text={skill} />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-      <div class="flex items-center gap-3">
-        <Button href="/projects" variant="primary" size="md">
-          <span>View Projects</span>
-        </Button>
-        <Button href="/contact" variant="secondary" size="md">
-          <span>Contact</span>
-        </Button>
+
+      <div class="rounded-2xl bg-[#0c0c0e] border border-white/[0.08] p-8 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-1 tracking-tight">Want to inspect the code or collaborate?</h3>
+          <p class="text-sm text-zinc-400">Browse my repositories on GitHub or send me an email directly.</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <Button href="/projects" variant="primary" size="md">
+            <span>View Projects</span>
+          </Button>
+          <Button href="/contact" variant="secondary" size="md">
+            <span>Contact Me</span>
+          </Button>
+        </div>
       </div>
+
     </div>
-  </div>
+  </section>
 </Layout>

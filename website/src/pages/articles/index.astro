@@ -2,45 +2,41 @@
 import Layout from '../../layouts/Layout.astro';
 import PageHero from '../../components/PageHero.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import PressSection from '../../components/PressSection.astro';
 import { articles } from '../../data/articles';
 import { siteConfig } from '../../data/site';
-
-const topics = [
-  { name: "Android Internals", color: "text-[#38bdf8] bg-sky-500/10 border-sky-500/20" },
-  { name: "Media3 & Audio", color: "text-[#818cf8] bg-indigo-500/10 border-indigo-500/20" },
-  { name: "Zero Telemetry", color: "text-[#34d399] bg-emerald-500/10 border-emerald-500/20" },
-  { name: "Reverse Engineering", color: "text-[#f43f5e] bg-rose-500/10 border-rose-500/20" },
-  { name: "Craftsmanship", color: "text-[#fbbf24] bg-amber-500/10 border-amber-500/20" }
-];
 ---
 
 <Layout 
-  title={`Articles & Engineering Notes — ${siteConfig.name}`}
-  description="Technical deep-dives into Android internals, media streaming architecture, reverse engineering, and software craftsmanship by LUC4N3X."
+  title={`Articles & Press | ${siteConfig.name}`}
+  description="Technical notes on audio DSP, Kotlin Multiplatform, Jetpack Media3, and Arch Linux, plus external press reviews and spotlights on Levyra."
 >
   <PageHero
-    badge="Writings & Research"
-    eyebrow="Engineering Notes"
-    title="Articles & Systems"
-    highlight="Architecture"
-    subtitle="Deep-dives into Android internals, low-latency media pipelines, reverse engineering, and software craftsmanship by LUC4N3X."
+    eyebrow="Technical Notes & Press"
+    title="Articles & Reviews"
+    subtitle="Engineering write-ups on audio DSP, Kotlin Multiplatform, and Linux tooling, followed by external articles and reviews featuring Levyra."
   />
 
-  <div class="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-[#080b11]">
-
-    <div class="flex flex-wrap items-center gap-2 mb-12">
-      <span class="text-xs font-mono text-zinc-500 mr-2 uppercase tracking-wider">Browse Topics:</span>
-      {topics.map(topic => (
-        <span class={`text-xs font-mono px-3 py-1 rounded-full border ${topic.color}`}>
-          {topic.name}
+  <section class="py-12 sm:py-20 bg-[#07090e]">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-8 border-b border-white/[0.08] pb-4">
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-[#38bdf8] font-bold block mb-1">
+          Engineering Notes
         </span>
-      ))}
-    </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Technical Write-Ups ({articles.length})
+        </h2>
+      </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-      {articles.map(article => (
-        <ArticleCard article={article} />
-      ))}
+      <div class="divide-y divide-white/[0.08]">
+        {articles.map(article => (
+          <ArticleCard article={article} />
+        ))}
+      </div>
     </div>
+  </section>
+
+  <div id="press">
+    <PressSection />
   </div>
 </Layout>

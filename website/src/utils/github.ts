@@ -1,70 +1,76 @@
 export interface LevyraMetrics {
+  version: string;
   stars: number;
   downloads: number;
-  version: string;
-  forks?: number;
+  forks: number;
 }
 
+const FALLBACK_METRICS: LevyraMetrics = {
+  version: '2.6.2',
+  stars: 280,
+  downloads: 8500,
+  forks: 18,
+};
+
+let cachedMetrics: LevyraMetrics | null = null;
+
 export async function getLevyraMetrics(): Promise<LevyraMetrics> {
-  const fallback: LevyraMetrics = {
-    stars: 393,
-    downloads: 6192,
-    version: "2.5.9",
-    forks: 7
-  };
+  if (cachedMetrics) {
+    return cachedMetrics;
+  }
 
   try {
-    const headers: Record<string, string> = {
-      "User-Agent": "LUC4N3X-Official-Website",
-      "Accept": "application/vnd.github.v3+json"
-    };
-
-    if (typeof process !== "undefined" && process.env?.GITHUB_TOKEN) {
-      headers["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
-    }
-
     const [repoRes, releasesRes] = await Promise.all([
-      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound", { headers }),
-      fetch("https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100", { headers })
+      fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound', {
+        headers: { 'Accept': 'application/vnd.github.v3+json', 'User-Agent': 'LUC4N3X-Site-Builder' }
+      }),
+      fetch('https://api.github.com/repos/LUC4N3X/Levyra-deepsound/releases?per_page=100', {
+        headers: { 'Accept': 'application/vnd.github.v3+json', 'User-Agent': 'LUC4N3X-Site-Builder' }
+      })
     ]);
 
-    let stars = fallback.stars;
-    let forks = fallback.forks;
-    let version = fallback.version;
-    let downloads = fallback.downloads;
-
-    if (repoRes.ok) {
-      const repo = await repoRes.json();
-      if (typeof repo.stargazers_count === "number") {
-        stars = repo.stargazers_count;
-      }
-      if (typeof repo.forks_count === "number") {
-        forks = repo.forks_count;
-      }
+    if (!repoRes.ok || !releasesRes.ok) {
+      throw new Error(`GitHub API returned status ${repoRes.status} / ${releasesRes.status}`);
     }
 
-    if (releasesRes.ok) {
-      const releases = await releasesRes.json();
-      if (Array.isArray(releases) && releases.length > 0) {
-        if (releases[0]?.tag_name) {
-          version = String(releases[0].tag_name).replace(/^v/, "");
-        }
-        let total = 0;
-        for (const rel of releases) {
-          if (!rel.draft && Array.isArray(rel.assets)) {
-            for (const asset of rel.assets) {
-              total += asset.download_count || 0;
-            }
+    const repoData = await repoRes.json();
+    const releasesData = await releasesRes.json();
+
+    let totalDownloads = 0;
+    let latestVersion = FALLBACK_METRICS.version;
+
+    if (Array.isArray(releasesData) && releasesData.length > 0) {
+      const latestRelease = releasesData.find((r: any) => !r.draft && !r.prerelease) || releasesData[0];
+      if (latestRelease && latestRelease.tag_name) {
+        latestVersion = latestRelease.tag_name.replace(/^v/i, '');
+      }
+
+      for (const release of releasesData) {
+        if (Array.isArray(release.assets)) {
+          for (const asset of release.assets) {
+            totalDownloads += asset.download_count || 0;
           }
         }
-        if (total > 0) {
-          downloads = total;
-        }
       }
     }
 
-    return { stars, downloads, version, forks };
-  } catch {
-    return fallback;
+    cachedMetrics = {
+      version: latestVersion,
+      stars: repoData.stargazers_count || FALLBACK_METRICS.stars,
+      downloads: totalDownloads > 0 ? totalDownloads : FALLBACK_METRICS.downloads,
+      forks: repoData.forks_count || FALLBACK_METRICS.forks,
+    };
+
+    return cachedMetrics;
+  } catch (err) {
+    console.warn('[getLevyraMetrics] Using fallback metrics due to API error:', err);
+    return FALLBACK_METRICS;
   }
+}
+
+export function formatMetricNumber(num: number): string {
+  if (num >= 1000) {
+    return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'k+';
+  }
+  return num.toString();
 }

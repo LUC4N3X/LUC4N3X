@@ -1,35 +1,38 @@
-import { siteConfig } from './site';
-
 export interface SocialLink {
   name: string;
-  url: string;
   label: string;
-  category: "code" | "contact" | "community";
+  href: string;
+  icon: string;
+  description: string;
 }
 
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: siteConfig.github,
     label: "@LUC4N3X",
-    category: "code"
+    href: "https://github.com/LUC4N3X",
+    icon: "github",
+    description: "Source code, issue trackers, and signed release binaries."
   },
   {
     name: "Email",
-    url: `mailto:${siteConfig.email}`,
-    label: siteConfig.email,
-    category: "contact"
+    label: "lucadrog0@outlook.it",
+    href: "mailto:lucadrog0@outlook.it",
+    icon: "mail",
+    description: "Direct email for bug reports, security notes, or questions."
   },
   {
-    name: "Weblate",
-    url: "https://hosted.weblate.org/engage/levyra/",
-    label: "Weblate / Levyra",
-    category: "community"
+    name: "Levyra Repository",
+    label: "LUC4N3X/Levyra-deepsound",
+    href: "https://github.com/LUC4N3X/Levyra-deepsound",
+    icon: "code",
+    description: "Main repository for the Levyra Android and Windows music player."
   },
   {
-    name: "Repository",
-    url: "https://github.com/LUC4N3X/LUC4N3X",
-    label: "LUC4N3X / LUC4N3X",
-    category: "code"
+    name: "Weblate Localization",
+    label: "hosted.weblate.org/engage/levyra",
+    href: "https://hosted.weblate.org/engage/levyra/",
+    icon: "globe",
+    description: "Community translation portal covering 37 languages."
   }
 ];
