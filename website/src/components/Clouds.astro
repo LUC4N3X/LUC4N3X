@@ -1,0 +1,193 @@
+---
+/**
+ * Cloud system.
+ *
+ * variant="band"  horizon deck that carries one section into the next
+ * variant="field" sparse clouds used as a background layer
+ *
+ * Shapes stay crisp vector silhouettes: a body in a vertical gradient plus a
+ * lit cap sitting slightly higher, the way a cloud catches light on top. No
+ * blur filters, so the outline reads clearly at any size.
+ */
+interface Props {
+  variant?: 'band' | 'field';
+  base?: string;
+  flip?: boolean;
+  height?: string;
+  class?: string;
+}
+
+const {
+  variant = 'band',
+  base = '#080b11',
+  flip = false,
+  height = 'h-[clamp(5rem,12vw,13rem)]',
+  class: className = ''
+} = Astro.props;
+
+// Several decks can share a page, so gradient and shape ids must stay unique.
+const u = Math.random().toString(36).slice(2, 8);
+const isBand = variant === 'band';
+---
+
+<div
+  class:list={[
+    'cloudscape pointer-events-none select-none',
+    isBand ? `relative block w-full ${height} -mb-px` : 'absolute inset-0 overflow-hidden',
+    flip && 'cloudscape--flip',
+    className
+  ]}
+  aria-hidden="true"
+>
+  <svg
+    class="absolute inset-0 h-full w-full"
+    viewBox={isBand ? '0 0 1600 220' : '0 0 1600 620'}
+    preserveAspectRatio={isBand ? 'xMidYMax slice' : 'xMidYMid slice'}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id={`body-${u}`} x1="0" y1="0" x2="0.1" y2="1">
+        <stop offset="0" stop-color="#5c7fb8" />
+        <stop offset="0.45" stop-color="#2b4473" />
+        <stop offset="1" stop-color="#16244370" />
+      </linearGradient>
+
+      <linearGradient id={`cap-${u}`} x1="0" y1="0" x2="0.06" y2="1">
+        <stop offset="0" stop-color="#e4f0ff" />
+        <stop offset="0.55" stop-color="#a8c6ec" />
+        <stop offset="1" stop-color="#7ea5d8" stop-opacity="0" />
+      </linearGradient>
+
+      <linearGradient id={`far-${u}`} x1="0" y1="0" x2="0.1" y2="1">
+        <stop offset="0" stop-color="#6d8cbd" />
+        <stop offset="1" stop-color="#2a3f68" />
+      </linearGradient>
+
+      <radialGradient id={`glow-${u}`} cx="0.5" cy="1" r="0.85">
+        <stop offset="0" stop-color="#38bdf8" stop-opacity="0.22" />
+        <stop offset="0.55" stop-color="#6366f1" stop-opacity="0.07" />
+        <stop offset="1" stop-color="#6366f1" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- Bubble silhouettes on a flat base, drawn as arcs. -->
+      <path
+        id={`cl-a-${u}`}
+        d="M0 110 A30 30 0 0 1 32 74 A44 44 0 0 1 106 46 A34 34 0 0 1 162 70 A26 26 0 0 1 202 88 A22 22 0 0 1 214 110 Z"
+      />
+      <path
+        id={`cl-b-${u}`}
+        d="M0 96 A22 22 0 0 1 26 66 A34 34 0 0 1 84 44 A28 28 0 0 1 130 64 A20 20 0 0 1 162 82 A17 17 0 0 1 172 96 Z"
+      />
+      <path
+        id={`cl-c-${u}`}
+        d="M0 80 A18 18 0 0 1 22 56 A28 28 0 0 1 70 38 A23 23 0 0 1 108 56 A15 15 0 0 1 128 80 Z"
+      />
+
+      <!-- Rows span exactly 1600 units so a -1600 scroll loops seamlessly. -->
+      <g id={`row-far-${u}`}>
+        <use href={`#cl-c-${u}`} transform="translate(60,16) scale(0.62)" />
+        <use href={`#cl-b-${u}`} transform="translate(430,10) scale(0.5)" />
+        <use href={`#cl-c-${u}`} transform="translate(880,20) scale(0.56)" />
+        <use href={`#cl-a-${u}`} transform="translate(1210,6) scale(0.48)" />
+      </g>
+      <g id={`row-mid-${u}`}>
+        <use href={`#cl-a-${u}`} transform="translate(-60,36) scale(0.84)" />
+        <use href={`#cl-c-${u}`} transform="translate(340,44) scale(0.9)" />
+        <use href={`#cl-b-${u}`} transform="translate(720,32) scale(0.86)" />
+        <use href={`#cl-a-${u}`} transform="translate(1130,40) scale(0.8)" />
+      </g>
+      <g id={`row-near-${u}`}>
+        <use href={`#cl-b-${u}`} transform="translate(-80,96) scale(1.18)" />
+        <use href={`#cl-a-${u}`} transform="translate(300,88) scale(1.12)" />
+        <use href={`#cl-c-${u}`} transform="translate(760,100) scale(1.24)" />
+        <use href={`#cl-b-${u}`} transform="translate(1120,92) scale(1.14)" />
+      </g>
+    </defs>
+
+    {isBand && (
+      <g>
+        <ellipse cx="800" cy="230" rx="780" ry="120" fill={`url(#glow-${u})`} />
+
+        <g class="cloud-layer" style="--dur:260s" opacity="0.4">
+          <use href={`#row-far-${u}`} fill={`url(#far-${u})`} />
+          <use href={`#row-far-${u}`} transform="translate(1600,0)" fill={`url(#far-${u})`} />
+        </g>
+
+        <g class="cloud-layer" style="--dur:170s">
+          <g opacity="0.9">
+            <use href={`#row-mid-${u}`} fill={`url(#body-${u})`} />
+            <use href={`#row-mid-${u}`} transform="translate(1600,0)" fill={`url(#body-${u})`} />
+          </g>
+          <g opacity="0.5">
+            <use href={`#row-mid-${u}`} transform="translate(6,-9) scale(0.97)" fill={`url(#cap-${u})`} />
+            <use href={`#row-mid-${u}`} transform="translate(1606,-9) scale(0.97)" fill={`url(#cap-${u})`} />
+          </g>
+        </g>
+
+        <g class="cloud-layer" style="--dur:105s">
+          <g>
+            <use href={`#row-near-${u}`} fill={base} />
+            <use href={`#row-near-${u}`} transform="translate(1600,0)" fill={base} />
+          </g>
+          <g opacity="0.3">
+            <use href={`#row-near-${u}`} transform="translate(8,-7) scale(0.98)" fill={`url(#cap-${u})`} />
+            <use href={`#row-near-${u}`} transform="translate(1608,-7) scale(0.98)" fill={`url(#cap-${u})`} />
+          </g>
+        </g>
+
+        <rect x="-20" y="208" width="1640" height="40" fill={base} />
+      </g>
+    )}
+
+    {!isBand && (
+      <g>
+        <g class="cloud-layer" style="--dur:300s" opacity="0.26">
+          <use href={`#row-far-${u}`} transform="translate(0,40)" fill={`url(#far-${u})`} />
+          <use href={`#row-far-${u}`} transform="translate(1600,40)" fill={`url(#far-${u})`} />
+        </g>
+
+        <g class="cloud-layer" style="--dur:210s">
+          <g opacity="0.4">
+            <use href={`#row-mid-${u}`} transform="translate(0,190)" fill={`url(#body-${u})`} />
+            <use href={`#row-mid-${u}`} transform="translate(1600,190)" fill={`url(#body-${u})`} />
+          </g>
+          <g opacity="0.26">
+            <use href={`#row-mid-${u}`} transform="translate(6,181) scale(0.97)" fill={`url(#cap-${u})`} />
+            <use href={`#row-mid-${u}`} transform="translate(1606,181) scale(0.97)" fill={`url(#cap-${u})`} />
+          </g>
+        </g>
+
+        <g class="cloud-layer" style="--dur:140s" opacity="0.3">
+          <use href={`#row-near-${u}`} transform="translate(0,400)" fill={`url(#body-${u})`} />
+          <use href={`#row-near-${u}`} transform="translate(1600,400)" fill={`url(#body-${u})`} />
+        </g>
+      </g>
+    )}
+  </svg>
+</div>
+
+<style>
+  .cloudscape--flip {
+    transform: scaleY(-1);
+  }
+
+  .cloud-layer {
+    animation: cloud-scroll var(--dur, 180s) linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes cloud-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1600px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cloud-layer {
+      animation: none;
+    }
+  }
+</style>
