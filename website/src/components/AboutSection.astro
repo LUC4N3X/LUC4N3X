@@ -54,29 +54,25 @@ import CloudDivider from './CloudDivider.astro';
         </div>
       </div>
 
-      <div class="lg:col-span-5 relative flex justify-center">
-        <div class="portrait relative w-full max-w-[440px] pt-10">
-          <!-- Halo the portrait rises out of -->
-          <div class="portrait__halo" aria-hidden="true"></div>
+      <div class="lg:col-span-5 relative flex justify-center pt-16 lg:pt-10">
+        <div class="portrait relative w-[78%] max-w-[380px] sm:w-full">
           <div class="portrait__ring" aria-hidden="true"></div>
 
-          <img
-            src="/assets/brand/luc4n3x-thinking.webp"
-            alt="LUC4N3X thinking, hand on chin"
-            width="889"
-            height="900"
-            loading="lazy"
-            class="portrait__img relative z-10 mx-auto w-[88%]"
-          />
-
-          <div class="thought absolute right-[-4%] top-0 z-20" aria-hidden="true">
-            <span>why only on <em>this</em> phone?</span>
+          <!-- Body, clipped to the disc -->
+          <div class="portrait__disc">
+            <img src="/assets/brand/luc4n3x-thinking.webp" alt="LUC4N3X thinking, hand on chin"
+                 width="889" height="900" loading="lazy" class="portrait__img" />
           </div>
+          <!-- Same image again, top part only, so the head breaks out of the disc -->
+          <img src="/assets/brand/luc4n3x-thinking.webp" alt="" aria-hidden="true"
+               width="889" height="900" loading="lazy" class="portrait__img portrait__img--pop" />
+
+          <div class="thought" aria-hidden="true"><span>why only on <em>this</em> phone?</span></div>
           <span class="thought-dot thought-dot--1" aria-hidden="true"></span>
           <span class="thought-dot thought-dot--2" aria-hidden="true"></span>
 
-          <span class="about-sticker about-sticker--sky absolute left-[-2%] top-[38%] z-20 -rotate-[8deg]">Arch Linux &middot; Wayland</span>
-          <span class="about-sticker about-sticker--pink absolute right-[0%] bottom-[16%] z-20 rotate-[6deg]">Made in Italy</span>
+          <span class="about-sticker about-sticker--sky absolute left-[-14%] top-[46%] z-20 -rotate-[8deg]">Arch Linux &middot; Wayland</span>
+          <span class="about-sticker about-sticker--pink absolute right-[-10%] bottom-[8%] z-20 rotate-[6deg]">Made in Italy</span>
         </div>
       </div>
 
@@ -87,57 +83,62 @@ import CloudDivider from './CloudDivider.astro';
 </section>
 
 <style>
-  .portrait__halo {
+  /* Square stage: a gradient disc with the portrait inside it. The image is
+     wider than the disc and sits on its bottom edge, so the head rises above
+     the top; the copy outside the disc shows only the upper part. */
+  .portrait { aspect-ratio: 1; }
+  .portrait__disc {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 25%, rgba(255,255,255,.22), transparent 45%),
+      linear-gradient(150deg, #38bdf8 0%, #6366f1 50%, #f472b6 100%);
+    box-shadow: 0 40px 120px -24px rgba(99,102,241,.6), inset 0 -30px 60px rgba(8,11,17,.25);
+  }
+  .portrait__img {
     position: absolute;
     left: 50%;
     bottom: 0;
-    width: 92%;
-    aspect-ratio: 1;
+    width: 116%;
+    max-width: none;
+    height: auto;
     transform: translateX(-50%);
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 30% 25%, rgba(255,255,255,.18), transparent 45%),
-      linear-gradient(150deg, #38bdf8 0%, #6366f1 48%, #f472b6 100%);
-    box-shadow: 0 40px 120px -20px rgba(99,102,241,.55);
+  }
+  .portrait__img--pop {
+    z-index: 10;
+    clip-path: inset(0 0 46% 0);
+    filter: drop-shadow(0 -2px 12px rgba(8,11,17,.35));
+    pointer-events: none;
   }
   .portrait__ring {
     position: absolute;
-    left: 50%;
-    bottom: -4%;
-    width: 108%;
-    aspect-ratio: 1;
-    transform: translateX(-50%);
+    inset: -7%;
     border-radius: 50%;
-    border: 1px dashed rgba(255,255,255,.18);
+    border: 1px dashed rgba(255,255,255,.2);
     animation: spin 60s linear infinite;
-  }
-  /* Head and shoulders break out of the halo; the bottom melts into it */
-  .portrait__img {
-    filter: drop-shadow(0 24px 30px rgba(8,11,17,.55));
-    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
-    mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
   }
 
   .thought {
-    padding: .7rem 1.1rem;
+    position: absolute;
+    z-index: 20;
+    right: -16%;
+    top: -18%;
+    padding: .65rem 1.05rem;
     border-radius: 1.4rem;
     background: #fff;
     color: #0b1326;
     font-weight: 600;
-    font-size: .9rem;
+    font-size: .88rem;
     white-space: nowrap;
     box-shadow: 0 16px 30px -12px rgba(0,0,0,.6);
     animation: bob 6s ease-in-out infinite;
   }
   .thought em { font-style: italic; color: #6366f1; }
-  .thought-dot {
-    position: absolute;
-    z-index: 20;
-    border-radius: 50%;
-    background: #fff;
-  }
-  .thought-dot--1 { right: 22%; top: 3.6rem; width: 14px; height: 14px; }
-  .thought-dot--2 { right: 30%; top: 5rem; width: 8px; height: 8px; }
+  .thought-dot { position: absolute; z-index: 20; border-radius: 50%; background: #fff; }
+  .thought-dot--1 { right: 6%; top: -4%; width: 13px; height: 13px; }
+  .thought-dot--2 { right: 14%; top: 2%; width: 8px; height: 8px; }
 
   .about-sticker {
     padding: .4rem .9rem;
@@ -152,14 +153,12 @@ import CloudDivider from './CloudDivider.astro';
   .about-sticker--sky { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
   .about-sticker--pink { background: linear-gradient(135deg, #f472b6, #e11d48); }
 
-  @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
-  @keyframes bob {
-    0%, 100% { translate: 0 0; }
-    50% { translate: 0 -6px; }
-  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
   @media (max-width: 640px) {
-    .thought { font-size: .78rem; right: 0; }
-    .about-sticker { font-size: .72rem; }
+    .thought { font-size: .75rem; right: -8%; top: -20%; }
+    .about-sticker { font-size: .7rem; padding: .3rem .7rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     .portrait__ring, .thought { animation: none; }
