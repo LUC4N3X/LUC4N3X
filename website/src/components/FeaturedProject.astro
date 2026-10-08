@@ -105,7 +105,10 @@ const downloadsFormatted = metrics.downloads >= 1000
           <div class="absolute -inset-10 bg-gradient-to-tr from-[#38bdf8]/30 via-[#818cf8]/25 to-[#f43f5e]/30 rounded-full blur-3xl opacity-80 pointer-events-none"></div>
           
           <img 
-            src="/assets/levyra/levyra-logo-3d.png" 
+            src="/assets/levyra/levyra-logo-3d.webp"
+            srcset="/assets/levyra/levyra-logo-3d-480.webp 480w, /assets/levyra/levyra-logo-3d.webp 900w"
+            sizes="(min-width: 1024px) 400px, (min-width: 640px) 340px, 260px"
+            decoding="async" 
             alt="Levyra DeepSound 3D Logo" 
             class="relative z-10 w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[400px] h-auto object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)] hover:scale-105 transition-transform duration-500 ease-out" 
             loading="lazy"
