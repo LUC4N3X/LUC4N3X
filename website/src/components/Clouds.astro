@@ -1,0 +1,115 @@
+---
+/**
+ * Layered night landscape.
+ *
+ * variant="band"  ridge line that carries one section into the next
+ * variant="field" the same ridges, sunk low, as a hero backdrop
+ *
+ * Each ridge is one soft bezier profile in a flat fill, stacked back to front
+ * and getting darker as it comes forward. Profiles start and end at the same
+ * height, so a copy placed 1600 units along joins seamlessly and the layer can
+ * scroll forever.
+ */
+interface Props {
+  variant?: 'band' | 'field';
+  base?: string;
+  flip?: boolean;
+  height?: string;
+  class?: string;
+}
+
+const {
+  variant = 'band',
+  base = '#06080d',
+  flip = false,
+  height = 'h-[clamp(3.5rem,7vw,7.5rem)]',
+  class: className = ''
+} = Astro.props;
+
+// Several landscapes can share a page, so ids must stay unique.
+const u = Math.random().toString(36).slice(2, 8);
+const isBand = variant === 'band';
+---
+
+<div
+  class:list={[
+    'cloudscape pointer-events-none select-none',
+    isBand ? `relative block w-full ${height} -mb-px` : 'absolute inset-0 overflow-hidden',
+    flip && 'cloudscape--flip',
+    className
+  ]}
+  aria-hidden="true"
+>
+  <svg
+    class="absolute inset-0 h-full w-full"
+    viewBox={isBand ? '0 0 1600 200' : '0 0 1600 340'}
+    preserveAspectRatio="xMidYMax slice"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <radialGradient id={`moon-${u}`} cx="0.5" cy="1" r="0.9">
+        <stop offset="0" stop-color="#38bdf8" stop-opacity="0.18" />
+        <stop offset="0.5" stop-color="#6366f1" stop-opacity="0.06" />
+        <stop offset="1" stop-color="#6366f1" stop-opacity="0" />
+      </radialGradient>
+
+      <path
+        id={`ridge-far-${u}`}
+        d="M0 200 L0 72 C 140 32 260 94 400 80 C 540 66 620 20 760 36 C 900 52 980 98 1120 88 C 1260 78 1340 36 1480 50 C 1532 55 1572 65 1600 72 L1600 200 Z"
+      />
+      <path
+        id={`ridge-mid-${u}`}
+        d="M0 200 L0 112 C 120 72 240 130 380 120 C 520 110 600 64 740 78 C 880 92 960 136 1100 128 C 1240 120 1320 78 1460 92 C 1512 97 1562 106 1600 112 L1600 200 Z"
+      />
+      <path
+        id={`ridge-near-${u}`}
+        d="M0 200 L0 152 C 130 120 250 168 390 160 C 530 152 610 114 750 126 C 890 138 970 174 1110 168 C 1250 162 1330 124 1470 136 C 1522 140 1566 147 1600 152 L1600 200 Z"
+      />
+    </defs>
+
+    <g transform={isBand ? undefined : 'translate(0,140)'} opacity={isBand ? 1 : 0.7}>
+      <ellipse cx="800" cy="200" rx="760" ry="130" fill={`url(#moon-${u})`} />
+
+      <g class="cloud-layer" style="--dur:300s">
+        <use href={`#ridge-far-${u}`} fill="#1d2b49" fill-opacity="0.55" />
+        <use href={`#ridge-far-${u}`} transform="translate(1600,0)" fill="#1d2b49" fill-opacity="0.55" />
+      </g>
+
+      <g class="cloud-layer" style="--dur:200s">
+        <use href={`#ridge-mid-${u}`} fill="#131d33" fill-opacity="0.8" />
+        <use href={`#ridge-mid-${u}`} transform="translate(1600,0)" fill="#131d33" fill-opacity="0.8" />
+      </g>
+
+      <g class="cloud-layer" style="--dur:130s">
+        <use href={`#ridge-near-${u}`} fill={base} />
+        <use href={`#ridge-near-${u}`} transform="translate(1600,0)" fill={base} />
+      </g>
+    </g>
+  </svg>
+</div>
+
+<style>
+  .cloudscape--flip {
+    transform: scaleY(-1);
+  }
+
+  .cloud-layer {
+    animation: cloud-scroll var(--dur, 200s) linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes cloud-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-1600px);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cloud-layer {
+      animation: none;
+    }
+  }
+</style>

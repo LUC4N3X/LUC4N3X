@@ -4,7 +4,7 @@ import Button from './Button.astro';
 import CloudDivider from './CloudDivider.astro';
 ---
 
-<section class="pt-16 sm:pt-24 pb-0 bg-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
+<section class="pt-16 sm:pt-24 pb-0 bg-gradient-to-b from-[#080b11] via-[#0a0f1d] to-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
   <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
     <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-sky-500/10 via-indigo-500/10 to-rose-500/8 rounded-full blur-[100px]"></div>
   </div>
@@ -14,83 +14,153 @@ import CloudDivider from './CloudDivider.astro';
       
       <div class="lg:col-span-7 flex flex-col gap-6">
         <SectionHeader
-          eyebrow="Independent Creator"
-          title="About LUC4N3X"
-          subtitle="I build software I want to use, and keep working on it until it feels right."
+          eyebrow="About me"
+          title="Hey, I'm LUC4N3X."
+          subtitle="Software developer, Linux user, and the person behind Levyra."
         />
 
         <div class="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
           <p>
-            Hey, I'm LUC4N3X. I take rough ideas and turn them into software I can actually use day in and day out.
+            I build software for myself and keep at it until it works the way I want. Most of my time goes into Android apps, backend APIs and small self-hosted tools.
           </p>
           <p>
-            Most days are spent between Android applications, high-throughput backend services, media pipelines, and infrastructure. What matters most is the phase after something starts working: finding what feels off, fixing the strange edge cases, and refining until the interface stays out of your way.
+            Getting a feature to run the first time is usually the easy part. What I enjoy is everything after that: chasing the weird edge cases, fixing a bug that only shows up on one obscure phone, and cutting complexity until the code reads plainly.
+          </p>
+          <p>
+            A lot of my ideas end up in Levyra, my open-source music player. When I'm not working on it, I'm usually tinkering with local-first setups, audio pipelines or small Linux utilities.
           </p>
         </div>
 
         <div class="space-y-2 border-t border-b border-white/[0.08] py-5 text-sm text-zinc-400">
           <div class="flex items-start gap-2.5">
             <span class="text-[#38bdf8] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>Primarily working with Kotlin, Jetpack Compose, Python, Linux, and Docker</span>
+            <span>Kotlin and Jetpack Compose on Android, Python and Docker on the backend, Linux everywhere</span>
           </div>
           <div class="flex items-start gap-2.5">
             <span class="text-[#818cf8] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>Focused on bugs that only trigger on specific hardware, network paths, or state transitions</span>
+            <span>I test on real phones, because the strangest bugs only show up on real hardware</span>
           </div>
           <div class="flex items-start gap-2.5">
             <span class="text-[#f43f5e] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>A focused, verified fix is always preferred over an unvetted architectural rewrite</span>
+            <span>I would rather ship a small, verified fix than a big rewrite nobody has tested</span>
           </div>
         </div>
 
         <div class="pt-2">
           <Button href="/about" variant="secondary" size="md">
-            <span>Read Full Story & Principles</span>
+            <span>More about how I work</span>
             <span class="ml-1">→</span>
           </Button>
         </div>
       </div>
 
-      <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
-        <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
-          <div class="absolute -inset-8 bg-gradient-to-tr from-[#38bdf8]/20 via-[#818cf8]/20 to-[#f43f5e]/15 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+      <div class="lg:col-span-5 relative flex justify-center pt-16 lg:pt-10">
+        <div class="portrait relative w-[78%] max-w-[380px] sm:w-full">
+          <div class="portrait__ring" aria-hidden="true"></div>
 
-          <div class="relative z-10 w-full rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-white/[0.08] via-white/[0.03] to-white/[0.06] border border-white/[0.1] shadow-2xl shadow-indigo-500/10 backdrop-blur-sm group hover:border-indigo-500/40 transition-all duration-300">
-            <img 
-              src="/assets/brand/luc4n3x-workspace.svg" 
-              alt="LUC4N3X developer workspace" 
-              class="w-full h-auto object-contain rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-              loading="lazy"
-              width="400"
-              height="400"
-            />
-            <div class="py-3 px-4 flex items-center justify-between text-xs font-mono border-t border-white/[0.08] bg-[#080b11]/60">
-              <div class="flex items-center gap-2 text-zinc-300">
-                <span class="w-2 h-2 rounded-full bg-[#34d399] animate-pulse"></span>
-                <span>Arch Linux · Wayland</span>
-              </div>
-              <span class="text-zinc-500">
-                Dev Environment
-              </span>
-            </div>
+          <!-- Body, clipped to the disc -->
+          <div class="portrait__disc">
+            <img src="/assets/brand/luc4n3x-thinking.webp" srcset="/assets/brand/luc4n3x-thinking-480.webp 480w, /assets/brand/luc4n3x-thinking.webp 889w" sizes="(min-width: 640px) 440px, 90vw" decoding="async" alt="LUC4N3X thinking, hand on chin"
+                 width="889" height="900" loading="lazy" class="portrait__img" />
           </div>
+          <!-- Same image again, top part only, so the head breaks out of the disc -->
+          <img src="/assets/brand/luc4n3x-thinking.webp" srcset="/assets/brand/luc4n3x-thinking-480.webp 480w, /assets/brand/luc4n3x-thinking.webp 889w" sizes="(min-width: 640px) 440px, 90vw" decoding="async" alt="" aria-hidden="true"
+               width="889" height="900" loading="lazy" class="portrait__img portrait__img--pop" />
 
-          <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Dual 4K Setup
-            </span>
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Neovim & Android Studio
-            </span>
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Local Hardware Testing
-            </span>
-          </div>
+          <div class="thought" aria-hidden="true"><span>why only on <em>this</em> phone?</span></div>
+          <span class="thought-dot thought-dot--1" aria-hidden="true"></span>
+          <span class="thought-dot thought-dot--2" aria-hidden="true"></span>
+
+          <span class="about-sticker about-sticker--sky absolute left-[-14%] top-[46%] z-20 -rotate-[8deg]">Arch Linux &middot; Wayland</span>
+          <span class="about-sticker about-sticker--pink absolute right-[-10%] bottom-[8%] z-20 rotate-[6deg]">Made in Italy</span>
         </div>
       </div>
 
     </div>
   </div>
 
-  <CloudDivider fill="#080b11" crestFill="#1e1b4b" midFill="#0f172a" />
+  <CloudDivider fill="#080b11" />
 </section>
+
+<style>
+  /* Square stage: a gradient disc with the portrait inside it. The image is
+     wider than the disc and sits on its bottom edge, so the head rises above
+     the top; the copy outside the disc shows only the upper part. */
+  .portrait { aspect-ratio: 1; }
+  .portrait__disc {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 25%, rgba(255,255,255,.22), transparent 45%),
+      linear-gradient(150deg, #38bdf8 0%, #6366f1 50%, #f472b6 100%);
+    box-shadow: 0 40px 120px -24px rgba(99,102,241,.6), inset 0 -30px 60px rgba(8,11,17,.25);
+  }
+  .portrait__img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 116%;
+    max-width: none;
+    height: auto;
+    transform: translateX(-50%);
+  }
+  .portrait__img--pop {
+    z-index: 10;
+    clip-path: inset(0 0 46% 0);
+    filter: drop-shadow(0 -2px 12px rgba(8,11,17,.35));
+    pointer-events: none;
+  }
+  .portrait__ring {
+    position: absolute;
+    inset: -7%;
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,.2);
+    animation: spin 60s linear infinite;
+  }
+
+  .thought {
+    position: absolute;
+    z-index: 20;
+    right: -16%;
+    top: -18%;
+    padding: .65rem 1.05rem;
+    border-radius: 1.4rem;
+    background: #fff;
+    color: #0b1326;
+    font-weight: 600;
+    font-size: .88rem;
+    white-space: nowrap;
+    box-shadow: 0 16px 30px -12px rgba(0,0,0,.6);
+    animation: bob 6s ease-in-out infinite;
+  }
+  .thought em { font-style: italic; color: #4338ca; }
+  .thought-dot { position: absolute; z-index: 20; border-radius: 50%; background: #fff; }
+  .thought-dot--1 { right: 6%; top: -4%; width: 13px; height: 13px; }
+  .thought-dot--2 { right: 14%; top: 2%; width: 8px; height: 8px; }
+
+  .about-sticker {
+    padding: .4rem .9rem;
+    border: 3px solid #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .82rem;
+    color: #fff;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,.7);
+  }
+  .about-sticker--sky { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
+  .about-sticker--pink { background: linear-gradient(135deg, #f472b6, #e11d48); }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+
+  @media (max-width: 640px) {
+    .thought { font-size: .75rem; right: -8%; top: -20%; }
+    .about-sticker { font-size: .7rem; padding: .3rem .7rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .portrait__ring, .thought { animation: none; }
+  }
+</style>

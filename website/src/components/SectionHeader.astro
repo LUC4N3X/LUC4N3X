@@ -15,12 +15,12 @@ const alignmentClasses = align === "center" ? "text-center items-center" : "text
 <div class={`flex flex-col gap-2.5 mb-6 sm:mb-8 ${alignmentClasses} ${className}`}>
   {eyebrow && (
     <div class="inline-flex items-center gap-2">
-      <span class="text-xs font-mono tracking-widest text-[#2997ff] uppercase font-semibold">
+      <span class="eyebrow uppercase">
         {eyebrow}
       </span>
     </div>
   )}
-  <h2 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-white leading-tight">
+  <h2 class="text-3xl sm:text-4xl md:text-[2.75rem] font-semibold tracking-[-0.03em] text-white leading-[1.1]">
     {title}
   </h2>
   {subtitle && (

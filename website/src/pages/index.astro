@@ -7,6 +7,7 @@ import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import Button from '../components/Button.astro';
 import CloudDivider from '../components/CloudDivider.astro';
+import StorySection from '../components/StorySection.astro';
 import { articles } from '../data/articles';
 import { siteConfig } from '../data/site';
 
@@ -26,6 +27,8 @@ const categories = [
   description={siteConfig.description}
 >
   <Hero />
+
+  <AboutSection />
 
   <FeaturedProject />
 
@@ -78,12 +81,12 @@ const categories = [
               {categories.map(cat => (
                 <a 
                   href={cat.href}
-                  class="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.07] border border-white/[0.06] hover:border-sky-500/30 transition-all duration-200 hover:-translate-y-0.5"
+                  class="spotlight group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.07] border border-white/[0.06] hover:border-sky-500/30 transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <span class="text-xs font-medium text-zinc-200 group-hover:text-white transition-colors">
                     {cat.name}
                   </span>
-                  <span class="text-[11px] font-mono text-zinc-500 group-hover:text-[#38bdf8] transition-colors ml-2">
+                  <span class="text-[11px] font-mono text-zinc-400 group-hover:text-[#38bdf8] transition-colors ml-2">
                     {cat.count}
                   </span>
                 </a>
@@ -91,7 +94,7 @@ const categories = [
             </div>
           </div>
 
-          <div class="space-y-4">
+          <div class="hidden lg:block space-y-4">
             <h3 class="text-xs font-mono uppercase tracking-widest text-zinc-400 font-semibold flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#f43f5e]"></span>
               <span>Popular Content</span>
@@ -102,7 +105,7 @@ const categories = [
                 <li>
                   <a 
                     href={`/articles/${article.slug}`}
-                    class="group flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-sky-500/25 transition-all duration-200 hover:translate-x-1"
+                    class="spotlight group flex items-start gap-3.5 p-3.5 rounded-2xl bg-white/[0.02] hover:bg-white/[0.06] border border-white/[0.05] hover:border-sky-500/25 transition-all duration-200 hover:translate-x-1"
                   >
                     <div class="w-6 h-6 rounded-lg bg-sky-500/10 border border-sky-500/25 text-[#38bdf8] flex items-center justify-center font-mono text-xs font-bold flex-shrink-0 mt-0.5 group-hover:bg-[#38bdf8] group-hover:text-[#080b11] transition-colors">
                       {idx + 1}
@@ -111,7 +114,7 @@ const categories = [
                       <h4 class="text-sm font-semibold text-zinc-200 group-hover:text-white group-hover:underline transition-colors leading-snug">
                         {article.title}
                       </h4>
-                      <div class="flex items-center gap-2 mt-1.5 text-[11px] font-mono text-zinc-500">
+                      <div class="flex items-center gap-2 mt-1.5 text-[11px] font-mono text-zinc-400">
                         <span class="text-zinc-400">{article.category}</span>
                         <span>·</span>
                         <span>{article.readingTime}</span>
@@ -129,10 +132,10 @@ const categories = [
 
     </div>
 
-    <CloudDivider fill="#0a0f1d" crestFill="#172554" midFill="#0d1d3a" />
+    <CloudDivider fill="#06080d" />
   </section>
 
-  <AboutSection />
+  <StorySection />
 
   <OpenSourceSection />
 </Layout>
