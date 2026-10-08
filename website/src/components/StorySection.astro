@@ -1,0 +1,80 @@
+---
+// Why Levyra exists and what LUC4N3X works with day to day. Copy follows the profile README.
+const stack = [
+  { area: 'Android', tools: ['Kotlin', 'Jetpack Compose', 'AndroidX Media3', 'ExoPlayer'], note: 'Media3 and ExoPlayer keep background playback running without dropping audio.', dot: 'bg-[#38bdf8]' },
+  { area: 'Backend', tools: ['Python', 'FastAPI', 'AsyncIO', 'Node.js'], note: 'Python for APIs and background jobs, Node.js for smaller scrapers and web utilities.', dot: 'bg-[#818cf8]' },
+  { area: 'Data', tools: ['SQLite', 'Room', 'Redis'], note: 'SQLite and Room for offline storage, Redis when caching speed matters.', dot: 'bg-[#c084fc]' },
+  { area: 'Shipping', tools: ['Docker', 'Cloudflare', 'GitHub Actions'], note: 'Everything runs in containers behind Cloudflare and deploys through GitHub Actions.', dot: 'bg-[#34d399]' },
+];
+---
+
+<section class="relative overflow-hidden bg-[#06080d] py-20 sm:py-28">
+  <div class="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-[120px]" aria-hidden="true"></div>
+
+  <div class="relative mx-auto max-w-6xl px-5 sm:px-8">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div class="relative mx-auto w-full max-w-sm">
+        <div class="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-sky-500/25 via-indigo-500/20 to-pink-500/25 blur-3xl" aria-hidden="true"></div>
+        <div class="relative rotate-[-3deg] rounded-[2rem] border-[3px] border-white bg-[#0e131f] p-8 shadow-2xl shadow-black/60 transition-transform duration-500 hover:rotate-0">
+          <img src="/assets/levyra/levyra-icon.svg" alt="Levyra icon" width="120" height="120" class="mx-auto h-28 w-28" loading="lazy" />
+          <p class="mt-6 text-center font-mono text-xs uppercase tracking-[0.2em] text-zinc-400">Android &middot; Windows</p>
+          <p class="mt-2 text-center text-2xl font-semibold tracking-[-0.03em] text-white">Levyra</p>
+        </div>
+        <span class="absolute -right-3 -top-4 rotate-[8deg] rounded-full border-[3px] border-white bg-gradient-to-br from-emerald-500 to-emerald-600 px-4 py-1.5 text-sm font-bold text-white shadow-lg">No account</span>
+        <span class="absolute -bottom-4 -left-2 rotate-[-6deg] rounded-full border-[3px] border-white bg-gradient-to-br from-pink-500 to-rose-600 px-4 py-1.5 text-sm font-bold text-white shadow-lg">Open source</span>
+      </div>
+
+      <div>
+        <span class="eyebrow uppercase">Why Levyra exists</span>
+        <h2 class="mt-3 text-3xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl">
+          I wanted a music player that didn't ask for an account.
+        </h2>
+        <div class="mt-6 space-y-4 text-base leading-relaxed text-zinc-400 sm:text-lg">
+          <p>
+            Levyra started because I wanted to save playlists and stream tracks without signing up for anything. I also wanted the music I stream and the files I already have to live in the same library.
+          </p>
+          <p>
+            It runs on Android and Windows and plays local and remote audio through native engines: Media3 on Android, libvlc on Windows. Downloads are real M4A files in your storage, synced lyrics come from LRCLIB, and your listening data stays on your device.
+          </p>
+          <p>
+            As I kept using it, I added the things I missed in other players: lyrics with timing controls, Queue Spaces, AutoEQ, Android Auto, song recognition, live radio, backups and a Windows version.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/projects/levyra" class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#080b11] transition-colors hover:bg-sky-300">
+            The full Levyra story
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
+          </a>
+          <a href="https://levyra.dpdns.org" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-colors hover:border-white/40 hover:text-white">
+            levyra.dpdns.org
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-24 sm:mt-32">
+      <div class="max-w-2xl">
+        <span class="eyebrow uppercase">What I work with</span>
+        <h2 class="mt-3 text-3xl font-semibold leading-[1.08] tracking-[-0.035em] text-white sm:text-5xl">
+          Linux every day, and tools that stay predictable.
+        </h2>
+        <p class="mt-5 text-base leading-relaxed text-zinc-400 sm:text-lg">
+          My daily setup runs entirely on Linux. I pick tools that keep behaving the same way when a project gets complicated.
+        </p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {stack.map((s) => (
+          <div class="spotlight rounded-3xl border border-white/[0.07] bg-[#0b0f19] p-6 transition-colors hover:border-white/15 sm:p-7">
+            <div class="flex items-center gap-2.5">
+              <span class={`h-2 w-2 rounded-full ${s.dot}`}></span>
+              <h3 class="font-mono text-xs uppercase tracking-[0.2em] text-zinc-400">{s.area}</h3>
+            </div>
+            <p class="mt-4 text-lg font-semibold leading-snug tracking-[-0.02em] text-white">{s.tools.join(' · ')}</p>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-400">{s.note}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

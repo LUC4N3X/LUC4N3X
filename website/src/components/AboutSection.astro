@@ -4,7 +4,7 @@ import Button from './Button.astro';
 import CloudDivider from './CloudDivider.astro';
 ---
 
-<section class="pt-16 sm:pt-24 pb-0 bg-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
+<section class="pt-16 sm:pt-24 pb-0 bg-gradient-to-b from-[#080b11] via-[#0a0f1d] to-[#0a0f1d] relative overflow-hidden flex flex-col justify-between">
   <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
     <div class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-sky-500/10 via-indigo-500/10 to-rose-500/8 rounded-full blur-[100px]"></div>
   </div>
@@ -14,38 +14,41 @@ import CloudDivider from './CloudDivider.astro';
       
       <div class="lg:col-span-7 flex flex-col gap-6">
         <SectionHeader
-          eyebrow="Independent Creator"
-          title="About LUC4N3X"
-          subtitle="I build software I want to use, and keep working on it until it feels right."
+          eyebrow="About me"
+          title="Hey, I'm LUC4N3X."
+          subtitle="Software developer, Linux user, and the person behind Levyra."
         />
 
         <div class="space-y-4 text-zinc-300 text-base sm:text-lg leading-relaxed font-normal">
           <p>
-            Hey, I'm LUC4N3X. I take rough ideas and turn them into software I can actually use day in and day out.
+            I build software for myself and keep at it until it works the way I want. Most of my time goes into Android apps, backend APIs and small self-hosted tools.
           </p>
           <p>
-            Most days are spent between Android applications, high-throughput backend services, media pipelines, and infrastructure. What matters most is the phase after something starts working: finding what feels off, fixing the strange edge cases, and refining until the interface stays out of your way.
+            Getting a feature to run the first time is usually the easy part. What I enjoy is everything after that: chasing the weird edge cases, fixing a bug that only shows up on one obscure phone, and cutting complexity until the code reads plainly.
+          </p>
+          <p>
+            A lot of my ideas end up in Levyra, my open-source music player. When I'm not working on it, I'm usually tinkering with local-first setups, audio pipelines or small Linux utilities.
           </p>
         </div>
 
         <div class="space-y-2 border-t border-b border-white/[0.08] py-5 text-sm text-zinc-400">
           <div class="flex items-start gap-2.5">
             <span class="text-[#38bdf8] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>Primarily working with Kotlin, Jetpack Compose, Python, Linux, and Docker</span>
+            <span>Kotlin and Jetpack Compose on Android, Python and Docker on the backend, Linux everywhere</span>
           </div>
           <div class="flex items-start gap-2.5">
             <span class="text-[#818cf8] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>Focused on bugs that only trigger on specific hardware, network paths, or state transitions</span>
+            <span>I test on real phones, because the strangest bugs only show up on real hardware</span>
           </div>
           <div class="flex items-start gap-2.5">
             <span class="text-[#f43f5e] mt-0.5 font-bold text-base leading-none">·</span>
-            <span>A focused, verified fix is always preferred over an unvetted architectural rewrite</span>
+            <span>I would rather ship a small, verified fix than a big rewrite nobody has tested</span>
           </div>
         </div>
 
         <div class="pt-2">
           <Button href="/about" variant="secondary" size="md">
-            <span>Read Full Story & Principles</span>
+            <span>More about how I work</span>
             <span class="ml-1">→</span>
           </Button>
         </div>
@@ -57,9 +60,9 @@ import CloudDivider from './CloudDivider.astro';
 
           <div class="relative z-10 w-full rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-white/[0.08] via-white/[0.03] to-white/[0.06] border border-white/[0.1] shadow-2xl shadow-indigo-500/10 backdrop-blur-sm group hover:border-indigo-500/40 transition-all duration-300">
             <img 
-              src="/assets/brand/luc4n3x-workspace.svg" 
-              alt="LUC4N3X developer workspace" 
-              class="w-full h-auto object-contain rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+              src="/assets/brand/luc4n3x-avatar.png" 
+              alt="Portrait of LUC4N3X" 
+              class="w-full aspect-square object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
               loading="lazy"
               width="400"
               height="400"
@@ -92,5 +95,5 @@ import CloudDivider from './CloudDivider.astro';
     </div>
   </div>
 
-  <CloudDivider fill="#080b11" crestFill="#1e1b4b" midFill="#0f172a" />
+  <CloudDivider fill="#080b11" />
 </section>

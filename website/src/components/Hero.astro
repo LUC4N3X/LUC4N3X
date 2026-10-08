@@ -1,102 +1,177 @@
 ---
 import Button from './Button.astro';
-import Clouds from './Clouds.astro';
-import CloudDivider from './CloudDivider.astro';
 import { siteConfig } from '../data/site';
+
+// Rolling hills, back to front. The nearest one is painted in the colour of
+// the next section so the hero runs straight into it without a seam.
+const hills = [
+  { d: 'M0 400V176C110 96 250 78 380 146C470 194 530 128 650 112C790 94 870 186 990 172C1110 158 1190 66 1330 72C1450 78 1530 136 1600 158V400Z', fill: '#17233d' },
+  { d: 'M0 400V246C150 178 300 186 440 236C560 278 660 200 820 202C980 204 1060 286 1200 268C1340 250 1460 198 1600 226V400Z', fill: '#101a2f' },
+  { d: 'M0 400V326C200 288 420 296 640 326C860 356 1080 298 1300 306C1440 312 1540 326 1600 332V400Z', fill: '#080b11' },
+];
+
+const stickers = [
+  { label: 'Kotlin', cls: 'sticker--violet', pos: 'left-[2%] top-[16%] -rotate-[9deg]', delay: '0s' },
+  { label: 'Arch Linux', cls: 'sticker--sky', pos: 'right-[0%] top-[6%] rotate-[7deg]', delay: '.8s' },
+  { label: 'Zero telemetry', cls: 'sticker--green', pos: 'right-[-2%] bottom-[30%] -rotate-[6deg]', delay: '1.6s' },
+  { label: 'Open source', cls: 'sticker--pink', pos: 'left-[-3%] bottom-[38%] rotate-[5deg]', delay: '2.4s' },
+];
 ---
 
-<section class="relative min-h-[95vh] flex flex-col justify-between overflow-hidden pt-24 sm:pt-32 bg-gradient-to-b from-[#091326] via-[#0d1d3a] to-[#080b11]">
-  
-  <div class="absolute inset-0 overflow-hidden pointer-events-none -z-0">
-    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[800px] sm:w-[1100px] h-[550px] bg-gradient-to-b from-sky-500/20 via-indigo-500/15 to-transparent rounded-full blur-[140px]"></div>
-    <div class="absolute top-1/4 left-10 w-96 h-64 bg-sky-400/15 rounded-full blur-[100px]"></div>
-    <div class="absolute top-1/3 right-10 w-[420px] h-72 bg-purple-500/15 rounded-full blur-[120px]"></div>
-    <div class="absolute bottom-1/3 left-1/2 -translate-x-1/2 w-[600px] h-48 bg-cyan-400/10 rounded-full blur-[90px]"></div>
-
-    <Clouds variant="field" />
+<section class="hero relative overflow-hidden bg-[#0b1326]">
+  <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_70%_20%,rgba(99,102,241,0.22),transparent_70%),radial-gradient(ellipse_50%_40%_at_15%_10%,rgba(56,189,248,0.14),transparent_70%)]"></div>
+    <div class="stars absolute inset-0"></div>
   </div>
 
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full text-center flex flex-col items-center z-10 my-auto pb-10 sm:pb-16">
-    
-    <div class="relative mb-6 sm:mb-8 group">
-      <div class="absolute -inset-4 bg-gradient-to-r from-sky-500/25 via-indigo-500/20 to-purple-500/20 rounded-full blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+  <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-6 px-5 pt-28 sm:px-8 sm:pt-36 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:pt-40">
+    <div class="max-w-2xl">
+      <p class="font-mono text-xs uppercase tracking-[0.22em] text-[#f472b6]">LUC4N3X &middot; independent developer</p>
 
-      <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full p-1 ring-1 ring-white/15 shadow-2xl shadow-sky-500/20 transition-transform duration-500 group-hover:scale-105 bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-md">
-        <div class="w-full h-full rounded-full overflow-hidden bg-[#070a14] p-0.5">
-          <img 
-            src="/assets/brand/luc4n3x-avatar.png" 
-            alt="LUC4N3X" 
-            class="w-full h-full object-cover rounded-full"
-            width="144"
-            height="144"
-            loading="eager"
-          />
-        </div>
+      <h1 class="mt-5 text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-6xl lg:text-[4.1rem]">
+        I build software I want to use, and keep at it{' '}
+        <span class="hero-accent">until it feels right.</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-zinc-400 sm:text-lg">
+        Android apps, audio pipelines, and small Linux tools, mostly in Kotlin and Python. The part I enjoy is what comes after it works: the odd edge cases, the bug that only shows up on one phone, and stripping out whatever is in the way.
+      </p>
+
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <Button href="/projects/levyra" variant="primary" size="lg" class="w-full sm:w-auto">
+          <span>Explore Levyra</span>
+          <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </Button>
+        <Button href="/articles" variant="secondary" size="lg" class="w-full sm:w-auto">
+          <span>Read engineering notes</span>
+        </Button>
+        <a href={siteConfig.github} target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 px-2 py-3 font-medium text-zinc-300 transition-colors hover:text-white">
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+          </svg>
+          <span>GitHub</span>
+        </a>
       </div>
     </div>
 
-    <span class="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs text-zinc-300 backdrop-blur-sm mb-7">
-      <span class="relative flex h-1.5 w-1.5">
-        <span class="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60 animate-ping"></span>
-        <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-      </span>
-      Currently building Levyra DeepSound
-    </span>
+    <div class="relative mx-auto w-full max-w-[540px] lg:mt-8">
+      <div class="bubble absolute left-1/2 top-0 z-20 -translate-x-1/2 sm:left-[18%] sm:translate-x-0">
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        </span>
+        Currently building Levyra DeepSound
+      </div>
 
-    <p class="font-mono text-sm text-[#7f9bc4] mb-4">LUC4N3X &middot; independent developer</p>
+      {stickers.map((s) => (
+        <span class={`sticker ${s.cls} ${s.pos} absolute z-20 hidden sm:inline-flex`} style={`--delay:${s.delay}`}>{s.label}</span>
+      ))}
 
-    <h1 class="hero-title text-[2.4rem] leading-[1.06] sm:text-5xl md:text-6xl font-semibold tracking-[-0.04em] max-w-4xl mb-6">
-      I build software I want to use, and keep at it until it feels right.
-    </h1>
-
-    <p class="text-base sm:text-lg text-zinc-400 max-w-xl leading-relaxed mb-9">
-      Android apps, audio pipelines, and small Linux tools, mostly in Kotlin and Python. The part I enjoy is what comes after it works: the odd edge cases, the bug that only shows up on one phone, and stripping out whatever is in the way.
-    </p>
-
-    <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12 w-full sm:w-auto max-w-sm sm:max-w-none">
-      <Button href="/projects/levyra" variant="primary" size="lg" class="w-full sm:w-auto">
-        <span>Explore Levyra</span>
-        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </Button>
-
-      <Button href="/articles" variant="secondary" size="lg" class="w-full sm:w-auto">
-        <span>Read Engineering Notes</span>
-      </Button>
-
-      <Button href={siteConfig.github} target="_blank" variant="outline" size="lg" class="w-full sm:w-auto">
-        <svg class="w-4 h-4 text-zinc-400" fill="currentColor" viewBox="0 0 24 24">
-          <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
-        </svg>
-        <span>GitHub</span>
-      </Button>
+      <div class="character relative z-10 pt-14">
+        <div class="absolute inset-x-[12%] bottom-[6%] h-[30%] rounded-full bg-indigo-500/25 blur-3xl" aria-hidden="true"></div>
+        <img
+          src="/assets/brand/luc4n3x-workspace.png"
+          alt="Cartoon of LUC4N3X at a desk with two monitors, one showing Levyra"
+          width="680"
+          height="508"
+          loading="eager"
+          fetchpriority="high"
+          class="relative h-auto w-full drop-shadow-[0_30px_40px_rgba(0,0,0,0.55)]"
+        />
+      </div>
     </div>
-
-    <div class="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 max-w-2xl text-[11px] sm:text-xs font-mono">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
-        <span>Arch Linux</span>
-      </span>
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#818cf8]"></span>
-        <span>AndroidX Media3</span>
-      </span>
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
-        <span>Jetpack Compose</span>
-      </span>
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#34d399]"></span>
-        <span>Zero Telemetry</span>
-      </span>
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#c084fc]"></span>
-        <span>On-Device SQLite</span>
-      </span>
-    </div>
-
   </div>
 
-  <CloudDivider fill="#080b11" />
+  <div class="relative -mt-16 h-[clamp(7rem,16vw,15rem)] sm:-mt-24 lg:-mt-32" aria-hidden="true">
+    <svg class="absolute inset-0 h-full w-full" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMax slice">
+      {hills.map((h) => <path d={h.d} fill={h.fill} />)}
+    </svg>
+  </div>
 </section>
+
+<style>
+  .hero-accent {
+    background: linear-gradient(100deg, #38bdf8 0%, #818cf8 45%, #f472b6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .stars {
+    background-image:
+      radial-gradient(1.5px 1.5px at 12% 18%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 28% 42%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1.5px 1.5px at 46% 12%, rgba(255,255,255,.6), transparent),
+      radial-gradient(1px 1px at 63% 30%, rgba(255,255,255,.45), transparent),
+      radial-gradient(1.5px 1.5px at 78% 8%, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 88% 36%, rgba(255,255,255,.5), transparent),
+      radial-gradient(1px 1px at 6% 52%, rgba(255,255,255,.4), transparent),
+      radial-gradient(1.5px 1.5px at 54% 56%, rgba(255,255,255,.35), transparent),
+      radial-gradient(1px 1px at 94% 60%, rgba(255,255,255,.4), transparent);
+    animation: twinkle 6s ease-in-out infinite alternate;
+  }
+
+  .bubble {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    white-space: nowrap;
+    padding: .6rem 1rem;
+    border-radius: 1rem;
+    background: #fff;
+    color: #0b1326;
+    font-size: .82rem;
+    font-weight: 600;
+    box-shadow: 0 14px 30px -10px rgba(0,0,0,.6);
+  }
+  .bubble::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -7px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .sticker {
+    align-items: center;
+    padding: .45rem .95rem;
+    border: 3px solid #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: -.01em;
+    color: #fff;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,.7);
+    animation: bob 5s ease-in-out var(--delay, 0s) infinite;
+  }
+  .sticker--violet { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+  .sticker--sky { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
+  .sticker--green { background: linear-gradient(135deg, #10b981, #059669); }
+  .sticker--pink { background: linear-gradient(135deg, #f472b6, #e11d48); }
+
+  .character img { animation: float 7s ease-in-out infinite; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  @keyframes bob {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -6px; }
+  }
+  @keyframes twinkle {
+    from { opacity: .55; }
+    to { opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stars, .sticker, .character img { animation: none; }
+  }
+</style>

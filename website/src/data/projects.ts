@@ -36,38 +36,5 @@ export const projects: Project[] = [
       "Zero telemetry, no ads, and no accounts (0 trackers verified by Apptizo)"
     ],
     icon: "/assets/levyra/levyra-icon.svg"
-  },
-  {
-    id: "thalarch",
-    name: "Thalarch Layer",
-    tagline: "Personal Arch Linux Setup & System Scripts",
-    description: "Personal Arch Linux setup, dotfiles, and shell scripts for keeping a fast, reproducible daily workstation.",
-    featured: false,
-    platforms: ["Arch Linux", "Linux CLI"],
-    stack: ["Shell", "Bash", "Arch Linux", "Dotfiles"],
-    github: "https://github.com/LUC4N3X/thalarch-layer",
-    status: "Active",
-    highlights: [
-      "Reproducible package lists and system configuration scripts",
-      "Minimal background services and clean shell startup",
-      "Keyboard-first terminal and window workflow"
-    ],
-    icon: "/assets/thalarch/thalarch-icon.png"
-  },
-  {
-    id: "instara-crew",
-    name: "Instara-Crew",
-    tagline: "Python CLI Utility for Account Analysis",
-    description: "Small Python command-line utility for inspecting account metadata and follower changes directly from the terminal.",
-    featured: false,
-    platforms: ["Server", "CLI"],
-    stack: ["Python", "CLI", "AsyncIO"],
-    github: "https://github.com/LUC4N3X/Instara-Crew",
-    status: "Active",
-    highlights: [
-      "Direct terminal output with low memory usage",
-      "Structured JSON and table diffs for account snapshots",
-      "Simple configuration with automatic retry backoff"
-    ]
   }
 ];
