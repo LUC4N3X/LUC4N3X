@@ -54,41 +54,29 @@ import CloudDivider from './CloudDivider.astro';
         </div>
       </div>
 
-      <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
-        <div class="relative w-full max-w-[420px] mx-auto flex flex-col items-center justify-center">
-          <div class="absolute -inset-8 bg-gradient-to-tr from-[#38bdf8]/20 via-[#818cf8]/20 to-[#f43f5e]/15 rounded-full blur-3xl opacity-75 pointer-events-none"></div>
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="portrait relative w-full max-w-[440px] pt-10">
+          <!-- Halo the portrait rises out of -->
+          <div class="portrait__halo" aria-hidden="true"></div>
+          <div class="portrait__ring" aria-hidden="true"></div>
 
-          <div class="relative z-10 w-full rounded-3xl overflow-hidden p-2 bg-gradient-to-tr from-white/[0.08] via-white/[0.03] to-white/[0.06] border border-white/[0.1] shadow-2xl shadow-indigo-500/10 backdrop-blur-sm group hover:border-indigo-500/40 transition-all duration-300">
-            <img 
-              src="/assets/brand/luc4n3x-avatar.png" 
-              alt="Portrait of LUC4N3X" 
-              class="w-full aspect-square object-cover rounded-2xl transition-transform duration-500 group-hover:scale-[1.02]"
-              loading="lazy"
-              width="400"
-              height="400"
-            />
-            <div class="py-3 px-4 flex items-center justify-between text-xs font-mono border-t border-white/[0.08] bg-[#080b11]/60">
-              <div class="flex items-center gap-2 text-zinc-300">
-                <span class="w-2 h-2 rounded-full bg-[#34d399] animate-pulse"></span>
-                <span>Arch Linux · Wayland</span>
-              </div>
-              <span class="text-zinc-500">
-                Dev Environment
-              </span>
-            </div>
-          </div>
+          <img
+            src="/assets/brand/luc4n3x-thinking.webp"
+            alt="LUC4N3X thinking, hand on chin"
+            width="889"
+            height="900"
+            loading="lazy"
+            class="portrait__img relative z-10 mx-auto w-[88%]"
+          />
 
-          <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Dual 4K Setup
-            </span>
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Neovim & Android Studio
-            </span>
-            <span class="px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08]">
-              Local Hardware Testing
-            </span>
+          <div class="thought absolute right-[-4%] top-0 z-20" aria-hidden="true">
+            <span>why only on <em>this</em> phone?</span>
           </div>
+          <span class="thought-dot thought-dot--1" aria-hidden="true"></span>
+          <span class="thought-dot thought-dot--2" aria-hidden="true"></span>
+
+          <span class="about-sticker about-sticker--sky absolute left-[-2%] top-[38%] z-20 -rotate-[8deg]">Arch Linux &middot; Wayland</span>
+          <span class="about-sticker about-sticker--pink absolute right-[0%] bottom-[16%] z-20 rotate-[6deg]">Made in Italy</span>
         </div>
       </div>
 
@@ -97,3 +85,83 @@ import CloudDivider from './CloudDivider.astro';
 
   <CloudDivider fill="#080b11" />
 </section>
+
+<style>
+  .portrait__halo {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 92%;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 25%, rgba(255,255,255,.18), transparent 45%),
+      linear-gradient(150deg, #38bdf8 0%, #6366f1 48%, #f472b6 100%);
+    box-shadow: 0 40px 120px -20px rgba(99,102,241,.55);
+  }
+  .portrait__ring {
+    position: absolute;
+    left: 50%;
+    bottom: -4%;
+    width: 108%;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 1px dashed rgba(255,255,255,.18);
+    animation: spin 60s linear infinite;
+  }
+  /* Head and shoulders break out of the halo; the bottom melts into it */
+  .portrait__img {
+    filter: drop-shadow(0 24px 30px rgba(8,11,17,.55));
+    -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
+    mask-image: linear-gradient(to bottom, #000 78%, transparent 99%);
+  }
+
+  .thought {
+    padding: .7rem 1.1rem;
+    border-radius: 1.4rem;
+    background: #fff;
+    color: #0b1326;
+    font-weight: 600;
+    font-size: .9rem;
+    white-space: nowrap;
+    box-shadow: 0 16px 30px -12px rgba(0,0,0,.6);
+    animation: bob 6s ease-in-out infinite;
+  }
+  .thought em { font-style: italic; color: #6366f1; }
+  .thought-dot {
+    position: absolute;
+    z-index: 20;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .thought-dot--1 { right: 22%; top: 3.6rem; width: 14px; height: 14px; }
+  .thought-dot--2 { right: 30%; top: 5rem; width: 8px; height: 8px; }
+
+  .about-sticker {
+    padding: .4rem .9rem;
+    border: 3px solid #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .82rem;
+    color: #fff;
+    white-space: nowrap;
+    box-shadow: 0 10px 24px -8px rgba(0,0,0,.7);
+  }
+  .about-sticker--sky { background: linear-gradient(135deg, #0ea5e9, #2563eb); }
+  .about-sticker--pink { background: linear-gradient(135deg, #f472b6, #e11d48); }
+
+  @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
+  @keyframes bob {
+    0%, 100% { translate: 0 0; }
+    50% { translate: 0 -6px; }
+  }
+  @media (max-width: 640px) {
+    .thought { font-size: .78rem; right: 0; }
+    .about-sticker { font-size: .72rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .portrait__ring, .thought { animation: none; }
+  }
+</style>
