@@ -22,7 +22,7 @@ const {
   variant = 'band',
   base = '#06080d',
   flip = false,
-  height = 'h-[clamp(6rem,14vw,15rem)]',
+  height = 'h-[clamp(3.5rem,7vw,7.5rem)]',
   class: className = ''
 } = Astro.props;
 
@@ -71,13 +71,13 @@ const isBand = variant === 'band';
       <ellipse cx="800" cy="200" rx="760" ry="130" fill={`url(#moon-${u})`} />
 
       <g class="cloud-layer" style="--dur:300s">
-        <use href={`#ridge-far-${u}`} fill="#1d2b49" />
-        <use href={`#ridge-far-${u}`} transform="translate(1600,0)" fill="#1d2b49" />
+        <use href={`#ridge-far-${u}`} fill="#1d2b49" fill-opacity="0.55" />
+        <use href={`#ridge-far-${u}`} transform="translate(1600,0)" fill="#1d2b49" fill-opacity="0.55" />
       </g>
 
       <g class="cloud-layer" style="--dur:200s">
-        <use href={`#ridge-mid-${u}`} fill="#131d33" />
-        <use href={`#ridge-mid-${u}`} transform="translate(1600,0)" fill="#131d33" />
+        <use href={`#ridge-mid-${u}`} fill="#131d33" fill-opacity="0.8" />
+        <use href={`#ridge-mid-${u}`} transform="translate(1600,0)" fill="#131d33" fill-opacity="0.8" />
       </g>
 
       <g class="cloud-layer" style="--dur:130s">

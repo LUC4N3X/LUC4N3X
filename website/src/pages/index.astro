@@ -7,13 +7,11 @@ import OpenSourceSection from '../components/OpenSourceSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import Button from '../components/Button.astro';
 import CloudDivider from '../components/CloudDivider.astro';
-import ProjectCard from '../components/ProjectCard.astro';
-import { projects } from '../data/projects';
+import StorySection from '../components/StorySection.astro';
 import { articles } from '../data/articles';
 import { siteConfig } from '../data/site';
 
 const featuredArticles = articles.slice(0, 2);
-const otherProjects = projects.filter((p) => !p.featured);
 const popularArticles = articles;
 const categories = [
   { name: "Android Internals", count: "2 notes", href: "/articles" },
@@ -29,6 +27,8 @@ const categories = [
   description={siteConfig.description}
 >
   <Hero />
+
+  <AboutSection />
 
   <FeaturedProject />
 
@@ -132,26 +132,10 @@ const categories = [
 
     </div>
 
-    <CloudDivider fill="#0a0f1d" crestFill="#172554" midFill="#0d1d3a" />
+    <CloudDivider fill="#06080d" />
   </section>
 
-  <section class="py-20 sm:py-24 bg-[#06080d]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
-        <div>
-          <span class="eyebrow uppercase">Also on the workbench</span>
-          <h2 class="mt-2.5 text-3xl sm:text-4xl font-semibold tracking-[-0.03em] text-white">Other things I maintain</h2>
-        </div>
-        <a href="/projects" class="font-mono text-sm text-[#7f9bc4] hover:text-white transition-colors">All projects</a>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        {otherProjects.map((project) => <ProjectCard project={project} />)}
-      </div>
-    </div>
-  </section>
-
-  <AboutSection />
+  <StorySection />
 
   <OpenSourceSection />
 </Layout>
