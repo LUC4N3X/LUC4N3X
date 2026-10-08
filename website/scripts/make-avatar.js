@@ -1,7 +1,6 @@
 import sharp from 'sharp';
-
 async function createAvatar() {
-  const inputPath = 'C:/Users/Luca Drogo/.gemini/antigravity/brain/3f2b54a2-2015-449d-a951-5ced1d451fae/.user_uploaded/media_1789925496942.jpg';
+  const inputPath = process.env.AVATAR_INPUT_PATH || './input.jpg';
   const { data, info } = await sharp(inputPath).raw().toBuffer({ resolveWithObject: true });
   
   const width = info.width;
@@ -104,14 +103,14 @@ async function createAvatar() {
       { input: characterPng, top: 0, left: 0 }
     ])
     .png({ quality: 95 })
-    .toFile('c:/Users/Luca Drogo/Documents/antigravity/vibrant-einstein/website/public/assets/brand/luc4n3x-avatar.png');
+    .toFile('./public/assets/brand/luc4n3x-avatar.png');
 
   await sharp(bgSvg)
     .composite([
       { input: characterPng, top: 0, left: 0 }
     ])
     .webp({ quality: 95 })
-    .toFile('c:/Users/Luca Drogo/Documents/antigravity/vibrant-einstein/website/public/assets/brand/luc4n3x-avatar.webp');
+    .toFile('./public/assets/brand/luc4n3x-avatar.webp');
     
   console.log('Avatar generated successfully!');
 }
