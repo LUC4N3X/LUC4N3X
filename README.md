@@ -24,7 +24,7 @@ I build software I want to use, and keep working on it until it feels right.
 
 ## About me
 
-<img align="right" alt="LUC4N3X developer workspace" width="360" src="./assets/brand/luc4n3x-workspace.svg" />
+<img align="right" alt="LUC4N3X at the developer workspace" width="400" src="./assets/brand/luc4n3x-about.webp" />
 
 Hey, I'm LUC4N3X. I build software for myself and keep at it until it actually works the way I want.
 
