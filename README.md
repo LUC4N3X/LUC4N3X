@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="./assets/brand/luc4n3x-logo.webp" width="560" alt="LUC4N3X logo" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-logo-dark.webp">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-logo.webp">
+  <img src="./assets/brand/luc4n3x-logo.webp" width="560" alt="LUC4N3X logo" />
+</picture>
 
 I build software I want to use, and keep working on it until it feels right.
 
