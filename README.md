@@ -1,10 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-lockup-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-lockup.png">
-  <img src="./assets/brand/luc4n3x-lockup-dark.png" width="640" alt="LUC4N3X, Software Engineer and Creator" />
-</picture>
+<img src="./assets/brand/luc4n3x-logo.webp" width="560" alt="LUC4N3X logo" />
 
 I build software I want to use, and keep working on it until it feels right.
 
