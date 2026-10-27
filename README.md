@@ -64,7 +64,7 @@ Levyra started because I wanted a music player that didn't demand an account jus
 
 ## Technologies I work with
 
-<img align="right" alt="Linux Workspace" width="340" src="./assets/brand/luc4n3x-linux-stack.svg" />
+<img align="right" alt="Tux at a Linux workstation" width="400" src="./assets/brand/luc4n3x-linux-stack.webp" />
 
 My daily setup runs entirely on Linux. I stick to tools that stay predictable when things get complicated:
 
