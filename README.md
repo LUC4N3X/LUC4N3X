@@ -76,7 +76,17 @@ On Android, I write Kotlin and Jetpack Compose for the UI, with AndroidX Media3 
 
 ## How I build
 
-Build the useful thing first, test it on real hardware, fix what breaks, and polish the interface once the foundation is solid.
+I rarely start from a diagram. I start from something that annoys me, build the smallest version that fixes it, and then use it every day until the rough edges show up. Most of the real work happens in that second part.
+
+A few habits that have stuck over the years:
+
+- **Real devices, not just emulators.** Playback, background limits, and battery drain behave very differently on a mid-range phone with aggressive power saving, so that is where things get tested.
+- **Make it work, then make it simple.** The first version is allowed to be messy. The one I ship should still make sense to me six months from now.
+- **Fix the cause, not the symptom.** If a bug comes back, I did not understand it the first time. I would rather spend an evening reproducing it than ship a workaround.
+- **Small, honest commits.** Each change does one thing and says what it does, so the history actually helps when something breaks.
+- **Polish comes last, but it does come.** Once the foundation holds, I go back for the details: smooth transitions, sensible empty states, and error messages a person can actually understand.
+
+If something I built turns out to be useful to you, or you run into a bug I missed, open an issue. That kind of feedback is how most of my projects got better.
 
 <div align="center">
 
@@ -86,7 +96,7 @@ Build the useful thing first, test it on real hardware, fix what breaks, and pol
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
-    <img src="./assets/brand/how-i-build-dark.svg" width="420" alt="Code. Build. Improve. Repeat. Explore repositories." />
+    <img src="./assets/brand/how-i-build-dark.svg" width="420" alt="Build, use, fix, refine. Explore repositories." />
   </picture>
 </a>
 
