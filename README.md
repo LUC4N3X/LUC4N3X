@@ -9,14 +9,11 @@ I'm an independent developer in Italy working on Android and desktop software.
 
 ---
 
-### Ranking
+### Working on
 
-#### Global
-<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=global&type=position&meta=none&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Global stars rank" />
-<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=global&type=tier&meta=goal-next-tier&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Global stars tier" />
-
-#### Country (IT)
-<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=country&type=position&meta=none&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Italy stars rank" />
+- Desktop parity for [Levyra](https://github.com/LUC4N3X/Levyra-deepsound) on Windows and Linux so the desktop client keeps up with Android.
+- Audio extraction and background playback reliability on mid-range Android phones with strict battery limits.
+- [antigravity-thalarch](https://github.com/LUC4N3X/antigravity-thalarch), a workflow and verification setup for coding agents.
 
 ### Links
 
