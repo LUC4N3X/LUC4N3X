@@ -18,11 +18,12 @@ function renderCards(data, theme) {
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+      .replace(/"/g, '&quot;')
+      .replace(/[^\x20-\x7E]/g, (c) => `&#${c.codePointAt(0)};`);
   const number = (n) => Number(n).toLocaleString('en-US');
 
   const frame = (w, h, title, body) =>
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}"><rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="10" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
+    `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}"><rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="10" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
 
   const t = (x, y, s, color = fg, size = 14, weight = 400, anchor = 'start', family = '') =>
     `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}"${family ? ` font-family="${family}"` : ''}>${esc(s)}</text>`;
