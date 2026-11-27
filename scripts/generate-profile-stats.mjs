@@ -23,8 +23,8 @@ function renderCards(data, theme) {
 
   const number = (n) => Number(n).toLocaleString('en-US');
 
-  const frame = (w, h, title, body) =>
-    `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}"><rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="6" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
+  const frame = (w, h, title, body, style = '') =>
+    `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}">${style ? `<style>${style}</style>` : ''}<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="6" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
 
   const t = (x, y, s, color = fg, size = 13.5, weight = 400, anchor = 'start', family = '') =>
     `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}"${family ? ` font-family="${family}"` : ''}>${esc(s)}</text>`;
@@ -47,6 +47,17 @@ function renderCards(data, theme) {
   const r = 40;
   const circ = 2 * Math.PI * r;
   const dash = (pct * circ) / 100;
+  const offset = (circ - dash).toFixed(2);
+  const circFixed = circ.toFixed(2);
+
+  const statsStyle =
+    `@keyframes fadeIn{from{opacity:0}to{opacity:1}}` +
+    `@keyframes ringFill{from{stroke-dashoffset:${circFixed}}to{stroke-dashoffset:${offset}}}` +
+    `@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}` +
+    `.stagger{opacity:0;animation:fadeIn .35s ease-in-out forwards}` +
+    `.ring{stroke-dashoffset:${circFixed};animation:ringFill 1s ease-out .25s forwards}` +
+    `.pct{opacity:0;transform-box:fill-box;transform-origin:center;animation:popIn .6s ease-out .35s forwards}` +
+    `@media (prefers-reduced-motion:reduce){.stagger,.pct{opacity:1;animation:none}.ring{stroke-dashoffset:${offset};animation:none}}`;
 
   const statRows = [
     [ICONS.star, 'Total Stars Earned:', number(data.totalStars)],
@@ -67,16 +78,23 @@ function renderCards(data, theme) {
       statRows
         .map(
           ([d, label, value], i) =>
+            `<g class="stagger" style="animation-delay:${180 + i * 80}ms">` +
             icon(d, 25, 53 + i * 24, iconColor, 0.85) +
             t(47, 64 + i * 24, label, fg, 13, 500) +
-            t(324, 64 + i * 24, value, fg, 13, 600, 'end', mono)
+            t(324, 64 + i * 24, value, fg, 13, 600, 'end', mono) +
+            `</g>`
         )
         .join('') +
       `<circle cx="412" cy="136" r="${r}" fill="none" stroke="${track}" stroke-width="6"/>` +
-      `<circle cx="412" cy="136" r="${r}" fill="none" stroke="${accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${dash.toFixed(2)} ${circ.toFixed(2)}" transform="rotate(-90 412 136)"/>` +
+      `<circle class="ring" cx="412" cy="136" r="${r}" fill="none" stroke="${accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${circFixed}" transform="rotate(-90 412 136)"/>` +
+      `<g class="pct">` +
       t(412, 141, pct.toFixed(1) + '%', fg, 16, 600, 'middle', mono) +
+      `</g>` +
+      `<g class="stagger" style="animation-delay:780ms">` +
       t(412, 196, 'PRs merged', muted, 11.5, 400, 'middle') +
-      t(470, 248, 'Updated ' + data.date, muted, 10.5, 400, 'end')
+      t(470, 248, 'Updated ' + data.date, muted, 10.5, 400, 'end') +
+      `</g>`,
+    statsStyle
   );
 
   const descriptionLines = [

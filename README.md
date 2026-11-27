@@ -28,7 +28,7 @@ Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra
 
 Day to day I use `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`, `libVLC`, `Python`, `TypeScript`, `SQLite` and `Docker` on Linux. If you hit a bug in one of my repos, open an issue.
 
-## Activity
+<br />
 
 <div align="center">
 
