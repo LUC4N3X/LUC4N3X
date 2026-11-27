@@ -89,16 +89,6 @@ Daily driver is Linux.
 </a>
 
 <br />
-
-<a href="https://github.com/LUC4N3X/Levyra-deepsound">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/pin-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/stats/pin-light.svg">
-    <img src="./assets/stats/pin-dark.svg" width="440" alt="LUC4N3X/Levyra-deepsound repository card" />
-  </picture>
-</a>
-
-<br />
 <br />
 
 <a href="https://github.com/LUC4N3X?tab=repositories">
