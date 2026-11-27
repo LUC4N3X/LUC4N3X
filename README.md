@@ -6,7 +6,7 @@
   <img src="./assets/brand/luc4n3x-logo.webp" width="440" alt="LUC4N3X" />
 </picture>
 
-<p>Independent developer in Italy · Full-stack, mobile, desktop</p>
+<p>Independent developer in Italy</p>
 
 <p>
   <a href="https://luc4n3x.pages.dev">Website</a> ·
@@ -20,15 +20,15 @@
 
 <br />
 
-### Hi there! 👋
+### Hey, I'm LUC4N3X
 
 <img align="right" alt="LUC4N3X workspace" width="320" src="./assets/brand/luc4n3x-about.webp" />
 
-I'm LUC4N3X, a generalist developer building across Android, desktop apps, web frontends, backend APIs and Linux.
+I build software across Android, desktop, web, backend APIs and Linux.
 
-Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound) ([website](https://levyra.dpdns.org) · [docs](https://levyra.dpdns.org/docs/) · [Weblate](https://hosted.weblate.org/engage/levyra/)), an open-source music player for Android, Windows and Linux that puts streamed tracks and local audio files in one library, with offline downloads, synced lyrics and no tracking.
+Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound) ([website](https://levyra.dpdns.org) · [docs](https://levyra.dpdns.org/docs/) · [Weblate](https://hosted.weblate.org/engage/levyra/)). It's a music player for Android, Windows and Linux that keeps streamed tracks and local audio files in one library, with offline downloads, synced lyrics and no tracking.
 
-Day to day I work with `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`, `libVLC`, `Python`, `TypeScript`, `SQLite` and `Docker` on Linux. If you run into a bug in one of my repos, open an issue.
+Day to day I use `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`, `libVLC`, `Python`, `TypeScript`, `SQLite` and `Docker` on Linux. If you hit a bug in one of my repos, open an issue.
 
 <br clear="right" />
 
