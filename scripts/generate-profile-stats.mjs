@@ -27,35 +27,42 @@ function renderCards(data, theme) {
   const t = (x, y, s, color = fg, size = 14, weight = 400, anchor = 'start', family = '') =>
     `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}"${family ? ` font-family="${family}"` : ''}>${esc(s)}</text>`;
 
-  const repoIcon = `<path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z" fill="${muted}" transform="translate(22 20) scale(0.95)"/>`;
-  const starIcon = `<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="${muted}" transform="translate(106 135) scale(0.85)"/>`;
-  const forkIcon = `<path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z" fill="${muted}" transform="translate(196 135) scale(0.85)"/>`;
-  const prIcon = `<path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z" fill="${muted}" transform="translate(22 20) scale(0.95)"/>`;
+  const repoIcon = `<path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z" fill="${muted}" transform="translate(22 19) scale(0.95)"/>`;
+  const starIcon = `<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" fill="${muted}" transform="translate(106 157) scale(0.85)"/>`;
+  const forkIcon = `<path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z" fill="${muted}" transform="translate(196 157) scale(0.85)"/>`;
+  const prIcon = `<path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z" fill="${muted}" transform="translate(22 19) scale(0.95)"/>`;
+
+  const descriptionLines = [
+    'Made for listening, not logging in. Levyra is an',
+    'open-source music player for Android and Windows,',
+    'bringing music discovery, synced lyrics, radio and',
+    'beautiful artwork together. No ads, no tracking,',
+    'just music \u266b',
+  ];
 
   const licenseLabel = data.license && data.license !== 'NOASSERTION' ? data.license : '';
 
   const pin = frame(
     400,
-    172,
+    192,
     'LUC4N3X / Levyra-deepsound repository statistics',
     repoIcon +
-      t(44, 33, 'Levyra-deepsound', accent, 15, 600) +
-      `<rect x="330" y="18" width="48" height="20" rx="10" fill="${pillBg}" stroke="${border}"/>` +
-      t(354, 32, 'Public', muted, 11, 500, 'middle') +
-      t(22, 66, 'Music player for Android, Windows and Linux.', fg, 13.5, 400) +
-      t(22, 87, 'Streamed tracks, local files and synced lyrics.', fg, 13.5, 400) +
-      `<line x1="22" y1="118" x2="378" y2="118" stroke="${track}" stroke-width="1"/>` +
-      `<circle cx="28" cy="142" r="5.5" fill="${purple}"/>` +
-      t(40, 146, 'Kotlin', muted, 12.5, 500) +
+      t(44, 32, 'Levyra-deepsound', accent, 15, 600) +
+      `<rect x="330" y="17" width="48" height="20" rx="10" fill="${pillBg}" stroke="${border}"/>` +
+      t(354, 31, 'Public', muted, 11, 500, 'middle') +
+      descriptionLines.map((line, i) => t(22, 58 + i * 17, line, fg, 12, 400)).join('') +
+      `<line x1="22" y1="144" x2="378" y2="144" stroke="${track}" stroke-width="1"/>` +
+      `<circle cx="28" cy="164" r="5.5" fill="${purple}"/>` +
+      t(40, 168, 'Kotlin', muted, 12.5, 500) +
       starIcon +
-      t(124, 146, number(data.stars), fg, 12.5, 600, 'start', mono) +
+      t(124, 168, number(data.stars), fg, 12.5, 600, 'start', mono) +
       forkIcon +
-      t(213, 146, number(data.forks), fg, 12.5, 600, 'start', mono) +
-      (licenseLabel ? t(378, 146, licenseLabel, muted, 12, 400, 'end') : '')
+      t(213, 168, number(data.forks), fg, 12.5, 600, 'start', mono) +
+      (licenseLabel ? t(378, 168, licenseLabel, muted, 12, 400, 'end') : '')
   );
 
   const pct = data.prs ? (100 * data.merged) / data.prs : 0;
-  const r = 36;
+  const r = 38;
   const circ = 2 * Math.PI * r;
   const dash = (pct * circ) / 100;
   const rows = [
@@ -66,23 +73,24 @@ function renderCards(data, theme) {
 
   const stats = frame(
     400,
-    172,
+    192,
     'LUC4N3X GitHub activity statistics',
     prIcon +
-      t(44, 33, 'GitHub activity', accent, 15, 600) +
-      t(378, 32, 'LUC4N3X', muted, 11.5, 500, 'end', mono) +
+      t(44, 32, 'GitHub activity', accent, 15, 600) +
+      t(378, 31, 'LUC4N3X', muted, 11.5, 500, 'end', mono) +
       rows
         .map(
           ([label, value], i) =>
-            t(22, 66 + i * 26, label, muted, 13, 500) +
-            t(236, 66 + i * 26, value, fg, 13.5, 600, 'end', mono)
+            t(22, 68 + i * 28, label, muted, 13, 500) +
+            t(236, 68 + i * 28, value, fg, 13.5, 600, 'end', mono)
         )
         .join('') +
-      `<circle cx="322" cy="86" r="${r}" fill="none" stroke="${track}" stroke-width="6"/>` +
-      `<circle cx="322" cy="86" r="${r}" fill="none" stroke="${accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${dash.toFixed(2)} ${circ.toFixed(2)}" transform="rotate(-90 322 86)"/>` +
-      t(322, 91, pct.toFixed(1) + '%', fg, 15, 600, 'middle', mono) +
-      t(322, 146, 'PR merge rate', muted, 11, 400, 'middle') +
-      t(22, 146, 'Updated ' + data.date, muted, 11, 400)
+      `<circle cx="322" cy="94" r="${r}" fill="none" stroke="${track}" stroke-width="6"/>` +
+      `<circle cx="322" cy="94" r="${r}" fill="none" stroke="${accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${dash.toFixed(2)} ${circ.toFixed(2)}" transform="rotate(-90 322 94)"/>` +
+      t(322, 99, pct.toFixed(1) + '%', fg, 15, 600, 'middle', mono) +
+      `<line x1="22" y1="144" x2="378" y2="144" stroke="${track}" stroke-width="1"/>` +
+      t(22, 168, 'Updated ' + data.date, muted, 11.5, 400) +
+      t(322, 168, 'PR merge rate', muted, 11.5, 400, 'middle')
   );
 
   return { stats, pin };
