@@ -24,7 +24,7 @@
 
 I'm LUC4N3X, a generalist developer building across Android, desktop apps, web frontends, backend APIs and Linux.
 
-Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound) ([website](https://levyra.dpdns.org) · [docs](https://levyra.dpdns.org/docs/) · [Weblate](https://hosted.weblate.org/engage/levyra/)), an open-source music player for Android, Windows and Linux that puts streamed tracks and local audio files in one library, with offline downloads, synced lyrics and no tracking. I also maintain [antigravity-thalarch](https://github.com/LUC4N3X/antigravity-thalarch).
+Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound) ([website](https://levyra.dpdns.org) · [docs](https://levyra.dpdns.org/docs/) · [Weblate](https://hosted.weblate.org/engage/levyra/)), an open-source music player for Android, Windows and Linux that puts streamed tracks and local audio files in one library, with offline downloads, synced lyrics and no tracking.
 
 Day to day I work with `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`, `libVLC`, `Python`, `TypeScript`, `SQLite` and `Docker` on Linux. If you run into a bug in one of my repos, open an issue.
 
