@@ -1,0 +1,64 @@
+name: Update profile statistics
+on:
+  push:
+    branches: [main, docs/professional-profile]
+    paths:
+      - '.github/workflows/profile-stats.yml'
+  schedule:
+    - cron: '23 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Generate stats (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: 'username=LUC4N3X&custom_title=GitHub%20activity&show_icons=true&show=reviews,prs_merged,prs_merged_percentage,discussions_started,discussions_answered&include_all_commits=true&theme=github_dark_dimmed'
+          path: assets/stats/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+      - name: Generate pin (dark)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: 'username=LUC4N3X&repo=Levyra-deepsound&show_owner=true&theme=github_dark_dimmed'
+          path: assets/stats/pin-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+      - name: Generate stats (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: 'username=LUC4N3X&custom_title=GitHub%20activity&show_icons=true&show=reviews,prs_merged,prs_merged_percentage,discussions_started,discussions_answered&include_all_commits=true&theme=default'
+          path: assets/stats/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+      - name: Generate pin (light)
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: pin
+          options: 'username=LUC4N3X&repo=Levyra-deepsound&show_owner=true&theme=default'
+          path: assets/stats/pin-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail_on_error: true
+      - name: Commit updated cards
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/stats/*.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'chore: refresh public profile statistics'
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
