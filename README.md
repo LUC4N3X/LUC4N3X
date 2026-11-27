@@ -1,58 +1,51 @@
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/luc4n3x-logo-dark.webp">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/luc4n3x-logo.webp">
-    <img src="./assets/brand/luc4n3x-logo.webp" width="420" alt="LUC4N3X" />
-  </picture>
+### Hi, I'm LUC4N3X
 
-  <p>Independent developer in Italy. Mostly Android apps and audio software.</p>
+I'm an independent developer in Italy working on Android and desktop software.
 
-  <p>
-    <a href="https://luc4n3x.pages.dev">Website</a> ·
-    <a href="https://levyra.dpdns.org">Levyra</a> ·
-    <a href="https://github.com/LUC4N3X?tab=repositories">Repositories</a> ·
-    <a href="https://github.com/sponsors/LUC4N3X">Sponsors</a>
-  </p>
+- Creator of [Levyra](https://github.com/LUC4N3X/Levyra-deepsound)
+  - Over 1.7K stars and 26K downloads on GitHub, available on Android, Windows and Linux.
+  - Plays streamed tracks and local audio files in one library, with synced lyrics and no account or tracking.
+- I mostly write Kotlin, Jetpack Compose and Compose Multiplatform with Media3 and libVLC, plus Python and backend tools on Linux.
 
-  <sub>GitHub Developer Program</sub>
-</div>
+---
 
-## About
+### Ranking
 
-I build software I want to use every day, mainly on Android and Linux. Most of my time goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound). When I'm not working on the player, I usually write backend APIs or small self-hosted tools around media.
+#### Global
+<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=global&type=position&meta=none&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Global stars rank" />
+<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=global&type=tier&meta=goal-next-tier&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Global stars tier" />
 
-I care a lot about how an app holds up on a normal phone with strict background limits. If a bug comes back, I'd rather spend an evening reproducing it on real hardware than ship a workaround.
+#### Country (IT)
+<img src="https://gitranks.com/api/badge/v2/LUC4N3X?ranking=s&context=country&type=position&meta=none&label=Stars+Rank&cornerStyle=rounded&labelBgColor=%235c5c5c&valueBgColor=%232282c2" alt="Italy stars rank" />
 
-## Levyra
+### Links
 
-[Levyra](https://github.com/LUC4N3X/Levyra-deepsound) is an open-source music player for Android, Windows and Linux. I started it because I was tired of splitting my library between a streaming app and a folder of local files, and I didn't want another account just to keep playlists around.
+- Website: [luc4n3x.pages.dev](https://luc4n3x.pages.dev)
+- Projects: [GitHub](https://github.com/LUC4N3X?tab=repositories)
+- Email: [lucanex@proton.me](mailto:lucanex@proton.me)
+- Levyra: [Website](https://levyra.dpdns.org) · [Docs](https://levyra.dpdns.org/docs/) · [Weblate](https://hosted.weblate.org/engage/levyra/)
+- Support: [GitHub Sponsors](https://github.com/sponsors/LUC4N3X)
 
-Saved tracks stay on your storage as normal audio files, and lyrics sync from LRCLIB. It has no ads and no tracking. Android runs on Kotlin, Jetpack Compose and Media3, while the desktop builds use Compose Multiplatform with libVLC.
+<p align="left">
+  <img src="https://komarev.com/ghpvc/?username=LUC4N3X&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
 
-[![Latest release](https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=Latest%20release&labelColor=1f2328&color=0969da)](https://github.com/LUC4N3X/Levyra-deepsound/releases/latest)
-[![License](https://img.shields.io/github/license/LUC4N3X/Levyra-deepsound?style=flat-square&label=License&labelColor=1f2328&color=30363d)](https://github.com/LUC4N3X/Levyra-deepsound/blob/main/LICENSE)
-
-[Repository](https://github.com/LUC4N3X/Levyra-deepsound) · [Website](https://levyra.dpdns.org) · [Docs](https://levyra.dpdns.org/docs/) · [Releases](https://github.com/LUC4N3X/Levyra-deepsound/releases)
-
-## On GitHub
-
-<p align="center">
-  <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/pin-dark.svg">
-      <source media="(prefers-color-scheme: light)" srcset="./assets/stats/pin-light.svg">
-      <img src="./assets/stats/pin-dark.svg" width="400" alt="Levyra repository statistics" />
-    </picture>
-  </a>
+<p align="left">
   <a href="https://github.com/LUC4N3X?tab=overview">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-dark.svg">
       <source media="(prefers-color-scheme: light)" srcset="./assets/stats/stats-light.svg">
-      <img src="./assets/stats/stats-dark.svg" width="400" alt="LUC4N3X GitHub activity statistics" />
+      <img src="./assets/stats/stats-dark.svg" width="495" alt="LUC4N3X GitHub statistics" />
     </picture>
   </a>
 </p>
 
-## Contact
-
-If you run into a bug or want to suggest something, open an issue on the repo. Everything else is on [luc4n3x.pages.dev](https://luc4n3x.pages.dev).
+<p align="left">
+  <a href="https://github.com/LUC4N3X/Levyra-deepsound">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/pin-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/stats/pin-light.svg">
+      <img src="./assets/stats/pin-dark.svg" width="440" alt="Levyra-deepsound repository card" />
+    </picture>
+  </a>
+</p>
