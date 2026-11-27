@@ -20,12 +20,11 @@ I'm an independent developer from Italy, working primarily on Android applicatio
 
 I'm also interested in self-hosted software, media extraction and open-source infrastructure.
 
-## Projects
+## Featured project
 
-| Project | Description |
-| :-- | :-- |
-| **[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)** | Open-source music player for Android and Windows, with music discovery, synced lyrics and local playback. |
-| **[LevyraExtractor](https://github.com/LUC4N3X/LevyraExtractor)** | Media extraction and stream resolution library for Levyra, based on the NewPipe and PipePipe ecosystem. |
+**[Levyra](https://github.com/LUC4N3X/Levyra-deepsound)** — An open-source music player for Android and Windows, with music discovery, synced lyrics and local playback.
+
+[Repository](https://github.com/LUC4N3X/Levyra-deepsound) · [Website](https://levyra.dpdns.org) · [Releases](https://github.com/LUC4N3X/Levyra-deepsound/releases)
 
 [![Levyra stars](https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&label=Levyra%20stars&logo=github)](https://github.com/LUC4N3X/Levyra-deepsound/stargazers)
 [![Levyra releases](https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=Latest%20release)](https://github.com/LUC4N3X/Levyra-deepsound/releases/latest)
