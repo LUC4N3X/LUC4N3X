@@ -37,15 +37,6 @@ I'm also interested in self-hosted software, media extraction and open-source in
   </picture>
 </a>
 
-## Technologies
-
-| Area | Tools |
-| :-- | :-- |
-| Mobile & desktop | Kotlin, Java, Jetpack Compose, Compose Multiplatform |
-| Media | AndroidX Media3, audio playback, media extraction |
-| Backend | Python, FastAPI, REST APIs |
-| Infrastructure | Docker, Linux, Cloudflare, GitHub Actions |
-
 ## GitHub activity
 
 <a href="https://github.com/LUC4N3X?tab=overview">
