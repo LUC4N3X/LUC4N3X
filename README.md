@@ -16,17 +16,13 @@
   <a href="mailto:lucanex@proton.me">Email</a>
 </p>
 
-<img src="./assets/brand/signal-divider.svg" width="440" alt="" />
-
 </div>
 
 ## About
 
 <img align="right" alt="LUC4N3X workspace" width="340" src="./assets/brand/luc4n3x-about.webp" />
 
-I'm LUC4N3X, based in Italy.
-
-Most of my time goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound), an open-source music player for Android, Windows and Linux. Alongside that, I work on media extraction, Linux backend services, and [antigravity-thalarch](https://github.com/LUC4N3X/antigravity-thalarch).
+I'm LUC4N3X. Most of my time goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound), an open-source music player for Android, Windows and Linux. Alongside that, I work on media extraction, Linux backend services, and [antigravity-thalarch](https://github.com/LUC4N3X/antigravity-thalarch).
 
 I test playback on real mid-range phones and keep user data local. If something breaks in one of my repos, open an issue.
 
