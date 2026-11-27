@@ -55,7 +55,7 @@ function renderCards(data, theme) {
     [ICONS.merge, 'Total PRs Merged:', number(data.merged)],
     [ICONS.check, 'Merged PRs Percentage:', pct.toFixed(1) + '%'],
     [ICONS.issue, 'Total Issues:', number(data.issues)],
-    [ICONS.download, 'Levyra Downloads:', number(data.downloads)],
+    [ICONS.download, 'Levyra GitHub Downloads:', number(data.downloads)],
     [ICONS.repo, 'Public Repositories:', number(data.publicRepos)],
   ];
 
@@ -168,7 +168,7 @@ const [user, repos, project, prs, merged, issues, downloads] = await Promise.all
   api('/repos/LUC4N3X/Levyra-deepsound'),
   count('author:LUC4N3X type:pr is:public'),
   count('author:LUC4N3X type:pr is:merged is:public'),
-  count('author:LUC4N3X type:issue is:public'),
+  count('user:LUC4N3X type:issue is:public'),
   totalLevyraDownloads(),
 ]);
 
