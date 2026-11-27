@@ -20,7 +20,7 @@
 
 <br />
 
-### Hey, I'm LUC4N3X
+### Hey, I'm Luca
 
 <img align="right" alt="LUC4N3X workspace" width="320" src="./assets/brand/luc4n3x-about.webp" />
 
