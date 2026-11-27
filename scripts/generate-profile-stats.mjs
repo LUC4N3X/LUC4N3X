@@ -131,6 +131,19 @@ async function count(query) {
   return result.total_count;
 }
 
+async function allOwnedRepos() {
+  const all = [];
+  let page = 1;
+  while (page <= 20) {
+    const batch = await api(`/users/LUC4N3X/repos?per_page=100&type=owner&page=${page}`);
+    if (!Array.isArray(batch) || batch.length === 0) break;
+    all.push(...batch);
+    if (batch.length < 100) break;
+    page += 1;
+  }
+  return all;
+}
+
 async function totalLevyraDownloads() {
   let page = 1;
   let total = 0;
@@ -151,7 +164,7 @@ async function totalLevyraDownloads() {
 
 const [user, repos, project, prs, merged, issues, downloads] = await Promise.all([
   api('/users/LUC4N3X'),
-  api('/users/LUC4N3X/repos?per_page=100&type=owner'),
+  allOwnedRepos(),
   api('/repos/LUC4N3X/Levyra-deepsound'),
   count('author:LUC4N3X type:pr is:public'),
   count('author:LUC4N3X type:pr is:merged is:public'),
