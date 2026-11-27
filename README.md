@@ -31,9 +31,9 @@ I'm also interested in self-hosted software, media extraction and open-source in
 
 <a href="https://github.com/LUC4N3X/Levyra-deepsound">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api/pin?username=LUC4N3X&amp;repo=LUC4N3X%2FLevyra-deepsound&amp;show_owner=true&amp;theme=github_dark_dimmed">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api/pin?username=LUC4N3X&amp;repo=LUC4N3X%2FLevyra-deepsound&amp;show_owner=true&amp;theme=default">
-    <img src="https://github-stats-extended.vercel.app/api/pin?username=LUC4N3X&amp;repo=LUC4N3X%2FLevyra-deepsound&amp;show_owner=true&amp;theme=github_dark_dimmed" width="480" alt="Levyra repository statistics" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/pin-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stats/pin-light.svg">
+    <img src="./assets/stats/pin-dark.svg" width="480" alt="Levyra repository statistics" />
   </picture>
 </a>
 
@@ -50,9 +50,9 @@ I'm also interested in self-hosted software, media extraction and open-source in
 
 <a href="https://github.com/LUC4N3X?tab=overview">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-stats-extended.vercel.app/api?username=LUC4N3X&amp;custom_title=GitHub%20activity&amp;show=reviews%2Cdiscussions_started%2Cdiscussions_answered%2Cprs_merged%2Cprs_merged_percentage%2Cprs_commented%2Cprs_reviewed%2Cissues_commented&amp;show_icons=true&amp;include_all_commits=true&amp;theme=github_dark_dimmed">
-    <source media="(prefers-color-scheme: light)" srcset="https://github-stats-extended.vercel.app/api?username=LUC4N3X&amp;custom_title=GitHub%20activity&amp;show=reviews%2Cdiscussions_started%2Cdiscussions_answered%2Cprs_merged%2Cprs_merged_percentage%2Cprs_commented%2Cprs_reviewed%2Cissues_commented&amp;show_icons=true&amp;include_all_commits=true&amp;theme=default">
-    <img src="https://github-stats-extended.vercel.app/api?username=LUC4N3X&amp;custom_title=GitHub%20activity&amp;show=reviews%2Cdiscussions_started%2Cdiscussions_answered%2Cprs_merged%2Cprs_merged_percentage%2Cprs_commented%2Cprs_reviewed%2Cissues_commented&amp;show_icons=true&amp;include_all_commits=true&amp;theme=github_dark_dimmed" width="560" alt="LUC4N3X GitHub activity and contribution statistics" />
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/stats/stats-light.svg">
+    <img src="./assets/stats/stats-dark.svg" width="560" alt="LUC4N3X GitHub activity and contribution statistics" />
   </picture>
 </a>
 
