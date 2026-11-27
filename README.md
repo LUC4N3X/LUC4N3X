@@ -18,7 +18,9 @@
 
 </div>
 
-## About
+<br />
+
+### Hi there! 👋
 
 <img align="right" alt="LUC4N3X workspace" width="320" src="./assets/brand/luc4n3x-about.webp" />
 
