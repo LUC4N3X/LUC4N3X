@@ -51,6 +51,4 @@ Day to day I use `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`,
   </picture>
 </a>
 
-<p><sub>GitHub Developer Program · <a href="mailto:lucanex@proton.me">lucanex@proton.me</a></sub></p>
-
 </div>
