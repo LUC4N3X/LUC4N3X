@@ -48,13 +48,15 @@ function renderCards(data, theme) {
   const circ = (2 * Math.PI * r).toFixed(2);
 
   const statsStyle =
-    `@keyframes fadeIn{from{opacity:0}to{opacity:1}}` +
+    `@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}` +
     `@keyframes ringDraw{from{stroke-dashoffset:${circ}}to{stroke-dashoffset:0}}` +
-    `@keyframes popIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}` +
-    `.stagger{opacity:0;animation:fadeIn .4s ease-out forwards}` +
-    `.ring{stroke-dashoffset:${circ};animation:ringDraw 1s ease-out .2s forwards}` +
-    `.pop{opacity:0;transform-box:fill-box;transform-origin:center;animation:popIn .55s ease-out .3s forwards}` +
-    `@media (prefers-reduced-motion:reduce){.stagger,.pop{opacity:1;animation:none}.ring{stroke-dashoffset:0;animation:none}}`;
+    `@keyframes popIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}` +
+    `@keyframes flameBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}` +
+    `.stagger{opacity:0;animation:fadeUp .55s cubic-bezier(.16,1,.3,1) forwards}` +
+    `.ring{stroke-dashoffset:${circ};animation:ringDraw 1.3s cubic-bezier(.16,1,.3,1) .3s forwards}` +
+    `.pop{opacity:0;transform-box:fill-box;transform-origin:center;animation:popIn .65s cubic-bezier(.16,1,.3,1) .45s forwards}` +
+    `.flame{transform-box:fill-box;transform-origin:center;animation:popIn .5s ease-out 1.1s backwards,flameBeat 2.4s ease-in-out 1.7s infinite}` +
+    `@media (prefers-reduced-motion:reduce){.stagger,.pop,.flame{opacity:1;animation:none}.ring{stroke-dashoffset:0;animation:none}}`;
 
   const leftMetrics = [
     [ICONS.star, 'Total Stars', number(data.totalStars)],
@@ -74,7 +76,7 @@ function renderCards(data, theme) {
     'LUC4N3X GitHub streak and statistics',
     `<line x1="180" y1="24" x2="180" y2="142" stroke="${divider}" stroke-width="1"/>` +
       `<line x1="360" y1="24" x2="360" y2="142" stroke="${divider}" stroke-width="1"/>` +
-      `<g class="stagger" style="animation-delay:120ms">` +
+      `<g class="stagger" style="animation-delay:200ms">` +
       t(90, 74, number(data.totalContributions), fg, 25, 700, 'middle', mono) +
       t(90, 104, 'Total Contributions', fg, 12.5, 500, 'middle') +
       t(90, 124, data.contributionsRange, muted, 11, 400, 'middle') +
@@ -82,15 +84,17 @@ function renderCards(data, theme) {
       `<circle cx="270" cy="66" r="${r}" fill="none" stroke="${divider}" stroke-width="5"/>` +
       `<circle class="ring" cx="270" cy="66" r="${r}" fill="none" stroke="${accent}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${circ}" transform="rotate(-90 270 66)"/>` +
       `<circle cx="270" cy="30" r="11" fill="${bg}"/>` +
+      `<g class="flame">` +
       icon(ICONS.flame, 262.5, 21.5, accent, 0.95) +
+      `</g>` +
       `<g class="pop">` +
       t(270, 74, number(data.currentStreak), fg, 24, 700, 'middle', mono) +
       `</g>` +
-      `<g class="stagger" style="animation-delay:240ms">` +
+      `<g class="stagger" style="animation-delay:350ms">` +
       t(270, 122, 'Current Streak', accent, 12.5, 600, 'middle') +
       t(270, 140, data.currentStreakRange, muted, 11, 400, 'middle') +
       `</g>` +
-      `<g class="stagger" style="animation-delay:320ms">` +
+      `<g class="stagger" style="animation-delay:480ms">` +
       t(450, 74, number(data.longestStreak), fg, 25, 700, 'middle', mono) +
       t(450, 104, 'Longest Streak', fg, 12.5, 500, 'middle') +
       t(450, 124, data.longestStreakRange, muted, 11, 400, 'middle') +
@@ -99,7 +103,7 @@ function renderCards(data, theme) {
       leftMetrics
         .map(
           ([d, label, value], i) =>
-            `<g class="stagger" style="animation-delay:${400 + i * 70}ms">` +
+            `<g class="stagger" style="animation-delay:${600 + i * 100}ms">` +
             icon(d, 26, 177 + i * 25, iconColor, 0.85) +
             t(48, 188 + i * 25, label, muted, 12.5, 500) +
             t(252, 188 + i * 25, value, fg, 13, 600, 'end', mono) +
@@ -109,14 +113,14 @@ function renderCards(data, theme) {
       rightMetrics
         .map(
           ([d, label, value], i) =>
-            `<g class="stagger" style="animation-delay:${440 + i * 70}ms">` +
+            `<g class="stagger" style="animation-delay:${650 + i * 100}ms">` +
             icon(d, 288, 177 + i * 25, iconColor, 0.85) +
             t(310, 188 + i * 25, label, muted, 12.5, 500) +
             t(514, 188 + i * 25, value, fg, 13, 600, 'end', mono) +
             `</g>`
         )
         .join('') +
-      `<g class="stagger" style="animation-delay:680ms">` +
+      `<g class="stagger" style="animation-delay:950ms">` +
       t(514, 260, 'Updated ' + data.date, muted, 10, 400, 'end') +
       `</g>`,
     statsStyle

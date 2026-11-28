@@ -43,12 +43,10 @@ Day to day I use `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`,
 <br />
 <br />
 
-<a href="https://github.com/LUC4N3X?tab=repositories">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/how-i-build-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/brand/how-i-build.svg">
-    <img src="./assets/brand/how-i-build-dark.svg" width="360" alt="Build, use, fix, refine. Explore repositories." />
-  </picture>
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/brand/motto-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/brand/motto.svg">
+  <img src="./assets/brand/motto-dark.svg" width="360" alt="Build, use, fix, refine." />
+</picture>
 
 </div>
