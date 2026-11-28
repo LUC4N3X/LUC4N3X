@@ -19,7 +19,9 @@
 ### Hey, I'm Luca
 
 > [!NOTE]
-> Independent developer in Italy building Android apps, desktop audio software, web apps and Linux backend tools. Most of my open-source work goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound). If you hit a bug in one of my repos, open an issue.
+> I'm an independent developer based in Italy. I work across Android, desktop apps, web frontends and Linux backend services, and I pick up whatever part of the stack a project needs.
+>
+> Most of my open-source time goes into [Levyra](https://github.com/LUC4N3X/Levyra-deepsound). I started it because I wanted one music player for both streamed tracks and local files without creating yet another account. Outside of Levyra, I tinker with media extraction and small self-hosted Linux tools, and I test playback on ordinary mid-range phones so things hold up in daily use. If you hit a bug in one of my repos, open an issue.
 
 <table>
   <tr>
@@ -41,11 +43,7 @@
 
 #### Stack
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=kotlin,androidstudio,gradle,python,ts,nodejs,sqlite,redis,docker,linux,cloudflare,githubactions&theme=dark">
-  <source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=kotlin,androidstudio,gradle,python,ts,nodejs,sqlite,redis,docker,linux,cloudflare,githubactions&theme=light">
-  <img src="https://skillicons.dev/icons?i=kotlin,androidstudio,gradle,python,ts,nodejs,sqlite,redis,docker,linux,cloudflare,githubactions&theme=dark" height="40" alt="Kotlin, Android Studio, Gradle, Python, TypeScript, Node.js, SQLite, Redis, Docker, Linux, Cloudflare, GitHub Actions" />
-</picture>
+![Kotlin, Android Studio, Gradle, Python, TypeScript, Node.js, SQLite, Redis, Docker, Linux, Cloudflare, GitHub Actions](https://skillicons.dev/icons?i=kotlin,androidstudio,gradle,python,ts,nodejs,sqlite,redis,docker,linux,cloudflare,githubactions)
 
 <br />
 
