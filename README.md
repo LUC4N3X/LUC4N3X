@@ -25,18 +25,27 @@
 
 <table>
   <tr>
-    <td width="64" align="center">
+    <td width="96" align="center" valign="middle">
       <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="./assets/levyra/levyra-icon.png" width="48" alt="Levyra" />
+        <img src="./assets/levyra/levyra-icon.png" width="68" alt="Levyra" />
       </a>
     </td>
     <td>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Levyra</strong></a><br />
-      <sub>Open-source music player for Android, Windows and Linux. Streamed tracks and local files in one library, synced lyrics, no tracking.</sub><br />
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers"><img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&labelColor=161b22&color=58a6ff" alt="Stars" /></a>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=release&labelColor=161b22&color=30363d" alt="Release" /></a>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases"><img src="https://img.shields.io/github/downloads/LUC4N3X/Levyra-deepsound/total?style=flat-square&label=downloads&labelColor=161b22&color=30363d" alt="Downloads" /></a>
-      <a href="https://github.com/LUC4N3X/Levyra-deepsound/blob/main/LICENSE"><img src="https://img.shields.io/github/license/LUC4N3X/Levyra-deepsound?style=flat-square&labelColor=161b22&color=30363d" alt="License" /></a>
+      <p>
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound"><strong>Levyra</strong></a>
+        &nbsp;·&nbsp;
+        <a href="https://levyra.dpdns.org">Website</a> ·
+        <a href="https://levyra.dpdns.org/docs/">Docs</a> ·
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest">Releases</a> ·
+        <a href="https://hosted.weblate.org/engage/levyra/">Weblate</a>
+      </p>
+      <p>Open-source music player for Android, Windows and Linux. Keeps streamed tracks and local audio files in one library, with offline downloads, synced lyrics and no tracking.</p>
+      <p>
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound/stargazers"><img src="https://img.shields.io/github/stars/LUC4N3X/Levyra-deepsound?style=flat-square&labelColor=161b22&color=58a6ff" alt="Stars" /></a>&nbsp;
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases/latest"><img src="https://img.shields.io/github/v/release/LUC4N3X/Levyra-deepsound?style=flat-square&label=release&labelColor=161b22&color=30363d" alt="Release" /></a>&nbsp;
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound/releases"><img src="https://img.shields.io/github/downloads/LUC4N3X/Levyra-deepsound/total?style=flat-square&label=downloads&labelColor=161b22&color=30363d" alt="Downloads" /></a>&nbsp;
+        <a href="https://github.com/LUC4N3X/Levyra-deepsound/blob/main/LICENSE"><img src="https://img.shields.io/github/license/LUC4N3X/Levyra-deepsound?style=flat-square&labelColor=161b22&color=30363d" alt="License" /></a>
+      </p>
     </td>
   </tr>
 </table>
