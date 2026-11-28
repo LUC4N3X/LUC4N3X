@@ -36,17 +36,7 @@ Day to day I use `Kotlin`, `Jetpack Compose`, `Compose Multiplatform`, `Media3`,
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/stats/stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="./assets/stats/stats-light.svg">
-    <img src="./assets/stats/stats-dark.svg" width="495" alt="LUC4N3X GitHub statistics" />
-  </picture>
-</a>
-
-<br />
-
-<a href="https://github.com/LUC4N3X?tab=overview">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=LUC4N3X&background=161b22&border=30363d&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakNum=e6edf3&sideNums=e6edf3&currStreakLabel=58a6ff&sideLabels=e6edf3&dates=8b949e&border_radius=6">
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=LUC4N3X&background=ffffff&border=d0d7de&stroke=d0d7de&ring=0969da&fire=0969da&currStreakNum=1f2328&sideNums=1f2328&currStreakLabel=0969da&sideLabels=1f2328&dates=656d76&border_radius=6">
-    <img src="https://streak-stats.demolab.com/?user=LUC4N3X&background=161b22&border=30363d&stroke=30363d&ring=58a6ff&fire=58a6ff&currStreakNum=e6edf3&sideNums=e6edf3&currStreakLabel=58a6ff&sideLabels=e6edf3&dates=8b949e&border_radius=6" width="495" alt="LUC4N3X GitHub streak statistics" />
+    <img src="./assets/stats/stats-dark.svg" width="540" alt="LUC4N3X GitHub streak and statistics" />
   </picture>
 </a>
 

@@ -4,12 +4,12 @@ function renderCards(data, theme) {
   const dark = theme === 'dark';
   const bg = dark ? '#161b22' : '#ffffff';
   const border = dark ? '#30363d' : '#d0d7de';
+  const divider = dark ? '#21262d' : '#eaeef2';
   const fg = dark ? '#e6edf3' : '#1f2328';
   const muted = dark ? '#8b949e' : '#656d76';
   const accent = dark ? '#58a6ff' : '#0969da';
   const iconColor = dark ? '#79c0ff' : '#0969da';
   const purple = dark ? '#a97bff' : '#7f52ff';
-  const track = dark ? '#21262d' : '#eaeef2';
   const font = '-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif';
   const mono = 'ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,monospace';
 
@@ -24,9 +24,9 @@ function renderCards(data, theme) {
   const number = (n) => Number(n).toLocaleString('en-US');
 
   const frame = (w, h, title, body, style = '') =>
-    `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}">${style ? `<style>${style}</style>` : ''}<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="6" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
+    `<?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}">${style ? `<style>${style}</style>` : ''}<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="8" fill="${bg}" stroke="${border}"/><g font-family="${font}">${body}</g></svg>\n`;
 
-  const t = (x, y, s, color = fg, size = 13.5, weight = 400, anchor = 'start', family = '') =>
+  const t = (x, y, s, color = fg, size = 13, weight = 400, anchor = 'start', family = '') =>
     `<text x="${x}" y="${y}" font-size="${size}" font-weight="${weight}" fill="${color}" text-anchor="${anchor}"${family ? ` font-family="${family}"` : ''}>${esc(s)}</text>`;
 
   const icon = (d, x, y, color = iconColor, scale = 0.85) =>
@@ -37,62 +37,87 @@ function renderCards(data, theme) {
     fork: 'M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z',
     pr: 'M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z',
     merge: 'M5.45 5.154A4.25 4.25 0 0 0 9.25 7.5h1.378a2.251 2.251 0 1 1 0 1.5H9.25A5.734 5.734 0 0 1 5 7.123v3.505a2.25 2.25 0 1 1-1.5 0V5.372a2.25 2.25 0 1 1 1.95-.218ZM4.25 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm8.5-4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z',
-    check: 'M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Zm3.78-9.72a.751.751 0 0 0-.018-1.042.751.751 0 0 0-1.042-.018L6.75 9.19 5.28 7.72a.751.751 0 0 0-1.042.018.751.751 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z',
     issue: 'M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Z',
     download: 'M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14ZM7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z',
+    flame: 'M7.998 14.5c2.832 0 5-1.98 5-4.5 0-1.463-.68-2.19-1.879-3.383l-.036-.037c-1.013-1.008-2.3-2.29-2.834-4.434-.322.256-.63.579-.864.953-.432.696-.621 1.58-.046 2.73.473.947-.67 1.928-1.564 1.337a2.502 2.502 0 0 1-.82-.982c-.578.836-.855 1.855-.855 2.816 0 2.52 2.168 4.5 3.898 4.5Z',
     repo: 'M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8Z',
   };
 
   const pct = data.prs ? (100 * data.merged) / data.prs : 0;
-  const r = 40;
-  const circ = 2 * Math.PI * r;
-  const dash = (pct * circ) / 100;
-  const offset = (circ - dash).toFixed(2);
-  const circFixed = circ.toFixed(2);
+  const r = 36;
+  const circ = (2 * Math.PI * r).toFixed(2);
 
   const statsStyle =
     `@keyframes fadeIn{from{opacity:0}to{opacity:1}}` +
-    `@keyframes ringFill{from{stroke-dashoffset:${circFixed}}to{stroke-dashoffset:${offset}}}` +
-    `@keyframes popIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}` +
-    `.stagger{opacity:0;animation:fadeIn .35s ease-in-out forwards}` +
-    `.ring{stroke-dashoffset:${circFixed};animation:ringFill 1s ease-out .25s forwards}` +
-    `.pct{opacity:0;transform-box:fill-box;transform-origin:center;animation:popIn .6s ease-out .35s forwards}` +
-    `@media (prefers-reduced-motion:reduce){.stagger,.pct{opacity:1;animation:none}.ring{stroke-dashoffset:${offset};animation:none}}`;
+    `@keyframes ringDraw{from{stroke-dashoffset:${circ}}to{stroke-dashoffset:0}}` +
+    `@keyframes popIn{from{opacity:0;transform:scale(.82)}to{opacity:1;transform:scale(1)}}` +
+    `.stagger{opacity:0;animation:fadeIn .4s ease-out forwards}` +
+    `.ring{stroke-dashoffset:${circ};animation:ringDraw 1s ease-out .2s forwards}` +
+    `.pop{opacity:0;transform-box:fill-box;transform-origin:center;animation:popIn .55s ease-out .3s forwards}` +
+    `@media (prefers-reduced-motion:reduce){.stagger,.pop{opacity:1;animation:none}.ring{stroke-dashoffset:0;animation:none}}`;
 
-  const statRows = [
-    [ICONS.star, 'Total Stars Earned:', number(data.totalStars)],
-    [ICONS.fork, 'Total Forks Earned:', number(data.totalForks)],
-    [ICONS.pr, 'Total PRs:', number(data.prs)],
-    [ICONS.merge, 'Total PRs Merged:', number(data.merged)],
-    [ICONS.check, 'Merged PRs Percentage:', pct.toFixed(1) + '%'],
-    [ICONS.issue, 'Total Issues:', number(data.issues)],
-    [ICONS.download, 'Levyra GitHub Downloads:', number(data.downloads)],
-    [ICONS.repo, 'Public Repositories:', number(data.publicRepos)],
+  const leftMetrics = [
+    [ICONS.star, 'Total Stars', number(data.totalStars)],
+    [ICONS.pr, 'Pull Requests', number(data.prs)],
+    [ICONS.issue, 'Total Issues', number(data.issues)],
+  ];
+
+  const rightMetrics = [
+    [ICONS.download, 'Levyra Downloads', number(data.downloads)],
+    [ICONS.merge, 'PRs Merged', pct.toFixed(1) + '%'],
+    [ICONS.fork, 'Total Forks', number(data.totalForks)],
   ];
 
   const stats = frame(
-    495,
-    264,
-    'LUC4N3X GitHub statistics',
-    t(25, 34, 'LUC4N3X stats', accent, 17, 600) +
-      statRows
+    540,
+    272,
+    'LUC4N3X GitHub streak and statistics',
+    `<line x1="180" y1="24" x2="180" y2="142" stroke="${divider}" stroke-width="1"/>` +
+      `<line x1="360" y1="24" x2="360" y2="142" stroke="${divider}" stroke-width="1"/>` +
+      `<g class="stagger" style="animation-delay:120ms">` +
+      t(90, 74, number(data.totalContributions), fg, 25, 700, 'middle', mono) +
+      t(90, 104, 'Total Contributions', fg, 12.5, 500, 'middle') +
+      t(90, 124, data.contributionsRange, muted, 11, 400, 'middle') +
+      `</g>` +
+      `<circle cx="270" cy="66" r="${r}" fill="none" stroke="${divider}" stroke-width="5"/>` +
+      `<circle class="ring" cx="270" cy="66" r="${r}" fill="none" stroke="${accent}" stroke-width="5" stroke-linecap="round" stroke-dasharray="${circ}" transform="rotate(-90 270 66)"/>` +
+      `<circle cx="270" cy="30" r="11" fill="${bg}"/>` +
+      icon(ICONS.flame, 262.5, 21.5, accent, 0.95) +
+      `<g class="pop">` +
+      t(270, 74, number(data.currentStreak), fg, 24, 700, 'middle', mono) +
+      `</g>` +
+      `<g class="stagger" style="animation-delay:240ms">` +
+      t(270, 122, 'Current Streak', accent, 12.5, 600, 'middle') +
+      t(270, 140, data.currentStreakRange, muted, 11, 400, 'middle') +
+      `</g>` +
+      `<g class="stagger" style="animation-delay:320ms">` +
+      t(450, 74, number(data.longestStreak), fg, 25, 700, 'middle', mono) +
+      t(450, 104, 'Longest Streak', fg, 12.5, 500, 'middle') +
+      t(450, 124, data.longestStreakRange, muted, 11, 400, 'middle') +
+      `</g>` +
+      `<line x1="22" y1="160" x2="518" y2="160" stroke="${divider}" stroke-width="1"/>` +
+      leftMetrics
         .map(
           ([d, label, value], i) =>
-            `<g class="stagger" style="animation-delay:${180 + i * 80}ms">` +
-            icon(d, 25, 53 + i * 24, iconColor, 0.85) +
-            t(47, 64 + i * 24, label, fg, 13, 500) +
-            t(324, 64 + i * 24, value, fg, 13, 600, 'end', mono) +
+            `<g class="stagger" style="animation-delay:${400 + i * 70}ms">` +
+            icon(d, 26, 177 + i * 25, iconColor, 0.85) +
+            t(48, 188 + i * 25, label, muted, 12.5, 500) +
+            t(252, 188 + i * 25, value, fg, 13, 600, 'end', mono) +
             `</g>`
         )
         .join('') +
-      `<circle cx="412" cy="136" r="${r}" fill="none" stroke="${track}" stroke-width="6"/>` +
-      `<circle class="ring" cx="412" cy="136" r="${r}" fill="none" stroke="${accent}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${circFixed}" transform="rotate(-90 412 136)"/>` +
-      `<g class="pct">` +
-      t(412, 141, pct.toFixed(1) + '%', fg, 16, 600, 'middle', mono) +
-      `</g>` +
-      `<g class="stagger" style="animation-delay:780ms">` +
-      t(412, 196, 'PRs merged', muted, 11.5, 400, 'middle') +
-      t(470, 248, 'Updated ' + data.date, muted, 10.5, 400, 'end') +
+      rightMetrics
+        .map(
+          ([d, label, value], i) =>
+            `<g class="stagger" style="animation-delay:${440 + i * 70}ms">` +
+            icon(d, 288, 177 + i * 25, iconColor, 0.85) +
+            t(310, 188 + i * 25, label, muted, 12.5, 500) +
+            t(514, 188 + i * 25, value, fg, 13, 600, 'end', mono) +
+            `</g>`
+        )
+        .join('') +
+      `<g class="stagger" style="animation-delay:680ms">` +
+      t(514, 260, 'Updated ' + data.date, muted, 10, 400, 'end') +
       `</g>`,
     statsStyle
   );
@@ -113,7 +138,7 @@ function renderCards(data, theme) {
     icon(ICONS.repo, 22, 19, muted, 0.95) +
       t(44, 32, 'LUC4N3X/Levyra-deepsound', accent, 14.5, 600) +
       descriptionLines.map((line, i) => t(22, 58 + i * 17, line, fg, 12, 400)).join('') +
-      `<line x1="22" y1="126" x2="418" y2="126" stroke="${track}" stroke-width="1"/>` +
+      `<line x1="22" y1="126" x2="418" y2="126" stroke="${divider}" stroke-width="1"/>` +
       `<circle cx="28" cy="146" r="5.5" fill="${purple}"/>` +
       t(40, 150, 'Kotlin', muted, 12.5, 500) +
       icon(ICONS.star, 106, 139, muted, 0.85) +
@@ -129,6 +154,20 @@ function renderCards(data, theme) {
 const token = process.env.GITHUB_TOKEN;
 if (!token) throw new Error('GITHUB_TOKEN is required');
 
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+function formatDate(iso, withYear = false) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${MONTHS[m - 1]} ${d}${withYear ? ', ' + y : ''}`;
+}
+
+function formatRange(startIso, endIso) {
+  if (!startIso || !endIso) return '';
+  if (startIso === endIso) return formatDate(startIso, true);
+  const sameYear = startIso.slice(0, 4) === endIso.slice(0, 4);
+  return `${formatDate(startIso, !sameYear)} - ${formatDate(endIso, !sameYear)}`;
+}
+
 async function api(path) {
   const response = await fetch('https://api.github.com' + path, {
     headers: {
@@ -139,6 +178,117 @@ async function api(path) {
   });
   if (!response.ok) throw new Error('GitHub API returned ' + response.status + ' for ' + path);
   return response.json();
+}
+
+async function graphql(query, variables = {}) {
+  const response = await fetch('https://api.github.com/graphql', {
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + token,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+  if (!response.ok) throw new Error('GitHub GraphQL returned ' + response.status);
+  const json = await response.json();
+  if (json.errors?.length) throw new Error('GitHub GraphQL error: ' + json.errors[0].message);
+  return json.data;
+}
+
+async function fetchStreakStats(login) {
+  const yearsData = await graphql(
+    `query($login: String!) {
+      user(login: $login) {
+        createdAt
+        contributionsCollection {
+          contributionYears
+        }
+      }
+    }`,
+    { login }
+  );
+  const years = yearsData.user.contributionsCollection.contributionYears;
+  const calendars = await Promise.all(
+    years.map((year) =>
+      graphql(
+        `query($login: String!, $from: DateTime!, $to: DateTime!) {
+          user(login: $login) {
+            contributionsCollection(from: $from, to: $to) {
+              contributionCalendar {
+                weeks {
+                  contributionDays {
+                    date
+                    contributionCount
+                  }
+                }
+              }
+            }
+          }
+        }`,
+        { login, from: `${year}-01-01T00:00:00Z`, to: `${year}-12-31T23:59:59Z` }
+      )
+    )
+  );
+
+  const byDate = new Map();
+  for (const cal of calendars) {
+    for (const week of cal.user.contributionsCollection.contributionCalendar.weeks) {
+      for (const day of week.contributionDays) {
+        byDate.set(day.date, day.contributionCount);
+      }
+    }
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  const days = [...byDate.entries()]
+    .filter(([date]) => date <= today)
+    .sort(([a], [b]) => a.localeCompare(b));
+
+  let totalContributions = 0;
+  let firstActiveDate = null;
+  let longest = { len: 0, start: null, end: null };
+  let run = { len: 0, start: null, end: null };
+
+  for (const [date, count] of days) {
+    totalContributions += count;
+    if (count > 0) {
+      if (!firstActiveDate) firstActiveDate = date;
+      if (run.len === 0) run.start = date;
+      run.len += 1;
+      run.end = date;
+      if (run.len >= longest.len) {
+        longest = { ...run };
+      }
+    } else {
+      run = { len: 0, start: null, end: null };
+    }
+  }
+
+  let current = { len: 0, start: null, end: null };
+  for (let i = days.length - 1; i >= 0; i -= 1) {
+    const [date, count] = days[i];
+    if (count > 0) {
+      if (!current.end) current.end = date;
+      current.start = date;
+      current.len += 1;
+    } else if (i === days.length - 1 && date === today) {
+      continue;
+    } else {
+      break;
+    }
+  }
+
+  const createdDate = yearsData.user.createdAt.slice(0, 10);
+  const startLabel = formatDate(firstActiveDate ?? createdDate, true);
+
+  return {
+    totalContributions,
+    contributionsRange: `${startLabel} - Present`,
+    currentStreak: current.len,
+    currentStreakRange: formatRange(current.start, current.end),
+    longestStreak: longest.len,
+    longestStreakRange: formatRange(longest.start, longest.end),
+  };
 }
 
 async function count(query) {
@@ -180,7 +330,7 @@ async function totalLevyraDownloads() {
   return total;
 }
 
-const [user, repos, project, prs, merged, issues, downloads] = await Promise.all([
+const [user, repos, project, prs, merged, issues, downloads, streak] = await Promise.all([
   api('/users/LUC4N3X'),
   allOwnedRepos(),
   api('/repos/LUC4N3X/Levyra-deepsound'),
@@ -188,6 +338,7 @@ const [user, repos, project, prs, merged, issues, downloads] = await Promise.all
   count('author:LUC4N3X type:pr is:merged is:public'),
   count('user:LUC4N3X type:issue is:public'),
   totalLevyraDownloads(),
+  fetchStreakStats('LUC4N3X'),
 ]);
 
 const totalStars = repos.reduce((sum, repo) => sum + (repo.stargazers_count ?? 0), 0);
@@ -203,6 +354,7 @@ if (
 }
 
 const data = {
+  ...streak,
   totalStars,
   totalForks,
   prs,
