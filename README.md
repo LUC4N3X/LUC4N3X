@@ -25,9 +25,9 @@
 
 <table>
   <tr>
-    <td width="96" align="center" valign="middle">
+    <td width="200" align="center" valign="middle">
       <a href="https://github.com/LUC4N3X/Levyra-deepsound">
-        <img src="./assets/levyra/levyra-icon.png" width="68" alt="Levyra" />
+        <img src="./assets/levyra/levyra-neon.webp" width="168" alt="Levyra DeepSound" />
       </a>
     </td>
     <td>
